@@ -110,7 +110,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container mx-auto px-4 py-6">
           <div className="text-center text-sm text-gray-500">
             <p>© 2025 Application de Révision CDA - Tous droits réservés</p>
-            <p className="mt-1">Créé  pour les futurs Concepteurs Développeurs d'Applications</p>
+            <p className="mt-1">Créé  pour les Concepteurs Développeurs d'Applications en licence</p>
           </div>
         </div>
       </footer>
