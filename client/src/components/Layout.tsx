@@ -109,8 +109,8 @@ export default function Layout({ children }: LayoutProps) {
       <footer className="bg-white border-t mt-auto">
         <div className="container mx-auto px-4 py-6">
           <div className="text-center text-sm text-gray-500">
-            <p>© 2024 Application de Révision CDA - Tous droits réservés</p>
-            <p className="mt-1">Créé avec ❤️ pour les futurs Concepteurs Développeurs d'Applications</p>
+            <p>© 2025 Application de Révision CDA - Tous droits réservés</p>
+            <p className="mt-1">Créé  pour les futurs Concepteurs Développeurs d'Applications</p>
           </div>
         </div>
       </footer>
