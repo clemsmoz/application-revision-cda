@@ -1,0 +1,393 @@
+{
+  "id": "bloc1-git",
+  "bloc": "bloc1",
+  "title": "Gestion du Code avec Git",
+  "icon": "🔀",
+  "color": "#F97316",
+  "description": "Git est LE gestionnaire de code source utilisé par des millions de développeurs. Il permet de gérer l'historique des modifications, de travailler en équipe et de gérer des projets de toutes tailles.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction à Git",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Git** s'est imposé comme le gestionnaire de code source standard dans l'industrie. Il est **performant**, permet de gérer de **gros projets** et offre la possibilité de **travailler localement** sans connexion réseau."
+        },
+        {
+          "type": "definition",
+          "term": "Git",
+          "definition": "Système de contrôle de version distribué (DVCS) créé par Linus Torvalds en 2005, permettant de suivre l'historique des modifications d'un projet et de collaborer efficacement en équipe."
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "Git est développé selon un **modèle open source**. Tout son code est accessible et des sponsors garantissent sa pérennité."
+        }
+      ]
+    },
+    {
+      "id": "installation-config",
+      "title": "Installation et Configuration",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Git s'installe à partir du site officiel **git-scm.com**. Les commandes suivent une syntaxe standard :"
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "git [commande] [paramètre(s)] [--option] [-o]"
+        },
+        {
+          "type": "subtitle",
+          "text": "Configuration Initiale"
+        },
+        {
+          "type": "paragraph",
+          "text": "La commande `git config` permet de gérer la configuration à **trois niveaux** : système, global (utilisateur) et local (projet)."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Configuration de l'identité (obligatoire)\ngit config --global user.name \"Votre Nom\"\ngit config --global user.email \"votre@email.com\"\n\n# Vérifier la configuration\ngit config --list"
+        },
+        {
+          "type": "subtitle",
+          "text": "Alias (Raccourcis)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les **alias** permettent de simplifier les commandes fréquemment utilisées."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Créer des alias utiles\ngit config --global alias.st status\ngit config --global alias.co checkout\ngit config --global alias.br branch\ngit config --global alias.lg \"log --all --graph --oneline\""
+        }
+      ]
+    },
+    {
+      "id": "depot-commits",
+      "title": "Dépôt et Commits",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'historique d'un dépôt Git est stocké dans un dossier caché `.git` à la racine du projet."
+        },
+        {
+          "type": "table",
+          "headers": ["Commande", "Rôle", "Exemple"],
+          "rows": [
+            ["git init", "Initialise un nouveau dépôt Git local", "git init mon-projet"],
+            ["git add <fichier>", "Ajoute un fichier à la zone de staging (préparation du commit)", "git add index.html"],
+            ["git add .", "Ajoute tous les fichiers modifiés au staging", "git add ."],
+            ["git commit -m \"message\"", "Enregistre les modifications du staging dans l'historique", "git commit -m \"Ajout page d'accueil\""],
+            ["git status", "Affiche l'état des fichiers (modifiés, stagés, non suivis)", "git status"]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Cycle de Vie d'un Fichier"
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "Untracked → (git add) → Staged → (git commit) → Committed\n    ↑                                                  ↓\n    └────────────── (modification) ──────────────────┘"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Bonne pratique** : Faire des commits **atomiques** (une fonctionnalité = un commit) avec des messages **clairs et descriptifs**."
+        }
+      ]
+    },
+    {
+      "id": "historique",
+      "title": "Historique et Navigation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Git conserve **tout l'historique** des modifications. On peut toujours revenir en arrière."
+        },
+        {
+          "type": "table",
+          "headers": ["Commande", "Rôle", "Exemple"],
+          "rows": [
+            ["git log", "Affiche l'historique des commits", "git log"],
+            ["git log --oneline", "Affiche l'historique de manière condensée", "git log --oneline"],
+            ["git log --all --graph", "Affiche l'historique graphique de toutes les branches", "git log --all --graph --oneline"],
+            ["git show <commit>", "Affiche les détails d'un commit spécifique", "git show abc123"],
+            ["git diff", "Compare les modifications non stagées", "git diff"],
+            ["git diff --staged", "Compare les modifications stagées", "git diff --staged"]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Notation HEAD"
+        },
+        {
+          "type": "paragraph",
+          "text": "**HEAD** désigne le commit actuel. On peut référencer les commits précédents avec `HEAD~n` (n commits en arrière)."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "HEAD      # Commit actuel\nHEAD~1    # Commit précédent\nHEAD~2    # 2 commits en arrière\nHEAD~n    # n commits en arrière"
+        }
+      ]
+    },
+    {
+      "id": "annulation",
+      "title": "Annulation et Retour en Arrière",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Git permet de **corriger les erreurs** et de revenir en arrière de plusieurs manières."
+        },
+        {
+          "type": "table",
+          "headers": ["Commande", "Effet", "Quand l'utiliser"],
+          "rows": [
+            ["git reset HEAD~n", "Supprime les n derniers commits (garde les modifications)", "Pour refaire des commits mal formulés"],
+            ["git reset --hard HEAD~n", "Supprime les n derniers commits ET les modifications", "⚠️ Dangereux : perte définitive des modifications"],
+            ["git revert <commit>", "Crée un nouveau commit qui annule les modifications d'un commit", "Pour annuler un commit déjà publié"],
+            ["git clean -fd", "Supprime les fichiers non suivis (untracked)", "Pour nettoyer le répertoire de travail"]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "danger",
+          "text": "**Attention** : `git reset --hard` supprime définitivement les modifications. À utiliser avec précaution !"
+        }
+      ]
+    },
+    {
+      "id": "branches",
+      "title": "Branches et Workflow",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **branches** permettent de travailler sur des développements différents en parallèle sans impacter la branche principale."
+        },
+        {
+          "type": "table",
+          "headers": ["Commande", "Rôle", "Exemple"],
+          "rows": [
+            ["git branch", "Liste les branches locales", "git branch"],
+            ["git branch <nom>", "Crée une nouvelle branche", "git branch feature-login"],
+            ["git checkout <branche>", "Change de branche", "git checkout feature-login"],
+            ["git checkout -b <nom>", "Crée et bascule sur une nouvelle branche", "git checkout -b feature-login"],
+            ["git branch -d <nom>", "Supprime une branche (si fusionnée)", "git branch -d feature-login"],
+            ["git branch -D <nom>", "Force la suppression d'une branche", "git branch -D feature-login"]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Workflow Git Flow (Simplifié)"
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "main (production)\n  ↑\n  └── develop (développement)\n        ↑\n        ├── feature/login\n        ├── feature/dashboard\n        └── bugfix/header"
+        }
+      ]
+    },
+    {
+      "id": "merge-rebase",
+      "title": "Fusion : Merge et Rebase",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Pour intégrer les modifications d'une branche dans une autre, on utilise **merge** ou **rebase**."
+        },
+        {
+          "type": "subtitle",
+          "text": "Merge (Fusion)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **merge** fusionne deux branches en créant un commit de fusion."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Fusionner la branche feature dans main\ngit checkout main\ngit merge feature-login"
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "Le merge peut générer des **conflits** si les mêmes lignes ont été modifiées dans les deux branches."
+        },
+        {
+          "type": "subtitle",
+          "text": "Rebase (Réapplication)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **rebase** réécrit l'historique en réappliquant les commits d'une branche sur une autre, créant un historique **linéaire**."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Rebaser feature sur main\ngit checkout feature-login\ngit rebase main"
+        },
+        {
+          "type": "table",
+          "headers": ["Critère", "Merge", "Rebase"],
+          "rows": [
+            ["Historique", "Préserve l'historique complet (commits de fusion)", "Historique linéaire (réécriture)"],
+            ["Conflits", "Résolus une seule fois", "Peuvent survenir à chaque commit réappliqué"],
+            ["Utilisation", "Fusion de branches publiques", "Nettoyage de branches locales avant fusion"]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "danger",
+          "text": "**Ne jamais rebaser une branche publique** (déjà publiée sur le dépôt distant) car cela réécrit l'historique."
+        }
+      ]
+    },
+    {
+      "id": "conflits",
+      "title": "Gestion des Conflits",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un **conflit** survient lorsque Git ne peut pas fusionner automatiquement les modifications de deux branches."
+        },
+        {
+          "type": "subtitle",
+          "text": "Résolution Manuelle"
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "<<<<<<< HEAD\nCode de la branche actuelle\n=======\nCode de la branche à fusionner\n>>>>>>> feature-login"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour résoudre :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "1. Ouvrir le fichier en conflit",
+            "2. Choisir quelle version garder (ou combiner les deux)",
+            "3. Supprimer les marqueurs de conflit (`<<<<<<<`, `=======`, `>>>>>>>`)",
+            "4. Ajouter le fichier résolu au staging : `git add <fichier>`",
+            "5. Finaliser avec `git commit` (pour merge) ou `git rebase --continue` (pour rebase)"
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Conseil** : Utiliser un IDE (VS Code, IntelliJ) qui propose des outils visuels pour résoudre les conflits plus facilement."
+        }
+      ]
+    },
+    {
+      "id": "depot-distant",
+      "title": "Dépôts Distants (GitHub, GitLab)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un **dépôt distant** (remote) permet de partager le code et de collaborer en équipe. Les plateformes les plus populaires sont **GitHub**, **GitLab** et **Bitbucket**."
+        },
+        {
+          "type": "table",
+          "headers": ["Commande", "Rôle", "Exemple"],
+          "rows": [
+            ["git remote add <nom> <url>", "Connecte un dépôt distant", "git remote add origin https://github.com/user/repo.git"],
+            ["git remote -v", "Liste les dépôts distants connectés", "git remote -v"],
+            ["git push <remote> <branche>", "Publie une branche sur le dépôt distant", "git push origin main"],
+            ["git push -u origin <branche>", "Publie et configure le suivi de la branche", "git push -u origin main"],
+            ["git pull", "Récupère et fusionne les modifications du distant", "git pull origin main"],
+            ["git fetch", "Récupère les modifications sans les fusionner", "git fetch origin"],
+            ["git clone <url>", "Clone un dépôt distant en local", "git clone https://github.com/user/repo.git"]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Workflow de Collaboration"
+        },
+        {
+          "type": "list",
+          "items": [
+            "1. **Clone** : `git clone <url>` (première fois)",
+            "2. **Pull** : `git pull` (récupérer les modifications de l'équipe)",
+            "3. **Développement** : Créer une branche, coder, commiter",
+            "4. **Push** : `git push` (publier ses modifications)",
+            "5. **Pull Request** : Demander la fusion de sa branche (sur GitHub/GitLab)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outils-avances",
+      "title": "Outils Avancés",
+      "content": [
+        {
+          "type": "subtitle",
+          "text": "Tags (Versions)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les **tags** permettent d'identifier des commits importants (versions livrées)."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Créer un tag\ngit tag v1.0.0\n\n# Publier les tags\ngit push --tags"
+        },
+        {
+          "type": "subtitle",
+          "text": "Stash (Remise)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **stash** permet de \"mettre de côté\" temporairement des modifications non commitées."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Sauvegarder les modifications\ngit stash\n\n# Lister les stash\ngit stash list\n\n# Réappliquer le dernier stash\ngit stash pop"
+        },
+        {
+          "type": "subtitle",
+          "text": ".gitignore"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le fichier **.gitignore** permet d'ignorer certains fichiers/dossiers (dépendances, fichiers de build, etc.)."
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "# Exemple .gitignore\nnode_modules/\n*.log\n.env\ndist/\nbuild/"
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Git est un système de contrôle de version distribué (DVCS) permettant de travailler localement.",
+    "Les commits enregistrent l'historique des modifications de manière atomique.",
+    "Les branches permettent de travailler sur des fonctionnalités en parallèle.",
+    "Le merge fusionne deux branches, le rebase réécrit l'historique de manière linéaire.",
+    "Les conflits surviennent quand les mêmes lignes sont modifiées dans deux branches.",
+    "Les dépôts distants (GitHub, GitLab) permettent la collaboration en équipe.",
+    "git pull = git fetch + git merge (récupère et fusionne les modifications distantes)."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Documentation officielle Git",
+      "url": "https://git-scm.com/doc"
+    },
+    {
+      "type": "interactive",
+      "title": "Learn Git Branching (interactif)",
+      "url": "https://learngitbranching.js.org/"
+    }
+  ]
+}

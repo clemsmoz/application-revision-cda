@@ -1,0 +1,544 @@
+{
+  "id": "bloc1-securite",
+  "bloc": "bloc1",
+  "title": "Sécurité des Applications Web",
+  "icon": "🔒",
+  "color": "#EF4444",
+  "description": "La sécurité des applications web est essentielle pour protéger les données des utilisateurs et l'intégrité du système. Ce module couvre les vulnérabilités courantes (OWASP Top 10) et les bonnes pratiques de sécurisation.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction à la Sécurité Web",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "La **sécurité des applications web** vise à protéger les applications contre les attaques malveillantes. Les vulnérabilités peuvent entraîner des fuites de données, des pertes financières et une atteinte à la réputation."
+        },
+        {
+          "type": "definition",
+          "term": "OWASP",
+          "definition": "Open Web Application Security Project : organisation à but non lucratif qui publie le Top 10 des vulnérabilités web les plus critiques."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Principe de Sécurité",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Confidentialité",
+              "Les données ne sont accessibles qu'aux personnes autorisées"
+            ],
+            [
+              "Intégrité",
+              "Les données ne peuvent pas être modifiées sans autorisation"
+            ],
+            [
+              "Disponibilité",
+              "Le système reste accessible aux utilisateurs légitimes"
+            ],
+            [
+              "Authentification",
+              "Vérifier l'identité des utilisateurs"
+            ],
+            [
+              "Autorisation",
+              "Contrôler les permissions d'accès"
+            ],
+            [
+              "Non-répudiation",
+              "Traçabilité des actions (logs, audit)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "owasp-top10",
+      "title": "OWASP Top 10 (2021)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **OWASP Top 10** liste les 10 vulnérabilités web les plus critiques. Tout développeur doit les connaître et savoir s'en protéger."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Rang",
+            "Vulnérabilité",
+            "Description"
+          ],
+          "rows": [
+            [
+              "A01",
+              "Broken Access Control",
+              "Contrôle d'accès défaillant (accès non autorisé aux ressources)"
+            ],
+            [
+              "A02",
+              "Cryptographic Failures",
+              "Échecs cryptographiques (données sensibles non chiffrées)"
+            ],
+            [
+              "A03",
+              "Injection",
+              "Injection SQL, NoSQL, OS, LDAP (données malveillantes dans les requêtes)"
+            ],
+            [
+              "A04",
+              "Insecure Design",
+              "Conception non sécurisée (failles dès la conception)"
+            ],
+            [
+              "A05",
+              "Security Misconfiguration",
+              "Mauvaise configuration (permissions, erreurs exposées)"
+            ],
+            [
+              "A06",
+              "Vulnerable Components",
+              "Composants vulnérables (bibliothèques obsolètes)"
+            ],
+            [
+              "A07",
+              "Authentication Failures",
+              "Échecs d'authentification (mots de passe faibles, sessions)"
+            ],
+            [
+              "A08",
+              "Software and Data Integrity",
+              "Intégrité logicielle et des données (CI/CD non sécurisé)"
+            ],
+            [
+              "A09",
+              "Logging and Monitoring",
+              "Journalisation insuffisante (attaques non détectées)"
+            ],
+            [
+              "A10",
+              "Server-Side Request Forgery",
+              "SSRF : requêtes forgées côté serveur"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "injection-sql",
+      "title": "Injection SQL",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Injection SQL",
+          "definition": "Vulnérabilité permettant à un attaquant d'injecter du code SQL malveillant dans une requête, pouvant entraîner la lecture, modification ou suppression de données."
+        },
+        {
+          "type": "subtitle",
+          "text": "Exemple d'Attaque"
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Code vulnérable (PHP)\n$email = $_POST['email'];\n$password = $_POST['password'];\n$query = \"SELECT * FROM users WHERE email='$email' AND password='$password'\";\n\n-- Attaque : l'user entre comme email :\n' OR '1'='1' --\n\n-- Requête résultante (contourne l'authentification) :\nSELECT * FROM users WHERE email='' OR '1'='1' --' AND password='...'"
+        },
+        {
+          "type": "subtitle",
+          "text": "Protection : Requêtes Préparées"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// ✅ Utiliser des requêtes préparées (PDO)\n$stmt = $pdo->prepare(\"SELECT * FROM users WHERE email = ? AND password = ?\");\n$stmt->execute([$email, $password]);\n\n// Ou avec des paramètres nommés\n$stmt = $pdo->prepare(\"SELECT * FROM users WHERE email = :email AND password = :password\");\n$stmt->execute(['email' => $email, 'password' => $password]);"
+        },
+        {
+          "type": "alert",
+          "level": "danger",
+          "text": "**Ne JAMAIS concaténer des données utilisateur dans des requêtes SQL.** Toujours utiliser des requêtes préparées (prepared statements)."
+        }
+      ]
+    },
+    {
+      "id": "xss",
+      "title": "XSS (Cross-Site Scripting)",
+      "content": [
+        {
+          "type": "definition",
+          "term": "XSS (Cross-Site Scripting)",
+          "definition": "Vulnérabilité permettant à un attaquant d'injecter du code JavaScript malveillant dans une page web, exécuté dans le navigateur des victimes."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type XSS",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Reflected XSS",
+              "Script injecté via URL, reflété dans la réponse",
+              "URL : ?search=<script>alert('XSS')</script>"
+            ],
+            [
+              "Stored XSS",
+              "Script stocké en base de données, exécuté à chaque affichage",
+              "Commentaire malveillant enregistré"
+            ],
+            [
+              "DOM-based XSS",
+              "Script injecté via manipulation du DOM côté client",
+              "document.write(location.hash)"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Exemple d'Attaque"
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<!-- Code vulnérable (PHP) -->\n<p>Hello <?php echo $_GET['name']; ?></p>\n\n<!-- Attaque : URL avec ?name=<script>alert('XSS')</script> -->\n<!-- Résultat : le script s'exécute dans le navigateur -->"
+        },
+        {
+          "type": "subtitle",
+          "text": "Protection : Échappement des Données"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// ✅ Échapper les données avant affichage\n<p>Hello <?php echo htmlspecialchars($_GET['name'], ENT_QUOTES, 'UTF-8'); ?></p>\n\n// En JavaScript\nconst name = '<script>alert(\"XSS\")</script>';\nelement.textContent = name; // ✅ Échappe automatiquement\nelement.innerHTML = name;   // ❌ Dangereux !"
+        },
+        {
+          "type": "alert",
+          "level": "danger",
+          "text": "**Toujours échapper les données utilisateur** avant de les afficher dans le HTML. Utiliser `htmlspecialchars()` en PHP, `textContent` en JS."
+        }
+      ]
+    },
+    {
+      "id": "csrf",
+      "title": "CSRF (Cross-Site Request Forgery)",
+      "content": [
+        {
+          "type": "definition",
+          "term": "CSRF (Cross-Site Request Forgery)",
+          "definition": "Vulnérabilité permettant à un attaquant de forcer un utilisateur authentifié à exécuter des actions non désirées sur une application web."
+        },
+        {
+          "type": "subtitle",
+          "text": "Exemple d'Attaque"
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<!-- Site malveillant contenant : -->\n<img src=\"https://banque.com/transfer?to=attacker&amount=1000\" />\n\n<!-- Si l'user est connecté à banque.com, la requête s'exécute -->"
+        },
+        {
+          "type": "subtitle",
+          "text": "Protection : Token CSRF"
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<!-- ✅ Ajouter un token CSRF dans les formulaires -->\n<form method=\"POST\" action=\"/transfer\">\n  <input type=\"hidden\" name=\"csrf_token\" value=\"<?php echo $_SESSION['csrf_token']; ?>\" />\n  <input type=\"text\" name=\"amount\" />\n  <button type=\"submit\">Transférer</button>\n</form>"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// Vérifier le token côté serveur\nif ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {\n  die('CSRF token invalide');\n}"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Utiliser des tokens CSRF** pour toutes les actions sensibles (modification, suppression, paiement)."
+        }
+      ]
+    },
+    {
+      "id": "authentification",
+      "title": "Authentification Sécurisée",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'**authentification** vérifie l'identité des utilisateurs. Elle doit être robuste pour éviter les accès non autorisés."
+        },
+        {
+          "type": "subtitle",
+          "text": "Stockage des Mots de Passe"
+        },
+        {
+          "type": "alert",
+          "level": "danger",
+          "text": "**Ne JAMAIS stocker les mots de passe en clair** dans la base de données. Toujours les hacher avec un algorithme sécurisé."
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// ❌ MAUVAIS : stocker en clair\n$password = $_POST['password'];\nINSERT INTO users (email, password) VALUES ('...', '$password');\n\n// ✅ BON : hacher avec bcrypt\n$hash = password_hash($_POST['password'], PASSWORD_BCRYPT);\nINSERT INTO users (email, password) VALUES ('...', '$hash');\n\n// Vérification\nif (password_verify($_POST['password'], $hash)) {\n  // Mot de passe correct\n}"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Algorithme",
+            "Sécurité",
+            "Recommandation"
+          ],
+          "rows": [
+            [
+              "MD5",
+              "❌ Obsolète",
+              "Ne JAMAIS utiliser"
+            ],
+            [
+              "SHA-1",
+              "❌ Obsolète",
+              "Ne JAMAIS utiliser"
+            ],
+            [
+              "bcrypt",
+              "✅ Sécurisé",
+              "Recommandé (PHP : password_hash)"
+            ],
+            [
+              "Argon2",
+              "✅ Très sécurisé",
+              "Recommandé (plus récent)"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Bonnes Pratiques"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Politique de mots de passe forts** : longueur minimale (12 caractères), complexité",
+            "**Limitation des tentatives** : bloquer après X échecs (brute force)",
+            "**Authentification à deux facteurs (2FA)** : SMS, application, clé physique",
+            "**Sessions sécurisées** : cookies HttpOnly, Secure, SameSite",
+            "**Expiration des sessions** : déconnexion automatique après inactivité"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autorisation",
+      "title": "Contrôle d'Accès et Autorisation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'**autorisation** contrôle les permissions d'accès aux ressources. Un utilisateur authentifié ne doit pas pouvoir accéder à toutes les ressources."
+        },
+        {
+          "type": "subtitle",
+          "text": "Principe du Moindre Privilège"
+        },
+        {
+          "type": "paragraph",
+          "text": "Chaque utilisateur ne doit avoir que les permissions **strictement nécessaires** à son rôle."
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// ❌ MAUVAIS : pas de vérification\n$user_id = $_GET['id'];\n$user = getUser($user_id); // N'importe qui peut voir n'importe quel profil\n\n// ✅ BON : vérifier les permissions\n$user_id = $_GET['id'];\nif ($user_id !== $_SESSION['user_id'] && !isAdmin($_SESSION['user_id'])) {\n  die('Accès refusé');\n}\n$user = getUser($user_id);"
+        },
+        {
+          "type": "subtitle",
+          "text": "RBAC (Role-Based Access Control)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Attribuer des **rôles** aux utilisateurs (admin, éditeur, lecteur) et des **permissions** aux rôles."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Tables pour RBAC\nCREATE TABLE roles (\n  id INT PRIMARY KEY,\n  name VARCHAR(50)\n);\n\nCREATE TABLE permissions (\n  id INT PRIMARY KEY,\n  name VARCHAR(50)\n);\n\nCREATE TABLE role_permissions (\n  role_id INT,\n  permission_id INT,\n  FOREIGN KEY (role_id) REFERENCES roles(id),\n  FOREIGN KEY (permission_id) REFERENCES permissions(id)\n);\n\nCREATE TABLE user_roles (\n  user_id INT,\n  role_id INT,\n  FOREIGN KEY (user_id) REFERENCES users(id),\n  FOREIGN KEY (role_id) REFERENCES roles(id)\n);"
+        }
+      ]
+    },
+    {
+      "id": "https",
+      "title": "HTTPS et Chiffrement",
+      "content": [
+        {
+          "type": "definition",
+          "term": "HTTPS",
+          "definition": "HTTP Secure : protocole de communication sécurisé utilisant TLS/SSL pour chiffrer les échanges entre le client et le serveur."
+        },
+        {
+          "type": "paragraph",
+          "text": "**HTTPS** protège contre l'interception des données (man-in-the-middle) et garantit l'authenticité du serveur."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "HTTP",
+            "HTTPS"
+          ],
+          "rows": [
+            [
+              "Données en clair",
+              "Données chiffrées"
+            ],
+            [
+              "Port 80",
+              "Port 443"
+            ],
+            [
+              "Vulnérable aux écoutes",
+              "Protégé contre les écoutes"
+            ],
+            [
+              "Pas de certificat",
+              "Certificat SSL/TLS requis"
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "danger",
+          "text": "**Toujours utiliser HTTPS** pour les applications web, surtout celles manipulant des données sensibles (authentification, paiement)."
+        },
+        {
+          "type": "subtitle",
+          "text": "Obtenir un Certificat SSL/TLS"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Let's Encrypt** : certificats gratuits et automatisés",
+            "**Cloudflare** : certificats gratuits avec CDN",
+            "**Autorités de certification commerciales** : DigiCert, Comodo, etc."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "headers",
+      "title": "En-têtes de Sécurité HTTP",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **en-têtes HTTP de sécurité** permettent de renforcer la sécurité des applications web."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "En-tête",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Content-Security-Policy",
+              "Contrôle les sources de contenu autorisées (XSS)",
+              "default-src 'self'"
+            ],
+            [
+              "X-Frame-Options",
+              "Empêche le clickjacking",
+              "DENY ou SAMEORIGIN"
+            ],
+            [
+              "X-Content-Type-Options",
+              "Empêche le MIME sniffing",
+              "nosniff"
+            ],
+            [
+              "Strict-Transport-Security",
+              "Force HTTPS (HSTS)",
+              "max-age=31536000"
+            ],
+            [
+              "X-XSS-Protection",
+              "Active la protection XSS du navigateur",
+              "1; mode=block"
+            ],
+            [
+              "Referrer-Policy",
+              "Contrôle les informations de référent",
+              "no-referrer"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// Ajouter des en-têtes de sécurité en PHP\nheader(\"Content-Security-Policy: default-src 'self'\");\nheader(\"X-Frame-Options: DENY\");\nheader(\"X-Content-Type-Options: nosniff\");\nheader(\"Strict-Transport-Security: max-age=31536000\");"
+        }
+      ]
+    },
+    {
+      "id": "validation",
+      "title": "Validation et Sanitisation des Données",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Ne jamais faire confiance aux données utilisateur.** Toujours valider et nettoyer les entrées."
+        },
+        {
+          "type": "subtitle",
+          "text": "Validation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vérifier que les données respectent le format attendu."
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// Validation d'un email\nif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {\n  die('Email invalide');\n}\n\n// Validation d'un nombre\nif (!is_numeric($age) || $age < 0 || $age > 150) {\n  die('Âge invalide');\n}"
+        },
+        {
+          "type": "subtitle",
+          "text": "Sanitisation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nettoyer les données pour supprimer les caractères dangereux."
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// Sanitiser un email\n$email = filter_var($email, FILTER_SANITIZE_EMAIL);\n\n// Sanitiser une chaîne\n$name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Valider côté serveur ET côté client.** La validation client améliore l'UX, mais la validation serveur est obligatoire (le client peut être contourné)."
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "OWASP Top 10 : les 10 vulnérabilités web les plus critiques à connaître.",
+    "Injection SQL : utiliser des requêtes préparées (prepared statements).",
+    "XSS : échapper les données utilisateur avant affichage (htmlspecialchars).",
+    "CSRF : utiliser des tokens CSRF pour les actions sensibles.",
+    "Mots de passe : toujours hacher avec bcrypt ou Argon2, jamais en clair.",
+    "HTTPS : obligatoire pour protéger les données en transit.",
+    "Contrôle d'accès : vérifier les permissions (principe du moindre privilège).",
+    "Validation : ne jamais faire confiance aux données utilisateur (valider et sanitiser)."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "OWASP Top 10 (2021)",
+      "url": "https://owasp.org/Top10/"
+    },
+    {
+      "type": "doc",
+      "title": "OWASP Cheat Sheet Series",
+      "url": "https://cheatsheetseries.owasp.org/"
+    },
+    {
+      "type": "tool",
+      "title": "Security Headers (tester les en-têtes)",
+      "url": "https://securityheaders.com/"
+    }
+  ]
+}

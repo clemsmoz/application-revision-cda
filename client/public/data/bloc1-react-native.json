@@ -1,0 +1,114 @@
+{
+  "id": "bloc1-react-native",
+  "bloc": "bloc1",
+  "title": "React Native",
+  "icon": "📱",
+  "color": "#61DAFB",
+  "description": "React Native permet de créer des applications mobiles natives (iOS et Android) en utilisant React et JavaScript.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction à React Native",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "React Native est un framework open-source créé par Meta (Facebook) qui permet de développer des applications mobiles natives en utilisant React. Le code JavaScript est compilé en composants natifs iOS et Android."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Avantage",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Code partagé",
+              "Un seul code pour iOS et Android"
+            ],
+            [
+              "Performance native",
+              "Utilise les composants natifs de la plateforme"
+            ],
+            [
+              "Hot Reload",
+              "Voir les changements instantanément"
+            ],
+            [
+              "Écosystème React",
+              "Utilise les concepts de React (composants, hooks, state)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "components",
+      "title": "Composants React Native",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Composant",
+            "Équivalent Web",
+            "Usage"
+          ],
+          "rows": [
+            [
+              "View",
+              "div",
+              "Conteneur de base"
+            ],
+            [
+              "Text",
+              "span/p",
+              "Affichage de texte"
+            ],
+            [
+              "Image",
+              "img",
+              "Affichage d'images"
+            ],
+            [
+              "ScrollView",
+              "div scrollable",
+              "Zone défilante"
+            ],
+            [
+              "TextInput",
+              "input",
+              "Saisie de texte"
+            ],
+            [
+              "TouchableOpacity",
+              "button",
+              "Bouton tactile"
+            ],
+            [
+              "FlatList",
+              "ul/ol",
+              "Liste optimisée"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "import { View, Text, StyleSheet } from 'react-native';\n\nexport default function App() {\n  return (\n    <View style={styles.container}>\n      <Text style={styles.title}>Hello React Native!</Text>\n    </View>\n  );\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    justifyContent: 'center',\n    alignItems: 'center',\n  },\n  title: {\n    fontSize: 24,\n    fontWeight: 'bold',\n  },\n});"
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "React Native permet de créer des apps mobiles natives avec JavaScript.",
+    "Un seul code pour iOS et Android.",
+    "Utilise les composants natifs de la plateforme.",
+    "Hot Reload pour voir les changements instantanément."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "React Native Docs",
+      "url": "https://reactnative.dev/"
+    }
+  ]
+}

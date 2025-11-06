@@ -1,0 +1,777 @@
+{
+  "id": "bloc1-javascript-poo",
+  "bloc": "bloc1",
+  "title": "JavaScript : Initiation et POO",
+  "icon": "⚡",
+  "color": "#F59E0B",
+  "description": "JavaScript est le langage de programmation du Web. 100% interprété, 100% objet, il permet de créer des applications web interactives et modernes.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Le Langage du Web",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "JavaScript est **le** langage de programmation du Web. Il est exécuté directement dans le navigateur et permet de rendre les pages web dynamiques et interactives."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Caractéristique",
+            "Description"
+          ],
+          "rows": [
+            [
+              "100% Interprété",
+              "Pas de compilation nécessaire, exécuté directement par le navigateur"
+            ],
+            [
+              "100% Objet",
+              "Tout est objet (sauf les primitives), programmation orientée objet native"
+            ],
+            [
+              "100% Web",
+              "Fonctionne côté client (navigateur) et côté serveur (Node.js)"
+            ],
+            [
+              "Typage Dynamique",
+              "Les types sont déterminés à l'exécution, pas de déclaration de type"
+            ],
+            [
+              "Event-Driven",
+              "Réagit aux événements utilisateur (clics, saisies, etc.)"
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Environnement de travail** : Utiliser VS Code avec les extensions ESLint et Prettier pour un code propre et maintenable."
+        }
+      ]
+    },
+    {
+      "id": "variables",
+      "title": "Variables et Types de Données",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Une **variable** est un identifiant associé à une valeur. En JavaScript moderne (ES6+), on utilise `let` (variable modifiable) et `const` (constante)."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Déclaration avec let (valeur modifiable)\nlet age = 25;\nage = 26; // ✅ OK\n\n// Déclaration avec const (constante)\nconst name = \"Alice\";\nname = \"Bob\"; // ❌ Erreur : impossible de réassigner une constante\n\n// ⚠️ Éviter var (ancienne syntaxe, portée globale)"
+        },
+        {
+          "type": "subtitle",
+          "text": "Types de Données Primitifs"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "number",
+              "Nombres entiers et décimaux",
+              "let age = 25; let prix = 19.99;"
+            ],
+            [
+              "string",
+              "Chaînes de caractères",
+              "let nom = \"Alice\"; let message = `Bonjour ${nom}`;"
+            ],
+            [
+              "boolean",
+              "Vrai ou Faux",
+              "let estMajeur = true;"
+            ],
+            [
+              "undefined",
+              "Variable déclarée mais non initialisée",
+              "let x; // x vaut undefined"
+            ],
+            [
+              "null",
+              "Absence intentionnelle de valeur",
+              "let user = null;"
+            ],
+            [
+              "symbol",
+              "Identifiant unique (avancé)",
+              "let id = Symbol('id');"
+            ],
+            [
+              "bigint",
+              "Très grands entiers",
+              "let big = 9007199254740991n;"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Convention de Nommage : camelCase"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// ✅ Bon (camelCase)\nlet firstName = \"Alice\";\nlet userAge = 25;\nlet isLoggedIn = true;\n\n// ❌ Mauvais\nlet first_name = \"Alice\"; // snake_case (Python)\nlet FirstName = \"Alice\";  // PascalCase (réservé aux classes)"
+        }
+      ]
+    },
+    {
+      "id": "operateurs",
+      "title": "Opérateurs",
+      "content": [
+        {
+          "type": "subtitle",
+          "text": "Opérateurs Arithmétiques"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Opérateur",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "+",
+              "Addition",
+              "5 + 3 → 8"
+            ],
+            [
+              "-",
+              "Soustraction",
+              "5 - 3 → 2"
+            ],
+            [
+              "*",
+              "Multiplication",
+              "5 * 3 → 15"
+            ],
+            [
+              "/",
+              "Division",
+              "10 / 2 → 5"
+            ],
+            [
+              "%",
+              "Modulo (reste de la division)",
+              "10 % 3 → 1"
+            ],
+            [
+              "**",
+              "Puissance",
+              "2 ** 3 → 8"
+            ],
+            [
+              "++",
+              "Incrémentation",
+              "let x = 5; x++; // x = 6"
+            ],
+            [
+              "--",
+              "Décrémentation",
+              "let x = 5; x--; // x = 4"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Opérateurs de Comparaison"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Opérateur",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "==",
+              "Égalité (avec conversion de type)",
+              "5 == '5' → true ⚠️"
+            ],
+            [
+              "===",
+              "Égalité stricte (sans conversion)",
+              "5 === '5' → false ✅"
+            ],
+            [
+              "!=",
+              "Différence (avec conversion)",
+              "5 != '5' → false"
+            ],
+            [
+              "!==",
+              "Différence stricte",
+              "5 !== '5' → true ✅"
+            ],
+            [
+              ">",
+              "Supérieur",
+              "5 > 3 → true"
+            ],
+            [
+              "<",
+              "Inférieur",
+              "5 < 3 → false"
+            ],
+            [
+              ">=",
+              "Supérieur ou égal",
+              "5 >= 5 → true"
+            ],
+            [
+              "<=",
+              "Inférieur ou égal",
+              "3 <= 5 → true"
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**Toujours utiliser === et !== (égalité stricte)** pour éviter les conversions de type implicites et les bugs."
+        },
+        {
+          "type": "subtitle",
+          "text": "Opérateurs Logiques"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Opérateur",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "&&",
+              "ET logique (AND)",
+              "(age >= 18) && (hasLicense) → true si les deux sont vrais"
+            ],
+            [
+              "||",
+              "OU logique (OR)",
+              "(age < 18) || (isStudent) → true si au moins un est vrai"
+            ],
+            [
+              "!",
+              "NON logique (NOT)",
+              "!isLoggedIn → inverse la valeur booléenne"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Short-Circuit Operators"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// && : retourne la première valeur fausse ou la dernière si toutes sont vraies\nlet result = true && \"Hello\"; // \"Hello\"\nlet result2 = false && \"Hello\"; // false\n\n// || : retourne la première valeur vraie ou la dernière si toutes sont fausses\nlet name = userName || \"Invité\"; // Si userName est vide, utilise \"Invité\"\n\n// ?? (Nullish Coalescing) : retourne la valeur de droite si la gauche est null ou undefined\nlet age = userAge ?? 18; // Si userAge est null/undefined, utilise 18"
+        }
+      ]
+    },
+    {
+      "id": "structures-conditionnelles",
+      "title": "Structures Conditionnelles",
+      "content": [
+        {
+          "type": "subtitle",
+          "text": "if / else"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "let age = 20;\n\nif (age >= 18) {\n  console.log(\"Majeur\");\n} else {\n  console.log(\"Mineur\");\n}\n\n// if / else if / else\nif (age < 13) {\n  console.log(\"Enfant\");\n} else if (age < 18) {\n  console.log(\"Adolescent\");\n} else {\n  console.log(\"Adulte\");\n}"
+        },
+        {
+          "type": "subtitle",
+          "text": "switch / case"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "let jour = \"lundi\";\n\nswitch (jour) {\n  case \"lundi\":\n  case \"mardi\":\n  case \"mercredi\":\n  case \"jeudi\":\n  case \"vendredi\":\n    console.log(\"Jour de travail\");\n    break;\n  case \"samedi\":\n  case \"dimanche\":\n    console.log(\"Week-end\");\n    break;\n  default:\n    console.log(\"Jour invalide\");\n}"
+        },
+        {
+          "type": "subtitle",
+          "text": "Opérateur Ternaire (Condition Inline)"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Syntaxe : condition ? valeurSiVrai : valeurSiFaux\nlet age = 20;\nlet statut = age >= 18 ? \"Majeur\" : \"Mineur\";\n\n// Équivalent à :\nlet statut;\nif (age >= 18) {\n  statut = \"Majeur\";\n} else {\n  statut = \"Mineur\";\n}"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Valeurs Falsy en JavaScript** : `false`, `0`, `\"\"` (chaîne vide), `null`, `undefined`, `NaN`. Toutes les autres valeurs sont **truthy**."
+        }
+      ]
+    },
+    {
+      "id": "structures-iteratives",
+      "title": "Structures Itératives (Boucles)",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Boucle",
+            "Syntaxe",
+            "Utilisation"
+          ],
+          "rows": [
+            [
+              "while",
+              "while (condition) { ... }",
+              "Tant que la condition est vraie (pré-testée)"
+            ],
+            [
+              "do...while",
+              "do { ... } while (condition);",
+              "Au moins un passage (post-testée)"
+            ],
+            [
+              "for",
+              "for (init; condition; incr) { ... }",
+              "Nombre d'itérations connu"
+            ],
+            [
+              "for...of",
+              "for (let item of array) { ... }",
+              "Parcourir les valeurs d'un tableau"
+            ],
+            [
+              "for...in",
+              "for (let key in object) { ... }",
+              "Parcourir les clés d'un objet"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Exemples"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// for classique\nfor (let i = 0; i < 5; i++) {\n  console.log(i); // 0, 1, 2, 3, 4\n}\n\n// for...of (parcourir un tableau)\nlet fruits = [\"apple\", \"banana\", \"orange\"];\nfor (let fruit of fruits) {\n  console.log(fruit); // pomme, banane, orange\n}\n\n// while\nlet i = 0;\nwhile (i < 3) {\n  console.log(i);\n  i++;\n}\n\n// break et continue\nfor (let i = 0; i < 10; i++) {\n  if (i === 3) continue; // Saute l'itération 3\n  if (i === 7) break;    // Arrête la boucle à 7\n  console.log(i);\n}"
+        },
+        {
+          "type": "alert",
+          "level": "danger",
+          "text": "**Attention aux boucles infinies !** Toujours vérifier que la condition de sortie peut être atteinte."
+        }
+      ]
+    },
+    {
+      "id": "tableaux",
+      "title": "Tableaux (Arrays)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un **tableau** est une collection ordonnée d'éléments. Les indices commencent à **0**."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Déclaration\nlet fruits = [\"apple\", \"banana\", \"orange\"];\nlet nombres = [1, 2, 3, 4, 5];\nlet mixte = [\"texte\", 42, true, null]; // Peut contenir différents types\n\n// Accès aux éléments\nconsole.log(fruits[0]); // \"pomme\"\nconsole.log(fruits[2]); // \"orange\"\n\n// Longueur du tableau\nconsole.log(fruits.length); // 3\n\n// Modifier un élément\nfruits[1] = \"fraise\";\nconsole.log(fruits); // [\"pomme\", \"fraise\", \"orange\"]"
+        },
+        {
+          "type": "subtitle",
+          "text": "Méthodes de Tableaux Essentielles"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Méthode",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "push()",
+              "Ajoute un élément à la fin",
+              "fruits.push(\"kiwi\")"
+            ],
+            [
+              "pop()",
+              "Retire le dernier élément",
+              "fruits.pop()"
+            ],
+            [
+              "unshift()",
+              "Ajoute un élément au début",
+              "fruits.unshift(\"mangue\")"
+            ],
+            [
+              "shift()",
+              "Retire le premier élément",
+              "fruits.shift()"
+            ],
+            [
+              "splice()",
+              "Ajoute/retire des éléments à une position",
+              "fruits.splice(1, 1, \"poire\")"
+            ],
+            [
+              "slice()",
+              "Extrait une portion du tableau",
+              "fruits.slice(1, 3)"
+            ],
+            [
+              "indexOf()",
+              "Trouve l'index d'un élément",
+              "fruits.indexOf(\"banane\")"
+            ],
+            [
+              "includes()",
+              "Vérifie si un élément existe",
+              "fruits.includes(\"pomme\")"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Tableaux Multidimensionnels (Matrices)"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Tableau 2D (matrice 3x3)\nlet matrice = [\n  [1, 2, 3],\n  [4, 5, 6],\n  [7, 8, 9]\n];\n\n// Accès : matrice[ligne][colonne]\nconsole.log(matrice[1][2]); // 6\n\n// Parcours avec boucles imbriquées\nfor (let i = 0; i < matrice.length; i++) {\n  for (let j = 0; j < matrice[i].length; j++) {\n    console.log(matrice[i][j]);\n  }\n}"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Destructuring** : `let [a, b] = [1, 2];` permet d'extraire facilement les valeurs d'un tableau."
+        }
+      ]
+    },
+    {
+      "id": "fonctions",
+      "title": "Fonctions",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **fonctions** permettent de regrouper du code réutilisable, d'améliorer la lisibilité et de simplifier la maintenance."
+        },
+        {
+          "type": "subtitle",
+          "text": "Déclaration de Fonction"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Fonction classique\nfunction greet(name) {\n  return `Hello ${name} !`;\n}\n\nconsole.log(greet(\"Alice\")); // \"Hello, Alice !\"\n\n// Fonction avec plusieurs paramètres\nfunction add(a, b) {\n  return a + b;\n}\n\nconsole.log(add(5, 3)); // 8"
+        },
+        {
+          "type": "subtitle",
+          "text": "Expression de Fonction (Function Expression)"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Fonction anonyme assignée à une variable\nconst multiply = function(a, b) {\n  return a * b;\n};\n\nconsole.log(multiply(4, 5)); // 20"
+        },
+        {
+          "type": "subtitle",
+          "text": "Arrow Functions (Fonctions Fléchées)"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Syntaxe concise\nconst carre = (x) => x * x;\nconsole.log(carre(5)); // 25\n\n// Avec plusieurs paramètres\nconst add = (a, b) => a + b;\n\n// Avec un corps de fonction\nconst greet = (name) => {\n  const message = `Hello ${name}`;\n  return message;\n};"
+        },
+        {
+          "type": "subtitle",
+          "text": "Paramètres par Défaut"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "function greet(name = \"Invité\") {\n  return `Hello ${name}`;\n}\n\nconsole.log(greet());        // \"Hello, Invité\"\nconsole.log(greet(\"Alice\")); // \"Hello, Alice\""
+        },
+        {
+          "type": "subtitle",
+          "text": "Rest Parameter (...args)"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Fonction variadique (nombre variable de paramètres)\nfunction somme(...nombres) {\n  return nombres.reduce((acc, n) => acc + n, 0);\n}\n\nconsole.log(somme(1, 2, 3));       // 6\nconsole.log(somme(1, 2, 3, 4, 5)); // 15"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Passage par valeur vs référence** : Les primitives (number, string, boolean) sont passées par valeur. Les objets et tableaux sont passés par référence."
+        }
+      ]
+    },
+    {
+      "id": "poo",
+      "title": "Programmation Orientée Objet (POO)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "JavaScript est un langage **orienté objet** basé sur les prototypes. Depuis ES6, on utilise la syntaxe `class` pour créer des objets."
+        },
+        {
+          "type": "subtitle",
+          "text": "Définition d'une Classe"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "class Personne {\n  // Constructeur (appelé lors de l'instanciation)\n  constructor(name, age) {\n    this.name = name;   // Propriété\n    this.age = age;\n  }\n\n  // Méthode\n  sePresenter() {\n    return `Je m'appelle ${this.name} et j'ai ${this.age} ans.`;\n  }\n}\n\n// Instanciation (création d'un objet)\nconst alice = new Personne(\"Alice\", 25);\nconsole.log(alice.sePresenter()); // \"Je m'appelle Alice et j'ai 25 ans.\""
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**this** représente l'instance actuelle de la classe. Dans le constructeur, `this` est l'objet en cours de création."
+        },
+        {
+          "type": "subtitle",
+          "text": "Modificateurs d'Accès"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Modificateur",
+            "Accès",
+            "Syntaxe"
+          ],
+          "rows": [
+            [
+              "public",
+              "Accessible de partout (par défaut)",
+              "this.nom"
+            ],
+            [
+              "private",
+              "Accessible uniquement dans la classe",
+              "#proprietePrivee"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "class CompteBancaire {\n  #solde; // Propriété privée (préfixe #)\n\n  constructor(soldeInitial) {\n    this.#solde = soldeInitial;\n  }\n\n  deposer(montant) {\n    this.#solde += montant;\n  }\n\n  getSolde() {\n    return this.#solde; // Accessible via une méthode publique\n  }\n}\n\nconst compte = new CompteBancaire(1000);\nconsole.log(compte.#solde); // ❌ Erreur : propriété privée\nconsole.log(compte.getSolde()); // ✅ 1000"
+        },
+        {
+          "type": "subtitle",
+          "text": "Méthodes et Propriétés Statiques"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les membres **statiques** appartiennent à la classe elle-même, pas aux instances."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "class Calculatrice {\n  static PI = 3.14159; // Propriété statique\n\n  static carre(x) {    // Méthode statique\n    return x * x;\n  }\n}\n\n// Accès sans instanciation\nconsole.log(Calculatrice.PI);      // 3.14159\nconsole.log(Calculatrice.carre(5)); // 25\n\n// ❌ Pas de 'this' dans une méthode statique"
+        }
+      ]
+    },
+    {
+      "id": "heritage",
+      "title": "Héritage",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'**héritage** permet à une classe enfant d'hériter des propriétés et méthodes d'une classe parente. En JavaScript, l'héritage est **unique** (une seule classe parente)."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Classe parente\nclass Animal {\n  constructor(name) {\n    this.name = name;\n  }\n\n  parler() {\n    return `${this.name} fait un bruit.`;\n  }\n}\n\n// Classe enfant (hérite d'Animal)\nclass Chien extends Animal {\n  constructor(name, race) {\n    super(name); // Appel du constructeur parent\n    this.race = race;\n  }\n\n  // Surcharge (override) de la méthode parler\n  parler() {\n    return `${this.name} aboie !`;\n  }\n\n  // Nouvelle méthode spécifique\n  courir() {\n    return `${this.name} court vite !`;\n  }\n}\n\nconst rex = new Chien(\"Rex\", \"Berger Allemand\");\nconsole.log(rex.parler());  // \"Rex aboie !\"\nconsole.log(rex.courir());  // \"Rex court vite !\""
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**super()** doit être appelé AVANT d'utiliser `this` dans le constructeur de la classe enfant."
+        },
+        {
+          "type": "subtitle",
+          "text": "Relation de Spécialisation / Généralisation"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'héritage représente une relation **\"est un\"** : un Chien **est un** Animal."
+        }
+      ]
+    },
+    {
+      "id": "classes-built-in",
+      "title": "Classes Built-in (Intégrées)",
+      "content": [
+        {
+          "type": "subtitle",
+          "text": "Math (100% Statique)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Méthode/Propriété",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Math.PI",
+              "Constante π",
+              "Math.PI → 3.14159..."
+            ],
+            [
+              "Math.abs(x)",
+              "Valeur absolue",
+              "Math.abs(-5) → 5"
+            ],
+            [
+              "Math.round(x)",
+              "Arrondi",
+              "Math.round(4.7) → 5"
+            ],
+            [
+              "Math.floor(x)",
+              "Arrondi inférieur",
+              "Math.floor(4.7) → 4"
+            ],
+            [
+              "Math.ceil(x)",
+              "Arrondi supérieur",
+              "Math.ceil(4.3) → 5"
+            ],
+            [
+              "Math.random()",
+              "Nombre aléatoire [0, 1[",
+              "Math.random() → 0.456..."
+            ],
+            [
+              "Math.max(...)",
+              "Maximum",
+              "Math.max(1, 5, 3) → 5"
+            ],
+            [
+              "Math.min(...)",
+              "Minimum",
+              "Math.min(1, 5, 3) → 1"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "String (Chaînes de Caractères)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les instances de String sont **immutables** : les méthodes retournent une nouvelle chaîne sans modifier l'originale."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Méthode",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "length",
+              "Longueur de la chaîne",
+              "\"Hello\".length → 5"
+            ],
+            [
+              "toUpperCase()",
+              "Convertir en majuscules",
+              "\"hello\".toUpperCase() → \"HELLO\""
+            ],
+            [
+              "toLowerCase()",
+              "Convertir en minuscules",
+              "\"HELLO\".toLowerCase() → \"hello\""
+            ],
+            [
+              "substring()",
+              "Extraire une sous-chaîne",
+              "\"Hello\".substring(0, 2) → \"He\""
+            ],
+            [
+              "indexOf()",
+              "Trouver la position",
+              "\"Hello\".indexOf(\"l\") → 2"
+            ],
+            [
+              "split()",
+              "Diviser en tableau",
+              "\"a,b,c\".split(\",\") → [\"a\", \"b\", \"c\"]"
+            ],
+            [
+              "trim()",
+              "Supprimer les espaces",
+              "\"  Hello  \".trim() → \"Hello\""
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Array (Tableaux)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Voir la section \"Tableaux\" pour les méthodes détaillées."
+        }
+      ]
+    },
+    {
+      "id": "arrow-functions",
+      "title": "Arrow Functions et Contexte",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **arrow functions** ont un comportement spécial avec `this` : elles héritent du contexte du bloc englobant."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "class Compteur {\n  constructor() {\n    this.valeur = 0;\n  }\n\n  // Fonction classique : 'this' dépend de l'appelant\n  incrementerClassique() {\n    setTimeout(function() {\n      this.valeur++; // ❌ 'this' ne pointe pas sur l'instance\n    }, 1000);\n  }\n\n  // Arrow function : 'this' est celui du bloc englobant\n  incrementerArrow() {\n    setTimeout(() => {\n      this.valeur++; // ✅ 'this' pointe sur l'instance\n    }, 1000);\n  }\n}"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Bonne pratique** : Utiliser les arrow functions pour les callbacks et les fonctions courtes pour simplifier l'écriture et éviter les problèmes de contexte."
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "JavaScript est interprété, orienté objet et dynamiquement typé.",
+    "Utiliser let et const (pas var). Toujours === au lieu de ==.",
+    "Les fonctions améliorent la lisibilité et la réutilisabilité du code.",
+    "Les classes (ES6) permettent la POO : constructor, méthodes, héritage.",
+    "this représente l'instance actuelle dans une méthode.",
+    "Les arrow functions héritent du contexte (this) du bloc englobant.",
+    "Les tableaux sont des collections indexées à partir de 0.",
+    "L'héritage (extends) permet la spécialisation : Chien extends Animal."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "MDN JavaScript",
+      "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript"
+    },
+    {
+      "type": "interactive",
+      "title": "JavaScript.info (tutoriel complet)",
+      "url": "https://javascript.info/"
+    }
+  ]
+}

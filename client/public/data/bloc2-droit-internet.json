@@ -1,0 +1,124 @@
+{
+  "id": "bloc2-droit-internet",
+  "bloc": "bloc2",
+  "title": "Droit de l'Internet",
+  "icon": "⚖️",
+  "color": "#E74C3C",
+  "description": "Le droit de l'Internet encadre les activités numériques : protection des données personnelles, propriété intellectuelle, responsabilité des hébergeurs et éditeurs.",
+  "sections": [
+    {
+      "id": "rgpd",
+      "title": "RGPD (Règlement Général sur la Protection des Données)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le RGPD (2018) est le règlement européen qui encadre le traitement des données personnelles."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Principe",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Consentement",
+              "L'utilisateur doit donner son accord explicite"
+            ],
+            [
+              "Droit d'accès",
+              "L'utilisateur peut consulter ses données"
+            ],
+            [
+              "Droit de rectification",
+              "L'utilisateur peut corriger ses données"
+            ],
+            [
+              "Droit à l'oubli",
+              "L'utilisateur peut demander la suppression"
+            ],
+            [
+              "Portabilité",
+              "L'utilisateur peut récupérer ses données"
+            ],
+            [
+              "DPO",
+              "Délégué à la Protection des Données (obligatoire pour certaines organisations)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "propriete",
+      "title": "Propriété Intellectuelle",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Type",
+            "Protection"
+          ],
+          "rows": [
+            [
+              "Droit d'auteur",
+              "Protège les œuvres originales (code, textes, images)"
+            ],
+            [
+              "Licences open source",
+              "MIT, GPL, Apache : définissent les droits d'utilisation"
+            ],
+            [
+              "Marques",
+              "Protègent les noms et logos"
+            ],
+            [
+              "Brevets",
+              "Protègent les inventions (rare en logiciel en Europe)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "responsabilite",
+      "title": "Responsabilité en Ligne",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Acteur",
+            "Responsabilité"
+          ],
+          "rows": [
+            [
+              "Éditeur",
+              "Responsable du contenu publié"
+            ],
+            [
+              "Hébergeur",
+              "Non responsable du contenu (sauf s'il ne retire pas un contenu illicite signalé)"
+            ],
+            [
+              "Intermédiaire technique",
+              "Fournisseur d'accès Internet, non responsable"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "RGPD : consentement, droits (accès, rectification, oubli, portabilité).",
+    "Propriété intellectuelle : droit d'auteur, licences open source.",
+    "Responsabilité : éditeur (responsable), hébergeur (non responsable sauf signalement).",
+    "DPO : Délégué à la Protection des Données."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "CNIL - RGPD",
+      "url": "https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on"
+    }
+  ]
+}

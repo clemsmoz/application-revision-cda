@@ -1,0 +1,112 @@
+{
+  "id": "bloc3-deploiement",
+  "bloc": "bloc3",
+  "title": "Déploiement d'Applications",
+  "icon": "🚀",
+  "color": "#1ABC9C",
+  "description": "Le déploiement consiste à mettre une application en production de manière fiable, sécurisée et automatisée.",
+  "sections": [
+    {
+      "id": "environnements",
+      "title": "Environnements de Déploiement",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Environnement",
+            "Usage"
+          ],
+          "rows": [
+            [
+              "Développement (Dev)",
+              "Machine locale du développeur"
+            ],
+            [
+              "Test (Staging)",
+              "Environnement de pré-production pour les tests"
+            ],
+            [
+              "Production (Prod)",
+              "Environnement accessible aux utilisateurs finaux"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "strategies",
+      "title": "Stratégies de Déploiement",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Stratégie",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Blue-Green",
+              "Deux environnements (bleu et vert), bascule instantanée"
+            ],
+            [
+              "Canary",
+              "Déploiement progressif sur un sous-ensemble d'utilisateurs"
+            ],
+            [
+              "Rolling",
+              "Mise à jour progressive des serveurs"
+            ],
+            [
+              "Feature Flags",
+              "Activer/désactiver des fonctionnalités sans redéployer"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cicd",
+      "title": "CI/CD",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "CI/CD (Continuous Integration / Continuous Deployment) automatise les tests et le déploiement."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Étape",
+            "Description"
+          ],
+          "rows": [
+            [
+              "CI (Intégration Continue)",
+              "Tests automatiques à chaque commit"
+            ],
+            [
+              "CD (Déploiement Continu)",
+              "Déploiement automatique en production"
+            ],
+            [
+              "Outils",
+              "GitHub Actions, GitLab CI, Jenkins, CircleCI"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Environnements : Dev (local), Staging (test), Prod (utilisateurs).",
+    "Stratégies : Blue-Green, Canary, Rolling, Feature Flags.",
+    "CI/CD : automatisation des tests et du déploiement.",
+    "Outils : GitHub Actions, GitLab CI, Jenkins."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "GitHub Actions",
+      "url": "https://docs.github.com/actions"
+    }
+  ]
+}

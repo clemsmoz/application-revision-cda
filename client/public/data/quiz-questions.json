@@ -1,0 +1,268 @@
+{
+  "bloc1": [
+    {
+      "id": "q1-algo-1",
+      "module": "bloc1-algorithmique",
+      "question": "Quelle est la complexité temporelle d'une recherche dans un tableau non trié ?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n²)"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La recherche dans un tableau non trié nécessite de parcourir potentiellement tous les éléments, d'où une complexité O(n)."
+    },
+    {
+      "id": "q1-algo-2",
+      "module": "bloc1-algorithmique",
+      "question": "Qu'est-ce qu'une variable en algorithmique ?",
+      "options": [
+        "Un espace mémoire nommé pour stocker une valeur",
+        "Une fonction",
+        "Une boucle",
+        "Un commentaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Une variable est un espace mémoire identifié par un nom, permettant de stocker et manipuler des valeurs."
+    },
+    {
+      "id": "q1-git-1",
+      "module": "bloc1-git",
+      "question": "Quelle commande Git permet de créer un nouveau commit ?",
+      "options": [
+        "git push",
+        "git commit -m 'message'",
+        "git add",
+        "git branch"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La commande 'git commit -m' crée un nouveau commit avec un message descriptif."
+    },
+    {
+      "id": "q1-git-2",
+      "module": "bloc1-git",
+      "question": "Quelle est la différence entre 'git merge' et 'git rebase' ?",
+      "options": [
+        "Aucune différence",
+        "merge crée un commit de fusion, rebase réécrit l'historique",
+        "rebase supprime les branches",
+        "merge est plus rapide"
+      ],
+      "correctAnswer": 1,
+      "explanation": "git merge crée un commit de fusion pour combiner les branches, tandis que git rebase réécrit l'historique en appliquant les commits sur une nouvelle base."
+    },
+    {
+      "id": "q1-html-1",
+      "module": "bloc1-html-css",
+      "question": "Quelle balise HTML5 est utilisée pour définir une section de navigation ?",
+      "options": [
+        "<div>",
+        "<nav>",
+        "<section>",
+        "<header>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La balise <nav> est une balise sémantique HTML5 dédiée aux sections de navigation."
+    },
+    {
+      "id": "q1-html-2",
+      "module": "bloc1-html-css",
+      "question": "Quelle propriété CSS permet de créer une mise en page flexible ?",
+      "options": [
+        "float",
+        "display: flex",
+        "position: absolute",
+        "margin"
+      ],
+      "correctAnswer": 1,
+      "explanation": "display: flex active le modèle Flexbox, permettant de créer des mises en page flexibles et responsives."
+    },
+    {
+      "id": "q1-js-1",
+      "module": "bloc1-javascript-poo",
+      "question": "Comment déclare-t-on une classe en JavaScript ES6 ?",
+      "options": [
+        "function MyClass() {}",
+        "class MyClass {}",
+        "var MyClass = {}",
+        "const MyClass = function() {}"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En ES6, on utilise le mot-clé 'class' pour déclarer une classe."
+    },
+    {
+      "id": "q1-js-2",
+      "module": "bloc1-javascript-async",
+      "question": "Quelle méthode permet de faire une requête HTTP en JavaScript ?",
+      "options": [
+        "ajax()",
+        "fetch()",
+        "request()",
+        "http()"
+      ],
+      "correctAnswer": 1,
+      "explanation": "fetch() est l'API moderne pour effectuer des requêtes HTTP en JavaScript."
+    },
+    {
+      "id": "q1-react-1",
+      "module": "bloc1-react",
+      "question": "Quel hook React permet de gérer l'état local d'un composant ?",
+      "options": [
+        "useEffect",
+        "useState",
+        "useContext",
+        "useReducer"
+      ],
+      "correctAnswer": 1,
+      "explanation": "useState est le hook React qui permet de déclarer et gérer une variable d'état locale."
+    },
+    {
+      "id": "q1-react-2",
+      "module": "bloc1-react",
+      "question": "À quoi sert useEffect en React ?",
+      "options": [
+        "Gérer l'état",
+        "Gérer les effets de bord (side effects)",
+        "Créer des composants",
+        "Gérer le routing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "useEffect permet de gérer les effets de bord comme les appels API, les abonnements, ou les manipulations du DOM."
+    }
+  ],
+  "bloc2": [
+    {
+      "id": "q2-sql-1",
+      "module": "bloc2-sql",
+      "question": "Quelle commande SQL permet de récupérer des données ?",
+      "options": [
+        "INSERT",
+        "SELECT",
+        "UPDATE",
+        "DELETE"
+      ],
+      "correctAnswer": 1,
+      "explanation": "SELECT est la commande SQL pour récupérer (lire) des données depuis une table."
+    },
+    {
+      "id": "q2-sql-2",
+      "module": "bloc2-sql",
+      "question": "Quelle jointure SQL retourne toutes les lignes de la table de gauche ?",
+      "options": [
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN",
+        "FULL JOIN"
+      ],
+      "correctAnswer": 1,
+      "explanation": "LEFT JOIN retourne toutes les lignes de la table de gauche, même si aucune correspondance n'existe dans la table de droite."
+    },
+    {
+      "id": "q2-uml-1",
+      "module": "bloc2-uml",
+      "question": "Quel diagramme UML représente les interactions entre acteurs et système ?",
+      "options": [
+        "Diagramme de classes",
+        "Diagramme de cas d'utilisation",
+        "Diagramme de séquence",
+        "Diagramme d'activité"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le diagramme de cas d'utilisation modélise les interactions entre les acteurs (utilisateurs) et le système."
+    },
+    {
+      "id": "q2-uml-2",
+      "module": "bloc2-uml",
+      "question": "Dans un diagramme de classes, que représente une flèche pleine ?",
+      "options": [
+        "Association",
+        "Héritage",
+        "Agrégation",
+        "Dépendance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Une flèche pleine avec un triangle vide représente une relation d'héritage (généralisation)."
+    },
+    {
+      "id": "q2-nosql-1",
+      "module": "bloc2-nosql",
+      "question": "Quel type de base de données NoSQL est MongoDB ?",
+      "options": [
+        "Clé-Valeur",
+        "Document",
+        "Colonnes",
+        "Graphe"
+      ],
+      "correctAnswer": 1,
+      "explanation": "MongoDB est une base de données orientée documents, stockant les données au format JSON/BSON."
+    }
+  ],
+  "bloc3": [
+    {
+      "id": "q3-docker-1",
+      "module": "bloc3-docker",
+      "question": "Quelle est la différence entre une image et un conteneur Docker ?",
+      "options": [
+        "Aucune différence",
+        "Image = modèle statique, Conteneur = instance en exécution",
+        "Conteneur est plus lourd qu'une image",
+        "Image s'exécute, conteneur est stocké"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Une image est un modèle en lecture seule, tandis qu'un conteneur est une instance en cours d'exécution de cette image."
+    },
+    {
+      "id": "q3-docker-2",
+      "module": "bloc3-docker",
+      "question": "Quelle commande Docker permet de lister les conteneurs en cours d'exécution ?",
+      "options": [
+        "docker images",
+        "docker ps",
+        "docker run",
+        "docker list"
+      ],
+      "correctAnswer": 1,
+      "explanation": "docker ps liste les conteneurs en cours d'exécution. Ajouter -a liste tous les conteneurs (actifs et arrêtés)."
+    },
+    {
+      "id": "q3-securite-1",
+      "module": "bloc1-securite",
+      "question": "Quelle vulnérabilité permet d'injecter du code SQL malveillant ?",
+      "options": [
+        "XSS",
+        "Injection SQL",
+        "CSRF",
+        "Clickjacking"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'injection SQL permet à un attaquant d'injecter du code SQL dans une requête pour manipuler la base de données."
+    },
+    {
+      "id": "q3-securite-2",
+      "module": "bloc1-securite",
+      "question": "Comment protéger une application contre les injections SQL ?",
+      "options": [
+        "Utiliser HTTPS",
+        "Utiliser des requêtes préparées (prepared statements)",
+        "Chiffrer les mots de passe",
+        "Utiliser des tokens CSRF"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les requêtes préparées (prepared statements) séparent le code SQL des données, empêchant les injections."
+    },
+    {
+      "id": "q3-tests-1",
+      "module": "bloc1-tests-unitaires",
+      "question": "Que signifie le pattern AAA dans les tests unitaires ?",
+      "options": [
+        "Add, Assert, Act",
+        "Arrange, Act, Assert",
+        "Assert, Arrange, Act",
+        "Act, Add, Assert"
+      ],
+      "correctAnswer": 1,
+      "explanation": "AAA signifie Arrange (préparer), Act (agir), Assert (vérifier). C'est la structure recommandée pour écrire des tests clairs."
+    }
+  ]
+}

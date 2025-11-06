@@ -1,0 +1,122 @@
+{
+  "id": "bloc3-plans-tests",
+  "bloc": "bloc3",
+  "title": "Plans de Tests",
+  "icon": "📋",
+  "color": "#F39C12",
+  "description": "Un plan de tests définit la stratégie, les objectifs et les procédures pour vérifier qu'une application répond aux exigences fonctionnelles et non-fonctionnelles.",
+  "sections": [
+    {
+      "id": "pyramide",
+      "title": "Pyramide des Tests",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "La pyramide des tests représente la répartition idéale des types de tests :"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Niveau",
+            "Type",
+            "Quantité"
+          ],
+          "rows": [
+            [
+              "Base",
+              "Tests Unitaires",
+              "70% (nombreux, rapides)"
+            ],
+            [
+              "Milieu",
+              "Tests d'Intégration",
+              "20% (moyens)"
+            ],
+            [
+              "Sommet",
+              "Tests E2E (End-to-End)",
+              "10% (peu, lents)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "types",
+      "title": "Types de Tests",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Type",
+            "Objectif",
+            "Outil"
+          ],
+          "rows": [
+            [
+              "Unitaire",
+              "Tester une fonction isolée",
+              "Jest, PHPUnit"
+            ],
+            [
+              "Intégration",
+              "Tester l'interaction entre modules",
+              "Supertest, Postman"
+            ],
+            [
+              "E2E",
+              "Tester le parcours utilisateur complet",
+              "Cypress, Selenium"
+            ],
+            [
+              "Performance",
+              "Tester la charge et les temps de réponse",
+              "JMeter, k6"
+            ],
+            [
+              "Sécurité",
+              "Tester les vulnérabilités",
+              "OWASP ZAP, Burp Suite"
+            ],
+            [
+              "Régression",
+              "Vérifier que les nouvelles modifications ne cassent pas l'existant",
+              "Suite de tests automatisés"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "title": "Contenu d'un Plan de Tests",
+      "content": [
+        {
+          "type": "list",
+          "items": [
+            "**Objectifs** : Que veut-on tester ?",
+            "**Périmètre** : Fonctionnalités couvertes",
+            "**Stratégie** : Types de tests, outils, environnements",
+            "**Cas de test** : Scénarios détaillés avec résultats attendus",
+            "**Critères d'acceptation** : Conditions pour valider le test",
+            "**Ressources** : Équipe, outils, budget",
+            "**Planning** : Calendrier des tests"
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Pyramide des tests : 70% unitaires, 20% intégration, 10% E2E.",
+    "Types : unitaire, intégration, E2E, performance, sécurité, régression.",
+    "Plan de tests : objectifs, périmètre, stratégie, cas de test, critères.",
+    "Outils : Jest, Cypress, JMeter, OWASP ZAP."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Cypress Docs",
+      "url": "https://docs.cypress.io/"
+    }
+  ]
+}

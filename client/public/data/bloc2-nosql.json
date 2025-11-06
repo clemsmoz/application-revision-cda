@@ -1,0 +1,105 @@
+{
+  "id": "bloc2-nosql",
+  "bloc": "bloc2",
+  "title": "NoSQL",
+  "icon": "🗄️",
+  "color": "#4DB33D",
+  "description": "Les bases de données NoSQL (Not Only SQL) offrent des alternatives aux bases relationnelles pour gérer des données non structurées ou semi-structurées à grande échelle.",
+  "sections": [
+    {
+      "id": "types",
+      "title": "Types de Bases NoSQL",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Type",
+            "Exemple",
+            "Usage"
+          ],
+          "rows": [
+            [
+              "Document",
+              "MongoDB, CouchDB",
+              "Données JSON/BSON (blogs, e-commerce)"
+            ],
+            [
+              "Clé-Valeur",
+              "Redis, DynamoDB",
+              "Cache, sessions, files d'attente"
+            ],
+            [
+              "Colonnes",
+              "Cassandra, HBase",
+              "Big Data, analytics"
+            ],
+            [
+              "Graphe",
+              "Neo4j, ArangoDB",
+              "Réseaux sociaux, recommandations"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mongodb",
+      "title": "MongoDB (Document)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "MongoDB est une base de données orientée document qui stocke les données au format BSON (Binary JSON)."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Insérer un document\ndb.users.insertOne({\n  name: \"Alice\",\n  email: \"alice@example.com\",\n  age: 25,\n  hobbies: [\"lecture\", \"sport\"]\n});\n\n// Rechercher\ndb.users.find({ age: { $gte: 18 } });\n\n// Mettre à jour\ndb.users.updateOne(\n  { name: \"Alice\" },\n  { $set: { age: 26 } }\n);\n\n// Supprimer\ndb.users.deleteOne({ name: \"Alice\" });"
+        }
+      ]
+    },
+    {
+      "id": "cap",
+      "title": "Théorème CAP",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le théorème CAP stipule qu'un système distribué ne peut garantir simultanément que 2 des 3 propriétés suivantes :"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Propriété",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Consistency (Cohérence)",
+              "Tous les nœuds voient les mêmes données au même moment"
+            ],
+            [
+              "Availability (Disponibilité)",
+              "Le système répond toujours, même en cas de panne"
+            ],
+            [
+              "Partition tolerance (Tolérance au partitionnement)",
+              "Le système fonctionne malgré les coupures réseau"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "NoSQL : alternatives aux bases relationnelles.",
+    "4 types : Document (MongoDB), Clé-Valeur (Redis), Colonnes (Cassandra), Graphe (Neo4j).",
+    "MongoDB : base orientée document (BSON).",
+    "Théorème CAP : on ne peut garantir que 2 des 3 (Cohérence, Disponibilité, Tolérance)."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "MongoDB Docs",
+      "url": "https://www.mongodb.com/docs/"
+    }
+  ]
+}

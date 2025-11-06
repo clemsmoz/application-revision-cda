@@ -1,0 +1,429 @@
+{
+  "id": "bloc1-html-css",
+  "bloc": "bloc1",
+  "title": "HTML5 et CSS3",
+  "icon": "🎨",
+  "color": "#3B82F6",
+  "description": "HTML et CSS sont les deux langages fondamentaux du Web. HTML structure le contenu, CSS le stylise. Ensemble, ils permettent de créer des pages web modernes et responsives.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction aux Langages du Web",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Après plus de 30 ans d'existence, le Web a révolutionné notre quotidien. Derrière chaque site web se cachent principalement deux langages : **HTML** (structure) et **CSS** (style)."
+        },
+        {
+          "type": "table",
+          "headers": ["Langage", "Rôle", "Version Actuelle", "Organisme"],
+          "rows": [
+            ["HTML", "Structure et contenu de la page", "HTML5", "W3C (World Wide Web Consortium)"],
+            ["CSS", "Mise en forme et style visuel", "CSS3", "W3C"],
+            ["JavaScript", "Interactivité et dynamisme", "ES2023", "ECMA International"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-bases",
+      "title": "HTML : Les Fondamentaux",
+      "content": [
+        {
+          "type": "definition",
+          "term": "HTML (HyperText Markup Language)",
+          "definition": "Langage de balisage qui permet de décrire la structure et le contenu d'une page web à l'aide de balises (tags)."
+        },
+        {
+          "type": "subtitle",
+          "text": "Le Principe des Boîtes"
+        },
+        {
+          "type": "paragraph",
+          "text": "La structure d'une page web repose sur le principe des **boîtes** : chaque élément HTML est une boîte que l'on emboîte dans d'autres boîtes."
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>Ma Page</title>\n  </head>\n  <body>\n    <header>\n      <h1>Titre Principal</h1>\n    </header>\n    <main>\n      <p>Contenu de la page</p>\n    </main>\n  </body>\n</html>"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Structure obligatoire** : Une page HTML valide doit toujours contenir `<!DOCTYPE html>`, `<html>`, `<head>` et `<body>`."
+        }
+      ]
+    },
+    {
+      "id": "html-balises",
+      "title": "Les Balises HTML",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Il existe plus de **100 balises** dans HTML5. Chaque balise a un rôle sémantique spécifique."
+        },
+        {
+          "type": "table",
+          "headers": ["Catégorie", "Balises", "Utilisation"],
+          "rows": [
+            ["Structure", "<header>, <nav>, <main>, <section>, <article>, <aside>, <footer>", "Organiser la page de manière sémantique"],
+            ["Titres", "<h1> à <h6>", "Hiérarchie des titres (h1 = plus important)"],
+            ["Texte", "<p>, <span>, <strong>, <em>, <br>, <hr>", "Paragraphes, emphases, sauts de ligne"],
+            ["Listes", "<ul>, <ol>, <li>", "Listes non ordonnées et ordonnées"],
+            ["Liens", "<a href=\"...\">", "Créer des hyperliens"],
+            ["Images", "<img src=\"...\" alt=\"...\">", "Afficher des images"],
+            ["Tableaux", "<table>, <thead>, <tbody>, <tr>, <th>, <td>", "Données tabulaires"],
+            ["Formulaires", "<form>, <input>, <textarea>, <select>, <button>", "Saisie utilisateur"],
+            ["Multimédia", "<video>, <audio>, <source>", "Vidéos et audio natifs"]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Balises Bloc vs Inline"
+        },
+        {
+          "type": "table",
+          "headers": ["Type", "Comportement", "Exemples"],
+          "rows": [
+            ["Bloc", "Prend toute la largeur disponible, commence sur une nouvelle ligne", "<div>, <p>, <h1>, <section>"],
+            ["Inline", "Prend uniquement la largeur de son contenu, reste sur la même ligne", "<span>, <a>, <strong>, <em>"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-attributs",
+      "title": "Les Attributs HTML",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **attributs** apportent des informations supplémentaires à une balise. Ils sont placés dans la balise ouvrante."
+        },
+        {
+          "type": "table",
+          "headers": ["Attribut", "Rôle", "Exemple"],
+          "rows": [
+            ["id", "Identifiant unique de l'élément", "<div id=\"header\">"],
+            ["class", "Classe CSS pour styliser l'élément", "<p class=\"intro\">"],
+            ["href", "URL de destination d'un lien", "<a href=\"https://example.com\">"],
+            ["src", "Source d'une image ou d'un média", "<img src=\"logo.png\">"],
+            ["alt", "Texte alternatif pour les images (accessibilité)", "<img alt=\"Logo du site\">"],
+            ["title", "Info-bulle au survol", "<a title=\"Cliquez ici\">"],
+            ["data-*", "Attributs personnalisés pour stocker des données", "<div data-user-id=\"123\">"]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**Accessibilité** : L'attribut `alt` est **obligatoire** pour les images afin de rendre le contenu accessible aux lecteurs d'écran."
+        }
+      ]
+    },
+    {
+      "id": "html-formulaires",
+      "title": "Formulaires HTML",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les formulaires permettent de **collecter des données** auprès des utilisateurs (authentification, recherche, commentaires, etc.)."
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<form action=\"/submit\" method=\"POST\">\n  <label for=\"name\">Nom :</label>\n  <input type=\"text\" id=\"name\" name=\"name\" required>\n  \n  <label for=\"email\">Email :</label>\n  <input type=\"email\" id=\"email\" name=\"email\" required>\n  \n  <label for=\"message\">Message :</label>\n  <textarea id=\"message\" name=\"message\"></textarea>\n  \n  <button type=\"submit\">Envoyer</button>\n</form>"
+        },
+        {
+          "type": "table",
+          "headers": ["Type d'Input", "Utilisation", "Validation HTML5"],
+          "rows": [
+            ["text", "Texte court", "required, minlength, maxlength"],
+            ["email", "Adresse email", "Validation automatique du format"],
+            ["password", "Mot de passe (masqué)", "required, minlength"],
+            ["number", "Nombre", "min, max, step"],
+            ["date", "Date", "min, max"],
+            ["checkbox", "Case à cocher", "checked"],
+            ["radio", "Bouton radio (choix unique)", "checked"],
+            ["file", "Upload de fichier", "accept (types de fichiers)"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-bases",
+      "title": "CSS : Les Fondamentaux",
+      "content": [
+        {
+          "type": "definition",
+          "term": "CSS (Cascading Style Sheets)",
+          "definition": "Langage de feuilles de style permettant d'appliquer des règles de mise en forme (couleurs, polices, espacements, positionnement) aux éléments HTML."
+        },
+        {
+          "type": "subtitle",
+          "text": "Syntaxe d'une Règle CSS"
+        },
+        {
+          "type": "code",
+          "language": "css",
+          "code": "sélecteur {\n  propriété: valeur;\n  propriété2: valeur2;\n}"
+        },
+        {
+          "type": "subtitle",
+          "text": "Trois Manières d'Appliquer du CSS"
+        },
+        {
+          "type": "table",
+          "headers": ["Méthode", "Syntaxe", "Utilisation"],
+          "rows": [
+            ["Inline (sur la balise)", "<p style=\"color: red;\">", "❌ À éviter (difficile à maintenir)"],
+            ["Interne (dans <head>)", "<style> p { color: red; } </style>", "⚠️ Pour des styles spécifiques à une page"],
+            ["Externe (fichier .css)", "<link rel=\"stylesheet\" href=\"style.css\">", "✅ Recommandé (réutilisable, maintenable)"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-selecteurs",
+      "title": "Les Sélecteurs CSS",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **sélecteurs** permettent de cibler les éléments HTML sur lesquels appliquer les styles."
+        },
+        {
+          "type": "table",
+          "headers": ["Sélecteur", "Syntaxe", "Cible", "Exemple"],
+          "rows": [
+            ["Type (balise)", "balise", "Tous les éléments de ce type", "p { color: blue; }"],
+            ["Classe", ".nomClasse", "Tous les éléments avec cette classe", ".intro { font-size: 18px; }"],
+            ["ID", "#nomID", "L'élément unique avec cet ID", "#header { background: black; }"],
+            ["Universel", "*", "Tous les éléments", "* { margin: 0; }"],
+            ["Descendant", "A B", "B à l'intérieur de A", "div p { color: red; }"],
+            ["Enfant direct", "A > B", "B enfant direct de A", "ul > li { list-style: none; }"],
+            ["Pseudo-classe", ":hover, :focus", "État spécifique", "a:hover { color: red; }"],
+            ["Attribut", "[attr=value]", "Éléments avec cet attribut", "input[type=\"text\"] { ... }"]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Spécificité** : ID (100) > Classe (10) > Balise (1). Plus la spécificité est élevée, plus la règle est prioritaire."
+        }
+      ]
+    },
+    {
+      "id": "css-proprietes",
+      "title": "Propriétés CSS Essentielles",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Il existe plus de **600 propriétés CSS**. Voici les plus importantes :"
+        },
+        {
+          "type": "table",
+          "headers": ["Catégorie", "Propriétés", "Exemples"],
+          "rows": [
+            ["Texte", "color, font-family, font-size, font-weight, text-align, line-height", "color: #333; font-size: 16px;"],
+            ["Boîte (Box Model)", "width, height, margin, padding, border", "margin: 20px; padding: 10px;"],
+            ["Arrière-plan", "background-color, background-image, background-size", "background: linear-gradient(...);"],
+            ["Positionnement", "position, top, left, z-index, display, float", "position: absolute; top: 0;"],
+            ["Flexbox", "display: flex, justify-content, align-items, flex-direction", "display: flex; justify-content: center;"],
+            ["Grid", "display: grid, grid-template-columns, gap", "display: grid; grid-template-columns: 1fr 1fr;"],
+            ["Transitions", "transition, transform", "transition: all 0.3s ease;"],
+            ["Animations", "animation, @keyframes", "@keyframes slide { from { ... } to { ... } }"]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Le Box Model (Modèle de Boîte)"
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "┌─────────────────────────────────┐\n│         Margin (extérieur)      │\n│  ┌───────────────────────────┐  │\n│  │      Border (bordure)     │  │\n│  │  ┌─────────────────────┐  │  │\n│  │  │  Padding (intérieur)│  │  │\n│  │  │  ┌───────────────┐  │  │  │\n│  │  │  │   Content     │  │  │  │\n│  │  │  └───────────────┘  │  │  │\n│  │  └─────────────────────┘  │  │\n│  └───────────────────────────┘  │\n└─────────────────────────────────┘"
+        }
+      ]
+    },
+    {
+      "id": "css-flexbox-grid",
+      "title": "Flexbox et Grid (Mise en Page Moderne)",
+      "content": [
+        {
+          "type": "subtitle",
+          "text": "Flexbox (Disposition Flexible)"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Flexbox** permet d'aligner et de distribuer des éléments dans un conteneur, même si leur taille est inconnue ou dynamique."
+        },
+        {
+          "type": "code",
+          "language": "css",
+          "code": ".container {\n  display: flex;\n  justify-content: space-between; /* Alignement horizontal */\n  align-items: center;            /* Alignement vertical */\n  flex-direction: row;            /* Direction (row, column) */\n  gap: 20px;                      /* Espacement entre éléments */\n}"
+        },
+        {
+          "type": "subtitle",
+          "text": "Grid (Grille)"
+        },
+        {
+          "type": "paragraph",
+          "text": "**CSS Grid** permet de créer des mises en page complexes en deux dimensions (lignes et colonnes)."
+        },
+        {
+          "type": "code",
+          "language": "css",
+          "code": ".container {\n  display: grid;\n  grid-template-columns: 1fr 2fr 1fr; /* 3 colonnes */\n  grid-template-rows: auto;           /* Lignes automatiques */\n  gap: 20px;                          /* Espacement */\n}"
+        },
+        {
+          "type": "table",
+          "headers": ["Critère", "Flexbox", "Grid"],
+          "rows": [
+            ["Dimensions", "1D (ligne OU colonne)", "2D (lignes ET colonnes)"],
+            ["Utilisation", "Navigation, barres d'outils, alignement simple", "Layouts complexes, grilles de cartes"],
+            ["Complexité", "Simple", "Plus avancé"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "responsive",
+      "title": "Responsive Web Design (RWD)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **Responsive Web Design** permet d'adapter l'affichage d'un site aux différentes tailles d'écran (mobile, tablette, desktop)."
+        },
+        {
+          "type": "subtitle",
+          "text": "Media Queries"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les **media queries** appliquent des styles différents selon la taille de l'écran."
+        },
+        {
+          "type": "code",
+          "language": "css",
+          "code": "/* Mobile First (par défaut) */\n.container {\n  width: 100%;\n  padding: 10px;\n}\n\n/* Tablette (≥ 768px) */\n@media (min-width: 768px) {\n  .container {\n    width: 750px;\n    margin: 0 auto;\n  }\n}\n\n/* Desktop (≥ 1024px) */\n@media (min-width: 1024px) {\n  .container {\n    width: 1000px;\n  }\n}"
+        },
+        {
+          "type": "table",
+          "headers": ["Breakpoint", "Taille", "Appareil"],
+          "rows": [
+            ["Mobile", "< 768px", "Smartphones"],
+            ["Tablette", "768px - 1023px", "Tablettes"],
+            ["Desktop", "≥ 1024px", "Ordinateurs"]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Mobile First** : Concevoir d'abord pour mobile, puis ajouter des styles pour les écrans plus grands (approche recommandée)."
+        }
+      ]
+    },
+    {
+      "id": "pseudo-classes",
+      "title": "Pseudo-classes et Pseudo-éléments",
+      "content": [
+        {
+          "type": "subtitle",
+          "text": "Pseudo-classes (États)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les **pseudo-classes** ciblent des éléments dans un **état spécifique**."
+        },
+        {
+          "type": "table",
+          "headers": ["Pseudo-classe", "Cible", "Exemple"],
+          "rows": [
+            [":hover", "Élément survolé par la souris", "a:hover { color: red; }"],
+            [":focus", "Élément ayant le focus (formulaire)", "input:focus { border: 2px solid blue; }"],
+            [":active", "Élément actif (clic en cours)", "button:active { transform: scale(0.95); }"],
+            [":first-child", "Premier enfant de son parent", "li:first-child { font-weight: bold; }"],
+            [":nth-child(n)", "n-ième enfant", "tr:nth-child(even) { background: #f0f0f0; }"]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Pseudo-éléments (Parties d'Élément)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les **pseudo-éléments** ciblent une **partie** d'un élément ou ajoutent du contenu."
+        },
+        {
+          "type": "table",
+          "headers": ["Pseudo-élément", "Cible", "Exemple"],
+          "rows": [
+            ["::before", "Ajoute du contenu AVANT l'élément", "p::before { content: '→ '; }"],
+            ["::after", "Ajoute du contenu APRÈS l'élément", "p::after { content: ' ←'; }"],
+            ["::first-letter", "Première lettre", "p::first-letter { font-size: 2em; }"],
+            ["::first-line", "Première ligne", "p::first-line { font-weight: bold; }"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cascade",
+      "title": "La Cascade CSS",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "La **cascade** détermine quelle règle CSS est appliquée lorsque plusieurs règles ciblent le même élément."
+        },
+        {
+          "type": "subtitle",
+          "text": "Ordre de Priorité (du plus important au moins important)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "1. **!important** (à éviter sauf cas exceptionnel)",
+            "2. **Styles inline** (dans l'attribut `style`)",
+            "3. **ID** (#monID)",
+            "4. **Classe, attribut, pseudo-classe** (.maClasse, [type=\"text\"], :hover)",
+            "5. **Balise, pseudo-élément** (p, ::before)",
+            "6. **Ordre d'apparition** (la dernière règle écrase les précédentes)"
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**Éviter !important** : Il rend le code difficile à maintenir. Préférer augmenter la spécificité du sélecteur."
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "HTML structure le contenu (balises sémantiques), CSS le stylise (couleurs, polices, mise en page).",
+    "Une page HTML valide doit contenir <!DOCTYPE html>, <html>, <head> et <body>.",
+    "Les sélecteurs CSS ciblent les éléments : balise, .classe, #id, :pseudo-classe.",
+    "Le Box Model : margin (extérieur) → border → padding → content.",
+    "Flexbox (1D) pour alignements simples, Grid (2D) pour layouts complexes.",
+    "Responsive Web Design : utiliser les media queries pour adapter aux différentes tailles d'écran.",
+    "Mobile First : concevoir d'abord pour mobile, puis ajouter des styles pour desktop."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "MDN Web Docs (HTML)",
+      "url": "https://developer.mozilla.org/fr/docs/Web/HTML"
+    },
+    {
+      "type": "doc",
+      "title": "MDN Web Docs (CSS)",
+      "url": "https://developer.mozilla.org/fr/docs/Web/CSS"
+    },
+    {
+      "type": "interactive",
+      "title": "Flexbox Froggy (apprendre Flexbox en jouant)",
+      "url": "https://flexboxfroggy.com/#fr"
+    },
+    {
+      "type": "interactive",
+      "title": "Grid Garden (apprendre Grid en jouant)",
+      "url": "https://cssgridgarden.com/#fr"
+    }
+  ]
+}

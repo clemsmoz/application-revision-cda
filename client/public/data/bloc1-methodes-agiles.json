@@ -1,0 +1,138 @@
+{
+  "id": "bloc1-methodes-agiles",
+  "bloc": "bloc1",
+  "title": "Méthodes Agiles",
+  "icon": "🔄",
+  "color": "#FF6B6B",
+  "description": "Les méthodes agiles sont des approches itératives et incrémentales de gestion de projet qui favorisent la collaboration, l'adaptation et la livraison continue de valeur.",
+  "sections": [
+    {
+      "id": "manifeste",
+      "title": "Manifeste Agile",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le Manifeste Agile (2001) définit 4 valeurs fondamentales :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Individus et interactions** plutôt que processus et outils",
+            "**Logiciel fonctionnel** plutôt que documentation exhaustive",
+            "**Collaboration avec le client** plutôt que négociation contractuelle",
+            "**Adaptation au changement** plutôt que suivi d'un plan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scrum",
+      "title": "Scrum",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Scrum est le framework agile le plus populaire. Il organise le travail en **sprints** (itérations de 1 à 4 semaines)."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Rôle",
+            "Responsabilité"
+          ],
+          "rows": [
+            [
+              "Product Owner",
+              "Définit les fonctionnalités et priorise le backlog"
+            ],
+            [
+              "Scrum Master",
+              "Facilite le processus et supprime les obstacles"
+            ],
+            [
+              "Équipe de développement",
+              "Réalise les fonctionnalités"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Cérémonie",
+            "Fréquence",
+            "Durée"
+          ],
+          "rows": [
+            [
+              "Sprint Planning",
+              "Début de sprint",
+              "2-4h"
+            ],
+            [
+              "Daily Scrum",
+              "Quotidien",
+              "15min"
+            ],
+            [
+              "Sprint Review",
+              "Fin de sprint",
+              "1-2h"
+            ],
+            [
+              "Sprint Retrospective",
+              "Fin de sprint",
+              "1h"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kanban",
+      "title": "Kanban",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Kanban est une méthode visuelle de gestion du flux de travail. Les tâches sont représentées sur un tableau avec des colonnes (À faire, En cours, Terminé)."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Principe",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Visualiser le flux",
+              "Tableau Kanban avec colonnes"
+            ],
+            [
+              "Limiter le WIP",
+              "Work In Progress limité pour éviter la surcharge"
+            ],
+            [
+              "Gérer le flux",
+              "Optimiser le temps de cycle"
+            ],
+            [
+              "Amélioration continue",
+              "Kaizen : petites améliorations régulières"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Agile : approche itérative et incrémentale.",
+    "Scrum : sprints, rôles (PO, SM, Dev), cérémonies (Planning, Daily, Review, Retro).",
+    "Kanban : visualisation du flux, limitation du WIP.",
+    "Valeurs : individus, logiciel fonctionnel, collaboration, adaptation."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Manifeste Agile",
+      "url": "https://agilemanifesto.org/"
+    }
+  ]
+}

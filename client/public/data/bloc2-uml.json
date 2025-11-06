@@ -1,0 +1,710 @@
+{
+  "id": "bloc2-uml",
+  "bloc": "bloc2",
+  "title": "UML : Modélisation des Besoins et Fonctionnalités",
+  "icon": "📐",
+  "color": "#8B5CF6",
+  "description": "UML (Unified Modeling Language) est un langage de modélisation graphique pour visualiser, spécifier, construire et documenter les systèmes logiciels. Il permet de modéliser les besoins, l'architecture et le comportement d'une application.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "UML : Histoire et Cadre d'Application",
+      "content": [
+        {
+          "type": "definition",
+          "term": "UML (Unified Modeling Language)",
+          "definition": "Langage de modélisation graphique standardisé pour représenter les systèmes logiciels. UML n'est PAS une méthode, mais un langage."
+        },
+        {
+          "type": "paragraph",
+          "text": "**UML** permet de modéliser tout type de système (logiciel, matériel, processus métier). Lire, écrire et parler UML sont des compétences **incontournables** en génie logiciel."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Version",
+            "Année",
+            "Changements Majeurs"
+          ],
+          "rows": [
+            [
+              "UML 1.x",
+              "1997-2004",
+              "Première standardisation, 9 diagrammes"
+            ],
+            [
+              "UML 2.x",
+              "2005-présent",
+              "Refonte complète, 14 diagrammes, meilleure séparation des concepts"
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**UML 2** a introduit un changement de vision important : séparation claire entre structure, comportement et interaction."
+        }
+      ]
+    },
+    {
+      "id": "categories",
+      "title": "Les Trois Catégories de Diagrammes",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "UML 2 organise les 14 diagrammes en **3 catégories** selon leur objectif."
+        },
+        {
+          "type": "subtitle",
+          "text": "1. Diagrammes Comportementaux"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Question** : Quels sont les services rendus par le système ?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Diagramme de cas d'utilisation** (Use Case) : Fonctionnalités du système vues par les acteurs",
+            "**Diagramme de machine à états** (State Machine) : États et transitions d'un objet",
+            "**Diagramme d'activité** (Activity) : Algorithmes, processus métier, workflows"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "2. Diagrammes d'Interaction"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Question** : Comment utilise-t-on le système ? Comment rend-il les services attendus ?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Diagramme de séquence** (Sequence) : Interactions entre objets dans le temps",
+            "**Diagramme de communication** (Communication) : Interactions avec focus sur les liens",
+            "**Diagramme de temps** (Timing) : Contraintes temporelles"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "3. Diagrammes Structurels"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Question** : Comment est architecturé le système ? De quoi est-il composé ?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Diagramme de classes** (Class) : Structure statique (classes, attributs, méthodes, relations)",
+            "**Diagramme d'objets** (Object) : Instances à un moment donné",
+            "**Diagramme de composants** (Component) : Organisation en modules",
+            "**Diagramme de déploiement** (Deployment) : Architecture matérielle"
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Catégorie",
+            "Objectif",
+            "Diagrammes Essentiels"
+          ],
+          "rows": [
+            [
+              "Comportementaux",
+              "QUOI (fonctionnalités)",
+              "Cas d'utilisation, Activité, Machine à états"
+            ],
+            [
+              "Interaction",
+              "COMMENT (utilisation)",
+              "Séquence"
+            ],
+            [
+              "Structurels",
+              "ARCHITECTURE (composition)",
+              "Classes"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outils",
+      "title": "Outils de Modélisation UML",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Plusieurs outils permettent de créer des diagrammes UML. **Visual Paradigm Community Edition** est recommandé dans le cours."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Outil",
+            "Type",
+            "Avantages"
+          ],
+          "rows": [
+            [
+              "Visual Paradigm CE",
+              "Gratuit (usage non commercial)",
+              "Complet, vérifie le formalisme UML 2"
+            ],
+            [
+              "StarUML",
+              "Gratuit / Payant",
+              "Léger, interface moderne"
+            ],
+            [
+              "PlantUML",
+              "Open Source (code)",
+              "Diagrammes en mode texte, versionnable"
+            ],
+            [
+              "Lucidchart",
+              "En ligne",
+              "Collaboratif, facile à prendre en main"
+            ],
+            [
+              "Draw.io (diagrams.net)",
+              "Gratuit, en ligne",
+              "Polyvalent, pas spécialisé UML"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Bonnes Pratiques avec Visual Paradigm"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Travailler par **projet** (un projet = une application)",
+            "Travailler de manière **itérative** (ne pas chercher la perfection au premier jet)",
+            "Faire confiance à l'outil (il vérifie le formalisme UML 2)",
+            "**Ne JAMAIS enregistrer dans un dossier partagé sur le cloud** (risque de corruption)",
+            "Utiliser **Ctrl+E** pour dupliquer un élément (pas Ctrl+C/Ctrl+V qui crée un alias)",
+            "Nommer correctement ses diagrammes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "use-case",
+      "title": "Diagramme de Cas d'Utilisation",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Diagramme de Cas d'Utilisation",
+          "definition": "Représente les fonctionnalités d'un système (SAE : Système Automatisé d'Entreprise) du point de vue des acteurs externes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce diagramme répond à la question : **Que fait le système ?** (pas comment il le fait)."
+        },
+        {
+          "type": "subtitle",
+          "text": "Éléments du Diagramme"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Élément",
+            "Représentation",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Acteur",
+              "Bonhomme ou <<acteur>>",
+              "Utilisateur ou système externe interagissant avec le système"
+            ],
+            [
+              "Cas d'utilisation",
+              "Ovale",
+              "Fonctionnalité du système (verbe à l'infinitif)"
+            ],
+            [
+              "Système",
+              "Rectangle",
+              "Frontière du système (contient les cas d'utilisation)"
+            ],
+            [
+              "Association",
+              "Ligne simple",
+              "Interaction entre acteur et cas d'utilisation"
+            ],
+            [
+              "Include",
+              "Flèche pointillée <<include>>",
+              "Inclusion obligatoire d'un autre cas"
+            ],
+            [
+              "Extend",
+              "Flèche pointillée <<extend>>",
+              "Extension conditionnelle d'un cas"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "┌─────────────────────────────────────┐\n│         Système E-Commerce          │\n│                                     │\n│   ┌──────────────┐                  │\n│   │ S'authentifier│                 │\n│   └──────────────┘                  │\n│          ↑                          │\n│   ┌──────────────┐                  │\n│   │Passer commande│                 │\n│   └──────────────┘                  │\n│          ↑                          │\n└──────────┼──────────────────────────┘\n           │\n        Client\n        (👤)"
+        },
+        {
+          "type": "subtitle",
+          "text": "Relations Include vs Extend"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Relation",
+            "Signification",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "<<include>>",
+              "Factorisation : le cas A inclut TOUJOURS le cas B",
+              "\"Passer commande\" include \"Vérifier stock\""
+            ],
+            [
+              "<<extend>>",
+              "Extension conditionnelle : le cas B étend le cas A dans certains cas",
+              "\"Passer commande\" extend \"Appliquer code promo\""
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**Erreur fréquente** : Include ≠ obligatoire, Extend ≠ optionnel. Include = factorisation, Extend = extension conditionnelle."
+        },
+        {
+          "type": "subtitle",
+          "text": "Bonnes Pratiques"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Les acteurs sont **idéalisés** (rôles, pas personnes réelles)",
+            "Un cas d'utilisation définit un **comportement** sans révéler la structure interne",
+            "Le diagramme ne représente **pas un algorithme ou un enchaînement**",
+            "Il est **impossible de produire un diagramme correct au premier jet** : travailler de manière itérative",
+            "Penser au **lecteur** lors de la modélisation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "state-machine",
+      "title": "Diagramme de Machine à États",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Diagramme de Machine à États",
+          "definition": "Présente les successions possibles d'états et d'actions d'un système (ou d'un objet) au cours de son cycle de vie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce diagramme répond à la question : **Dans quels états peut se trouver le système ?**"
+        },
+        {
+          "type": "subtitle",
+          "text": "Éléments du Diagramme"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Élément",
+            "Représentation",
+            "Description"
+          ],
+          "rows": [
+            [
+              "État initial",
+              "Cercle noir plein",
+              "Point de départ"
+            ],
+            [
+              "État",
+              "Rectangle arrondi",
+              "Situation stable du système"
+            ],
+            [
+              "Transition",
+              "Flèche",
+              "Passage d'un état à un autre"
+            ],
+            [
+              "État final",
+              "Cercle noir dans un cercle",
+              "Point d'arrivée"
+            ],
+            [
+              "Choix",
+              "Losange",
+              "Branchement conditionnel"
+            ],
+            [
+              "Super-état",
+              "Rectangle contenant d'autres états",
+              "Regroupement d'états"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "Exemple : États d'une commande\n\n  ●  (état initial)\n  ↓\n┌─────────────┐\n│  En attente │\n└─────────────┘\n  ↓ [paiement validé]\n┌─────────────┐\n│  En cours   │\n└─────────────┘\n  ↓ [expédition]\n┌─────────────┐\n│   Livrée    │\n└─────────────┘\n  ↓\n  ◉  (état final)"
+        },
+        {
+          "type": "subtitle",
+          "text": "Syntaxe des Transitions"
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "événement [condition] / action\n\nExemple :\npaiement [montant > 0] / envoyer confirmation"
+        },
+        {
+          "type": "subtitle",
+          "text": "Bonnes Pratiques"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Visual Paradigm vérifie le formalisme UML 2",
+            "La description des transitions est **libre** : faire attention aux termes employés",
+            "Créer dans l'ordre : états → transitions → super-états → définir les transitions",
+            "Lier les informations du diagramme de cas d'utilisation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "activity",
+      "title": "Diagramme d'Activité",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Diagramme d'Activité",
+          "definition": "Modélise un algorithme, un processus métier ou un workflow. Il peut faire apparaître des mécanismes de parallélisation et faire intervenir plusieurs acteurs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce diagramme répond à la question : **Comment se déroule un processus ?**"
+        },
+        {
+          "type": "subtitle",
+          "text": "Éléments du Diagramme"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Élément",
+            "Représentation",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Nœud initial",
+              "Cercle noir plein",
+              "Point de départ"
+            ],
+            [
+              "Activité",
+              "Rectangle arrondi",
+              "Action ou tâche"
+            ],
+            [
+              "Flux de contrôle",
+              "Flèche",
+              "Enchaînement des activités"
+            ],
+            [
+              "Décision",
+              "Losange",
+              "Branchement conditionnel"
+            ],
+            [
+              "Fusion",
+              "Losange",
+              "Convergence de flux"
+            ],
+            [
+              "Fork (séparation)",
+              "Barre horizontale",
+              "Début de parallélisation"
+            ],
+            [
+              "Join (synchronisation)",
+              "Barre horizontale",
+              "Fin de parallélisation"
+            ],
+            [
+              "Nœud final",
+              "Cercle noir dans un cercle",
+              "Point d'arrivée"
+            ],
+            [
+              "Partition",
+              "Couloir vertical/horizontal",
+              "Acteur responsable des activités"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "Exemple : Processus de commande\n\n  ●  (début)\n  ↓\n┌──────────────────┐\n│ Saisir commande  │\n└──────────────────┘\n  ↓\n  ◇  [stock disponible ?]\n  ├─ Oui → ┌──────────────┐\n  │        │ Préparer     │\n  │        └──────────────┘\n  │             ↓\n  │        ┌──────────────┐\n  │        │ Expédier     │\n  │        └──────────────┘\n  │\n  └─ Non → ┌──────────────┐\n           │ Notifier     │\n           └──────────────┘\n                ↓\n                ◉  (fin)"
+        },
+        {
+          "type": "subtitle",
+          "text": "Parallélisation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le diagramme d'activité permet de modéliser des **activités parallèles** (fork/join)."
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "┌──────────────┐\n│ Commande     │\n└──────────────┘\n       ↓\n   ═══════  (fork)\n    ↓     ↓\n┌──────┐ ┌──────┐\n│Préparer│ │Facturer│\n└──────┘ └──────┘\n    ↓     ↓\n   ═══════  (join)\n       ↓\n┌──────────────┐\n│ Expédier     │\n└──────────────┘"
+        },
+        {
+          "type": "subtitle",
+          "text": "Bonnes Pratiques"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Il n'y a **pas de différence visuelle** entre flux de contrôle et flux d'objet (mais ce sont deux concepts différents)",
+            "Utiliser les **régions itératives** pour modéliser les boucles (foreach)",
+            "Créer dans l'ordre : activités → flux → partitions → objets/ports → actions événements",
+            "Lier les informations du diagramme de machine à états"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class",
+      "title": "Diagramme de Classes",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Diagramme de Classes",
+          "definition": "Représente la structure statique du système : classes, attributs, méthodes et relations entre classes. C'est le diagramme le plus utilisé en développement logiciel."
+        },
+        {
+          "type": "subtitle",
+          "text": "Structure d'une Classe"
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "┌─────────────────────┐\n│      Utilisateur    │ ← Nom de la classe\n├─────────────────────┤\n│ - id: int           │ ← Attributs (- = privé, + = public, # = protégé)\n│ - name: string       │\n│ - email: string     │\n├─────────────────────┤\n│ + seConnecter()     │ ← Méthodes\n│ + seDeconnecter()   │\n└─────────────────────┘"
+        },
+        {
+          "type": "subtitle",
+          "text": "Relations entre Classes"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Relation",
+            "Symbole",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Association",
+              "─────",
+              "Lien simple entre classes",
+              "Client ──── Commande"
+            ],
+            [
+              "Agrégation",
+              "◇────",
+              "Relation \"a un\" (faible)",
+              "Voiture ◇──── Roue"
+            ],
+            [
+              "Composition",
+              "◆────",
+              "Relation \"est composé de\" (forte)",
+              "Maison ◆──── Pièce"
+            ],
+            [
+              "Héritage",
+              "───▷",
+              "Relation \"est un\" (généralisation)",
+              "Chien ───▷ Animal"
+            ],
+            [
+              "Dépendance",
+              "- - ->",
+              "Utilisation temporaire",
+              "Contrôleur - - -> Service"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Multiplicités"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Notation",
+            "Signification"
+          ],
+          "rows": [
+            [
+              "1",
+              "Exactement un"
+            ],
+            [
+              "0..1",
+              "Zéro ou un (optionnel)"
+            ],
+            [
+              "*  ou  0..*",
+              "Zéro ou plusieurs"
+            ],
+            [
+              "1..*",
+              "Un ou plusieurs"
+            ],
+            [
+              "n..m",
+              "Entre n et m"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "Exemple : Client et Commandes\n\n┌─────────┐         1      0..*    ┌─────────┐\n│ Client  │─────────────────────────│Commande │\n└─────────┘                         └─────────┘\n\nUn client peut avoir 0 ou plusieurs commandes.\nUne commande appartient à exactement 1 client."
+        }
+      ]
+    },
+    {
+      "id": "sequence",
+      "title": "Diagramme de Séquence",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Diagramme de Séquence",
+          "definition": "Représente les interactions entre objets dans un ordre chronologique. Il montre comment les objets collaborent pour réaliser un cas d'utilisation."
+        },
+        {
+          "type": "subtitle",
+          "text": "Éléments du Diagramme"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Élément",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Acteur / Objet",
+              "Participant à l'interaction (en haut)"
+            ],
+            [
+              "Ligne de vie",
+              "Ligne verticale pointillée représentant la durée de vie"
+            ],
+            [
+              "Message",
+              "Flèche horizontale (appel de méthode, envoi de données)"
+            ],
+            [
+              "Activation",
+              "Rectangle sur la ligne de vie (période d'activité)"
+            ],
+            [
+              "Message de retour",
+              "Flèche pointillée (valeur de retour)"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "Exemple : Authentification\n\nClient    Contrôleur    Service    BDD\n  │            │           │         │\n  │─login()───>│           │         │\n  │            │─verify()─>│         │\n  │            │           │─query()>│\n  │            │           │<────────│\n  │            │<──────────│         │\n  │<───token───│           │         │\n  │            │           │         │"
+        },
+        {
+          "type": "subtitle",
+          "text": "Types de Messages"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type",
+            "Flèche",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Synchrone",
+              "─────>",
+              "Appel bloquant (attend la réponse)"
+            ],
+            [
+              "Asynchrone",
+              "- - - >",
+              "Appel non bloquant"
+            ],
+            [
+              "Retour",
+              "<─ ─ ─",
+              "Valeur de retour"
+            ],
+            [
+              "Création",
+              "─────> (avec <<create>>)",
+              "Création d'un objet"
+            ],
+            [
+              "Destruction",
+              "X",
+              "Destruction d'un objet"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "UML est un langage de modélisation (pas une méthode) pour visualiser et documenter les systèmes.",
+    "3 catégories : Comportementaux (QUOI), Interaction (COMMENT), Structurels (ARCHITECTURE).",
+    "Diagramme de cas d'utilisation : fonctionnalités vues par les acteurs.",
+    "Diagramme de classes : structure statique (classes, attributs, méthodes, relations).",
+    "Diagramme de séquence : interactions entre objets dans le temps.",
+    "Diagramme d'activité : algorithmes, processus, workflows.",
+    "Diagramme de machine à états : états et transitions d'un objet.",
+    "Travailler de manière itérative : impossible de produire un diagramme correct au premier jet."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Spécification UML 2.5 (OMG)",
+      "url": "https://www.omg.org/spec/UML/"
+    },
+    {
+      "type": "tool",
+      "title": "Visual Paradigm Community Edition",
+      "url": "https://www.visual-paradigm.com/download/community.jsp"
+    },
+    {
+      "type": "tool",
+      "title": "PlantUML (diagrammes en mode texte)",
+      "url": "https://plantuml.com/"
+    }
+  ]
+}

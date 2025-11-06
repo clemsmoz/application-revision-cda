@@ -1,0 +1,500 @@
+{
+  "id": "bloc1-react",
+  "bloc": "bloc1",
+  "title": "React JS : Principes et Fondamentaux",
+  "icon": "⚛️",
+  "color": "#61DAFB",
+  "description": "React est une bibliothèque JavaScript pour créer des interfaces utilisateur interactives. Basé sur des composants réutilisables, il permet de créer des Single Page Applications (SPA) performantes.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "React au Service du Développeur Front-End",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le Web repose sur une architecture **client-serveur**. Le **front-end** est la partie qui gère l'interface utilisateur dans le navigateur."
+        },
+        {
+          "type": "definition",
+          "term": "React",
+          "definition": "Bibliothèque JavaScript (créée par Facebook/Meta) pour construire des interfaces utilisateur. React organise le code en composants réutilisables et utilise le concept de Single Page Application (SPA)."
+        },
+        {
+          "type": "paragraph",
+          "text": "React est basé sur **HTML/CSS/JavaScript** et permet d'implémenter des fonctionnalités dans l'interface de manière efficace et maintenable."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Composants",
+              "Briques réutilisables de l'interface (boutons, formulaires, cartes, etc.)"
+            ],
+            [
+              "JSX",
+              "Syntaxe mélangeant JavaScript et HTML pour écrire les composants"
+            ],
+            [
+              "Virtual DOM",
+              "Représentation virtuelle du DOM pour optimiser les mises à jour"
+            ],
+            [
+              "SPA",
+              "Single Page Application : une seule page HTML, contenu mis à jour dynamiquement"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spa",
+      "title": "Single Page Application (SPA)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "React utilise le concept de **Single Page Application** : l'intégralité de l'application est chargée dès la première page, puis seules les zones nécessaires sont mises à jour."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Approche Traditionnelle",
+            "SPA (React)"
+          ],
+          "rows": [
+            [
+              "Rechargement complet de la page à chaque navigation",
+              "Mise à jour partielle du contenu sans rechargement"
+            ],
+            [
+              "Requêtes HTTP pour chaque page",
+              "Requêtes AJAX uniquement pour les données"
+            ],
+            [
+              "Lent et saccadé",
+              "Rapide et fluide"
+            ],
+            [
+              "Expérience web classique",
+              "Expérience proche d'une application native"
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Avantages SPA** : Communication client-serveur optimisée, interface plus réactive, meilleure expérience utilisateur."
+        }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "title": "Frameworks Front-End",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "React n'est pas le seul framework JavaScript. Tous partagent le même objectif et les mêmes principes."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Framework",
+            "Créateur",
+            "Particularité"
+          ],
+          "rows": [
+            [
+              "React",
+              "Meta (Facebook)",
+              "Bibliothèque légère, écosystème riche"
+            ],
+            [
+              "Vue.js",
+              "Evan You",
+              "Progressif, facile à apprendre"
+            ],
+            [
+              "Angular",
+              "Google",
+              "Framework complet, TypeScript natif"
+            ],
+            [
+              "Svelte",
+              "Rich Harris",
+              "Compilation, pas de Virtual DOM"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Objectif commun** : Rendre facile, rapide et maintenable la création d'interfaces web modernes."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Principes communs** : SPA, affichage partiel, requêtes AJAX, composants réutilisables."
+        }
+      ]
+    },
+    {
+      "id": "init",
+      "title": "Initialisation d'une Application React",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Pour créer une nouvelle application React, on utilise **Node.js** et l'outil **create-react-app** (ou Vite, plus moderne)."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Avec create-react-app (classique)\nnpx create-react-app mon-app\ncd mon-app\nnpm start\n\n# Avec Vite (moderne, plus rapide)\nnpm create vite@latest mon-app -- --template react\ncd mon-app\nnpm install\nnpm run dev"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Node.js** permet d'avoir un serveur web de développement sur la machine locale. Le **rafraîchissement automatique** (Hot Module Replacement) met à jour l'application dans le navigateur dès qu'on sauvegarde un fichier."
+        },
+        {
+          "type": "subtitle",
+          "text": "Structure d'un Projet React"
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "mon-app/\n├── node_modules/     # Dépendances installées\n├── public/           # Fichiers statiques (index.html, images)\n├── src/              # Code source\n│   ├── components/   # Composants réutilisables\n│   ├── App.jsx       # Composant principal\n│   ├── main.jsx      # Point d'entrée\n│   └── index.css     # Styles globaux\n├── package.json      # Dépendances et scripts\n└── vite.config.js    # Configuration Vite"
+        }
+      ]
+    },
+    {
+      "id": "composant",
+      "title": "Le Composant : Brique de Base",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **composant** est la brique de base d'une application React. Il doit être **simple** et **réutilisable**. Il s'utilise comme une balise HTML personnalisée."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "// Composant fonctionnel (moderne)\nfunction Bouton() {\n  return (\n    <button className=\"btn btn-primary\">\n      Cliquez ici\n    </button>\n  );\n}\n\n// Utilisation dans un autre composant\nfunction App() {\n  return (\n    <div>\n      <h1>Mon Application</h1>\n      <Bouton />\n      <Bouton />\n    </div>\n  );\n}"
+        },
+        {
+          "type": "subtitle",
+          "text": "JSX (JavaScript XML)"
+        },
+        {
+          "type": "definition",
+          "term": "JSX",
+          "definition": "Syntaxe qui mélange JavaScript et HTML. Permet d'écrire du code ressemblant à du HTML directement dans JavaScript. Spécifique à React."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "// JSX\nconst element = <h1>Hello {name}</h1>;\n\n// Équivalent JavaScript pur\nconst element = React.createElement('h1', null, 'Hello, ', name);"
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**Différences JSX vs HTML** : `className` au lieu de `class`, `htmlFor` au lieu de `for`, attributs en camelCase (`onClick`, `onChange`)."
+        },
+        {
+          "type": "subtitle",
+          "text": "Bootstrap avec React"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Bootstrap** est souvent utilisé avec React pour avoir rapidement des composants graphiques basiques (boutons, formulaires, grilles)."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Installer Bootstrap\nnpm install bootstrap\n\n# Importer dans main.jsx ou App.jsx\nimport 'bootstrap/dist/css/bootstrap.min.css';"
+        }
+      ]
+    },
+    {
+      "id": "state",
+      "title": "L'État d'un Composant (State)",
+      "content": [
+        {
+          "type": "definition",
+          "term": "State (État)",
+          "definition": "Variables réactives locales à un composant. Lorsque le state change, React re-rend automatiquement le composant pour refléter les nouvelles valeurs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le state est géré avec le **hook useState()**."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "import { useState } from 'react';\n\nfunction Compteur() {\n  // Déclarer un state\n  const [count, setCount] = useState(0);\n  //     ↑       ↑            ↑\n  //  variable  setter   valeur initiale\n\n  return (\n    <div>\n      <p>Compteur : {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Incrémenter\n      </button>\n    </div>\n  );\n}"
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**Ne JAMAIS modifier directement le state** : `count++` ❌. Toujours utiliser le setter : `setCount(count + 1)` ✅."
+        },
+        {
+          "type": "subtitle",
+          "text": "Hook useEffect()"
+        },
+        {
+          "type": "paragraph",
+          "text": "**useEffect()** permet d'exécuter du code au démarrage du composant ou lorsque certaines variables changent."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "import { useState, useEffect } from 'react';\n\nfunction App() {\n  const [users, setUsers] = useState([]);\n\n  // S'exécute au montage du composant (équivalent componentDidMount)\n  useEffect(() => {\n    fetch('/api/users')\n      .then(res => res.json())\n      .then(data => setUsers(data));\n  }, []); // ← Tableau vide = exécution unique au montage\n\n  return <div>{/* Afficher users */}</div>;\n}"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dépendances",
+            "Comportement"
+          ],
+          "rows": [
+            [
+              "[]",
+              "Exécution unique au montage du composant"
+            ],
+            [
+              "[count]",
+              "Exécution au montage + à chaque changement de count"
+            ],
+            [
+              "Pas de tableau",
+              "Exécution à chaque re-render (⚠️ éviter)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usecallback",
+      "title": "Hook useCallback()",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**useCallback()** permet d'optimiser les performances en mémorisant une fonction pour éviter qu'elle soit recréée à chaque re-render."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "import { useState, useCallback } from 'react';\n\nfunction App() {\n  const [count, setCount] = useState(0);\n\n  // Sans useCallback : fonction recréée à chaque render\n  const handleClick = () => {\n    setCount(count + 1);\n  };\n\n  // Avec useCallback : fonction mémorisée\n  const handleClickOptimized = useCallback(() => {\n    setCount(count + 1);\n  }, [count]); // ← Dépendances : recréer si count change\n\n  return <button onClick={handleClickOptimized}>Cliquer</button>;\n}"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**React Developer Tools** : Extension navigateur indispensable pour déboguer les composants, le state et les props."
+        }
+      ]
+    },
+    {
+      "id": "conditionnel",
+      "title": "Affichage Conditionnel",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'affichage conditionnel se gère en JavaScript avec **if/else** ou l'**opérateur ternaire** (plus courant)."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "function App() {\n  const [isLoggedIn, setIsLoggedIn] = useState(false);\n\n  // Méthode 1 : if/else\n  if (isLoggedIn) {\n    return <h1>Welcome !</h1>;\n  } else {\n    return <h1>Veuillez vous connecter</h1>;\n  }\n}\n\n// Méthode 2 : Opérateur ternaire (plus courant)\nfunction App() {\n  const [isLoggedIn, setIsLoggedIn] = useState(false);\n\n  return (\n    <div>\n      {isLoggedIn ? (\n        <h1>Welcome !</h1>\n      ) : (\n        <h1>Veuillez vous connecter</h1>\n      )}\n    </div>\n  );\n}\n\n// Méthode 3 : && (afficher si vrai)\nfunction App() {\n  const [hasError, setHasError] = useState(false);\n\n  return (\n    <div>\n      {hasError && <p className=\"error\">Une erreur est survenue</p>}\n    </div>\n  );\n}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Il est possible de stocker des morceaux de template dans des variables :"
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "function App() {\n  const [user, setUser] = useState(null);\n\n  let content;\n  if (user) {\n    content = <h1>Hello {user.name}</h1>;\n  } else {\n    content = <h1>Veuillez vous connecter</h1>;\n  }\n\n  return <div>{content}</div>;\n}"
+        }
+      ]
+    },
+    {
+      "id": "listes",
+      "title": "Affichage de Listes",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'affichage de listes se gère avec la méthode **map()** de JavaScript."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "function App() {\n  const users = [\n    { id: 1, name: 'Alice' },\n    { id: 2, name: 'Bob' },\n    { id: 3, name: 'Charlie' }\n  ];\n\n  return (\n    <ul>\n      {users.map(user => (\n        <li key={user.id}>{user.name}</li>\n      ))}\n    </ul>\n  );\n}"
+        },
+        {
+          "type": "alert",
+          "level": "danger",
+          "text": "**La prop `key` est obligatoire** lors de l'affichage de listes. Elle permet à React d'optimiser les mises à jour en identifiant chaque élément de manière unique."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "// ❌ Mauvais : pas de key\n{users.map(user => <li>{user.name}</li>)}\n\n// ❌ Mauvais : key avec index (éviter)\n{users.map((user, index) => <li key={index}>{user.name}</li>)}\n\n// ✅ Bon : key avec ID unique\n{users.map(user => <li key={user.id}>{user.name}</li>)}"
+        }
+      ]
+    },
+    {
+      "id": "props",
+      "title": "Les Props (Propriétés)",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Props",
+          "definition": "Données passées d'un composant parent à un composant enfant. Elles sont en lecture seule (immutables)."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "// Composant enfant\nfunction Bouton(props) {\n  return (\n    <button className={props.variant}>\n      {props.label}\n    </button>\n  );\n}\n\n// Composant parent\nfunction App() {\n  return (\n    <div>\n      <Bouton variant=\"primary\" label=\"Enregistrer\" />\n      <Bouton variant=\"secondary\" label=\"Annuler\" />\n    </div>\n  );\n}"
+        },
+        {
+          "type": "subtitle",
+          "text": "Destructuration des Props (Recommandé)"
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "// Avec destructuration (plus lisible)\nfunction Bouton({ variant, label }) {\n  return (\n    <button className={variant}>\n      {label}\n    </button>\n  );\n}"
+        },
+        {
+          "type": "subtitle",
+          "text": "Typage des Props avec PropTypes"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Bonne pratique** : Déclarer et typer les props avec le module **prop-types**."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "npm install prop-types"
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "import PropTypes from 'prop-types';\n\nfunction Bouton({ variant, label, onClick }) {\n  return (\n    <button className={variant} onClick={onClick}>\n      {label}\n    </button>\n  );\n}\n\n// Déclaration des types\nBouton.propTypes = {\n  variant: PropTypes.string.isRequired,\n  label: PropTypes.string.isRequired,\n  onClick: PropTypes.func.isRequired\n};"
+        }
+      ]
+    },
+    {
+      "id": "props-events",
+      "title": "Props Événements (Remonter des Données)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les props avec fonction permettent de **remonter des événements et des données** d'un composant enfant vers un composant parent."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "// Composant enfant\nfunction Formulaire({ onSubmit }) {\n  const [name, setName] = useState('');\n\n  const handleSubmit = (e) => {\n    e.preventDefault();\n    onSubmit(name); // Remonter la donnée au parent\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <input\n        value={name}\n        onChange={(e) => setName(e.target.value)}\n      />\n      <button type=\"submit\">Envoyer</button>\n    </form>\n  );\n}\n\n// Composant parent\nfunction App() {\n  const handleFormSubmit = (name) => {\n    console.log('Nom reçu :', name);\n  };\n\n  return <Formulaire onSubmit={handleFormSubmit} />;\n}"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**useEffect() avec dépendances** : Se déclenche à chaque mise à jour d'une des variables listées dans le tableau de dépendances."
+        }
+      ]
+    },
+    {
+      "id": "factorisation",
+      "title": "Factorisation de Code",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Factoriser régulièrement** permet de maintenir les composants simples et lisibles. Un composant doit avoir une seule responsabilité."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "// ❌ Composant trop complexe\nfunction App() {\n  return (\n    <div>\n      <header>\n        <nav>\n          <ul>\n            <li><a href=\"/\">Accueil</a></li>\n            <li><a href=\"/about\">À propos</a></li>\n          </ul>\n        </nav>\n      </header>\n      <main>{/* Contenu */}</main>\n      <footer>{/* Pied de page */}</footer>\n    </div>\n  );\n}\n\n// ✅ Composants factorisés\nfunction Header() { /* ... */ }\nfunction Navigation() { /* ... */ }\nfunction Footer() { /* ... */ }\n\nfunction App() {\n  return (\n    <div>\n      <Header />\n      <main>{/* Contenu */}</main>\n      <Footer />\n    </div>\n  );\n}"
+        }
+      ]
+    },
+    {
+      "id": "router",
+      "title": "React Router (Navigation)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le module **react-router-dom** permet d'ajouter une navigation entre plusieurs pages dans une SPA."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "npm install react-router-dom"
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';\n\nfunction Home() {\n  return <h1>Page d'accueil</h1>;\n}\n\nfunction About() {\n  return <h1>À propos</h1>;\n}\n\nfunction App() {\n  return (\n    <BrowserRouter>\n      <nav>\n        <Link to=\"/\">Accueil</Link>\n        <Link to=\"/about\">À propos</Link>\n      </nav>\n\n      <Routes>\n        <Route path=\"/\" element={<Home />} />\n        <Route path=\"/about\" element={<About />} />\n      </Routes>\n    </BrowserRouter>\n  );\n}"
+        },
+        {
+          "type": "alert",
+          "level": "danger",
+          "text": "**Ne JAMAIS utiliser `<a href>`** dans une application React : cela recharge la page et fait sortir de l'application. Toujours utiliser **`<Link to>`**."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'**historique est simulé**, donnant l'illusion d'une navigation classique (boutons précédent/suivant du navigateur fonctionnent)."
+        }
+      ]
+    },
+    {
+      "id": "bootstrap-grid",
+      "title": "Bootstrap et Responsive Design",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Bootstrap fait gagner du temps grâce au **système de grille 12 colonnes** pour rendre l'application responsive."
+        },
+        {
+          "type": "code",
+          "language": "jsx",
+          "code": "function App() {\n  return (\n    <div className=\"container\">\n      <div className=\"row\">\n        <div className=\"col-md-4\">\n          <div className=\"card\">\n            <div className=\"card-body\">\n              <h5 className=\"card-title\">Carte 1</h5>\n            </div>\n          </div>\n        </div>\n        <div className=\"col-md-4\">\n          <div className=\"card\">\n            <div className=\"card-body\">\n              <h5 className=\"card-title\">Carte 2</h5>\n            </div>\n          </div>\n        </div>\n        <div className=\"col-md-4\">\n          <div className=\"card\">\n            <div className=\"card-body\">\n              <h5 className=\"card-title\">Carte 3</h5>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n}"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Console développeur** : Permet de simuler une navigation mobile (mode responsive) pour tester l'affichage sur différentes tailles d'écran."
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "React est une bibliothèque pour créer des interfaces utilisateur avec des composants réutilisables.",
+    "SPA (Single Page Application) : une seule page HTML, contenu mis à jour dynamiquement.",
+    "JSX mélange JavaScript et HTML pour écrire les composants.",
+    "State (useState) : variables réactives qui déclenchent un re-render lors de leur modification.",
+    "Props : données passées du parent à l'enfant (lecture seule).",
+    "useEffect() : exécuter du code au montage ou lors de changements de dépendances.",
+    "map() pour afficher des listes, avec la prop key obligatoire.",
+    "React Router pour la navigation (Link, Routes, Route).",
+    "Ne jamais utiliser <a href> dans React, toujours <Link to>."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Documentation officielle React",
+      "url": "https://react.dev/"
+    },
+    {
+      "type": "tool",
+      "title": "React Developer Tools (extension navigateur)",
+      "url": "https://react.dev/learn/react-developer-tools"
+    },
+    {
+      "type": "doc",
+      "title": "React Router",
+      "url": "https://reactrouter.com/"
+    }
+  ]
+}

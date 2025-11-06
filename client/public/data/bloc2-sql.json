@@ -1,0 +1,614 @@
+{
+  "id": "bloc2-sql",
+  "bloc": "bloc2",
+  "title": "SQL : Développement de Bases de Données",
+  "icon": "🗄️",
+  "color": "#10B981",
+  "description": "SQL (Structured Query Language) est le langage standard pour interagir avec les bases de données relationnelles. Il permet de créer, interroger, modifier et gérer des données structurées.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction aux Bases de Données Relationnelles",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Base de Données Relationnelle",
+          "definition": "Système de gestion de données organisées en tables (relations) composées de lignes (enregistrements) et de colonnes (attributs). Les tables sont liées entre elles par des clés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le modèle relationnel repose sur la **théorie des ensembles** et l'**algèbre relationnelle**. Les données sont structurées et respectent des contraintes d'intégrité."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Table (Relation)",
+              "Collection de données organisées en lignes et colonnes",
+              "Table `users`"
+            ],
+            [
+              "Ligne (Tuple)",
+              "Enregistrement unique dans une table",
+              "Un utilisateur spécifique"
+            ],
+            [
+              "Colonne (Attribut)",
+              "Propriété d'un enregistrement",
+              "`nom`, `email`, `age`"
+            ],
+            [
+              "Clé Primaire (PK)",
+              "Identifiant unique d'une ligne",
+              "`id` (auto-incrémenté)"
+            ],
+            [
+              "Clé Étrangère (FK)",
+              "Référence vers une clé primaire d'une autre table",
+              "`user_id` dans `orders`"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "SGBDR Populaires"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "SGBDR",
+            "Type",
+            "Utilisation"
+          ],
+          "rows": [
+            [
+              "MySQL / MariaDB",
+              "Open Source",
+              "Web, applications générales"
+            ],
+            [
+              "PostgreSQL",
+              "Open Source",
+              "Applications complexes, données géospatiales"
+            ],
+            [
+              "SQLite",
+              "Embarqué",
+              "Applications mobiles, prototypes"
+            ],
+            [
+              "Oracle",
+              "Commercial",
+              "Grandes entreprises"
+            ],
+            [
+              "SQL Server",
+              "Commercial (Microsoft)",
+              "Environnements Windows, .NET"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ldd",
+      "title": "LDD : Langage de Définition de Données",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **LDD** (DDL en anglais) permet de définir la structure de la base de données : créer, modifier et supprimer des tables, des index, etc."
+        },
+        {
+          "type": "subtitle",
+          "text": "CREATE TABLE (Créer une Table)"
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "CREATE TABLE users (\n  id INT PRIMARY KEY AUTO_INCREMENT,\n  name VARCHAR(100) NOT NULL,\n  email VARCHAR(255) UNIQUE NOT NULL,\n  age INT CHECK (age >= 18),\n  date_inscription DATETIME DEFAULT CURRENT_TIMESTAMP\n);"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type de Données",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "INT",
+              "Entier",
+              "age INT"
+            ],
+            [
+              "VARCHAR(n)",
+              "Chaîne de caractères (longueur variable)",
+              "nom VARCHAR(100)"
+            ],
+            [
+              "TEXT",
+              "Texte long",
+              "description TEXT"
+            ],
+            [
+              "DATE",
+              "Date (YYYY-MM-DD)",
+              "date_naissance DATE"
+            ],
+            [
+              "DATETIME",
+              "Date et heure",
+              "created_at DATETIME"
+            ],
+            [
+              "BOOLEAN",
+              "Vrai/Faux",
+              "is_active BOOLEAN"
+            ],
+            [
+              "DECIMAL(p,s)",
+              "Nombre décimal (précision, échelle)",
+              "prix DECIMAL(10,2)"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Contraintes d'Intégrité"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Contrainte",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "PRIMARY KEY",
+              "Identifiant unique de la ligne",
+              "id INT PRIMARY KEY"
+            ],
+            [
+              "FOREIGN KEY",
+              "Référence vers une autre table",
+              "FOREIGN KEY (user_id) REFERENCES users(id)"
+            ],
+            [
+              "UNIQUE",
+              "Valeur unique dans la colonne",
+              "email VARCHAR(255) UNIQUE"
+            ],
+            [
+              "NOT NULL",
+              "Valeur obligatoire",
+              "nom VARCHAR(100) NOT NULL"
+            ],
+            [
+              "CHECK",
+              "Condition à respecter",
+              "age INT CHECK (age >= 18)"
+            ],
+            [
+              "DEFAULT",
+              "Valeur par défaut",
+              "created_at DATETIME DEFAULT CURRENT_TIMESTAMP"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "ALTER TABLE (Modifier une Table)"
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Ajouter une colonne\nALTER TABLE users ADD COLUMN telephone VARCHAR(20);\n\n-- Modifier une colonne\nALTER TABLE users MODIFY COLUMN name VARCHAR(150);\n\n-- Supprimer une colonne\nALTER TABLE users DROP COLUMN telephone;\n\n-- Ajouter une contrainte\nALTER TABLE users ADD CONSTRAINT fk_role\n  FOREIGN KEY (role_id) REFERENCES roles(id);"
+        },
+        {
+          "type": "subtitle",
+          "text": "DROP TABLE (Supprimer une Table)"
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Supprimer une table\nDROP TABLE users;\n\n-- Supprimer si elle existe (évite les erreurs)\nDROP TABLE IF EXISTS users;"
+        }
+      ]
+    },
+    {
+      "id": "lmd",
+      "title": "LMD : Langage de Manipulation de Données",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **LMD** (DML en anglais) permet de manipuler les données : insérer, lire, modifier et supprimer des enregistrements."
+        },
+        {
+          "type": "subtitle",
+          "text": "INSERT (Insérer des Données)"
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Insérer un enregistrement\nINSERT INTO users (name, email, age)\nVALUES ('Alice', 'alice@example.com', 25);\n\n-- Insérer plusieurs enregistrements\nINSERT INTO users (name, email, age) VALUES\n  ('Bob', 'bob@example.com', 30),\n  ('Charlie', 'charlie@example.com', 28);\n\n-- Insérer avec toutes les colonnes (dans l'ordre)\nINSERT INTO users\nVALUES (NULL, 'David', 'david@example.com', 35, NOW());"
+        },
+        {
+          "type": "subtitle",
+          "text": "SELECT (Interroger des Données)"
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Sélectionner toutes les colonnes\nSELECT * FROM users;\n\n-- Sélectionner des colonnes spécifiques\nSELECT name, email FROM users;\n\n-- Avec condition WHERE\nSELECT * FROM users WHERE age >= 25;\n\n-- Avec plusieurs conditions\nSELECT * FROM users\nWHERE age >= 25 AND email LIKE '%@example.com';\n\n-- Trier les résultats\nSELECT * FROM users ORDER BY age DESC;\n\n-- Limiter le nombre de résultats\nSELECT * FROM users LIMIT 10;\n\n-- Pagination\nSELECT * FROM users LIMIT 10 OFFSET 20; -- Page 3 (20 enregistrements sautés)"
+        },
+        {
+          "type": "subtitle",
+          "text": "Opérateurs de Comparaison"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Opérateur",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "=",
+              "Égal",
+              "age = 25"
+            ],
+            [
+              "!=  ou  <>",
+              "Différent",
+              "age != 25"
+            ],
+            [
+              ">",
+              "Supérieur",
+              "age > 25"
+            ],
+            [
+              "<",
+              "Inférieur",
+              "age < 25"
+            ],
+            [
+              ">=",
+              "Supérieur ou égal",
+              "age >= 25"
+            ],
+            [
+              "<=",
+              "Inférieur ou égal",
+              "age <= 25"
+            ],
+            [
+              "BETWEEN",
+              "Entre deux valeurs",
+              "age BETWEEN 20 AND 30"
+            ],
+            [
+              "IN",
+              "Dans une liste",
+              "age IN (20, 25, 30)"
+            ],
+            [
+              "LIKE",
+              "Correspondance de motif",
+              "nom LIKE 'A%' (commence par A)"
+            ],
+            [
+              "IS NULL",
+              "Valeur nulle",
+              "email IS NULL"
+            ],
+            [
+              "IS NOT NULL",
+              "Valeur non nulle",
+              "email IS NOT NULL"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "UPDATE (Modifier des Données)"
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Modifier un enregistrement\nUPDATE users\nSET age = 26\nWHERE id = 1;\n\n-- Modifier plusieurs colonnes\nUPDATE users\nSET name = 'Alice Dupont', age = 26\nWHERE id = 1;\n\n-- Modifier plusieurs enregistrements\nUPDATE users\nSET age = age + 1\nWHERE age < 30;"
+        },
+        {
+          "type": "alert",
+          "level": "danger",
+          "text": "**⚠️ ATTENTION** : Toujours utiliser WHERE avec UPDATE et DELETE, sinon TOUTES les lignes seront modifiées/supprimées !"
+        },
+        {
+          "type": "subtitle",
+          "text": "DELETE (Supprimer des Données)"
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Supprimer un enregistrement\nDELETE FROM users WHERE id = 1;\n\n-- Supprimer plusieurs enregistrements\nDELETE FROM users WHERE age < 18;\n\n-- Vider la table (delete tous les enregistrements)\nDELETE FROM users; -- ⚠️ Dangereux !\n\n-- Ou mieux (plus rapide, réinitialise les auto-incréments)\nTRUNCATE TABLE users;"
+        }
+      ]
+    },
+    {
+      "id": "jointures",
+      "title": "Jointures (JOIN)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **jointures** permettent de combiner des données de plusieurs tables en fonction de relations entre elles."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Tables d'exemple\nCREATE TABLE users (\n  id INT PRIMARY KEY,\n  name VARCHAR(100)\n);\n\nCREATE TABLE orders (\n  id INT PRIMARY KEY,\n  user_id INT,\n  montant DECIMAL(10,2),\n  FOREIGN KEY (user_id) REFERENCES users(id)\n);"
+        },
+        {
+          "type": "subtitle",
+          "text": "INNER JOIN (Jointure Interne)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Retourne uniquement les lignes ayant une correspondance dans les deux tables."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "SELECT users.name, orders.montant\nFROM users\nINNER JOIN orders ON users.id = orders.user_id;"
+        },
+        {
+          "type": "subtitle",
+          "text": "LEFT JOIN (Jointure Gauche)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Retourne toutes les lignes de la table de gauche, même si aucune correspondance dans la table de droite."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "SELECT users.name, orders.montant\nFROM users\nLEFT JOIN orders ON users.id = orders.user_id;\n-- Retourne tous les users, même ceux sans commande (montant = NULL)"
+        },
+        {
+          "type": "subtitle",
+          "text": "RIGHT JOIN (Jointure Droite)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Retourne toutes les lignes de la table de droite, même si aucune correspondance dans la table de gauche."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "SELECT users.name, orders.montant\nFROM users\nRIGHT JOIN orders ON users.id = orders.user_id;\n-- Retourne toutes les commandes, même celles sans user associé"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type de JOIN",
+            "Description",
+            "Cas d'usage"
+          ],
+          "rows": [
+            [
+              "INNER JOIN",
+              "Correspondances uniquement",
+              "Utilisateurs ayant passé des commandes"
+            ],
+            [
+              "LEFT JOIN",
+              "Toutes les lignes de gauche",
+              "Tous les utilisateurs (avec ou sans commandes)"
+            ],
+            [
+              "RIGHT JOIN",
+              "Toutes les lignes de droite",
+              "Toutes les commandes (avec ou sans utilisateur)"
+            ],
+            [
+              "FULL OUTER JOIN",
+              "Toutes les lignes des deux tables",
+              "Rarement utilisé (non supporté par MySQL)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fonctions",
+      "title": "Fonctions d'Agrégation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **fonctions d'agrégation** permettent de calculer des statistiques sur un ensemble de lignes."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Fonction",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "COUNT()",
+              "Compte le nombre de lignes",
+              "SELECT COUNT(*) FROM users;"
+            ],
+            [
+              "SUM()",
+              "Somme des valeurs",
+              "SELECT SUM(montant) FROM orders;"
+            ],
+            [
+              "AVG()",
+              "Moyenne des valeurs",
+              "SELECT AVG(age) FROM users;"
+            ],
+            [
+              "MIN()",
+              "Valeur minimale",
+              "SELECT MIN(age) FROM users;"
+            ],
+            [
+              "MAX()",
+              "Valeur maximale",
+              "SELECT MAX(age) FROM users;"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Nombre total d'users\nSELECT COUNT(*) AS total_users FROM users;\n\n-- Âge moyen\nSELECT AVG(age) AS age_moyen FROM users;\n\n-- Montant total des commandes\nSELECT SUM(montant) AS total FROM orders;"
+        },
+        {
+          "type": "subtitle",
+          "text": "GROUP BY (Regroupement)"
+        },
+        {
+          "type": "paragraph",
+          "text": "**GROUP BY** permet de regrouper les résultats par une ou plusieurs colonnes."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Nombre de commandes par user\nSELECT user_id, COUNT(*) AS nb_commandes\nFROM orders\nGROUP BY user_id;\n\n-- Montant total des commandes par user\nSELECT user_id, SUM(montant) AS total\nFROM orders\nGROUP BY user_id;\n\n-- Avec jointure\nSELECT users.name, COUNT(orders.id) AS nb_commandes\nFROM users\nLEFT JOIN orders ON users.id = orders.user_id\nGROUP BY users.id, users.name;"
+        },
+        {
+          "type": "subtitle",
+          "text": "HAVING (Filtrer les Groupes)"
+        },
+        {
+          "type": "paragraph",
+          "text": "**HAVING** filtre les résultats après le regroupement (contrairement à WHERE qui filtre avant)."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Utilisateurs ayant passé plus de 3 commandes\nSELECT user_id, COUNT(*) AS nb_commandes\nFROM orders\nGROUP BY user_id\nHAVING COUNT(*) > 3;\n\n-- Utilisateurs ayant dépensé plus de 1000€\nSELECT user_id, SUM(montant) AS total\nFROM orders\nGROUP BY user_id\nHAVING SUM(montant) > 1000;"
+        }
+      ]
+    },
+    {
+      "id": "sous-requetes",
+      "title": "Sous-Requêtes (Subqueries)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Une **sous-requête** est une requête imbriquée dans une autre requête."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Utilisateurs ayant passé au moins une commande\nSELECT * FROM users\nWHERE id IN (SELECT DISTINCT user_id FROM orders);\n\n-- Utilisateurs ayant dépensé plus que la moyenne\nSELECT * FROM users\nWHERE id IN (\n  SELECT user_id FROM orders\n  GROUP BY user_id\n  HAVING SUM(montant) > (SELECT AVG(montant) FROM orders)\n);\n\n-- Sous-requête dans SELECT\nSELECT name,\n  (SELECT COUNT(*) FROM orders WHERE orders.user_id = users.id) AS nb_commandes\nFROM users;"
+        }
+      ]
+    },
+    {
+      "id": "transactions",
+      "title": "Transactions",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Transaction",
+          "definition": "Ensemble d'opérations SQL exécutées comme une unité atomique. Soit toutes les opérations réussissent (COMMIT), soit aucune n'est appliquée (ROLLBACK)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les transactions garantissent les propriétés **ACID** : Atomicité, Cohérence, Isolation, Durabilité."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Démarrer une transaction\nSTART TRANSACTION;\n\n-- Opérations\nUPDATE comptes SET solde = solde - 100 WHERE id = 1;\nUPDATE comptes SET solde = solde + 100 WHERE id = 2;\n\n-- Valider la transaction\nCOMMIT;\n\n-- Ou annuler en cas d'erreur\nROLLBACK;"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Utiliser les transactions** pour garantir la cohérence des données lors d'opérations critiques (transferts bancaires, commandes, etc.)."
+        }
+      ]
+    },
+    {
+      "id": "index",
+      "title": "Index et Optimisation",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Index",
+          "definition": "Structure de données qui améliore la vitesse des requêtes SELECT en créant un \"index\" des valeurs d'une ou plusieurs colonnes."
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "code": "-- Créer un index\nCREATE INDEX idx_email ON users(email);\n\n-- Index sur plusieurs colonnes\nCREATE INDEX idx_nom_prenom ON users(name, firstName);\n\n-- Supprimer un index\nDROP INDEX idx_email ON users;"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Avantage",
+            "Inconvénient"
+          ],
+          "rows": [
+            [
+              "Accélère les SELECT",
+              "Ralentit les INSERT/UPDATE/DELETE"
+            ],
+            [
+              "Améliore les JOIN",
+              "Occupe de l'espace disque"
+            ],
+            [
+              "Optimise les WHERE et ORDER BY",
+              "Maintenance supplémentaire"
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Créer des index** sur les colonnes fréquemment utilisées dans WHERE, JOIN et ORDER BY."
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "SQL est le langage standard pour interagir avec les bases de données relationnelles.",
+    "LDD (CREATE, ALTER, DROP) définit la structure. LMD (SELECT, INSERT, UPDATE, DELETE) manipule les données.",
+    "Toujours utiliser WHERE avec UPDATE et DELETE pour éviter de modifier/supprimer toutes les lignes.",
+    "Les jointures (JOIN) combinent des données de plusieurs tables.",
+    "INNER JOIN : correspondances uniquement. LEFT JOIN : toutes les lignes de gauche.",
+    "Fonctions d'agrégation (COUNT, SUM, AVG, MIN, MAX) avec GROUP BY et HAVING.",
+    "Les transactions (START TRANSACTION, COMMIT, ROLLBACK) garantissent la cohérence des données.",
+    "Les index accélèrent les SELECT mais ralentissent les INSERT/UPDATE/DELETE."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "SQL Tutorial (W3Schools)",
+      "url": "https://www.w3schools.com/sql/"
+    },
+    {
+      "type": "interactive",
+      "title": "SQLBolt (apprendre SQL en pratiquant)",
+      "url": "https://sqlbolt.com/"
+    },
+    {
+      "type": "doc",
+      "title": "PostgreSQL Documentation",
+      "url": "https://www.postgresql.org/docs/"
+    }
+  ]
+}

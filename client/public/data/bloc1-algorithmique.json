@@ -1,0 +1,319 @@
+{
+  "id": "bloc1-algorithmique",
+  "bloc": "bloc1",
+  "title": "Principes Algorithmiques",
+  "icon": "🧮",
+  "color": "#10B981",
+  "description": "L'algorithmique est la base de tout programme informatique. Un algorithme est une suite d'instructions logiques qui résout un problème de manière optimale et compréhensible.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction à l'Algorithmique",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un algorithme doit fournir la solution à un problème de manière **optimale** et **compréhensible par tous**. Il s'écrit sous forme de logigramme (utilisation de symboles) ou en langage naturel simple."
+        },
+        {
+          "type": "definition",
+          "term": "Algorithme",
+          "definition": "Suite d'instructions logiques exécutées les unes après les autres en fonction des valeurs des variables en entrée, produisant un résultat en sortie."
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "Un algorithme est **toujours améliorable** et **testable**. Il n'existe pas de solution unique à un problème donné."
+        }
+      ]
+    },
+    {
+      "id": "expressions",
+      "title": "Expressions Arithmétiques et Logiques",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Une expression numérique est une suite d'opérations mathématiques (addition, soustraction, multiplication, division, etc.). Les règles mathématiques de base restent appliquées, notamment la **priorité des opérateurs**."
+        },
+        {
+          "type": "table",
+          "headers": ["Opérateur", "Symbole", "Priorité", "Exemple"],
+          "rows": [
+            ["Parenthèses", "()", "1 (plus haute)", "(2 + 3) × 4 = 20"],
+            ["Puissance", "^", "2", "2^3 = 8"],
+            ["Multiplication / Division", "× /", "3", "4 × 5 / 2 = 10"],
+            ["Addition / Soustraction", "+ -", "4 (plus basse)", "10 + 5 - 3 = 12"]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**Attention** : En informatique, tout s'écrit sur une seule ligne. Pensez au typage en sortie et aux priorités des opérateurs."
+        },
+        {
+          "type": "subtitle",
+          "text": "Expressions Logiques (Booléennes)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les expressions logiques utilisent les opérateurs **AND** (ET), **OR** (OU) et **NOT** (NÉGATION) pour effectuer des comparaisons. Le résultat est toujours **Vrai** (True/1) ou **Faux** (False/0)."
+        },
+        {
+          "type": "table",
+          "headers": ["Opérateur", "Symbole", "Description", "Exemple"],
+          "rows": [
+            ["AND (ET)", "&&, AND", "Vrai si les deux conditions sont vraies", "(x > 5) AND (x < 10)"],
+            ["OR (OU)", "||, OR", "Vrai si au moins une condition est vraie", "(x < 0) OR (x > 100)"],
+            ["NOT (NON)", "!, NOT", "Inverse la valeur logique", "NOT (x == 5)"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structures-conditionnelles",
+      "title": "Structures Conditionnelles",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les structures conditionnelles permettent de **choisir une branche d'exécution** en fonction d'une condition logique (Vrai ou Faux)."
+        },
+        {
+          "type": "subtitle",
+          "text": "Si / Alors / Sinon (If / Then / Else)"
+        },
+        {
+          "type": "code",
+          "language": "pseudo",
+          "code": "SI condition ALORS\n    // Instructions si la condition est vraie\nSINON\n    // Instructions si la condition est fausse\nFIN SI"
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**Attention** : Éviter l'abus d'imbrication de `if/else` pour maintenir la lisibilité du code. Préférer les structures à choix multiples si nécessaire."
+        },
+        {
+          "type": "subtitle",
+          "text": "Structure à Choix Multiples (Switch / Select Case)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lorsque trop de `Si / Alors / Sinon` rendent le programme compliqué, on utilise une **structure à choix multiples** qui teste une variable contre plusieurs valeurs possibles."
+        },
+        {
+          "type": "code",
+          "language": "pseudo",
+          "code": "SELON variable\n    CAS valeur1:\n        // Instructions\n    CAS valeur2:\n        // Instructions\n    DÉFAUT:\n        // Instructions par défaut\nFIN SELON"
+        }
+      ]
+    },
+    {
+      "id": "structures-iteratives",
+      "title": "Structures Itératives (Boucles)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les boucles permettent de **répéter un bloc d'instructions** tant qu'une condition est vraie ou un nombre de fois déterminé."
+        },
+        {
+          "type": "table",
+          "headers": ["Type de Boucle", "Quand l'utiliser", "Syntaxe", "Risque"],
+          "rows": [
+            ["FOR (Pour)", "Nombre d'itérations connu à l'avance", "FOR i = 1 TO n", "Boucle infinie si mal configurée"],
+            ["WHILE (Tant que) - Pré-testée", "Condition testée AVANT l'exécution", "WHILE condition DO", "Ne s'exécute jamais si condition fausse dès le départ"],
+            ["DO WHILE - Post-testée", "Condition testée APRÈS l'exécution (au moins 1 passage)", "DO ... WHILE condition", "S'exécute au moins une fois"],
+            ["DO UNTIL (Jusqu'à)", "Arrêt quand la condition devient vraie", "DO ... UNTIL condition", "Inverse logique de WHILE"]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "danger",
+          "text": "**Danger : Boucles infinies** - Toujours vérifier que la condition de sortie peut être atteinte. Pensez à incrémenter/décrémenter les compteurs correctement."
+        },
+        {
+          "type": "subtitle",
+          "text": "Exemple : Calcul de la somme de 1 à N"
+        },
+        {
+          "type": "code",
+          "language": "pseudo",
+          "code": "somme ← 0\nPOUR i DE 1 À N FAIRE\n    somme ← somme + i\nFIN POUR\nAFFICHER somme"
+        }
+      ]
+    },
+    {
+      "id": "fonctions-procedures",
+      "title": "Fonctions et Procédures",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les fonctions et procédures permettent de **découper le code en modules réutilisables** et de séparer les responsabilités."
+        },
+        {
+          "type": "table",
+          "headers": ["Concept", "Rôle", "Retourne une valeur ?", "Exemple"],
+          "rows": [
+            ["Procédure (Sub)", "Exécute un traitement sans retourner de valeur", "Non", "AfficherMessage()"],
+            ["Fonction", "Exécute un traitement et retourne UNE valeur typée", "Oui", "CalculerMoyenne() → nombre"]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Passage de Paramètres"
+        },
+        {
+          "type": "table",
+          "headers": ["Mode", "Mot-clé", "Comportement", "Utilisation"],
+          "rows": [
+            ["Par Recopie (Valeur)", "ByVal", "La valeur est copiée. L'original est protégé.", "Quand on ne veut pas modifier la variable d'origine"],
+            ["Par Référence", "ByRef", "La variable originale peut être modifiée par la fonction.", "Quand on veut modifier la variable d'origine (attention aux effets de bord)"]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Bonne pratique** : Préférer les fonctions qui retournent une valeur plutôt que les procédures avec passage par référence, pour un code plus lisible et sûr."
+        }
+      ]
+    },
+    {
+      "id": "portee-variables",
+      "title": "Portée des Variables",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "La **portée (scope)** d'une variable détermine où elle est accessible dans le programme."
+        },
+        {
+          "type": "table",
+          "headers": ["Type de Portée", "Déclaration", "Accessible", "Durée de vie"],
+          "rows": [
+            ["Locale", "À l'intérieur d'une fonction/procédure", "Uniquement dans cette fonction", "Détruite à la fin de la fonction"],
+            ["Globale (Module)", "En dehors de toute fonction", "Dans tout le module", "Toute l'exécution du programme"],
+            ["Publique", "Avec mot-clé Public", "Dans tous les modules", "Toute l'exécution du programme"]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**Attention** : Éviter l'abus de variables globales qui rendent le code difficile à déboguer et à maintenir."
+        }
+      ]
+    },
+    {
+      "id": "tableaux",
+      "title": "Tableaux (Arrays)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un tableau permet de stocker **plusieurs valeurs du même type** sous un seul nom de variable, accessibles via un **indice** (index)."
+        },
+        {
+          "type": "subtitle",
+          "text": "Tableaux à Une Dimension"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un tableau à une dimension est une **liste** d'éléments. L'indice de départ est généralement **0** dans la plupart des langages."
+        },
+        {
+          "type": "code",
+          "language": "pseudo",
+          "code": "// Déclaration d'un tableau de 10 entiers\nDÉCLARER notes[10] : ENTIER\n\n// Remplissage\nPOUR i DE 0 À 9 FAIRE\n    notes[i] ← SAISIR()\nFIN POUR"
+        },
+        {
+          "type": "subtitle",
+          "text": "Tableaux Bidimensionnels (Matrices)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un tableau bidimensionnel est une **matrice** (lignes × colonnes). Le premier indice représente la ligne, le second la colonne."
+        },
+        {
+          "type": "code",
+          "language": "pseudo",
+          "code": "// Déclaration d'une matrice 3×3\nDÉCLARER matrice[3][3] : ENTIER\n\n// Parcours avec deux boucles imbriquées\nPOUR i DE 0 À 2 FAIRE\n    POUR j DE 0 À 2 FAIRE\n        matrice[i][j] ← i * j\n    FIN POUR\nFIN POUR"
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**Attention** : Vérifier les limites du tableau pour éviter les erreurs d'accès hors index (index out of bounds)."
+        }
+      ]
+    },
+    {
+      "id": "chaines-dates",
+      "title": "Manipulation des Chaînes et Dates",
+      "content": [
+        {
+          "type": "subtitle",
+          "text": "Chaînes de Caractères (String)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une chaîne de caractères est un **tableau de caractères**. Tous les langages proposent des fonctions pour les manipuler."
+        },
+        {
+          "type": "table",
+          "headers": ["Opération", "Description", "Exemple"],
+          "rows": [
+            ["Longueur", "Obtenir le nombre de caractères", "LENGTH(\"Bonjour\") → 7"],
+            ["Extraction", "Extraire une sous-chaîne", "SUBSTRING(\"Bonjour\", 0, 3) → \"Bon\""],
+            ["Concaténation", "Assembler deux chaînes", "\"Bon\" + \"jour\" → \"Bonjour\""],
+            ["Recherche", "Trouver un caractère/mot", "FIND(\"Bonjour\", \"jour\") → 3"]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Dates et Heures"
+        },
+        {
+          "type": "paragraph",
+          "text": "La manipulation des dates est délicate car elle dépend du **format de zone** (Europe : JJ/MM/AAAA, USA : MM/JJ/AAAA)."
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Conseil** : Convertir la date en format nombre (timestamp), la manipuler, puis l'afficher au bon format."
+        }
+      ]
+    },
+    {
+      "id": "bonnes-pratiques",
+      "title": "Bonnes Pratiques en Algorithmique",
+      "content": [
+        {
+          "type": "list",
+          "items": [
+            "**Diviser pour mieux régner** : Découper un problème complexe en sous-problèmes plus simples.",
+            "**Tester unitairement** : Tester chaque fonction/procédure indépendamment.",
+            "**Indentation et formatage** : Respecter une mise en forme claire pour la lisibilité.",
+            "**Nommer clairement** : Utiliser des noms de variables et fonctions explicites.",
+            "**Commenter le code** : Expliquer les parties complexes ou non évidentes.",
+            "**Éviter la duplication** : Factoriser le code répétitif dans des fonctions.",
+            "**Gérer les erreurs** : Prévoir les cas limites et les erreurs possibles."
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Un algorithme est une suite d'instructions logiques résolvant un problème de manière optimale.",
+    "Les structures conditionnelles (if/else, switch) permettent de diriger l'exécution.",
+    "Les boucles (for, while, do/while) permettent de répéter des instructions.",
+    "Les fonctions retournent une valeur, les procédures non.",
+    "Le passage par valeur (ByVal) protège la variable d'origine, le passage par référence (ByRef) la modifie.",
+    "Les tableaux permettent de stocker plusieurs valeurs du même type.",
+    "Toujours vérifier les conditions de sortie des boucles pour éviter les boucles infinies."
+  ],
+  "resources": [
+    {
+      "type": "video",
+      "title": "Introduction à l'algorithmique",
+      "url": "#"
+    },
+    {
+      "type": "exercice",
+      "title": "Exercices pratiques sur les boucles",
+      "url": "#"
+    }
+  ]
+}

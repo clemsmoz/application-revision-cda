@@ -1,0 +1,648 @@
+{
+  "id": "bloc1-javascript-async",
+  "bloc": "bloc1",
+  "title": "JavaScript : Événementiel et Asynchrone",
+  "icon": "⚡",
+  "color": "#F59E0B",
+  "description": "JavaScript permet de manipuler le DOM et de gérer les événements utilisateur. La programmation asynchrone (Promises, async/await, Fetch API) permet de gérer les opérations longues sans bloquer l'interface.",
+  "sections": [
+    {
+      "id": "dom",
+      "title": "JavaScript et le DOM",
+      "content": [
+        {
+          "type": "definition",
+          "term": "DOM (Document Object Model)",
+          "definition": "Représentation objet de la structure HTML d'une page web. Chaque élément HTML devient un objet JavaScript manipulable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **DOM** est une **API** (Application Programming Interface) qui permet à JavaScript d'accéder et de manipuler les éléments HTML et CSS d'une page web en temps réel."
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<!-- HTML -->\n<div id=\"container\">\n  <p class=\"texte\">Hello</p>\n</div>\n\n<!-- Structure DOM (arbre d'objets) -->\nDocument\n  └── html\n       └── body\n            └── div#container\n                 └── p.texte\n                      └── \"Hello, \" (TextNode)"
+        }
+      ]
+    },
+    {
+      "id": "window",
+      "title": "L'Objet Global window",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**window** est l'objet global du navigateur. Il représente la fenêtre du navigateur et contient toutes les variables globales et fonctions."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Propriété/Méthode",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "window.document",
+              "Accès au DOM de la page",
+              "window.document.title"
+            ],
+            [
+              "window.location",
+              "URL actuelle",
+              "window.location.href"
+            ],
+            [
+              "window.alert()",
+              "Affiche une alerte",
+              "alert('Message')"
+            ],
+            [
+              "window.confirm()",
+              "Affiche une confirmation (OK/Annuler)",
+              "if (confirm('Continuer?')) { ... }"
+            ],
+            [
+              "window.setTimeout()",
+              "Exécute une fonction après un délai",
+              "setTimeout(() => { ... }, 1000)"
+            ],
+            [
+              "window.setInterval()",
+              "Exécute une fonction à intervalle régulier",
+              "setInterval(() => { ... }, 1000)"
+            ],
+            [
+              "window.clearInterval()",
+              "Arrête un intervalle",
+              "clearInterval(intervalId)"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Exemple : Afficher un message après 2 secondes\nsetTimeout(() => {\n  console.log(\"2 secondes écoulées !\");\n}, 2000);\n\n// Exemple : Compteur toutes les secondes\nlet compteur = 0;\nconst intervalId = setInterval(() => {\n  compteur++;\n  console.log(compteur);\n  if (compteur === 5) {\n    clearInterval(intervalId); // Arrête après 5 secondes\n  }\n}, 1000);"
+        }
+      ]
+    },
+    {
+      "id": "selection",
+      "title": "Sélectionner des Éléments du DOM",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Pour manipuler le DOM, il faut d'abord **sélectionner** les éléments HTML. Les méthodes modernes **querySelector()** et **querySelectorAll()** sont universelles et efficaces."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Méthode",
+            "Retourne",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "querySelector()",
+              "1 élément (le premier)",
+              "Sélectionne le premier élément correspondant au sélecteur CSS",
+              "document.querySelector('.btn')"
+            ],
+            [
+              "querySelectorAll()",
+              "NodeList (tous)",
+              "Sélectionne tous les éléments correspondants",
+              "document.querySelectorAll('p')"
+            ],
+            [
+              "getElementById()",
+              "1 élément",
+              "Sélectionne par ID (obsolète, préférer querySelector)",
+              "document.getElementById('header')"
+            ],
+            [
+              "getElementsByClassName()",
+              "HTMLCollection",
+              "Sélectionne par classe (obsolète)",
+              "document.getElementsByClassName('item')"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Sélectionner un élément par ID\nconst header = document.querySelector('#header');\n\n// Sélectionner un élément par classe\nconst bouton = document.querySelector('.btn-primary');\n\n// Sélectionner tous les paragraphes\nconst paragraphes = document.querySelectorAll('p');\n\n// Parcourir les éléments sélectionnés\nparagraphes.forEach(p => {\n  console.log(p.textContent);\n});\n\n// Sélecteur CSS complexe\nconst lien = document.querySelector('nav > ul > li:first-child > a');"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**querySelectorAll()** retourne une **NodeList** (pas un tableau). Pour utiliser les méthodes de tableau, convertir avec `Array.from(nodeList)` ou `[...nodeList]`."
+        }
+      ]
+    },
+    {
+      "id": "manipulation",
+      "title": "Créer et Supprimer des Éléments",
+      "content": [
+        {
+          "type": "subtitle",
+          "text": "Créer des Éléments"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Créer un élément\nconst div = document.createElement('div');\ndiv.textContent = \"Nouveau contenu\";\ndiv.className = \"ma-classe\";\n\n// Ajouter l'élément au DOM\ndocument.body.appendChild(div);\n\n// Créer une image\nconst img = new Image();\nimg.src = \"logo.png\";\nimg.alt = \"Logo\";\ndocument.body.appendChild(img);\n\n// Insérer avant un élément existant\nconst reference = document.querySelector('#reference');\nreference.parentNode.insertBefore(div, reference);"
+        },
+        {
+          "type": "subtitle",
+          "text": "Supprimer des Éléments"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Supprimer un élément\nconst element = document.querySelector('.a-delete');\nelement.remove();\n\n// Vider un conteneur (supprimer tous ses enfants)\nconst container = document.querySelector('#container');\ncontainer.innerHTML = ''; // Méthode simple mais moins performante\n\n// Ou mieux :\nwhile (container.firstChild) {\n  container.removeChild(container.firstChild);\n}"
+        },
+        {
+          "type": "subtitle",
+          "text": "Modifier le Contenu"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Propriété",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "textContent",
+              "Texte brut (sans HTML)",
+              "element.textContent = 'Texte'"
+            ],
+            [
+              "innerHTML",
+              "Contenu HTML (⚠️ risque XSS)",
+              "element.innerHTML = '<strong>Gras</strong>'"
+            ],
+            [
+              "value",
+              "Valeur d'un input",
+              "input.value = 'Nouvelle valeur'"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css",
+      "title": "Gérer les Styles CSS",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "JavaScript permet de modifier les styles CSS des éléments en temps réel."
+        },
+        {
+          "type": "subtitle",
+          "text": "Modifier les Styles Inline"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "const element = document.querySelector('.box');\n\n// Modifier un style (camelCase pour les propriétés composées)\nelement.style.backgroundColor = 'blue';\nelement.style.fontSize = '20px';\nelement.style.marginTop = '10px';\n\n// ⚠️ Les noms CSS composés deviennent camelCase :\n// background-color → backgroundColor\n// font-size → fontSize"
+        },
+        {
+          "type": "subtitle",
+          "text": "Manipuler les Classes CSS (Recommandé)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Plutôt que de modifier les styles inline, il est préférable d'ajouter/retirer des **classes CSS** définies dans une feuille de style."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Méthode",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "classList.add()",
+              "Ajoute une classe",
+              "element.classList.add('active')"
+            ],
+            [
+              "classList.remove()",
+              "Retire une classe",
+              "element.classList.remove('hidden')"
+            ],
+            [
+              "classList.toggle()",
+              "Ajoute si absente, retire si présente",
+              "element.classList.toggle('visible')"
+            ],
+            [
+              "classList.contains()",
+              "Vérifie si la classe existe",
+              "if (element.classList.contains('active')) { ... }"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "const bouton = document.querySelector('.btn');\n\n// Ajouter une classe\nbouton.classList.add('btn-primary');\n\n// Retirer une classe\nbouton.classList.remove('btn-secondary');\n\n// Toggle (activer/désactiver)\nbouton.classList.toggle('active');\n\n// Vérifier\nif (bouton.classList.contains('active')) {\n  console.log('Le bouton est active');\n}"
+        }
+      ]
+    },
+    {
+      "id": "evenements",
+      "title": "Programmation Événementielle",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "La **programmation événementielle** permet de réagir aux actions de l'utilisateur (clics, saisies clavier, mouvements de souris, etc.)."
+        },
+        {
+          "type": "subtitle",
+          "text": "Phases de Propagation des Événements"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lorsqu'un événement se produit, il se propage en **trois phases** :"
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "1. CAPTURE (de la racine vers la cible)\n   Document → html → body → div → button\n\n2. TARGET (sur l'élément cible)\n   button\n\n3. BUBBLING (de la cible vers la racine)\n   button → div → body → html → Document"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "Par défaut, les écouteurs d'événements sont attachés en phase **BUBBLING**. On peut choisir la phase CAPTURE en passant `true` comme 3ème paramètre."
+        }
+      ]
+    },
+    {
+      "id": "ecouteurs",
+      "title": "Les Écouteurs d'Événements",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un **écouteur d'événements** (event listener) est une fonction qui s'exécute lorsqu'un événement se produit."
+        },
+        {
+          "type": "subtitle",
+          "text": "Ajouter un Écouteur"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "const bouton = document.querySelector('.btn');\n\n// Méthode moderne (recommandée)\nbouton.addEventListener('click', function(event) {\n  console.log('Bouton cliqué !');\n  console.log(event.target); // L'élément cliqué\n});\n\n// Avec arrow function\nbouton.addEventListener('click', (event) => {\n  console.log('Clic détecté');\n});\n\n// Méthode obsolète (à éviter)\nbouton.onclick = function() {\n  console.log('Clic');\n};"
+        },
+        {
+          "type": "subtitle",
+          "text": "Événements Courants"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Événement",
+            "Déclencheur",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "click",
+              "Clic de souris",
+              "bouton.addEventListener('click', ...)"
+            ],
+            [
+              "dblclick",
+              "Double-clic",
+              "element.addEventListener('dblclick', ...)"
+            ],
+            [
+              "mouseover",
+              "Survol de la souris",
+              "div.addEventListener('mouseover', ...)"
+            ],
+            [
+              "mouseout",
+              "Sortie de la souris",
+              "div.addEventListener('mouseout', ...)"
+            ],
+            [
+              "keydown",
+              "Touche enfoncée",
+              "window.addEventListener('keydown', ...)"
+            ],
+            [
+              "keyup",
+              "Touche relâchée",
+              "input.addEventListener('keyup', ...)"
+            ],
+            [
+              "submit",
+              "Soumission de formulaire",
+              "form.addEventListener('submit', ...)"
+            ],
+            [
+              "change",
+              "Changement de valeur (input)",
+              "select.addEventListener('change', ...)"
+            ],
+            [
+              "input",
+              "Saisie en temps réel",
+              "input.addEventListener('input', ...)"
+            ],
+            [
+              "load",
+              "Chargement de la page",
+              "window.addEventListener('load', ...)"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Objet Event"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "bouton.addEventListener('click', (event) => {\n  console.log(event.target);       // L'élément cliqué\n  console.log(event.type);         // Type d'événement ('click')\n  console.log(event.clientX);      // Position X de la souris\n  console.log(event.clientY);      // Position Y de la souris\n  \n  event.preventDefault();          // Empêche le comportement par défaut\n  event.stopPropagation();         // Arrête la propagation (bubbling)\n});\n\n// Exemple : Empêcher la soumission d'un formulaire\nform.addEventListener('submit', (event) => {\n  event.preventDefault(); // Empêche le rechargement de la page\n  // Traiter le formulaire en JavaScript\n});"
+        },
+        {
+          "type": "subtitle",
+          "text": "Supprimer un Écouteur"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Pour supprimer un écouteur, il faut une référence à la fonction\nfunction handleClick() {\n  console.log('Clic');\n}\n\nbouton.addEventListener('click', handleClick);\n\n// Supprimer l'écouteur\nbouton.removeEventListener('click', handleClick);\n\n// ⚠️ Impossible de supprimer une fonction anonyme ou arrow function"
+        }
+      ]
+    },
+    {
+      "id": "clavier",
+      "title": "Gestion du Clavier",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les événements clavier sont écoutés sur **window** ou sur un élément spécifique (input)."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Écouter les touches du clavier globalement\nwindow.addEventListener('keydown', (event) => {\n  console.log('Touche pressée :', event.key);\n  \n  // Exemples de touches\n  if (event.key === 'Enter') {\n    console.log('Touche Entrée');\n  }\n  if (event.key === 'Escape') {\n    console.log('Touche Échap');\n  }\n  if (event.key === 'ArrowUp') {\n    console.log('Flèche haut');\n  }\n  \n  // Touches de modification\n  if (event.ctrlKey) {\n    console.log('Ctrl enfoncé');\n  }\n  if (event.shiftKey) {\n    console.log('Shift enfoncé');\n  }\n});"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Propriété",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "event.key",
+              "Nom de la touche",
+              "'Enter', 'a', 'ArrowUp'"
+            ],
+            [
+              "event.code",
+              "Code physique de la touche",
+              "'KeyA', 'Enter', 'ArrowUp'"
+            ],
+            [
+              "event.ctrlKey",
+              "Ctrl enfoncé ?",
+              "true/false"
+            ],
+            [
+              "event.shiftKey",
+              "Shift enfoncé ?",
+              "true/false"
+            ],
+            [
+              "event.altKey",
+              "Alt enfoncé ?",
+              "true/false"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "async-intro",
+      "title": "Programmation Asynchrone : Introduction",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "JavaScript est **monothread** : il ne peut exécuter qu'une seule instruction à la fois. Les opérations longues (requêtes réseau, lecture de fichiers) bloqueraient l'interface."
+        },
+        {
+          "type": "definition",
+          "term": "Programmation Asynchrone",
+          "definition": "Permet d'exécuter des opérations longues sans bloquer le reste du code. Le résultat est traité plus tard, via un callback ou une Promise."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// ❌ Code synchrone (bloquant)\nconsole.log('Début');\nattendre(2000); // Bloque pendant 2 secondes\nconsole.log('Fin');\n\n// ✅ Code asynchrone (non bloquant)\nconsole.log('Début');\nsetTimeout(() => {\n  console.log('Après 2 secondes');\n}, 2000);\nconsole.log('Fin'); // S'exécute immédiatement\n\n// Ordre d'affichage :\n// Début\n// Fin\n// Après 2 secondes"
+        }
+      ]
+    },
+    {
+      "id": "promises",
+      "title": "Promises (Promesses)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Une **Promise** représente une valeur qui sera disponible maintenant, plus tard, ou jamais. Elle a trois états : **pending** (en attente), **fulfilled** (résolue), **rejected** (rejetée)."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Créer une Promise\nconst maPromesse = new Promise((resolve, reject) => {\n  // Opération asynchrone\n  setTimeout(() => {\n    const succes = true;\n    if (succes) {\n      resolve('Opération réussie !'); // Résolution\n    } else {\n      reject('Error !'); // Rejet\n    }\n  }, 2000);\n});\n\n// Utiliser la Promise\nmaPromesse\n  .then((resultat) => {\n    console.log(resultat); // \"Opération réussie !\"\n  })\n  .catch((erreur) => {\n    console.error(erreur);\n  })\n  .finally(() => {\n    console.log('Terminé (succès ou échec)');\n  });"
+        },
+        {
+          "type": "subtitle",
+          "text": "Chaînage de Promises"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Les méthodes then() retournent une Promise\nfetch('https://api.example.com/data')\n  .then(response => response.json())  // Convertir en JSON\n  .then(data => {\n    console.log(data);\n    return data.id; // Passer au then suivant\n  })\n  .then(id => {\n    console.log('ID :', id);\n  })\n  .catch(error => {\n    console.error('Error :', error);\n  });"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**then()** et **catch()** retournent toujours une Promise, permettant le **chaînage**."
+        }
+      ]
+    },
+    {
+      "id": "fetch",
+      "title": "Fetch API (Requêtes HTTP)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'**API Fetch** permet d'effectuer des requêtes HTTP (GET, POST, PUT, DELETE) de manière moderne et basée sur les Promises."
+        },
+        {
+          "type": "subtitle",
+          "text": "Requête GET (Récupérer des Données)"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Récupérer des données JSON\nfetch('https://api.example.com/users')\n  .then(response => {\n    if (!response.ok) {\n      throw new Error('Error réseau');\n    }\n    return response.json(); // Convertir en JSON\n  })\n  .then(users => {\n    console.log(users);\n  })\n  .catch(error => {\n    console.error('Error :', error);\n  });"
+        },
+        {
+          "type": "subtitle",
+          "text": "Requête POST (Envoyer des Données)"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Envoyer des données JSON\nfetch('https://api.example.com/users', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json'\n  },\n  body: JSON.stringify({\n    name: 'Alice',\n    email: 'alice@example.com'\n  })\n})\n  .then(response => response.json())\n  .then(data => {\n    console.log('Utilisateur créé :', data);\n  })\n  .catch(error => {\n    console.error('Error :', error);\n  });"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Méthode HTTP",
+            "Utilisation",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "GET",
+              "Récupérer des données",
+              "fetch('/api/users')"
+            ],
+            [
+              "POST",
+              "Créer une ressource",
+              "fetch('/api/users', { method: 'POST', ... })"
+            ],
+            [
+              "PUT",
+              "Modifier une ressource",
+              "fetch('/api/users/1', { method: 'PUT', ... })"
+            ],
+            [
+              "DELETE",
+              "Supprimer une ressource",
+              "fetch('/api/users/1', { method: 'DELETE' })"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "async-await",
+      "title": "async / await",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**async/await** est une syntaxe moderne qui rend le code asynchrone plus lisible, en le faisant ressembler à du code synchrone."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Fonction asynchrone\nasync function fetchUsers() {\n  try {\n    const response = await fetch('https://api.example.com/users');\n    if (!response.ok) {\n      throw new Error('Error réseau');\n    }\n    const users = await response.json();\n    console.log(users);\n    return users;\n  } catch (error) {\n    console.error('Error :', error);\n  }\n}\n\n// Appel de la fonction\nfetchUsers();"
+        },
+        {
+          "type": "subtitle",
+          "text": "Règles async/await"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**async** rend une fonction asynchrone (elle retourne toujours une Promise)",
+            "**await** ne peut être utilisé QUE dans une fonction async",
+            "**await** attend la résolution de la Promise avant de continuer",
+            "Utiliser **try/catch** pour gérer les erreurs"
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Comparaison Promises vs async/await\n\n// Avec Promises (chaînage)\nfetch('/api/users')\n  .then(response => response.json())\n  .then(users => {\n    console.log(users);\n  })\n  .catch(error => {\n    console.error(error);\n  });\n\n// Avec async/await (plus lisible)\nasync function getUsers() {\n  try {\n    const response = await fetch('/api/users');\n    const users = await response.json();\n    console.log(users);\n  } catch (error) {\n    console.error(error);\n  }\n}"
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "**await** bloque l'exécution de la fonction async, mais **pas le reste du programme**. Le traitement asynchrone est toujours là, simplement masqué par la syntaxe."
+        }
+      ]
+    },
+    {
+      "id": "debugging",
+      "title": "Débogage Asynchrone",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le débogage du code asynchrone est plus complexe. Utiliser les **outils de développement du navigateur**."
+        },
+        {
+          "type": "subtitle",
+          "text": "Onglet Réseau (Network)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Vérifier la requête HTTP (URL, méthode, headers)",
+            "Vérifier les données envoyées (payload)",
+            "Vérifier la réponse reçue (status, body)",
+            "Identifier les erreurs réseau (404, 500, etc.)"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Console et Breakpoints"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Utiliser console.log pour tracer l'exécution\nasync function fetchData() {\n  console.log('Début de la requête');\n  const response = await fetch('/api/data');\n  console.log('Réponse reçue :', response);\n  const data = await response.json();\n  console.log('Données parsées :', data);\n  return data;\n}"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Principe fondamental du front-end** : Toujours un double travail → Gérer les variables du modèle JS + Répercuter leur état dans le DOM."
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Le DOM est une représentation objet de la structure HTML manipulable par JavaScript.",
+    "querySelector() et querySelectorAll() sont les méthodes modernes pour sélectionner des éléments.",
+    "Les événements se propagent en 3 phases : Capture → Target → Bubbling.",
+    "addEventListener() permet d'attacher des écouteurs d'événements.",
+    "Les Promises représentent une valeur future (pending, fulfilled, rejected).",
+    "Fetch API permet d'effectuer des requêtes HTTP basées sur les Promises.",
+    "async/await rend le code asynchrone plus lisible (syntaxe synchrone).",
+    "await ne peut être utilisé QUE dans une fonction async."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "MDN - DOM",
+      "url": "https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model"
+    },
+    {
+      "type": "doc",
+      "title": "MDN - Fetch API",
+      "url": "https://developer.mozilla.org/fr/docs/Web/API/Fetch_API"
+    },
+    {
+      "type": "doc",
+      "title": "MDN - async/await",
+      "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/async_function"
+    }
+  ]
+}

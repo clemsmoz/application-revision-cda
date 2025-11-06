@@ -1,0 +1,98 @@
+{
+  "id": "bloc2-figma",
+  "bloc": "bloc2",
+  "title": "Figma",
+  "icon": "🎯",
+  "color": "#F24E1E",
+  "description": "Figma est un outil de design collaboratif en ligne pour créer des interfaces utilisateur, des prototypes et des systèmes de design.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction à Figma",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Figma est un outil de design d'interface basé sur le web, permettant la collaboration en temps réel. Il est utilisé pour créer des wireframes, des maquettes et des prototypes interactifs."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Avantage",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Collaboratif",
+              "Plusieurs personnes peuvent travailler simultanément"
+            ],
+            [
+              "Basé sur le web",
+              "Pas d'installation, accessible partout"
+            ],
+            [
+              "Prototypage",
+              "Créer des prototypes interactifs"
+            ],
+            [
+              "Design System",
+              "Composants réutilisables et cohérents"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "Concepts Clés",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Frame",
+              "Conteneur de base (équivalent d'un artboard)"
+            ],
+            [
+              "Component",
+              "Élément réutilisable (bouton, carte, etc.)"
+            ],
+            [
+              "Instance",
+              "Copie d'un composant qui hérite de ses propriétés"
+            ],
+            [
+              "Auto Layout",
+              "Mise en page flexible et responsive"
+            ],
+            [
+              "Constraints",
+              "Contraintes pour adapter les éléments au redimensionnement"
+            ],
+            [
+              "Prototype",
+              "Liens interactifs entre les écrans"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Figma : outil de design collaboratif en ligne.",
+    "Frames : conteneurs de base pour les écrans.",
+    "Components : éléments réutilisables.",
+    "Auto Layout : mise en page flexible.",
+    "Prototypage : créer des interactions entre écrans."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Figma Documentation",
+      "url": "https://help.figma.com/"
+    }
+  ]
+}

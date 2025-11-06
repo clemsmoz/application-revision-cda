@@ -1,0 +1,259 @@
+{
+  "terms": [
+    {
+      "term": "API",
+      "definition": "Application Programming Interface - Interface de programmation permettant à des applications de communiquer entre elles",
+      "category": "Général"
+    },
+    {
+      "term": "CRUD",
+      "definition": "Create, Read, Update, Delete - Les quatre opérations de base sur les données",
+      "category": "Base de données"
+    },
+    {
+      "term": "DOM",
+      "definition": "Document Object Model - Représentation en mémoire de la structure d'un document HTML/XML",
+      "category": "JavaScript"
+    },
+    {
+      "term": "SQL",
+      "definition": "Structured Query Language - Langage de requête pour gérer les bases de données relationnelles",
+      "category": "Base de données"
+    },
+    {
+      "term": "NoSQL",
+      "definition": "Not Only SQL - Bases de données non relationnelles (documents, clé-valeur, graphes, colonnes)",
+      "category": "Base de données"
+    },
+    {
+      "term": "UML",
+      "definition": "Unified Modeling Language - Langage de modélisation graphique pour concevoir des systèmes",
+      "category": "Conception"
+    },
+    {
+      "term": "Git",
+      "definition": "Système de contrôle de version distribué pour suivre les modifications du code source",
+      "category": "Outils"
+    },
+    {
+      "term": "Docker",
+      "definition": "Plateforme de conteneurisation permettant d'empaqueter et déployer des applications",
+      "category": "DevOps"
+    },
+    {
+      "term": "REST",
+      "definition": "Representational State Transfer - Style d'architecture pour les API web utilisant HTTP",
+      "category": "API"
+    },
+    {
+      "term": "JSON",
+      "definition": "JavaScript Object Notation - Format léger d'échange de données",
+      "category": "Général"
+    },
+    {
+      "term": "MVC",
+      "definition": "Model-View-Controller - Pattern architectural séparant données, présentation et logique",
+      "category": "Architecture"
+    },
+    {
+      "term": "ORM",
+      "definition": "Object-Relational Mapping - Technique de conversion entre objets et tables relationnelles",
+      "category": "Base de données"
+    },
+    {
+      "term": "JWT",
+      "definition": "JSON Web Token - Standard pour créer des tokens d'accès sécurisés",
+      "category": "Sécurité"
+    },
+    {
+      "term": "HTTPS",
+      "definition": "HTTP Secure - Version sécurisée du protocole HTTP utilisant TLS/SSL",
+      "category": "Sécurité"
+    },
+    {
+      "term": "XSS",
+      "definition": "Cross-Site Scripting - Vulnérabilité permettant l'injection de scripts malveillants",
+      "category": "Sécurité"
+    },
+    {
+      "term": "CSRF",
+      "definition": "Cross-Site Request Forgery - Attaque forçant un utilisateur à exécuter des actions non désirées",
+      "category": "Sécurité"
+    },
+    {
+      "term": "CI/CD",
+      "definition": "Continuous Integration/Continuous Deployment - Pratiques d'automatisation du développement",
+      "category": "DevOps"
+    },
+    {
+      "term": "TDD",
+      "definition": "Test-Driven Development - Méthode de développement guidée par les tests",
+      "category": "Tests"
+    },
+    {
+      "term": "Agile",
+      "definition": "Méthodologie de gestion de projet itérative et incrémentale",
+      "category": "Méthodologie"
+    },
+    {
+      "term": "Scrum",
+      "definition": "Framework agile avec des sprints, daily meetings et rôles définis",
+      "category": "Méthodologie"
+    },
+    {
+      "term": "React",
+      "definition": "Bibliothèque JavaScript pour construire des interfaces utilisateur avec des composants",
+      "category": "Framework"
+    },
+    {
+      "term": "Hook",
+      "definition": "Fonction React permettant d'utiliser l'état et d'autres fonctionnalités dans les composants fonctionnels",
+      "category": "React"
+    },
+    {
+      "term": "Props",
+      "definition": "Properties - Données passées d'un composant parent à un composant enfant en React",
+      "category": "React"
+    },
+    {
+      "term": "State",
+      "definition": "État local d'un composant React qui peut changer au fil du temps",
+      "category": "React"
+    },
+    {
+      "term": "Promise",
+      "definition": "Objet JavaScript représentant l'achèvement ou l'échec d'une opération asynchrone",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Async/Await",
+      "definition": "Syntaxe JavaScript pour gérer les opérations asynchrones de manière plus lisible",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Callback",
+      "definition": "Fonction passée en argument à une autre fonction pour être exécutée plus tard",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Closure",
+      "definition": "Fonction JavaScript ayant accès aux variables de sa portée parente",
+      "category": "JavaScript"
+    },
+    {
+      "term": "POO",
+      "definition": "Programmation Orientée Objet - Paradigme basé sur les objets et les classes",
+      "category": "Général"
+    },
+    {
+      "term": "Héritage",
+      "definition": "Mécanisme permettant à une classe de hériter des propriétés et méthodes d'une autre",
+      "category": "POO"
+    },
+    {
+      "term": "Encapsulation",
+      "definition": "Principe de masquer les détails d'implémentation et d'exposer une interface publique",
+      "category": "POO"
+    },
+    {
+      "term": "Polymorphisme",
+      "definition": "Capacité d'un objet à prendre plusieurs formes selon le contexte",
+      "category": "POO"
+    },
+    {
+      "term": "SOLID",
+      "definition": "Cinq principes de conception orientée objet (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion)",
+      "category": "Architecture"
+    },
+    {
+      "term": "DRY",
+      "definition": "Don't Repeat Yourself - Principe visant à éviter la duplication de code",
+      "category": "Bonnes pratiques"
+    },
+    {
+      "term": "KISS",
+      "definition": "Keep It Simple, Stupid - Principe de simplicité dans la conception",
+      "category": "Bonnes pratiques"
+    },
+    {
+      "term": "YAGNI",
+      "definition": "You Aren't Gonna Need It - Ne pas implémenter de fonctionnalités non nécessaires",
+      "category": "Bonnes pratiques"
+    },
+    {
+      "term": "Refactoring",
+      "definition": "Restructuration du code sans changer son comportement externe",
+      "category": "Bonnes pratiques"
+    },
+    {
+      "term": "Débogage",
+      "definition": "Processus de détection et correction des erreurs dans le code",
+      "category": "Général"
+    },
+    {
+      "term": "IDE",
+      "definition": "Integrated Development Environment - Environnement de développement intégré",
+      "category": "Outils"
+    },
+    {
+      "term": "Framework",
+      "definition": "Cadre de travail fournissant une structure et des outils pour développer des applications",
+      "category": "Général"
+    },
+    {
+      "term": "Bibliothèque",
+      "definition": "Collection de fonctions et d'outils réutilisables pour faciliter le développement",
+      "category": "Général"
+    },
+    {
+      "term": "Algorithme",
+      "definition": "Suite finie d'opérations permettant de résoudre un problème",
+      "category": "Algorithmique"
+    },
+    {
+      "term": "Complexité",
+      "definition": "Mesure de l'efficacité d'un algorithme en temps et en espace (notation Big O)",
+      "category": "Algorithmique"
+    },
+    {
+      "term": "Récursivité",
+      "definition": "Technique où une fonction s'appelle elle-même",
+      "category": "Algorithmique"
+    },
+    {
+      "term": "Itération",
+      "definition": "Répétition d'un ensemble d'instructions (boucles)",
+      "category": "Algorithmique"
+    },
+    {
+      "term": "Variable",
+      "definition": "Espace mémoire nommé pour stocker une valeur",
+      "category": "Programmation"
+    },
+    {
+      "term": "Constante",
+      "definition": "Variable dont la valeur ne peut pas être modifiée après initialisation",
+      "category": "Programmation"
+    },
+    {
+      "term": "Fonction",
+      "definition": "Bloc de code réutilisable effectuant une tâche spécifique",
+      "category": "Programmation"
+    },
+    {
+      "term": "Paramètre",
+      "definition": "Variable utilisée dans la définition d'une fonction",
+      "category": "Programmation"
+    },
+    {
+      "term": "Argument",
+      "definition": "Valeur passée à une fonction lors de son appel",
+      "category": "Programmation"
+    },
+    {
+      "term": "Portée",
+      "definition": "Zone du code où une variable est accessible (scope)",
+      "category": "Programmation"
+    }
+  ]
+}

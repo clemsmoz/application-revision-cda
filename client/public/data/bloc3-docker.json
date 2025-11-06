@@ -1,0 +1,596 @@
+{
+  "id": "bloc3-docker",
+  "bloc": "bloc3",
+  "title": "Docker : Conteneurisation et DevOps",
+  "icon": "🐳",
+  "color": "#2496ED",
+  "description": "Docker est une plateforme de conteneurisation qui permet de créer, déployer et exécuter des applications dans des environnements isolés et portables. C'est un outil essentiel pour le DevOps et le déploiement d'applications.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction à Docker",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Docker",
+          "definition": "Plateforme de virtualisation légère qui permet de créer, déployer et exécuter des applications dans des conteneurs isolés."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Docker** résout le problème classique : \"Ça marche sur ma machine, mais pas en production\". Les conteneurs garantissent que l'application s'exécute de manière identique partout."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Machine Virtuelle (VM)",
+            "Conteneur Docker"
+          ],
+          "rows": [
+            [
+              "Virtualise le matériel",
+              "Virtualise l'OS"
+            ],
+            [
+              "Lourd (plusieurs Go)",
+              "Léger (quelques Mo)"
+            ],
+            [
+              "Démarrage lent (minutes)",
+              "Démarrage rapide (secondes)"
+            ],
+            [
+              "Isolation complète",
+              "Isolation au niveau processus"
+            ],
+            [
+              "Nécessite un hyperviseur",
+              "Utilise le noyau de l'hôte"
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Conteneur ≠ VM** : Un conteneur partage le noyau de l'OS hôte, ce qui le rend beaucoup plus léger et rapide."
+        }
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "Concepts Fondamentaux",
+      "content": [
+        {
+          "type": "subtitle",
+          "text": "Image Docker"
+        },
+        {
+          "type": "definition",
+          "term": "Image",
+          "definition": "Modèle en lecture seule contenant tout le nécessaire pour exécuter une application (code, dépendances, bibliothèques, configuration)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les images sont construites à partir d'un **Dockerfile** et stockées dans un **registre** (Docker Hub, GitLab Registry, etc.)."
+        },
+        {
+          "type": "subtitle",
+          "text": "Conteneur Docker"
+        },
+        {
+          "type": "definition",
+          "term": "Conteneur",
+          "definition": "Instance en cours d'exécution d'une image. Un conteneur est une application isolée qui s'exécute sur l'hôte."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Analogie** : Image = Classe, Conteneur = Instance (objet)."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Image",
+              "Modèle statique (template)",
+              "nginx:latest, node:18"
+            ],
+            [
+              "Conteneur",
+              "Instance en cours d'exécution",
+              "Serveur web Nginx actif"
+            ],
+            [
+              "Dockerfile",
+              "Fichier de configuration pour construire une image",
+              "FROM node:18..."
+            ],
+            [
+              "Volume",
+              "Stockage persistant partagé entre hôte et conteneur",
+              "/data:/app/data"
+            ],
+            [
+              "Réseau",
+              "Communication entre conteneurs",
+              "bridge, host, none"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "installation",
+      "title": "Installation et Commandes de Base",
+      "content": [
+        {
+          "type": "subtitle",
+          "text": "Installation"
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Linux (Ubuntu/Debian)\ncurl -fsSL https://get.docker.com -o get-docker.sh\nsudo sh get-docker.sh\n\n# Ajouter l'user au groupe docker (éviter sudo)\nsudo usermod -aG docker $USER\n\n# Vérifier l'installation\ndocker --version\ndocker run hello-world"
+        },
+        {
+          "type": "subtitle",
+          "text": "Commandes Essentielles"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Commande",
+            "Description"
+          ],
+          "rows": [
+            [
+              "docker pull <image>",
+              "Télécharger une image depuis Docker Hub"
+            ],
+            [
+              "docker images",
+              "Lister les images locales"
+            ],
+            [
+              "docker run <image>",
+              "Créer et démarrer un conteneur"
+            ],
+            [
+              "docker ps",
+              "Lister les conteneurs en cours d'exécution"
+            ],
+            [
+              "docker ps -a",
+              "Lister tous les conteneurs (actifs et arrêtés)"
+            ],
+            [
+              "docker stop <id>",
+              "Arrêter un conteneur"
+            ],
+            [
+              "docker start <id>",
+              "Démarrer un conteneur arrêté"
+            ],
+            [
+              "docker rm <id>",
+              "Supprimer un conteneur"
+            ],
+            [
+              "docker rmi <image>",
+              "Supprimer une image"
+            ],
+            [
+              "docker logs <id>",
+              "Afficher les logs d'un conteneur"
+            ],
+            [
+              "docker exec -it <id> bash",
+              "Ouvrir un shell dans un conteneur"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Exemple : Lancer un Serveur Nginx"
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Télécharger l'image Nginx\ndocker pull nginx\n\n# Lancer un conteneur Nginx\ndocker run -d -p 8080:80 --name mon-nginx nginx\n# -d : mode détaché (arrière-plan)\n# -p 8080:80 : mapper le port 8080 de l'hôte vers le port 80 du conteneur\n# --name : nommer le conteneur\n\n# Accéder à http://localhost:8080\n\n# Arrêter et delete\ndocker stop mon-nginx\ndocker rm mon-nginx"
+        }
+      ]
+    },
+    {
+      "id": "dockerfile",
+      "title": "Dockerfile : Créer des Images",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un **Dockerfile** est un fichier texte contenant les instructions pour construire une image Docker."
+        },
+        {
+          "type": "subtitle",
+          "text": "Instructions Principales"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Instruction",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "FROM",
+              "Image de base",
+              "FROM node:18"
+            ],
+            [
+              "WORKDIR",
+              "Répertoire de travail",
+              "WORKDIR /app"
+            ],
+            [
+              "COPY",
+              "Copier des fichiers de l'hôte vers l'image",
+              "COPY . /app"
+            ],
+            [
+              "RUN",
+              "Exécuter une commande lors de la construction",
+              "RUN npm install"
+            ],
+            [
+              "CMD",
+              "Commande par défaut au démarrage du conteneur",
+              "CMD [\"node\", \"server.js\"]"
+            ],
+            [
+              "ENTRYPOINT",
+              "Point d'entrée (non remplaçable)",
+              "ENTRYPOINT [\"node\"]"
+            ],
+            [
+              "ENV",
+              "Définir une variable d'environnement",
+              "ENV NODE_ENV=production"
+            ],
+            [
+              "EXPOSE",
+              "Documenter le port utilisé",
+              "EXPOSE 3000"
+            ],
+            [
+              "VOLUME",
+              "Définir un volume",
+              "VOLUME /data"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Exemple : Application Node.js"
+        },
+        {
+          "type": "code",
+          "language": "dockerfile",
+          "code": "# Dockerfile\n# Image de base\nFROM node:18-alpine\n\n# Répertoire de travail\nWORKDIR /app\n\n# Copier package.json et package-lock.json\nCOPY package*.json ./\n\n# Installer les dépendances\nRUN npm install --production\n\n# Copier le code source\nCOPY . .\n\n# Exposer le port\nEXPOSE 3000\n\n# Commande de démarrage\nCMD [\"node\", \"server.js\"]"
+        },
+        {
+          "type": "subtitle",
+          "text": "Construire et Exécuter"
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Construire l'image\ndocker build -t mon-app:1.0 .\n\n# Lancer le conteneur\ndocker run -d -p 3000:3000 --name mon-app mon-app:1.0\n\n# Vérifier les logs\ndocker logs mon-app"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "**Bonnes pratiques** : Utiliser des images de base légères (alpine), copier package.json avant le code source (cache des layers), ne pas inclure node_modules dans l'image."
+        }
+      ]
+    },
+    {
+      "id": "volumes",
+      "title": "Volumes : Persistance des Données",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Par défaut, les données d'un conteneur sont **éphémères** : elles disparaissent quand le conteneur est supprimé. Les **volumes** permettent de persister les données."
+        },
+        {
+          "type": "subtitle",
+          "text": "Types de Volumes"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Volume nommé",
+              "Géré par Docker",
+              "docker volume create mon-volume"
+            ],
+            [
+              "Bind mount",
+              "Lier un dossier de l'hôte",
+              "-v /home/user/data:/app/data"
+            ],
+            [
+              "tmpfs",
+              "Stockage en mémoire (temporaire)",
+              "--tmpfs /tmp"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Exemple : Base de Données MySQL"
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Créer un volume\ndocker volume create mysql-data\n\n# Lancer MySQL avec volume persistant\ndocker run -d \\\n  --name mysql \\\n  -e MYSQL_ROOT_PASSWORD=secret \\\n  -v mysql-data:/var/lib/mysql \\\n  -p 3306:3306 \\\n  mysql:8\n\n# Les données persistent même si le conteneur est supprimé\ndocker rm -f mysql\ndocker run -d --name mysql -e MYSQL_ROOT_PASSWORD=secret -v mysql-data:/var/lib/mysql -p 3306:3306 mysql:8\n# Les données sont toujours là !"
+        }
+      ]
+    },
+    {
+      "id": "networks",
+      "title": "Réseaux : Communication entre Conteneurs",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **réseaux Docker** permettent aux conteneurs de communiquer entre eux."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type de Réseau",
+            "Description",
+            "Cas d'usage"
+          ],
+          "rows": [
+            [
+              "bridge (défaut)",
+              "Réseau privé isolé",
+              "Conteneurs sur le même hôte"
+            ],
+            [
+              "host",
+              "Utilise le réseau de l'hôte",
+              "Performances maximales"
+            ],
+            [
+              "none",
+              "Aucun réseau",
+              "Isolation complète"
+            ],
+            [
+              "custom bridge",
+              "Réseau personnalisé",
+              "Communication par nom de conteneur"
+            ]
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Exemple : Application + Base de Données"
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Créer un réseau personnalisé\ndocker network create mon-reseau\n\n# Lancer MySQL\ndocker run -d --name mysql --network mon-reseau -e MYSQL_ROOT_PASSWORD=secret mysql:8\n\n# Lancer l'application (peut accéder à MySQL via le name \"mysql\")\ndocker run -d --name app --network mon-reseau -e DB_HOST=mysql -p 3000:3000 mon-app:1.0"
+        }
+      ]
+    },
+    {
+      "id": "docker-compose",
+      "title": "Docker Compose : Orchestration Multi-Conteneurs",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Docker Compose",
+          "definition": "Outil pour définir et exécuter des applications multi-conteneurs à l'aide d'un fichier YAML."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Docker Compose** simplifie le déploiement d'applications complexes (application + base de données + cache, etc.)."
+        },
+        {
+          "type": "subtitle",
+          "text": "Exemple : Application Node.js + MySQL"
+        },
+        {
+          "type": "code",
+          "language": "yaml",
+          "code": "# docker-compose.yml\nversion: '3.8'\n\nservices:\n  # Base de données MySQL\n  db:\n    image: mysql:8\n    environment:\n      MYSQL_ROOT_PASSWORD: secret\n      MYSQL_DATABASE: myapp\n    volumes:\n      - db-data:/var/lib/mysql\n    networks:\n      - app-network\n\n  # Application Node.js\n  app:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      DB_HOST: db\n      DB_USER: root\n      DB_PASSWORD: secret\n      DB_NAME: myapp\n    depends_on:\n      - db\n    networks:\n      - app-network\n\nvolumes:\n  db-data:\n\nnetworks:\n  app-network:"
+        },
+        {
+          "type": "subtitle",
+          "text": "Commandes Docker Compose"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Commande",
+            "Description"
+          ],
+          "rows": [
+            [
+              "docker-compose up",
+              "Démarrer tous les services"
+            ],
+            [
+              "docker-compose up -d",
+              "Démarrer en arrière-plan"
+            ],
+            [
+              "docker-compose down",
+              "Arrêter et supprimer les conteneurs"
+            ],
+            [
+              "docker-compose ps",
+              "Lister les services"
+            ],
+            [
+              "docker-compose logs",
+              "Afficher les logs"
+            ],
+            [
+              "docker-compose exec <service> bash",
+              "Ouvrir un shell dans un service"
+            ],
+            [
+              "docker-compose build",
+              "Reconstruire les images"
+            ],
+            [
+              "docker-compose restart",
+              "Redémarrer les services"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Démarrer l'application complète\ndocker-compose up -d\n\n# Vérifier les logs\ndocker-compose logs -f app\n\n# Arrêter et nettoyer\ndocker-compose down"
+        }
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "Bonnes Pratiques",
+      "content": [
+        {
+          "type": "subtitle",
+          "text": "Optimisation des Images"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Utiliser des images de base légères** : alpine, slim",
+            "**Multi-stage builds** : séparer la construction et l'exécution",
+            "**Minimiser les layers** : regrouper les commandes RUN",
+            "**Utiliser .dockerignore** : exclure node_modules, .git, etc.",
+            "**Ne pas exécuter en root** : créer un utilisateur non-privilégié"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "text": "Exemple : Multi-Stage Build"
+        },
+        {
+          "type": "code",
+          "language": "dockerfile",
+          "code": "# Étape 1 : Construction\nFROM node:18-alpine AS builder\nWORKDIR /app\nCOPY package*.json ./\nRUN npm install\nCOPY . .\nRUN npm run build\n\n# Étape 2 : Production\nFROM node:18-alpine\nWORKDIR /app\nCOPY --from=builder /app/dist ./dist\nCOPY --from=builder /app/node_modules ./node_modules\nCMD [\"node\", \"dist/server.js\"]"
+        },
+        {
+          "type": "subtitle",
+          "text": "Sécurité"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Ne pas stocker de secrets dans l'image** : utiliser des variables d'environnement ou des secrets managers",
+            "**Scanner les vulnérabilités** : docker scan, Trivy, Snyk",
+            "**Mettre à jour régulièrement les images de base**",
+            "**Limiter les ressources** : --memory, --cpus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devops",
+      "title": "Docker et DevOps",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Docker est un pilier du **DevOps** et de l'**Infrastructure as Code (IaC)**."
+        },
+        {
+          "type": "subtitle",
+          "text": "CI/CD avec Docker"
+        },
+        {
+          "type": "code",
+          "language": "yaml",
+          "code": "# Exemple : GitLab CI/CD\nstages:\n  - build\n  - test\n  - deploy\n\nbuild:\n  stage: build\n  script:\n    - docker build -t mon-app:$CI_COMMIT_SHA .\n    - docker push mon-app:$CI_COMMIT_SHA\n\ntest:\n  stage: test\n  script:\n    - docker run mon-app:$CI_COMMIT_SHA npm test\n\ndeploy:\n  stage: deploy\n  script:\n    - docker pull mon-app:$CI_COMMIT_SHA\n    - docker-compose up -d"
+        },
+        {
+          "type": "subtitle",
+          "text": "Orchestration"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour les applications complexes en production, utiliser des orchestrateurs :"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Outil",
+            "Description",
+            "Cas d'usage"
+          ],
+          "rows": [
+            [
+              "Docker Swarm",
+              "Orchestrateur simple intégré à Docker",
+              "Petites applications"
+            ],
+            [
+              "Kubernetes",
+              "Orchestrateur puissant et complexe",
+              "Applications à grande échelle"
+            ],
+            [
+              "AWS ECS",
+              "Service AWS pour conteneurs",
+              "Infrastructure AWS"
+            ],
+            [
+              "Nomad",
+              "Orchestrateur léger (HashiCorp)",
+              "Alternative à Kubernetes"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Docker permet de créer des conteneurs légers et portables pour exécuter des applications.",
+    "Conteneur ≠ VM : un conteneur partage le noyau de l'OS hôte (plus léger et rapide).",
+    "Image = modèle statique, Conteneur = instance en cours d'exécution.",
+    "Dockerfile : fichier de configuration pour construire une image (FROM, RUN, CMD, COPY).",
+    "Volumes : persistance des données (volumes nommés, bind mounts).",
+    "Réseaux : communication entre conteneurs (bridge, host, custom).",
+    "Docker Compose : orchestration multi-conteneurs avec un fichier YAML.",
+    "Bonnes pratiques : images légères (alpine), multi-stage builds, .dockerignore, sécurité."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Documentation officielle Docker",
+      "url": "https://docs.docker.com/"
+    },
+    {
+      "type": "doc",
+      "title": "Docker Compose",
+      "url": "https://docs.docker.com/compose/"
+    },
+    {
+      "type": "interactive",
+      "title": "Play with Docker (environnement en ligne)",
+      "url": "https://labs.play-with-docker.com/"
+    }
+  ]
+}

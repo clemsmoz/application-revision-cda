@@ -1,0 +1,143 @@
+{
+  "id": "bloc1-php-symfony",
+  "bloc": "bloc1",
+  "title": "PHP & Symfony",
+  "icon": "🐘",
+  "color": "#777BB4",
+  "description": "PHP est un langage de script côté serveur largement utilisé pour le développement web. Symfony est un framework PHP robuste pour créer des applications web professionnelles.",
+  "sections": [
+    {
+      "id": "php-basics",
+      "title": "Fondamentaux de PHP",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "PHP (Hypertext Preprocessor) est un langage de programmation open-source spécialement conçu pour le développement web. Il s'exécute côté serveur et génère du HTML dynamique."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Variables",
+              "Commencent par $",
+              "$nom = 'Alice';"
+            ],
+            [
+              "Tableaux",
+              "Indexés ou associatifs",
+              "$arr = ['a', 'b']; $assoc = ['key' => 'value'];"
+            ],
+            [
+              "Fonctions",
+              "function nomFonction()",
+              "function add($a, $b) { return $a + $b; }"
+            ],
+            [
+              "Classes",
+              "Programmation orientée objet",
+              "class User { public $name; }"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "<?php\n// Variables et types\n$name = \"Alice\";\n$age = 25;\n$isActive = true;\n\n// Tableaux\n$fruits = [\"apple\", \"banana\", \"orange\"];\n$user = [\n    \"name\" => \"Bob\",\n    \"email\" => \"bob@example.com\"\n];\n\n// Fonctions\nfunction greet($name) {\n    return \"Hello, $name!\";\n}\n\necho greet($name);\n?>"
+        }
+      ]
+    },
+    {
+      "id": "symfony-intro",
+      "title": "Introduction à Symfony",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Symfony est un framework PHP professionnel basé sur le pattern MVC (Model-View-Controller). Il fournit des composants réutilisables et suit les meilleures pratiques de développement."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Composant",
+            "Rôle"
+          ],
+          "rows": [
+            [
+              "Controller",
+              "Gère les requêtes HTTP et retourne des réponses"
+            ],
+            [
+              "Routing",
+              "Associe les URLs aux contrôleurs"
+            ],
+            [
+              "Twig",
+              "Moteur de templates pour les vues"
+            ],
+            [
+              "Doctrine",
+              "ORM pour la gestion de la base de données"
+            ],
+            [
+              "Forms",
+              "Création et validation de formulaires"
+            ],
+            [
+              "Security",
+              "Authentification et autorisation"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "symfony-controller",
+      "title": "Contrôleurs Symfony",
+      "content": [
+        {
+          "type": "code",
+          "language": "php",
+          "code": "<?php\nnamespace App\\Controller;\n\nuse Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController;\nuse Symfony\\Component\\HttpFoundation\\Response;\nuse Symfony\\Component\\Routing\\Annotation\\Route;\n\nclass HomeController extends AbstractController\n{\n    #[Route('/', name: 'home')]\n    public function index(): Response\n    {\n        return $this->render('home/index.html.twig', [\n            'message' => 'Welcome sur Symfony!'\n        ]);\n    }\n\n    #[Route('/user/{id}', name: 'user_show')]\n    public function show(int $id): Response\n    {\n        return $this->json([\n            'id' => $id,\n            'name' => 'User ' . $id\n        ]);\n    }\n}"
+        }
+      ]
+    },
+    {
+      "id": "doctrine",
+      "title": "Doctrine ORM",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Doctrine est l'ORM (Object-Relational Mapping) de Symfony. Il permet de manipuler la base de données via des objets PHP plutôt que du SQL brut."
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "<?php\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\n\n#[ORM\\Entity]\nclass Product\n{\n    #[ORM\\Id]\n    #[ORM\\GeneratedValue]\n    #[ORM\\Column(type: 'integer')]\n    private $id;\n\n    #[ORM\\Column(type: 'string', length: 255)]\n    private $name;\n\n    #[ORM\\Column(type: 'decimal', precision: 10, scale: 2)]\n    private $price;\n\n    // Getters et setters...\n}"
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "PHP est un langage côté serveur pour le développement web dynamique.",
+    "Symfony est un framework MVC professionnel avec des composants réutilisables.",
+    "Routing : associe les URLs aux contrôleurs.",
+    "Twig : moteur de templates pour les vues.",
+    "Doctrine : ORM pour manipuler la base de données via des objets."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "PHP Documentation",
+      "url": "https://www.php.net/"
+    },
+    {
+      "type": "doc",
+      "title": "Symfony Documentation",
+      "url": "https://symfony.com/doc"
+    }
+  ]
+}

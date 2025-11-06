@@ -1,0 +1,211 @@
+{
+  "id": "bloc1-tests-unitaires",
+  "bloc": "bloc1",
+  "title": "Tests Unitaires",
+  "icon": "🧪",
+  "color": "#10B981",
+  "description": "Les tests unitaires permettent de vérifier le bon fonctionnement des composants individuels d'une application. Ils garantissent la qualité du code et facilitent la maintenance.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction aux Tests Unitaires",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Test Unitaire",
+          "definition": "Test automatisé qui vérifie le bon fonctionnement d'une unité de code isolée (fonction, méthode, classe)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les tests unitaires font partie de la **pyramide des tests** : Tests Unitaires (base) → Tests d'Intégration → Tests E2E (sommet)."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Avantage",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Détection précoce des bugs",
+              "Les erreurs sont trouvées rapidement"
+            ],
+            [
+              "Documentation vivante",
+              "Les tests documentent le comportement attendu"
+            ],
+            [
+              "Refactoring sécurisé",
+              "Modifier le code sans crainte de tout casser"
+            ],
+            [
+              "Qualité du code",
+              "Force à écrire du code testable et modulaire"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "title": "Frameworks de Tests",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Langage",
+            "Framework",
+            "Description"
+          ],
+          "rows": [
+            [
+              "JavaScript",
+              "Jest",
+              "Framework complet (React, Node.js)"
+            ],
+            [
+              "JavaScript",
+              "Mocha + Chai",
+              "Flexible et modulaire"
+            ],
+            [
+              "JavaScript",
+              "Vitest",
+              "Rapide, compatible Vite"
+            ],
+            [
+              "PHP",
+              "PHPUnit",
+              "Standard pour PHP"
+            ],
+            [
+              "Python",
+              "pytest",
+              "Simple et puissant"
+            ],
+            [
+              "Java",
+              "JUnit",
+              "Standard pour Java"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "title": "Structure d'un Test",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un test suit généralement le pattern **AAA** : Arrange (préparer), Act (agir), Assert (vérifier)."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Exemple avec Jest\nfunction add(a, b) {\n  return a + b;\n}\n\ntest('add() doit add deux nombres', () => {\n  // Arrange (préparer)\n  const a = 2;\n  const b = 3;\n\n  // Act (agir)\n  const result = add(a, b);\n\n  // Assert (vérifier)\n  expect(result).toBe(5);\n});"
+        }
+      ]
+    },
+    {
+      "id": "assertions",
+      "title": "Assertions Courantes",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Assertion (Jest)",
+            "Description"
+          ],
+          "rows": [
+            [
+              "expect(x).toBe(y)",
+              "Égalité stricte (===)"
+            ],
+            [
+              "expect(x).toEqual(y)",
+              "Égalité profonde (objets, tableaux)"
+            ],
+            [
+              "expect(x).toBeTruthy()",
+              "Valeur truthy"
+            ],
+            [
+              "expect(x).toBeFalsy()",
+              "Valeur falsy"
+            ],
+            [
+              "expect(x).toBeNull()",
+              "Valeur null"
+            ],
+            [
+              "expect(x).toBeUndefined()",
+              "Valeur undefined"
+            ],
+            [
+              "expect(arr).toContain(item)",
+              "Tableau contient un élément"
+            ],
+            [
+              "expect(fn).toThrow()",
+              "Fonction lance une exception"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mocks",
+      "title": "Mocks et Stubs",
+      "content": [
+        {
+          "type": "definition",
+          "term": "Mock",
+          "definition": "Objet simulé qui remplace une dépendance externe (API, base de données) pour isoler le code testé."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Mock d'une fonction\nconst fetchUser = jest.fn();\nfetchUser.mockResolvedValue({ id: 1, name: 'Alice' });\n\n// Test\ntest('getUserName() retourne le name', async () => {\n  const name = await getUserName(1);\n  expect(name).toBe('Alice');\n  expect(fetchUser).toHaveBeenCalledWith(1);\n});"
+        }
+      ]
+    },
+    {
+      "id": "tdd",
+      "title": "TDD (Test-Driven Development)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **TDD** est une méthodologie où les tests sont écrits **avant** le code de production."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Red** : Écrire un test qui échoue",
+            "**Green** : Écrire le code minimal pour faire passer le test",
+            "**Refactor** : Améliorer le code tout en gardant les tests verts"
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Les tests unitaires vérifient le bon fonctionnement d'une unité de code isolée.",
+    "Pattern AAA : Arrange (préparer), Act (agir), Assert (vérifier).",
+    "Frameworks : Jest (JS), PHPUnit (PHP), pytest (Python).",
+    "Mocks : objets simulés pour isoler le code testé.",
+    "TDD : écrire les tests avant le code (Red, Green, Refactor)."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Jest Documentation",
+      "url": "https://jestjs.io/"
+    },
+    {
+      "type": "doc",
+      "title": "PHPUnit Documentation",
+      "url": "https://phpunit.de/"
+    }
+  ]
+}

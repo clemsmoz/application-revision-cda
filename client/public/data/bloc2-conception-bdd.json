@@ -1,0 +1,116 @@
+{
+  "id": "bloc2-conception-bdd",
+  "bloc": "bloc2",
+  "title": "Conception de Bases de Données",
+  "icon": "🏗️",
+  "color": "#3498DB",
+  "description": "La conception de bases de données consiste à modéliser les données de manière efficace, cohérente et normalisée pour garantir l'intégrité et les performances.",
+  "sections": [
+    {
+      "id": "merise",
+      "title": "Méthode MERISE",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "MERISE est une méthode française de conception de systèmes d'information. Elle utilise 3 niveaux de modélisation :"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Niveau",
+            "Modèle",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Conceptuel",
+              "MCD (Modèle Conceptuel de Données)",
+              "Entités, associations, cardinalités"
+            ],
+            [
+              "Logique",
+              "MLD (Modèle Logique de Données)",
+              "Tables, clés primaires/étrangères"
+            ],
+            [
+              "Physique",
+              "MPD (Modèle Physique de Données)",
+              "Implémentation SQL"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "normalisation",
+      "title": "Normalisation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "La normalisation élimine les redondances et garantit l'intégrité des données."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Forme Normale",
+            "Règle"
+          ],
+          "rows": [
+            [
+              "1NF",
+              "Valeurs atomiques (pas de listes)"
+            ],
+            [
+              "2NF",
+              "Pas de dépendance partielle (toutes les colonnes dépendent de la clé entière)"
+            ],
+            [
+              "3NF",
+              "Pas de dépendance transitive (pas de colonne dépendant d'une autre colonne non-clé)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cardinalites",
+      "title": "Cardinalités",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Cardinalité",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "1:1 (Un à Un)",
+              "Un utilisateur a un profil"
+            ],
+            [
+              "1:N (Un à Plusieurs)",
+              "Un client passe plusieurs commandes"
+            ],
+            [
+              "N:N (Plusieurs à Plusieurs)",
+              "Un étudiant suit plusieurs cours, un cours a plusieurs étudiants"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "MERISE : MCD (conceptuel) → MLD (logique) → MPD (physique).",
+    "Normalisation : 1NF (atomique), 2NF (pas de dépendance partielle), 3NF (pas de transitive).",
+    "Cardinalités : 1:1, 1:N, N:N.",
+    "Clés : primaire (identifiant unique), étrangère (référence)."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "MERISE",
+      "url": "https://fr.wikipedia.org/wiki/Merise_(informatique)"
+    }
+  ]
+}

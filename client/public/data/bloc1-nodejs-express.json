@@ -1,0 +1,170 @@
+{
+  "id": "bloc1-nodejs-express",
+  "bloc": "bloc1",
+  "title": "Node.js & Express",
+  "icon": "🟢",
+  "color": "#339933",
+  "description": "Node.js permet d'exécuter du JavaScript côté serveur. Express est un framework minimaliste pour créer des API et applications web avec Node.js.",
+  "sections": [
+    {
+      "id": "nodejs-intro",
+      "title": "Introduction à Node.js",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Node.js est un environnement d'exécution JavaScript basé sur le moteur V8 de Chrome. Il permet d'utiliser JavaScript pour le développement back-end avec une architecture non-bloquante et événementielle."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Event Loop",
+              "Boucle événementielle pour gérer les opérations asynchrones"
+            ],
+            [
+              "npm",
+              "Gestionnaire de paquets pour installer des bibliothèques"
+            ],
+            [
+              "Modules",
+              "Système de modules CommonJS (require) ou ES6 (import)"
+            ],
+            [
+              "Non-bloquant",
+              "Les opérations I/O ne bloquent pas l'exécution"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Serveur HTTP basique avec Node.js\nconst http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/plain' });\n  res.end('Hello from Node.js!');\n});\n\nserver.listen(3000, () => {\n  console.log('Serveur démarré sur le port 3000');\n});"
+        }
+      ]
+    },
+    {
+      "id": "express-intro",
+      "title": "Framework Express",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Express est un framework web minimaliste et flexible pour Node.js. Il simplifie la création de serveurs HTTP, d'API REST et d'applications web."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "const express = require('express');\nconst app = express();\n\n// Middleware pour parser le JSON\napp.use(express.json());\n\n// Routes\napp.get('/', (req, res) => {\n  res.json({ message: 'Welcome sur l\\'API' });\n});\n\napp.get('/users/:id', (req, res) => {\n  const userId = req.params.id;\n  res.json({ id: userId, name: 'User ' + userId });\n});\n\napp.post('/users', (req, res) => {\n  const { name, email } = req.body;\n  res.status(201).json({ id: 1, name, email });\n});\n\napp.listen(3000, () => {\n  console.log('Serveur Express démarré sur le port 3000');\n});"
+        }
+      ]
+    },
+    {
+      "id": "middleware",
+      "title": "Middleware Express",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les middleware sont des fonctions qui ont accès aux objets request (req) et response (res). Ils peuvent modifier ces objets, terminer la requête ou passer au middleware suivant."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type",
+            "Exemple",
+            "Usage"
+          ],
+          "rows": [
+            [
+              "Application",
+              "app.use(express.json())",
+              "Appliqué à toutes les routes"
+            ],
+            [
+              "Route",
+              "app.get('/path', middleware, handler)",
+              "Appliqué à une route spécifique"
+            ],
+            [
+              "Erreur",
+              "app.use((err, req, res, next) => {})",
+              "Gestion centralisée des erreurs"
+            ],
+            [
+              "Tiers",
+              "cors, helmet, morgan",
+              "Bibliothèques externes"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Middleware personnalisé\nconst logger = (req, res, next) => {\n  console.log(`${req.method} ${req.url}`);\n  next(); // Passer au middleware suivant\n};\n\napp.use(logger);\n\n// Middleware d'authentification\nconst auth = (req, res, next) => {\n  const token = req.headers.authorization;\n  if (!token) {\n    return res.status(401).json({ error: 'Unauthorized' });\n  }\n  next();\n};\n\napp.get('/protected', auth, (req, res) => {\n  res.json({ message: 'Access granted' });\n});"
+        }
+      ]
+    },
+    {
+      "id": "rest-api",
+      "title": "API REST avec Express",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Méthode HTTP",
+            "Route",
+            "Action"
+          ],
+          "rows": [
+            [
+              "GET",
+              "/users",
+              "Lister tous les utilisateurs"
+            ],
+            [
+              "GET",
+              "/users/:id",
+              "Récupérer un utilisateur"
+            ],
+            [
+              "POST",
+              "/users",
+              "Créer un utilisateur"
+            ],
+            [
+              "PUT",
+              "/users/:id",
+              "Mettre à jour un utilisateur"
+            ],
+            [
+              "DELETE",
+              "/users/:id",
+              "Supprimer un utilisateur"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Node.js permet d'exécuter JavaScript côté serveur avec une architecture non-bloquante.",
+    "Express est un framework minimaliste pour créer des API et applications web.",
+    "Les middleware sont des fonctions qui traitent les requêtes avant les routes.",
+    "API REST : GET (lire), POST (créer), PUT (modifier), DELETE (supprimer).",
+    "npm est le gestionnaire de paquets pour installer des bibliothèques."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Node.js Documentation",
+      "url": "https://nodejs.org/"
+    },
+    {
+      "type": "doc",
+      "title": "Express Documentation",
+      "url": "https://expressjs.com/"
+    }
+  ]
+}

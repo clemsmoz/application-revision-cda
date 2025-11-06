@@ -1,0 +1,100 @@
+{
+  "id": "bloc2-ux-design",
+  "bloc": "bloc2",
+  "title": "UX Design",
+  "icon": "🎨",
+  "color": "#9B59B6",
+  "description": "L'UX Design (User Experience Design) vise à créer des produits numériques centrés sur l'utilisateur, en optimisant l'expérience globale d'interaction.",
+  "sections": [
+    {
+      "id": "definition",
+      "title": "Qu'est-ce que l'UX Design ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'UX Design englobe tous les aspects de l'interaction entre l'utilisateur et le produit : utilisabilité, accessibilité, plaisir d'utilisation, utilité."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "UX vs UI"
+          ],
+          "rows": [
+            [
+              "UX (User Experience)",
+              "Comment ça fonctionne, ressenti global"
+            ],
+            [
+              "UI (User Interface)",
+              "Comment ça apparaît, design visuel"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "processus",
+      "title": "Processus UX",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Étape",
+            "Activités"
+          ],
+          "rows": [
+            [
+              "Recherche",
+              "Interviews utilisateurs, personas, parcours utilisateur"
+            ],
+            [
+              "Idéation",
+              "Brainstorming, sketching, wireframes"
+            ],
+            [
+              "Prototypage",
+              "Maquettes interactives, tests utilisateurs"
+            ],
+            [
+              "Test",
+              "Tests d'utilisabilité, A/B testing"
+            ],
+            [
+              "Itération",
+              "Améliorations basées sur les retours"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "principes",
+      "title": "Principes UX",
+      "content": [
+        {
+          "type": "list",
+          "items": [
+            "**Utilisabilité** : Facilité d'utilisation",
+            "**Accessibilité** : Utilisable par tous (handicaps, âge)",
+            "**Désirabilité** : Agréable et attrayant",
+            "**Crédibilité** : Inspirer confiance",
+            "**Utilité** : Répond aux besoins réels"
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "UX Design : créer des produits centrés sur l'utilisateur.",
+    "UX (expérience) vs UI (interface visuelle).",
+    "Processus : Recherche → Idéation → Prototypage → Test → Itération.",
+    "Principes : utilisabilité, accessibilité, désirabilité, crédibilité, utilité."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/"
+    }
+  ]
+}
