@@ -1,0 +1,195 @@
+{
+  "id": "bloc1-nodejs-avance",
+  "bloc": "bloc1",
+  "title": "Node.js - Approfondissement",
+  "icon": "🟢",
+  "color": "#339933",
+  "description": "Concepts avancés de Node.js : programmation asynchrone, streams, gestion des erreurs, performance, sécurité et déploiement en production.",
+  "sections": [
+    {
+      "id": "async-avance",
+      "title": "Programmation Asynchrone Avancée",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Node.js utilise un modèle événementiel non-bloquant. La maîtrise de l'asynchrone est essentielle pour des applications performantes."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Méthode",
+            "Avantages",
+            "Inconvénients"
+          ],
+          "rows": [
+            [
+              "Callbacks",
+              "Simple",
+              "Callback hell, gestion d'erreurs complexe"
+            ],
+            [
+              "Promises",
+              "Chaînable, .catch()",
+              "Verbeux pour plusieurs opérations"
+            ],
+            [
+              "Async/Await",
+              "Lisible, gestion d'erreurs avec try/catch",
+              "Nécessite des Promises"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Promise.all for exécuter en parallèle\nconst [users, posts, comments] = await Promise.all([\n  fetchUsers(),\n  fetchPosts(),\n  fetchComments()\n]);\n\n// Promise.race for timeout\nconst result = await Promise.race([\n  fetchData(),\n  new Promise((_, reject) => \n    setTimeout(() => reject(new Error('Timeout')), 5000)\n  )\n]);"
+        }
+      ]
+    },
+    {
+      "id": "streams",
+      "title": "Streams",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **streams** permettent de traiter des données volumineuses par morceaux (chunks) sans charger tout en mémoire."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type de Stream",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Readable",
+              "Lecture de données (fs.createReadStream)"
+            ],
+            [
+              "Writable",
+              "Écriture de données (fs.createWriteStream)"
+            ],
+            [
+              "Duplex",
+              "Lecture et écriture (socket TCP)"
+            ],
+            [
+              "Transform",
+              "Transformation de données (compression)"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Copier un fichier avec streams\nconst fs = require('fs');\n\nconst readStream = fs.createReadStream('input.txt');\nconst writeStream = fs.createWriteStream('output.txt');\n\nreadStream.pipe(writeStream);\n\n// Compression avec stream\nconst zlib = require('zlib');\nconst gzip = zlib.createGzip();\n\nfs.createReadStream('file.txt')\n  .pipe(gzip)\n  .pipe(fs.createWriteStream('file.txt.gz'));"
+        },
+        {
+          "type": "alert",
+          "level": "tip",
+          "text": "Utilisez les streams pour traiter de gros fichiers (logs, CSV, vidéos) sans saturer la mémoire."
+        }
+      ]
+    },
+    {
+      "id": "gestion-erreurs",
+      "title": "Gestion des Erreurs",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Une gestion robuste des erreurs est cruciale pour la stabilité d'une application Node.js en production."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Middleware de gestion d'erreurs Express\napp.use((err, req, res, next) => {\n  console.error(err.stack);\n  res.status(500).json({\n    error: process.env.NODE_ENV === 'production' \n      ? 'Internal Server Error' \n      : err.message\n  });\n});\n\n// Gestion des erreurs non capturées\nprocess.on('uncaughtException', (err) => {\n  console.error('Uncaught Exception:', err);\n  process.exit(1);\n});\n\nprocess.on('unhandledRejection', (reason, promise) => {\n  console.error('Unhandled Rejection:', reason);\n  process.exit(1);\n});"
+        }
+      ]
+    },
+    {
+      "id": "performance",
+      "title": "Performance et Optimisation",
+      "content": [
+        {
+          "type": "list",
+          "items": [
+            "**Clustering** : Utiliser tous les cœurs CPU avec le module `cluster`",
+            "**Caching** : Redis pour mettre en cache les requêtes fréquentes",
+            "**Compression** : Compresser les réponses HTTP avec `compression`",
+            "**Connection pooling** : Réutiliser les connexions DB",
+            "**Profiling** : Identifier les bottlenecks avec `--inspect` et Chrome DevTools",
+            "**Load balancing** : Répartir la charge avec Nginx ou HAProxy"
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Clustering\nconst cluster = require('cluster');\nconst os = require('os');\n\nif (cluster.isMaster) {\n  const numCPUs = os.cpus().length;\n  \n  for (let i = 0; i < numCPUs; i++) {\n    cluster.fork();\n  }\n  \n  cluster.on('exit', (worker) => {\n    console.log(`Worker ${worker.process.pid} died`);\n    cluster.fork(); // Redémarrer\n  });\n} else {\n  // Code du server\n  app.listen(3000);\n}"
+        }
+      ]
+    },
+    {
+      "id": "securite",
+      "title": "Sécurité",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Vulnérabilité",
+            "Protection"
+          ],
+          "rows": [
+            [
+              "Injection",
+              "Validation des entrées, requêtes préparées"
+            ],
+            [
+              "XSS",
+              "Échappement des données, Content Security Policy"
+            ],
+            [
+              "CSRF",
+              "Tokens CSRF"
+            ],
+            [
+              "Dépendances vulnérables",
+              "npm audit, Snyk"
+            ],
+            [
+              "Secrets exposés",
+              "Variables d'environnement, .gitignore"
+            ],
+            [
+              "DoS",
+              "Rate limiting (express-rate-limit)"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Helmet for sécuriser les headers HTTP\nconst helmet = require('helmet');\napp.use(helmet());\n\n// Rate limiting\nconst rateLimit = require('express-rate-limit');\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 minutes\n  max: 100 // 100 requêtes max\n});\napp.use('/api/', limiter);"
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Async/Await : syntaxe moderne pour gérer l'asynchrone.",
+    "Streams : traiter de gros volumes de données sans saturer la mémoire.",
+    "Gestion d'erreurs : middleware Express + uncaughtException/unhandledRejection.",
+    "Performance : clustering, caching (Redis), compression.",
+    "Sécurité : Helmet, rate limiting, validation des entrées, npm audit."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Node.js Docs",
+      "url": "https://nodejs.org/docs/"
+    },
+    {
+      "type": "doc",
+      "title": "Express Best Practices",
+      "url": "https://expressjs.com/en/advanced/best-practice-security.html"
+    }
+  ]
+}

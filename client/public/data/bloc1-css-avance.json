@@ -1,0 +1,126 @@
+{
+  "id": "bloc1-css-avance",
+  "bloc": "bloc1",
+  "title": "CSS Avancé",
+  "icon": "🎨",
+  "color": "#264DE4",
+  "description": "Techniques CSS avancées : animations, transitions, Grid avancé, variables CSS, préprocesseurs et méthodologies d'organisation du code.",
+  "sections": [
+    {
+      "id": "animations",
+      "title": "Animations et Transitions",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **transitions** permettent d'animer les changements de propriétés CSS, tandis que les **animations** offrent un contrôle plus fin avec des keyframes."
+        },
+        {
+          "type": "code",
+          "language": "css",
+          "code": "/* Transition */\n.button {\n  background: blue;\n  transition: background 0.3s ease;\n}\n.button:hover {\n  background: red;\n}\n\n/* Animation */\n@keyframes slide-in {\n  from { transform: translateX(-100%); }\n  to { transform: translateX(0); }\n}\n.element {\n  animation: slide-in 0.5s ease-out;\n}"
+        }
+      ]
+    },
+    {
+      "id": "variables",
+      "title": "Variables CSS (Custom Properties)",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **variables CSS** permettent de réutiliser des valeurs et de créer des thèmes dynamiques."
+        },
+        {
+          "type": "code",
+          "language": "css",
+          "code": ":root {\n  --primary-color: #3498db;\n  --spacing: 16px;\n}\n\n.button {\n  background: var(--primary-color);\n  padding: var(--spacing);\n}"
+        }
+      ]
+    },
+    {
+      "id": "preprocesseurs",
+      "title": "Préprocesseurs CSS",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Préprocesseur",
+            "Syntaxe",
+            "Avantages"
+          ],
+          "rows": [
+            [
+              "Sass/SCSS",
+              ".scss",
+              "Variables, mixins, nesting, fonctions"
+            ],
+            [
+              "Less",
+              ".less",
+              "Variables, mixins, nesting"
+            ],
+            [
+              "Stylus",
+              ".styl",
+              "Syntaxe flexible, puissant"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "scss",
+          "code": "// SCSS\n$primary: #3498db;\n\n@mixin flex-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.container {\n  @include flex-center;\n  background: $primary;\n}"
+        }
+      ]
+    },
+    {
+      "id": "methodologies",
+      "title": "Méthodologies CSS",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Méthodologie",
+            "Principe"
+          ],
+          "rows": [
+            [
+              "BEM",
+              "Block__Element--Modifier (nommage structuré)"
+            ],
+            [
+              "OOCSS",
+              "Object-Oriented CSS (séparation structure/apparence)"
+            ],
+            [
+              "SMACSS",
+              "Scalable and Modular Architecture"
+            ],
+            [
+              "Atomic CSS",
+              "Classes utilitaires (Tailwind)"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Transitions : animer les changements de propriétés.",
+    "Animations : contrôle fin avec @keyframes.",
+    "Variables CSS : réutilisation et thèmes dynamiques.",
+    "Préprocesseurs : Sass/SCSS pour variables, mixins, nesting.",
+    "Méthodologies : BEM pour nommage structuré."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "MDN CSS",
+      "url": "https://developer.mozilla.org/fr/docs/Web/CSS"
+    },
+    {
+      "type": "doc",
+      "title": "Sass",
+      "url": "https://sass-lang.com/"
+    }
+  ]
+}

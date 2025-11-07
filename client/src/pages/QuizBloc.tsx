@@ -13,8 +13,10 @@ import {
   Clock,
   Trophy,
   RotateCcw,
-  Home
+  Home,
+  BarChart
 } from 'lucide-react';
+import { useQuizHistory } from '@/hooks/useQuizHistory';
 
 interface Question {
   id: string;
@@ -37,9 +39,11 @@ export default function QuizBloc() {
   const [showExplanation, setShowExplanation] = useState(false);
   const [score, setScore] = useState(0);
   const [answeredQuestions, setAnsweredQuestions] = useState<boolean[]>([]);
+  const [userAnswers, setUserAnswers] = useState<number[]>([]);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [startTime] = useState(Date.now());
   const [endTime, setEndTime] = useState<number | null>(null);
+  const { addAttempt } = useQuizHistory();
 
   const blocInfo: Record<string, { title: string; color: string }> = {
     bloc1: { title: 'Bloc 1', color: 'blue' },
@@ -84,6 +88,10 @@ export default function QuizBloc() {
     newAnsweredQuestions[currentQuestionIndex] = true;
     setAnsweredQuestions(newAnsweredQuestions);
 
+    const newUserAnswers = [...userAnswers];
+    newUserAnswers[currentQuestionIndex] = selectedAnswer;
+    setUserAnswers(newUserAnswers);
+
     if (selectedAnswer === currentQuestion.correctAnswer) {
       setScore(score + 1);
     }
@@ -95,8 +103,28 @@ export default function QuizBloc() {
       setSelectedAnswer(null);
       setShowExplanation(false);
     } else {
+      const now = Date.now();
       setQuizCompleted(true);
-      setEndTime(Date.now());
+      setEndTime(now);
+      
+      // Enregistrer la tentative dans l'historique
+      const duration = Math.floor((now - startTime) / 1000);
+      const percentage = Math.round((score / questions.length) * 100);
+      
+      addAttempt({
+        moduleId: blocId,
+        bloc: blocId,
+        score,
+        totalQuestions: questions.length,
+        percentage,
+        duration,
+        answers: questions.map((q, index) => ({
+          questionId: parseInt(q.id),
+          userAnswer: userAnswers[index] ?? -1,
+          correctAnswer: q.correctAnswer,
+          isCorrect: userAnswers[index] === q.correctAnswer,
+        })),
+      });
     }
   };
 
@@ -106,6 +134,7 @@ export default function QuizBloc() {
     setShowExplanation(false);
     setScore(0);
     setAnsweredQuestions(new Array(questions.length).fill(false));
+    setUserAnswers([]);
     setQuizCompleted(false);
     setEndTime(null);
   };
@@ -190,12 +219,18 @@ export default function QuizBloc() {
             </div>
 
             {/* Actions */}
-            <div className="flex gap-4">
-              <Button onClick={handleRestart} variant="outline" className="flex-1">
-                <RotateCcw className="w-4 h-4 mr-2" />
-                Recommencer
-              </Button>
-              <Button onClick={() => setLocation('/')} className="flex-1">
+            <div className="flex flex-col gap-3">
+              <div className="flex gap-4">
+                <Button onClick={handleRestart} variant="outline" className="flex-1">
+                  <RotateCcw className="w-4 h-4 mr-2" />
+                  Recommencer
+                </Button>
+                <Button onClick={() => setLocation('/statistics')} variant="outline" className="flex-1">
+                  <BarChart className="w-4 h-4 mr-2" />
+                  Voir mes stats
+                </Button>
+              </div>
+              <Button onClick={() => setLocation('/')} className="w-full">
                 <Home className="w-4 h-4 mr-2" />
                 Retour au Dashboard
               </Button>

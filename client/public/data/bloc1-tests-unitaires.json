@@ -103,7 +103,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Exemple avec Jest\nfunction add(a, b) {\n  return a + b;\n}\n\ntest('add() doit add deux nombres', () => {\n  // Arrange (préparer)\n  const a = 2;\n  const b = 3;\n\n  // Act (agir)\n  const result = add(a, b);\n\n  // Assert (vérifier)\n  expect(result).toBe(5);\n});"
+          "code": "// Exemple avec Jest\nfunction add(a, b) {\n  return a + b;\n}\n\ntest('add() doit add deux numbers', () => {\n  // Arrange (préparer)\n  const a = 2;\n  const b = 3;\n\n  // Act (agir)\n  const result = add(a, b);\n\n  // Assert (vérifier)\n  expect(result).toBe(5);\n});"
         }
       ]
     },
@@ -124,7 +124,7 @@
             ],
             [
               "expect(x).toEqual(y)",
-              "Égalité profonde (objets, tableaux)"
+              "Égalité profonde (objects, arrays)"
             ],
             [
               "expect(x).toBeTruthy()",
@@ -166,7 +166,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Mock d'une fonction\nconst fetchUser = jest.fn();\nfetchUser.mockResolvedValue({ id: 1, name: 'Alice' });\n\n// Test\ntest('getUserName() retourne le name', async () => {\n  const name = await getUserName(1);\n  expect(name).toBe('Alice');\n  expect(fetchUser).toHaveBeenCalledWith(1);\n});"
+          "code": "// Mock d'une function\nconst fetchUser = jest.fn();\nfetchUser.mockResolvedValue({ id: 1, name: 'Alice' });\n\n// Test\ntest('getUserName() retourne le name', async () => {\n  const name = await getUserName(1);\n  expect(name).toBe('Alice');\n  expect(fetchUser).toHaveBeenCalledWith(1);\n});"
         }
       ]
     },

@@ -28,7 +28,7 @@
           "rows": [
             [
               "Confidentialité",
-              "Les données ne sont accessibles qu'aux personnes autorisées"
+              "Les données ne sont accessibles qu'aux people autorisées"
             ],
             [
               "Intégrité",
@@ -36,11 +36,11 @@
             ],
             [
               "Disponibilité",
-              "Le système reste accessible aux utilisateurs légitimes"
+              "Le système reste accessible aux users légitimes"
             ],
             [
               "Authentification",
-              "Vérifier l'identité des utilisateurs"
+              "Vérifier l'identité des users"
             ],
             [
               "Autorisation",
@@ -118,7 +118,7 @@
             [
               "A10",
               "Server-Side Request Forgery",
-              "SSRF : requêtes forgées côté serveur"
+              "SSRF : requêtes forgées côté server"
             ]
           ]
         }
@@ -199,7 +199,7 @@
         {
           "type": "code",
           "language": "html",
-          "code": "<!-- Code vulnérable (PHP) -->\n<p>Hello <?php echo $_GET['name']; ?></p>\n\n<!-- Attaque : URL avec ?name=<script>alert('XSS')</script> -->\n<!-- Résultat : le script s'exécute dans le navigateur -->"
+          "code": "<!-- Code vulnérable (PHP) -->\n<p>Hello <?php echo $_GET['name']; ?></p>\n\n<!-- Attaque : url avec ?name=<script>alert('XSS')</script> -->\n<!-- Résultat : le script s'exécute dans le navigateur -->"
         },
         {
           "type": "subtitle",
@@ -233,7 +233,7 @@
         {
           "type": "code",
           "language": "html",
-          "code": "<!-- Site malveillant contenant : -->\n<img src=\"https://banque.com/transfer?to=attacker&amount=1000\" />\n\n<!-- Si l'user est connecté à banque.com, la requête s'exécute -->"
+          "code": "<!-- Site malveillant contenant : -->\n<img src=\"https://banque.com/transfer?to=attacker&amount=1000\" />\n\n<!-- if l'user est connecté à banque.com, la requête s'exécute -->"
         },
         {
           "type": "subtitle",
@@ -242,12 +242,12 @@
         {
           "type": "code",
           "language": "html",
-          "code": "<!-- ✅ Ajouter un token CSRF dans les formulaires -->\n<form method=\"POST\" action=\"/transfer\">\n  <input type=\"hidden\" name=\"csrf_token\" value=\"<?php echo $_SESSION['csrf_token']; ?>\" />\n  <input type=\"text\" name=\"amount\" />\n  <button type=\"submit\">Transférer</button>\n</form>"
+          "code": "<!-- ✅ Add un token CSRF dans les formulaires -->\n<form method=\"POST\" action=\"/transfer\">\n  <input type=\"hidden\" name=\"csrf_token\" value=\"<?php echo $_SESSION['csrf_token']; ?>\" />\n  <input type=\"text\" name=\"amount\" />\n  <button type=\"submit\">Transférer</button>\n</form>"
         },
         {
           "type": "code",
           "language": "php",
-          "code": "// Vérifier le token côté serveur\nif ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {\n  die('CSRF token invalide');\n}"
+          "code": "// Vérifier le token côté server\nif ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {\n  die('CSRF token invalid');\n}"
         },
         {
           "type": "alert",
@@ -343,7 +343,7 @@
         {
           "type": "code",
           "language": "php",
-          "code": "// ❌ MAUVAIS : pas de vérification\n$user_id = $_GET['id'];\n$user = getUser($user_id); // N'importe qui peut voir n'importe quel profil\n\n// ✅ BON : vérifier les permissions\n$user_id = $_GET['id'];\nif ($user_id !== $_SESSION['user_id'] && !isAdmin($_SESSION['user_id'])) {\n  die('Accès refusé');\n}\n$user = getUser($user_id);"
+          "code": "// ❌ MAUVAIS : pas de vérification\n$user_id = $_GET['id'];\n$user = getUser($user_id); // N'importe qui peut View n'importe quel profil\n\n// ✅ BON : vérifier les permissions\n$user_id = $_GET['id'];\nif ($user_id !== $_SESSION['user_id'] && !isAdmin($_SESSION['user_id'])) {\n  die('Accès refusé');\n}\n$user = getUser($user_id);"
         },
         {
           "type": "subtitle",
@@ -356,7 +356,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Tables pour RBAC\nCREATE TABLE roles (\n  id INT PRIMARY KEY,\n  name VARCHAR(50)\n);\n\nCREATE TABLE permissions (\n  id INT PRIMARY KEY,\n  name VARCHAR(50)\n);\n\nCREATE TABLE role_permissions (\n  role_id INT,\n  permission_id INT,\n  FOREIGN KEY (role_id) REFERENCES roles(id),\n  FOREIGN KEY (permission_id) REFERENCES permissions(id)\n);\n\nCREATE TABLE user_roles (\n  user_id INT,\n  role_id INT,\n  FOREIGN KEY (user_id) REFERENCES users(id),\n  FOREIGN KEY (role_id) REFERENCES roles(id)\n);"
+          "code": "-- Tables for RBAC\nCREATE table roles (\n  id INT PRIMARY KEY,\n  name VARCHAR(50)\n);\n\nCREATE table permissions (\n  id INT PRIMARY KEY,\n  name VARCHAR(50)\n);\n\nCREATE table role_permissions (\n  role_id INT,\n  permission_id INT,\n  FOREIGN KEY (role_id) REFERENCES roles(id),\n  FOREIGN KEY (permission_id) REFERENCES permissions(id)\n);\n\nCREATE table user_roles (\n  user_id INT,\n  role_id INT,\n  FOREIGN KEY (user_id) REFERENCES users(id),\n  FOREIGN KEY (role_id) REFERENCES roles(id)\n);"
         }
       ]
     },
@@ -435,7 +435,7 @@
           "rows": [
             [
               "Content-Security-Policy",
-              "Contrôle les sources de contenu autorisées (XSS)",
+              "Contrôle les sources de content autorisées (XSS)",
               "default-src 'self'"
             ],
             [
@@ -468,7 +468,7 @@
         {
           "type": "code",
           "language": "php",
-          "code": "// Ajouter des en-têtes de sécurité en PHP\nheader(\"Content-Security-Policy: default-src 'self'\");\nheader(\"X-Frame-Options: DENY\");\nheader(\"X-Content-Type-Options: nosniff\");\nheader(\"Strict-Transport-Security: max-age=31536000\");"
+          "code": "// Add des en-têtes de sécurité en PHP\nheader(\"Content-Security-Policy: default-src 'self'\");\nheader(\"X-Frame-Options: DENY\");\nheader(\"X-Content-Type-Options: nosniff\");\nheader(\"Strict-Transport-Security: max-age=31536000\");"
         }
       ]
     },
@@ -491,7 +491,7 @@
         {
           "type": "code",
           "language": "php",
-          "code": "// Validation d'un email\nif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {\n  die('Email invalide');\n}\n\n// Validation d'un nombre\nif (!is_numeric($age) || $age < 0 || $age > 150) {\n  die('Âge invalide');\n}"
+          "code": "// Validation d'un email\nif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {\n  die('email invalid');\n}\n\n// Validation d'un number\nif (!is_numeric($age) || $age < 0 || $age > 150) {\n  die('Âge invalid');\n}"
         },
         {
           "type": "subtitle",

@@ -1,0 +1,148 @@
+{
+  "id": "bloc1-git-avance",
+  "bloc": "bloc1",
+  "title": "Git Avancé (GitHub/GitLab)",
+  "icon": "🔀",
+  "color": "#F05032",
+  "description": "Fonctionnalités avancées de Git et utilisation des plateformes GitHub et GitLab pour la collaboration, CI/CD et gestion de projets.",
+  "sections": [
+    {
+      "id": "rebase",
+      "title": "Rebase vs Merge",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **rebase** et le **merge** sont deux stratégies pour intégrer les modifications d'une branche dans une autre."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Merge",
+            "Rebase"
+          ],
+          "rows": [
+            [
+              "Crée un commit de merge",
+              "Réécrit l'historique"
+            ],
+            [
+              "Historique non linéaire",
+              "Historique linéaire"
+            ],
+            [
+              "Préserve l'historique complet",
+              "Historique plus propre"
+            ],
+            [
+              "Recommandé pour les branches publiques",
+              "Recommandé pour les branches locales"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Merge\ngit checkout main\ngit merge feature-branch\n\n# Rebase\ngit checkout feature-branch\ngit rebase main"
+        }
+      ]
+    },
+    {
+      "id": "github-gitlab",
+      "title": "GitHub vs GitLab",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Fonctionnalité",
+            "GitHub",
+            "GitLab"
+          ],
+          "rows": [
+            [
+              "Hébergement",
+              "Cloud (github.com)",
+              "Cloud + Self-hosted"
+            ],
+            [
+              "CI/CD",
+              "GitHub Actions",
+              "GitLab CI/CD (intégré)"
+            ],
+            [
+              "Issues",
+              "Oui",
+              "Oui + Boards Kanban"
+            ],
+            [
+              "Pull/Merge Requests",
+              "Pull Requests",
+              "Merge Requests"
+            ],
+            [
+              "Wiki",
+              "Oui",
+              "Oui"
+            ],
+            [
+              "Gratuit",
+              "Oui (public + privé limité)",
+              "Oui (plus généreux)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pull-requests",
+      "title": "Pull Requests / Merge Requests",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **Pull Requests** (GitHub) ou **Merge Requests** (GitLab) permettent de proposer des modifications et de les faire réviser avant fusion."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Code Review** : Relecture par les pairs",
+            "**Tests automatiques** : CI/CD vérifie les tests",
+            "**Discussions** : Commentaires sur le code",
+            "**Approbation** : Validation avant merge"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cicd",
+      "title": "CI/CD avec GitHub Actions / GitLab CI",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'intégration continue (CI) et le déploiement continu (CD) automatisent les tests et le déploiement."
+        },
+        {
+          "type": "code",
+          "language": "yaml",
+          "code": "# GitHub Actions (.github/workflows/ci.yml)\nname: CI\non: [push, pull_request]\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n      - name: Install dependencies\n        run: npm install\n      - name: Run tests\n        run: npm test"
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Rebase : historique linéaire, Merge : préserve l'historique complet.",
+    "GitHub : populaire, GitHub Actions. GitLab : CI/CD intégré, self-hosted.",
+    "Pull/Merge Requests : code review, tests automatiques, approbation.",
+    "CI/CD : automatisation des tests et du déploiement."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "GitHub Docs",
+      "url": "https://docs.github.com/"
+    },
+    {
+      "type": "doc",
+      "title": "GitLab Docs",
+      "url": "https://docs.gitlab.com/"
+    }
+  ]
+}

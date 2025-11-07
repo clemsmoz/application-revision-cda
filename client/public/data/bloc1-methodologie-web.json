@@ -1,0 +1,125 @@
+{
+  "id": "bloc1-methodologie-web",
+  "bloc": "bloc1",
+  "title": "Méthodologie de Conception de Site Web",
+  "icon": "🎯",
+  "color": "#E67E22",
+  "description": "Méthodologies et processus de conception web : design thinking, atomic design, mobile-first, progressive enhancement.",
+  "sections": [
+    {
+      "id": "design-thinking",
+      "title": "Design Thinking",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **Design Thinking** est une approche centrée utilisateur pour résoudre des problèmes complexes."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Phase",
+            "Objectif"
+          ],
+          "rows": [
+            [
+              "Empathie",
+              "Comprendre les besoins users"
+            ],
+            [
+              "Définition",
+              "Formuler le problème"
+            ],
+            [
+              "Idéation",
+              "Générer des solutions"
+            ],
+            [
+              "Prototypage",
+              "Créer des maquettes"
+            ],
+            [
+              "Test",
+              "Valider avec les users"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "atomic-design",
+      "title": "Atomic Design",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'**Atomic Design** structure les interfaces en composants réutilisables."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Niveau",
+            "Description",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Atomes",
+              "Éléments de base",
+              "Bouton, input, label"
+            ],
+            [
+              "Molécules",
+              "Groupes d'atomes",
+              "Champ de formulaire (label + input)"
+            ],
+            [
+              "Organismes",
+              "Groupes de molécules",
+              "Header, formulaire complet"
+            ],
+            [
+              "Templates",
+              "Structure de page",
+              "Layout avec zones"
+            ],
+            [
+              "Pages",
+              "Instances avec content réel",
+              "Page d'accueil"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mobile-first",
+      "title": "Mobile-First",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Mobile-First** : concevoir d'abord pour mobile, puis adapter pour desktop."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Avantages** : Performance, priorité au contenu essentiel",
+            "**Media queries** : min-width (mobile → desktop)",
+            "**Touch-friendly** : Boutons min 44x44px",
+            "**Progressive enhancement** : Ajouter des fonctionnalités pour grands écrans"
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Design Thinking : approche centrée utilisateur en 5 phases.",
+    "Atomic Design : structure en atomes, molécules, organismes, templates, pages.",
+    "Mobile-First : concevoir pour mobile d'abord, puis adapter pour desktop."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Atomic Design",
+      "url": "https://atomicdesign.bradfrost.com/"
+    }
+  ]
+}

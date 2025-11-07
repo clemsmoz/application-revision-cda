@@ -62,11 +62,11 @@
             ],
             [
               "2NF",
-              "Pas de dépendance partielle (toutes les colonnes dépendent de la clé entière)"
+              "Pas de dépendance partielle (toutes les columns dépendent de la clé entière)"
             ],
             [
               "3NF",
-              "Pas de dépendance transitive (pas de colonne dépendant d'une autre colonne non-clé)"
+              "Pas de dépendance transitive (pas de column dépendant d'une autre column non-clé)"
             ]
           ]
         }
@@ -85,11 +85,11 @@
           "rows": [
             [
               "1:1 (Un à Un)",
-              "Un utilisateur a un profil"
+              "Un user a un profil"
             ],
             [
               "1:N (Un à Plusieurs)",
-              "Un client passe plusieurs commandes"
+              "Un client passe plusieurs orders"
             ],
             [
               "N:N (Plusieurs à Plusieurs)",

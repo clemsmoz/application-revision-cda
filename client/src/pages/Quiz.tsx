@@ -1,9 +1,12 @@
 import { Link } from 'wouter';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Code, Database, Rocket, ArrowRight, Brain } from 'lucide-react';
+import { Code, Database, Rocket, ArrowRight, Brain, BarChart } from 'lucide-react';
+import { useQuizHistory } from '@/hooks/useQuizHistory';
 
 export default function Quiz() {
+  const { history, getGlobalStats } = useQuizHistory();
+  const globalStats = getGlobalStats();
   const blocs = [
     {
       id: 'bloc1',
@@ -49,12 +52,24 @@ export default function Quiz() {
         </div>
       </div>
 
+      {/* Navigation vers statistiques */}
+      {history.length > 0 && (
+        <div className="flex justify-end">
+          <Link href="/statistics">
+            <Button variant="outline" className="gap-2">
+              <BarChart className="w-4 h-4" />
+              Voir mes statistiques
+            </Button>
+          </Link>
+        </div>
+      )}
+
       {/* Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card>
           <CardContent className="pt-6">
             <div className="text-center">
-              <p className="text-3xl font-bold text-gray-900">20</p>
+              <p className="text-3xl font-bold text-gray-900">107</p>
               <p className="text-sm text-gray-500 mt-1">Questions disponibles</p>
             </div>
           </CardContent>
@@ -62,15 +77,15 @@ export default function Quiz() {
         <Card>
           <CardContent className="pt-6">
             <div className="text-center">
-              <p className="text-3xl font-bold text-gray-900">3</p>
-              <p className="text-sm text-gray-500 mt-1">Quiz par bloc</p>
+              <p className="text-3xl font-bold text-gray-900">33</p>
+              <p className="text-sm text-gray-500 mt-1">Modules disponibles</p>
             </div>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="pt-6">
             <div className="text-center">
-              <p className="text-3xl font-bold text-gray-900">0</p>
+              <p className="text-3xl font-bold text-gray-900">{history.length}</p>
               <p className="text-sm text-gray-500 mt-1">Quiz complétés</p>
             </div>
           </CardContent>

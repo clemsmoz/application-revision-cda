@@ -53,7 +53,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Insérer un document\ndb.users.insertOne({\n  name: \"Alice\",\n  email: \"alice@example.com\",\n  age: 25,\n  hobbies: [\"lecture\", \"sport\"]\n});\n\n// Rechercher\ndb.users.find({ age: { $gte: 18 } });\n\n// Mettre à jour\ndb.users.updateOne(\n  { name: \"Alice\" },\n  { $set: { age: 26 } }\n);\n\n// Supprimer\ndb.users.deleteOne({ name: \"Alice\" });"
+          "code": "// Insérer un document\ndb.users.insertOne({\n  name: \"Alice\",\n  email: \"alice@example.com\",\n  age: 25,\n  hobbies: [\"lecture\", \"sport\"]\n});\n\n// Search\ndb.users.find({ age: { $gte: 18 } });\n\n// Mettre à jour\ndb.users.updateOne(\n  { name: \"Alice\" },\n  { $set: { age: 26 } }\n);\n\n// Delete\ndb.users.deleteOne({ name: \"Alice\" });"
         }
       ]
     },

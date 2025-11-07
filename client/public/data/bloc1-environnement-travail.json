@@ -1,0 +1,192 @@
+{
+  "id": "bloc1-environnement-travail",
+  "bloc": "bloc1",
+  "title": "Environnement de Travail",
+  "icon": "💻",
+  "color": "#34495E",
+  "description": "Configuration et utilisation d'un environnement de développement professionnel : éditeurs de code, terminaux, outils de productivité et bonnes pratiques.",
+  "sections": [
+    {
+      "id": "editeurs",
+      "title": "Éditeurs de Code",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un éditeur de code est l'outil principal du développeur. Les IDE (Integrated Development Environment) modernes offrent des fonctionnalités avancées pour améliorer la productivité."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Éditeur",
+            "Type",
+            "Points Forts"
+          ],
+          "rows": [
+            [
+              "VS Code",
+              "Éditeur léger",
+              "Extensions, Git intégré, IntelliSense"
+            ],
+            [
+              "WebStorm",
+              "IDE complet",
+              "Refactoring avancé, débogage puissant"
+            ],
+            [
+              "PHPStorm",
+              "IDE PHP",
+              "Support Symfony, Composer intégré"
+            ],
+            [
+              "Sublime Text",
+              "Éditeur léger",
+              "Rapide, personnalisable"
+            ],
+            [
+              "Vim/Neovim",
+              "Éditeur terminal",
+              "Productivité maximale, léger"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Extensions VS Code essentielles** : ESLint, Prettier, GitLens, Live Server, Auto Rename Tag, Path Intellisense."
+        }
+      ]
+    },
+    {
+      "id": "terminal",
+      "title": "Terminal et Ligne de Commande",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "La maîtrise du terminal est essentielle pour un développeur professionnel."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Commande",
+            "Description"
+          ],
+          "rows": [
+            [
+              "cd",
+              "Change directory (naviguer)"
+            ],
+            [
+              "ls / dir",
+              "Lister les files"
+            ],
+            [
+              "mkdir",
+              "Créer un folder"
+            ],
+            [
+              "rm / del",
+              "Supprimer un file"
+            ],
+            [
+              "cp / copy",
+              "Copier un file"
+            ],
+            [
+              "mv / move",
+              "Déplacer/renommer"
+            ],
+            [
+              "cat / type",
+              "Afficher le content d'un file"
+            ],
+            [
+              "grep / findstr",
+              "Rechercher dans un file"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Terminaux modernes** : Windows Terminal, iTerm2 (macOS), Terminator (Linux), Hyper."
+        }
+      ]
+    },
+    {
+      "id": "outils",
+      "title": "Outils de Productivité",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Outil",
+            "Usage"
+          ],
+          "rows": [
+            [
+              "Postman",
+              "Tester les API REST"
+            ],
+            [
+              "Docker Desktop",
+              "Conteneurisation"
+            ],
+            [
+              "DBeaver",
+              "Client de base de données universel"
+            ],
+            [
+              "Insomnia",
+              "Alternative à Postman"
+            ],
+            [
+              "Figma",
+              "Design d'interfaces"
+            ],
+            [
+              "Notion",
+              "Documentation et notes"
+            ],
+            [
+              "Slack/Discord",
+              "Communication d'équipe"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bonnes-pratiques",
+      "title": "Bonnes Pratiques",
+      "content": [
+        {
+          "type": "list",
+          "items": [
+            "**Organisation** : Structure de dossiers claire et cohérente",
+            "**Nommage** : Conventions de nommage (camelCase, snake_case, kebab-case)",
+            "**Sauvegarde** : Commits Git réguliers",
+            "**Documentation** : README.md à jour",
+            "**Environnements** : Séparer dev, staging, production",
+            "**Variables d'environnement** : Utiliser fichiers de configuration pour les secrets"
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "VS Code est l'éditeur le plus populaire avec un écosystème d'extensions riche.",
+    "Maîtriser le terminal améliore la productivité.",
+    "Utiliser des outils adaptés pour chaque tâche (Postman, Docker, DBeaver).",
+    "Bonnes pratiques : organisation, nommage cohérent, commits réguliers."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "VS Code",
+      "url": "https://code.visualstudio.com/"
+    },
+    {
+      "type": "doc",
+      "title": "Postman",
+      "url": "https://www.postman.com/"
+    }
+  ]
+}

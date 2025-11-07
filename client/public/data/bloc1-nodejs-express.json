@@ -42,7 +42,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Serveur HTTP basique avec Node.js\nconst http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/plain' });\n  res.end('Hello from Node.js!');\n});\n\nserver.listen(3000, () => {\n  console.log('Serveur démarré sur le port 3000');\n});"
+          "code": "// server HTTP basique avec Node.js\nconst http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/plain' });\n  res.end('Hello from Node.js!');\n});\n\nserver.listen(3000, () => {\n  console.log('server démarré sur le port 3000');\n});"
         }
       ]
     },
@@ -57,7 +57,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "const express = require('express');\nconst app = express();\n\n// Middleware pour parser le JSON\napp.use(express.json());\n\n// Routes\napp.get('/', (req, res) => {\n  res.json({ message: 'Welcome sur l\\'API' });\n});\n\napp.get('/users/:id', (req, res) => {\n  const userId = req.params.id;\n  res.json({ id: userId, name: 'User ' + userId });\n});\n\napp.post('/users', (req, res) => {\n  const { name, email } = req.body;\n  res.status(201).json({ id: 1, name, email });\n});\n\napp.listen(3000, () => {\n  console.log('Serveur Express démarré sur le port 3000');\n});"
+          "code": "const express = require('express');\nconst app = express();\n\n// Middleware for parser le JSON\napp.use(express.json());\n\n// Routes\napp.get('/', (req, res) => {\n  res.json({ message: 'Welcome sur l\\'API' });\n});\n\napp.get('/users/:id', (req, res) => {\n  const userId = req.params.id;\n  res.json({ id: userId, name: 'User ' + userId });\n});\n\napp.post('/users', (req, res) => {\n  const { name, email } = req.body;\n  res.status(201).json({ id: 1, name, email });\n});\n\napp.listen(3000, () => {\n  console.log('server Express démarré sur le port 3000');\n});"
         }
       ]
     },
@@ -121,27 +121,27 @@
             [
               "GET",
               "/users",
-              "Lister tous les utilisateurs"
+              "Lister tous les users"
             ],
             [
               "GET",
               "/users/:id",
-              "Récupérer un utilisateur"
+              "Récupérer un user"
             ],
             [
               "POST",
               "/users",
-              "Créer un utilisateur"
+              "Créer un user"
             ],
             [
               "PUT",
               "/users/:id",
-              "Mettre à jour un utilisateur"
+              "Mettre à day un user"
             ],
             [
               "DELETE",
               "/users/:id",
-              "Supprimer un utilisateur"
+              "Supprimer un user"
             ]
           ]
         }

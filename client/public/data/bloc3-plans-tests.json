@@ -65,12 +65,12 @@
             ],
             [
               "E2E",
-              "Tester le parcours utilisateur complet",
+              "Tester le parcours user complet",
               "Cypress, Selenium"
             ],
             [
               "Performance",
-              "Tester la charge et les temps de réponse",
+              "Tester la charge et les time de réponse",
               "JMeter, k6"
             ],
             [

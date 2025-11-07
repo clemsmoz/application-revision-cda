@@ -10,6 +10,7 @@ import Fiches from "./pages/Fiches";
 import FicheBloc from "./pages/FicheBloc";
 import Quiz from "./pages/Quiz";
 import QuizBloc from "./pages/QuizBloc";
+import Statistics from "./pages/Statistics";
 import Lexique from "./pages/Lexique";
 
 function Router() {
@@ -21,6 +22,7 @@ function Router() {
         <Route path="/fiches/:blocId" component={FicheBloc} />
         <Route path="/quiz" component={Quiz} />
         <Route path="/quiz/:blocId" component={QuizBloc} />
+        <Route path="/statistics" component={Statistics} />
         <Route path="/lexique" component={Lexique} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}

@@ -37,7 +37,7 @@
         {
           "type": "code",
           "language": "bash",
-          "code": "git [commande] [paramètre(s)] [--option] [-o]"
+          "code": "git [order] [paramètre(s)] [--option] [-o]"
         },
         {
           "type": "subtitle",
@@ -50,7 +50,7 @@
         {
           "type": "code",
           "language": "bash",
-          "code": "# Configuration de l'identité (obligatoire)\ngit config --global user.name \"Votre Nom\"\ngit config --global user.email \"votre@email.com\"\n\n# Vérifier la configuration\ngit config --list"
+          "code": "# Configuration de l'identité (obligatoire)\ngit config --global user.name \"Votre name\"\ngit config --global user.email \"votre@email.com\"\n\n# Vérifier la configuration\ngit config --list"
         },
         {
           "type": "subtitle",
@@ -77,13 +77,37 @@
         },
         {
           "type": "table",
-          "headers": ["Commande", "Rôle", "Exemple"],
+          "headers": [
+            "Commande",
+            "Rôle",
+            "Exemple"
+          ],
           "rows": [
-            ["git init", "Initialise un nouveau dépôt Git local", "git init mon-projet"],
-            ["git add <fichier>", "Ajoute un fichier à la zone de staging (préparation du commit)", "git add index.html"],
-            ["git add .", "Ajoute tous les fichiers modifiés au staging", "git add ."],
-            ["git commit -m \"message\"", "Enregistre les modifications du staging dans l'historique", "git commit -m \"Ajout page d'accueil\""],
-            ["git status", "Affiche l'état des fichiers (modifiés, stagés, non suivis)", "git status"]
+            [
+              "git init",
+              "Initialise un new dépôt Git local",
+              "git init mon-projet"
+            ],
+            [
+              "git add <file>",
+              "Ajoute un file à la zone de staging (préparation du commit)",
+              "git add index.html"
+            ],
+            [
+              "git add .",
+              "Ajoute tous les files modifiés au staging",
+              "git add ."
+            ],
+            [
+              "git commit -m \"message\"",
+              "Enregistre les modifications du staging dans l'historique",
+              "git commit -m \"Ajout page d'accueil\""
+            ],
+            [
+              "git status",
+              "Affiche l'état des files (modifiés, stagés, non suivis)",
+              "git status"
+            ]
           ]
         },
         {
@@ -112,14 +136,42 @@
         },
         {
           "type": "table",
-          "headers": ["Commande", "Rôle", "Exemple"],
+          "headers": [
+            "Commande",
+            "Rôle",
+            "Exemple"
+          ],
           "rows": [
-            ["git log", "Affiche l'historique des commits", "git log"],
-            ["git log --oneline", "Affiche l'historique de manière condensée", "git log --oneline"],
-            ["git log --all --graph", "Affiche l'historique graphique de toutes les branches", "git log --all --graph --oneline"],
-            ["git show <commit>", "Affiche les détails d'un commit spécifique", "git show abc123"],
-            ["git diff", "Compare les modifications non stagées", "git diff"],
-            ["git diff --staged", "Compare les modifications stagées", "git diff --staged"]
+            [
+              "git log",
+              "Affiche l'historique des commits",
+              "git log"
+            ],
+            [
+              "git log --oneline",
+              "Affiche l'historique de manière condensée",
+              "git log --oneline"
+            ],
+            [
+              "git log --all --graph",
+              "Affiche l'historique graphique de toutes les branches",
+              "git log --all --graph --oneline"
+            ],
+            [
+              "git show <commit>",
+              "Affiche les détails d'un commit spécifique",
+              "git show abc123"
+            ],
+            [
+              "git diff",
+              "Compare les modifications non stagées",
+              "git diff"
+            ],
+            [
+              "git diff --staged",
+              "Compare les modifications stagées",
+              "git diff --staged"
+            ]
           ]
         },
         {
@@ -133,7 +185,7 @@
         {
           "type": "code",
           "language": "bash",
-          "code": "HEAD      # Commit actuel\nHEAD~1    # Commit précédent\nHEAD~2    # 2 commits en arrière\nHEAD~n    # n commits en arrière"
+          "code": "HEAD      # Commit current\nHEAD~1    # Commit précédent\nHEAD~2    # 2 commits en arrière\nHEAD~n    # n commits en arrière"
         }
       ]
     },
@@ -147,12 +199,32 @@
         },
         {
           "type": "table",
-          "headers": ["Commande", "Effet", "Quand l'utiliser"],
+          "headers": [
+            "Commande",
+            "Effet",
+            "Quand l'utiliser"
+          ],
           "rows": [
-            ["git reset HEAD~n", "Supprime les n derniers commits (garde les modifications)", "Pour refaire des commits mal formulés"],
-            ["git reset --hard HEAD~n", "Supprime les n derniers commits ET les modifications", "⚠️ Dangereux : perte définitive des modifications"],
-            ["git revert <commit>", "Crée un nouveau commit qui annule les modifications d'un commit", "Pour annuler un commit déjà publié"],
-            ["git clean -fd", "Supprime les fichiers non suivis (untracked)", "Pour nettoyer le répertoire de travail"]
+            [
+              "git reset HEAD~n",
+              "Supprime les n derniers commits (garde les modifications)",
+              "Pour refaire des commits mal formulés"
+            ],
+            [
+              "git reset --hard HEAD~n",
+              "Supprime les n derniers commits ET les modifications",
+              "⚠️ Dangereux : perte définitive des modifications"
+            ],
+            [
+              "git revert <commit>",
+              "Crée un new commit qui annule les modifications d'un commit",
+              "Pour annuler un commit déjà publié"
+            ],
+            [
+              "git clean -fd",
+              "Supprime les files non suivis (untracked)",
+              "Pour nettoyer le répertoire de travail"
+            ]
           ]
         },
         {
@@ -172,14 +244,42 @@
         },
         {
           "type": "table",
-          "headers": ["Commande", "Rôle", "Exemple"],
+          "headers": [
+            "Commande",
+            "Rôle",
+            "Exemple"
+          ],
           "rows": [
-            ["git branch", "Liste les branches locales", "git branch"],
-            ["git branch <nom>", "Crée une nouvelle branche", "git branch feature-login"],
-            ["git checkout <branche>", "Change de branche", "git checkout feature-login"],
-            ["git checkout -b <nom>", "Crée et bascule sur une nouvelle branche", "git checkout -b feature-login"],
-            ["git branch -d <nom>", "Supprime une branche (si fusionnée)", "git branch -d feature-login"],
-            ["git branch -D <nom>", "Force la suppression d'une branche", "git branch -D feature-login"]
+            [
+              "git branch",
+              "Liste les branches locales",
+              "git branch"
+            ],
+            [
+              "git branch <name>",
+              "Crée une nouvelle branche",
+              "git branch feature-login"
+            ],
+            [
+              "git checkout <branche>",
+              "Change de branche",
+              "git checkout feature-login"
+            ],
+            [
+              "git checkout -b <name>",
+              "Crée et bascule sur une nouvelle branche",
+              "git checkout -b feature-login"
+            ],
+            [
+              "git branch -d <name>",
+              "Supprime une branche (si fusionnée)",
+              "git branch -d feature-login"
+            ],
+            [
+              "git branch -D <name>",
+              "Force la suppression d'une branche",
+              "git branch -D feature-login"
+            ]
           ]
         },
         {
@@ -234,11 +334,27 @@
         },
         {
           "type": "table",
-          "headers": ["Critère", "Merge", "Rebase"],
+          "headers": [
+            "Critère",
+            "Merge",
+            "Rebase"
+          ],
           "rows": [
-            ["Historique", "Préserve l'historique complet (commits de fusion)", "Historique linéaire (réécriture)"],
-            ["Conflits", "Résolus une seule fois", "Peuvent survenir à chaque commit réappliqué"],
-            ["Utilisation", "Fusion de branches publiques", "Nettoyage de branches locales avant fusion"]
+            [
+              "Historique",
+              "Préserve l'historique complet (commits de fusion)",
+              "Historique linéaire (réécriture)"
+            ],
+            [
+              "Conflits",
+              "Résolus une seule fois",
+              "Peuvent survenir à chaque commit réappliqué"
+            ],
+            [
+              "Utilisation",
+              "Fusion de branches publiques",
+              "Nettoyage de branches locales avant fusion"
+            ]
           ]
         },
         {
@@ -296,15 +412,47 @@
         },
         {
           "type": "table",
-          "headers": ["Commande", "Rôle", "Exemple"],
+          "headers": [
+            "Commande",
+            "Rôle",
+            "Exemple"
+          ],
           "rows": [
-            ["git remote add <nom> <url>", "Connecte un dépôt distant", "git remote add origin https://github.com/user/repo.git"],
-            ["git remote -v", "Liste les dépôts distants connectés", "git remote -v"],
-            ["git push <remote> <branche>", "Publie une branche sur le dépôt distant", "git push origin main"],
-            ["git push -u origin <branche>", "Publie et configure le suivi de la branche", "git push -u origin main"],
-            ["git pull", "Récupère et fusionne les modifications du distant", "git pull origin main"],
-            ["git fetch", "Récupère les modifications sans les fusionner", "git fetch origin"],
-            ["git clone <url>", "Clone un dépôt distant en local", "git clone https://github.com/user/repo.git"]
+            [
+              "git remote add <name> <url>",
+              "Connecte un dépôt distant",
+              "git remote add origin https://github.com/user/repo.git"
+            ],
+            [
+              "git remote -v",
+              "Liste les dépôts distants connectés",
+              "git remote -v"
+            ],
+            [
+              "git push <remote> <branche>",
+              "Publie une branche sur le dépôt distant",
+              "git push origin main"
+            ],
+            [
+              "git push -u origin <branche>",
+              "Publie et configure le suivi de la branche",
+              "git push -u origin main"
+            ],
+            [
+              "git pull",
+              "Récupère et fusionne les modifications du distant",
+              "git pull origin main"
+            ],
+            [
+              "git fetch",
+              "Récupère les modifications sans les fusionner",
+              "git fetch origin"
+            ],
+            [
+              "git clone <url>",
+              "Clone un dépôt distant en local",
+              "git clone https://github.com/user/repo.git"
+            ]
           ]
         },
         {

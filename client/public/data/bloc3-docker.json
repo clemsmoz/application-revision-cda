@@ -40,7 +40,7 @@
             ],
             [
               "Isolation complète",
-              "Isolation au niveau processus"
+              "Isolation au level processus"
             ],
             [
               "Nécessite un hyperviseur",
@@ -101,7 +101,7 @@
             [
               "Conteneur",
               "Instance en cours d'exécution",
-              "Serveur web Nginx actif"
+              "Serveur web Nginx active"
             ],
             [
               "Dockerfile",
@@ -133,7 +133,7 @@
         {
           "type": "code",
           "language": "bash",
-          "code": "# Linux (Ubuntu/Debian)\ncurl -fsSL https://get.docker.com -o get-docker.sh\nsudo sh get-docker.sh\n\n# Ajouter l'user au groupe docker (éviter sudo)\nsudo usermod -aG docker $USER\n\n# Vérifier l'installation\ndocker --version\ndocker run hello-world"
+          "code": "# Linux (Ubuntu/Debian)\ncurl -fsSL https://get.docker.com -o get-docker.sh\nsudo sh get-docker.sh\n\n# Add l'user au groupe docker (éviter sudo)\nsudo usermod -aG docker $USER\n\n# Vérifier l'installation\ndocker --version\ndocker run hello-world"
         },
         {
           "type": "subtitle",
@@ -235,12 +235,12 @@
             ],
             [
               "COPY",
-              "Copier des fichiers de l'hôte vers l'image",
+              "Copier des files de l'hôte vers l'image",
               "COPY . /app"
             ],
             [
               "RUN",
-              "Exécuter une commande lors de la construction",
+              "Exécuter une order lors de la construction",
               "RUN npm install"
             ],
             [
@@ -277,7 +277,7 @@
         {
           "type": "code",
           "language": "dockerfile",
-          "code": "# Dockerfile\n# Image de base\nFROM node:18-alpine\n\n# Répertoire de travail\nWORKDIR /app\n\n# Copier package.json et package-lock.json\nCOPY package*.json ./\n\n# Installer les dépendances\nRUN npm install --production\n\n# Copier le code source\nCOPY . .\n\n# Exposer le port\nEXPOSE 3000\n\n# Commande de démarrage\nCMD [\"node\", \"server.js\"]"
+          "code": "# Dockerfile\n# image de database\nFROM node:18-alpine\n\n# Répertoire de travail\nWORKDIR /app\n\n# Copier package.json et package-lock.json\nCOPY package*.json ./\n\n# Installer les dépendances\nRUN npm install --production\n\n# Copier le code source\nCOPY . .\n\n# Exposer le port\nEXPOSE 3000\n\n# Commande de démarrage\nCMD [\"node\", \"server.js\"]"
         },
         {
           "type": "subtitle",
@@ -322,7 +322,7 @@
             ],
             [
               "Bind mount",
-              "Lier un dossier de l'hôte",
+              "Lier un folder de l'hôte",
               "-v /home/user/data:/app/data"
             ],
             [
@@ -339,7 +339,7 @@
         {
           "type": "code",
           "language": "bash",
-          "code": "# Créer un volume\ndocker volume create mysql-data\n\n# Lancer MySQL avec volume persistant\ndocker run -d \\\n  --name mysql \\\n  -e MYSQL_ROOT_PASSWORD=secret \\\n  -v mysql-data:/var/lib/mysql \\\n  -p 3306:3306 \\\n  mysql:8\n\n# Les données persistent même si le conteneur est supprimé\ndocker rm -f mysql\ndocker run -d --name mysql -e MYSQL_ROOT_PASSWORD=secret -v mysql-data:/var/lib/mysql -p 3306:3306 mysql:8\n# Les données sont toujours là !"
+          "code": "# Créer un volume\ndocker volume create mysql-data\n\n# Lancer MySQL avec volume persistant\ndocker run -d \\\n  --name mysql \\\n  -e MYSQL_ROOT_PASSWORD=secret \\\n  -v mysql-data:/var/lib/mysql \\\n  -p 3306:3306 \\\n  mysql:8\n\n# Les données persistent même if le conteneur est Deleted\ndocker rm -f mysql\ndocker run -d --name mysql -e MYSQL_ROOT_PASSWORD=secret -v mysql-data:/var/lib/mysql -p 3306:3306 mysql:8\n# Les données sont toujours là !"
         }
       ]
     },
@@ -377,7 +377,7 @@
             [
               "custom bridge",
               "Réseau personnalisé",
-              "Communication par nom de conteneur"
+              "Communication par name de conteneur"
             ]
           ]
         },
@@ -412,7 +412,7 @@
         {
           "type": "code",
           "language": "yaml",
-          "code": "# docker-compose.yml\nversion: '3.8'\n\nservices:\n  # Base de données MySQL\n  db:\n    image: mysql:8\n    environment:\n      MYSQL_ROOT_PASSWORD: secret\n      MYSQL_DATABASE: myapp\n    volumes:\n      - db-data:/var/lib/mysql\n    networks:\n      - app-network\n\n  # Application Node.js\n  app:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      DB_HOST: db\n      DB_USER: root\n      DB_PASSWORD: secret\n      DB_NAME: myapp\n    depends_on:\n      - db\n    networks:\n      - app-network\n\nvolumes:\n  db-data:\n\nnetworks:\n  app-network:"
+          "code": "# docker-compose.yml\nversion: '3.8'\n\nservices:\n  # database de données MySQL\n  db:\n    image: mysql:8\n    environment:\n      MYSQL_ROOT_PASSWORD: secret\n      MYSQL_DATABASE: myapp\n    volumes:\n      - db-data:/var/lib/mysql\n    networks:\n      - app-network\n\n  # Application Node.js\n  app:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      DB_HOST: db\n      DB_USER: root\n      DB_PASSWORD: secret\n      DB_NAME: myapp\n    depends_on:\n      - db\n    networks:\n      - app-network\n\nvolumes:\n  db-data:\n\nnetworks:\n  app-network:"
         },
         {
           "type": "subtitle",

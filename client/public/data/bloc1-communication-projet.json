@@ -1,0 +1,126 @@
+{
+  "id": "bloc1-communication-projet",
+  "bloc": "bloc1",
+  "title": "Communiquer en Mode Projet",
+  "icon": "💬",
+  "color": "#16A085",
+  "description": "Communication efficace en gestion de projet : réunions, reporting, outils collaboratifs et gestion des parties prenantes.",
+  "sections": [
+    {
+      "id": "types-reunions",
+      "title": "Types de Réunions",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Réunion",
+            "Fréquence",
+            "Objectif"
+          ],
+          "rows": [
+            [
+              "Kick-off",
+              "Début de projet",
+              "Lancer le projet, aligner l'équipe"
+            ],
+            [
+              "Daily stand-up",
+              "Quotidien (15min)",
+              "Point rapide : fait, à faire, blocages"
+            ],
+            [
+              "Sprint planning",
+              "Début de sprint",
+              "Planifier les tâches du sprint"
+            ],
+            [
+              "Sprint review",
+              "Fin de sprint",
+              "Démonstration des fonctionnalités"
+            ],
+            [
+              "Retrospective",
+              "Fin de sprint",
+              "Amélioration continue"
+            ],
+            [
+              "Comité de pilotage",
+              "Mensuel",
+              "Décisions stratégiques"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reporting",
+      "title": "Reporting",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **reporting** informe les parties prenantes de l'avancement du projet."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Rapport d'avancement** : Tâches terminées, en cours, à venir",
+            "**Indicateurs** : Vélocité, burn-down chart, taux de complétion",
+            "**Risques** : Identification et plan de mitigation",
+            "**Budget** : Dépenses vs prévisionnel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outils",
+      "title": "Outils Collaboratifs",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Outil",
+            "Usage"
+          ],
+          "rows": [
+            [
+              "Jira",
+              "Gestion de projet Agile"
+            ],
+            [
+              "Trello",
+              "Kanban simple"
+            ],
+            [
+              "Slack/Teams",
+              "Communication d'équipe"
+            ],
+            [
+              "Confluence",
+              "Documentation"
+            ],
+            [
+              "Miro",
+              "Brainstorming visuel"
+            ],
+            [
+              "Figma",
+              "Design collaboratif"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Réunions : kick-off, daily stand-up, sprint planning/review, retrospective.",
+    "Reporting : avancement, indicateurs (vélocité, burn-down), risques, budget.",
+    "Outils : Jira, Trello, Slack, Confluence, Miro."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Scrum Guide",
+      "url": "https://scrumguides.org/"
+    }
+  ]
+}

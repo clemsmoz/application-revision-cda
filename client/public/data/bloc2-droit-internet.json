@@ -23,23 +23,23 @@
           "rows": [
             [
               "Consentement",
-              "L'utilisateur doit donner son accord explicite"
+              "L'user doit donner son accord explicite"
             ],
             [
               "Droit d'accès",
-              "L'utilisateur peut consulter ses données"
+              "L'user peut consulter ses données"
             ],
             [
               "Droit de rectification",
-              "L'utilisateur peut corriger ses données"
+              "L'user peut corriger ses données"
             ],
             [
               "Droit à l'oubli",
-              "L'utilisateur peut demander la suppression"
+              "L'user peut demander la suppression"
             ],
             [
               "Portabilité",
-              "L'utilisateur peut récupérer ses données"
+              "L'user peut récupérer ses données"
             ],
             [
               "DPO",
@@ -93,11 +93,11 @@
           "rows": [
             [
               "Éditeur",
-              "Responsable du contenu publié"
+              "Responsable du content publié"
             ],
             [
               "Hébergeur",
-              "Non responsable du contenu (sauf s'il ne retire pas un contenu illicite signalé)"
+              "Non responsable du content (sauf s'il ne retire pas un content illicite signalé)"
             ],
             [
               "Intermédiaire technique",

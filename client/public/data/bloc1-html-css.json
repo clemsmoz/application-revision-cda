@@ -16,11 +16,31 @@
         },
         {
           "type": "table",
-          "headers": ["Langage", "Rôle", "Version Actuelle", "Organisme"],
+          "headers": [
+            "Langage",
+            "Rôle",
+            "Version Actuelle",
+            "Organisme"
+          ],
           "rows": [
-            ["HTML", "Structure et contenu de la page", "HTML5", "W3C (World Wide Web Consortium)"],
-            ["CSS", "Mise en forme et style visuel", "CSS3", "W3C"],
-            ["JavaScript", "Interactivité et dynamisme", "ES2023", "ECMA International"]
+            [
+              "HTML",
+              "Structure et content de la page",
+              "HTML5",
+              "W3C (World Wide Web Consortium)"
+            ],
+            [
+              "CSS",
+              "Mise en forme et style visuel",
+              "CSS3",
+              "W3C"
+            ],
+            [
+              "JavaScript",
+              "Interactivité et dynamisme",
+              "ES2023",
+              "ECMA International"
+            ]
           ]
         }
       ]
@@ -45,7 +65,7 @@
         {
           "type": "code",
           "language": "html",
-          "code": "<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>Ma Page</title>\n  </head>\n  <body>\n    <header>\n      <h1>Titre Principal</h1>\n    </header>\n    <main>\n      <p>Contenu de la page</p>\n    </main>\n  </body>\n</html>"
+          "code": "<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>Ma Page</title>\n  </head>\n  <body>\n    <header>\n      <h1>title Principal</h1>\n    </header>\n    <main>\n      <p>content de la page</p>\n    </main>\n  </body>\n</html>"
         },
         {
           "type": "alert",
@@ -64,17 +84,57 @@
         },
         {
           "type": "table",
-          "headers": ["Catégorie", "Balises", "Utilisation"],
+          "headers": [
+            "Catégorie",
+            "Balises",
+            "Utilisation"
+          ],
           "rows": [
-            ["Structure", "<header>, <nav>, <main>, <section>, <article>, <aside>, <footer>", "Organiser la page de manière sémantique"],
-            ["Titres", "<h1> à <h6>", "Hiérarchie des titres (h1 = plus important)"],
-            ["Texte", "<p>, <span>, <strong>, <em>, <br>, <hr>", "Paragraphes, emphases, sauts de ligne"],
-            ["Listes", "<ul>, <ol>, <li>", "Listes non ordonnées et ordonnées"],
-            ["Liens", "<a href=\"...\">", "Créer des hyperliens"],
-            ["Images", "<img src=\"...\" alt=\"...\">", "Afficher des images"],
-            ["Tableaux", "<table>, <thead>, <tbody>, <tr>, <th>, <td>", "Données tabulaires"],
-            ["Formulaires", "<form>, <input>, <textarea>, <select>, <button>", "Saisie utilisateur"],
-            ["Multimédia", "<video>, <audio>, <source>", "Vidéos et audio natifs"]
+            [
+              "Structure",
+              "<header>, <nav>, <main>, <section>, <item>, <aside>, <footer>",
+              "Organiser la page de manière sémantique"
+            ],
+            [
+              "Titres",
+              "<h1> à <h6>",
+              "Hiérarchie des titles (h1 = plus important)"
+            ],
+            [
+              "Texte",
+              "<p>, <span>, <strong>, <em>, <br>, <hr>",
+              "Paragraphes, emphases, sauts de line"
+            ],
+            [
+              "Listes",
+              "<ul>, <ol>, <li>",
+              "Listes non ordonnées et ordonnées"
+            ],
+            [
+              "Liens",
+              "<a href=\"...\">",
+              "Créer des hyperliens"
+            ],
+            [
+              "Images",
+              "<img src=\"...\" alt=\"...\">",
+              "Afficher des images"
+            ],
+            [
+              "Tableaux",
+              "<table>, <thead>, <tbody>, <tr>, <th>, <td>",
+              "Données tabulaires"
+            ],
+            [
+              "Formulaires",
+              "<form>, <input>, <textarea>, <select>, <button>",
+              "Saisie user"
+            ],
+            [
+              "Multimédia",
+              "<video>, <audio>, <source>",
+              "Vidéos et audio natifs"
+            ]
           ]
         },
         {
@@ -83,10 +143,22 @@
         },
         {
           "type": "table",
-          "headers": ["Type", "Comportement", "Exemples"],
+          "headers": [
+            "Type",
+            "Comportement",
+            "Exemples"
+          ],
           "rows": [
-            ["Bloc", "Prend toute la largeur disponible, commence sur une nouvelle ligne", "<div>, <p>, <h1>, <section>"],
-            ["Inline", "Prend uniquement la largeur de son contenu, reste sur la même ligne", "<span>, <a>, <strong>, <em>"]
+            [
+              "Bloc",
+              "Prend toute la width available, commence sur une nouvelle line",
+              "<div>, <p>, <h1>, <section>"
+            ],
+            [
+              "Inline",
+              "Prend uniquement la width de son content, reste sur la même line",
+              "<span>, <a>, <strong>, <em>"
+            ]
           ]
         }
       ]
@@ -101,15 +173,47 @@
         },
         {
           "type": "table",
-          "headers": ["Attribut", "Rôle", "Exemple"],
+          "headers": [
+            "Attribut",
+            "Rôle",
+            "Exemple"
+          ],
           "rows": [
-            ["id", "Identifiant unique de l'élément", "<div id=\"header\">"],
-            ["class", "Classe CSS pour styliser l'élément", "<p class=\"intro\">"],
-            ["href", "URL de destination d'un lien", "<a href=\"https://example.com\">"],
-            ["src", "Source d'une image ou d'un média", "<img src=\"logo.png\">"],
-            ["alt", "Texte alternatif pour les images (accessibilité)", "<img alt=\"Logo du site\">"],
-            ["title", "Info-bulle au survol", "<a title=\"Cliquez ici\">"],
-            ["data-*", "Attributs personnalisés pour stocker des données", "<div data-user-id=\"123\">"]
+            [
+              "id",
+              "Identifiant unique de l'élément",
+              "<div id=\"header\">"
+            ],
+            [
+              "class",
+              "Classe CSS pour styliser l'élément",
+              "<p class=\"intro\">"
+            ],
+            [
+              "href",
+              "URL de destination d'un lien",
+              "<a href=\"https://example.com\">"
+            ],
+            [
+              "src",
+              "Source d'une image ou d'un média",
+              "<img src=\"logo.png\">"
+            ],
+            [
+              "alt",
+              "Texte alternatif pour les images (accessibilité)",
+              "<img alt=\"Logo du site\">"
+            ],
+            [
+              "title",
+              "Info-bulle au survol",
+              "<a title=\"Cliquez ici\">"
+            ],
+            [
+              "data-*",
+              "Attributs personnalisés pour stocker des données",
+              "<div data-user-id=\"123\">"
+            ]
           ]
         },
         {
@@ -130,20 +234,56 @@
         {
           "type": "code",
           "language": "html",
-          "code": "<form action=\"/submit\" method=\"POST\">\n  <label for=\"name\">Nom :</label>\n  <input type=\"text\" id=\"name\" name=\"name\" required>\n  \n  <label for=\"email\">Email :</label>\n  <input type=\"email\" id=\"email\" name=\"email\" required>\n  \n  <label for=\"message\">Message :</label>\n  <textarea id=\"message\" name=\"message\"></textarea>\n  \n  <button type=\"submit\">Envoyer</button>\n</form>"
+          "code": "<form action=\"/submit\" method=\"POST\">\n  <label for=\"name\">name :</label>\n  <input type=\"text\" id=\"name\" name=\"name\" required>\n  \n  <label for=\"email\">email :</label>\n  <input type=\"email\" id=\"email\" name=\"email\" required>\n  \n  <label for=\"message\">message :</label>\n  <textarea id=\"message\" name=\"message\"></textarea>\n  \n  <button type=\"submit\">Send</button>\n</form>"
         },
         {
           "type": "table",
-          "headers": ["Type d'Input", "Utilisation", "Validation HTML5"],
+          "headers": [
+            "Type d'Input",
+            "Utilisation",
+            "Validation HTML5"
+          ],
           "rows": [
-            ["text", "Texte court", "required, minlength, maxlength"],
-            ["email", "Adresse email", "Validation automatique du format"],
-            ["password", "Mot de passe (masqué)", "required, minlength"],
-            ["number", "Nombre", "min, max, step"],
-            ["date", "Date", "min, max"],
-            ["checkbox", "Case à cocher", "checked"],
-            ["radio", "Bouton radio (choix unique)", "checked"],
-            ["file", "Upload de fichier", "accept (types de fichiers)"]
+            [
+              "text",
+              "Texte court",
+              "required, minlength, maxlength"
+            ],
+            [
+              "email",
+              "Adresse email",
+              "Validation automatique du format"
+            ],
+            [
+              "password",
+              "Mot de passe (masqué)",
+              "required, minlength"
+            ],
+            [
+              "number",
+              "Nombre",
+              "min, max, step"
+            ],
+            [
+              "date",
+              "Date",
+              "min, max"
+            ],
+            [
+              "checkbox",
+              "Case à cocher",
+              "checked"
+            ],
+            [
+              "radio",
+              "Bouton radio (choix unique)",
+              "checked"
+            ],
+            [
+              "file",
+              "Upload de file",
+              "accept (types de files)"
+            ]
           ]
         }
       ]
@@ -164,7 +304,7 @@
         {
           "type": "code",
           "language": "css",
-          "code": "sélecteur {\n  propriété: valeur;\n  propriété2: valeur2;\n}"
+          "code": "sélecteur {\n  propriété: value;\n  propriété2: valeur2;\n}"
         },
         {
           "type": "subtitle",
@@ -172,11 +312,27 @@
         },
         {
           "type": "table",
-          "headers": ["Méthode", "Syntaxe", "Utilisation"],
+          "headers": [
+            "Méthode",
+            "Syntaxe",
+            "Utilisation"
+          ],
           "rows": [
-            ["Inline (sur la balise)", "<p style=\"color: red;\">", "❌ À éviter (difficile à maintenir)"],
-            ["Interne (dans <head>)", "<style> p { color: red; } </style>", "⚠️ Pour des styles spécifiques à une page"],
-            ["Externe (fichier .css)", "<link rel=\"stylesheet\" href=\"style.css\">", "✅ Recommandé (réutilisable, maintenable)"]
+            [
+              "Inline (sur la balise)",
+              "<p style=\"color: red;\">",
+              "❌ À éviter (difficile à maintenir)"
+            ],
+            [
+              "Interne (dans <head>)",
+              "<style> p { color: red; } </style>",
+              "⚠️ Pour des styles spécifiques à une page"
+            ],
+            [
+              "Externe (file .css)",
+              "<link rel=\"stylesheet\" href=\"style.css\">",
+              "✅ Recommandé (réutilisable, maintenable)"
+            ]
           ]
         }
       ]
@@ -191,16 +347,61 @@
         },
         {
           "type": "table",
-          "headers": ["Sélecteur", "Syntaxe", "Cible", "Exemple"],
+          "headers": [
+            "Sélecteur",
+            "Syntaxe",
+            "Cible",
+            "Exemple"
+          ],
           "rows": [
-            ["Type (balise)", "balise", "Tous les éléments de ce type", "p { color: blue; }"],
-            ["Classe", ".nomClasse", "Tous les éléments avec cette classe", ".intro { font-size: 18px; }"],
-            ["ID", "#nomID", "L'élément unique avec cet ID", "#header { background: black; }"],
-            ["Universel", "*", "Tous les éléments", "* { margin: 0; }"],
-            ["Descendant", "A B", "B à l'intérieur de A", "div p { color: red; }"],
-            ["Enfant direct", "A > B", "B enfant direct de A", "ul > li { list-style: none; }"],
-            ["Pseudo-classe", ":hover, :focus", "État spécifique", "a:hover { color: red; }"],
-            ["Attribut", "[attr=value]", "Éléments avec cet attribut", "input[type=\"text\"] { ... }"]
+            [
+              "Type (balise)",
+              "balise",
+              "Tous les éléments de ce type",
+              "p { color: blue; }"
+            ],
+            [
+              "Classe",
+              ".nomClasse",
+              "Tous les éléments avec cette classe",
+              ".intro { font-size: 18px; }"
+            ],
+            [
+              "ID",
+              "#nomID",
+              "L'élément unique avec cet ID",
+              "#header { background: black; }"
+            ],
+            [
+              "Universel",
+              "*",
+              "Tous les éléments",
+              "* { margin: 0; }"
+            ],
+            [
+              "Descendant",
+              "A B",
+              "B à l'intérieur de A",
+              "div p { color: red; }"
+            ],
+            [
+              "Enfant direct",
+              "A > B",
+              "B enfant direct de A",
+              "ul > li { list-style: none; }"
+            ],
+            [
+              "Pseudo-classe",
+              ":hover, :focus",
+              "État spécifique",
+              "a:hover { color: red; }"
+            ],
+            [
+              "Attribut",
+              "[attr=value]",
+              "Éléments avec cet attribut",
+              "input[type=\"text\"] { ... }"
+            ]
           ]
         },
         {
@@ -220,16 +421,52 @@
         },
         {
           "type": "table",
-          "headers": ["Catégorie", "Propriétés", "Exemples"],
+          "headers": [
+            "Catégorie",
+            "Propriétés",
+            "Exemples"
+          ],
           "rows": [
-            ["Texte", "color, font-family, font-size, font-weight, text-align, line-height", "color: #333; font-size: 16px;"],
-            ["Boîte (Box Model)", "width, height, margin, padding, border", "margin: 20px; padding: 10px;"],
-            ["Arrière-plan", "background-color, background-image, background-size", "background: linear-gradient(...);"],
-            ["Positionnement", "position, top, left, z-index, display, float", "position: absolute; top: 0;"],
-            ["Flexbox", "display: flex, justify-content, align-items, flex-direction", "display: flex; justify-content: center;"],
-            ["Grid", "display: grid, grid-template-columns, gap", "display: grid; grid-template-columns: 1fr 1fr;"],
-            ["Transitions", "transition, transform", "transition: all 0.3s ease;"],
-            ["Animations", "animation, @keyframes", "@keyframes slide { from { ... } to { ... } }"]
+            [
+              "Texte",
+              "color, font-family, font-size, font-weight, text-align, line-height",
+              "color: #333; font-size: 16px;"
+            ],
+            [
+              "Boîte (Box Model)",
+              "width, height, margin, padding, border",
+              "margin: 20px; padding: 10px;"
+            ],
+            [
+              "Arrière-plan",
+              "background-color, background-image, background-size",
+              "background: linear-gradient(...);"
+            ],
+            [
+              "Positionnement",
+              "position, top, left, z-index, display, float",
+              "position: absolute; top: 0;"
+            ],
+            [
+              "Flexbox",
+              "display: flex, justify-content, align-items, flex-direction",
+              "display: flex; justify-content: center;"
+            ],
+            [
+              "Grid",
+              "display: grid, grid-template-columns, gap",
+              "display: grid; grid-template-columns: 1fr 1fr;"
+            ],
+            [
+              "Transitions",
+              "transition, transform",
+              "transition: all 0.3s ease;"
+            ],
+            [
+              "Animations",
+              "animation, @keyframes",
+              "@keyframes slide { from { ... } to { ... } }"
+            ]
           ]
         },
         {
@@ -275,11 +512,27 @@
         },
         {
           "type": "table",
-          "headers": ["Critère", "Flexbox", "Grid"],
+          "headers": [
+            "Critère",
+            "Flexbox",
+            "Grid"
+          ],
           "rows": [
-            ["Dimensions", "1D (ligne OU colonne)", "2D (lignes ET colonnes)"],
-            ["Utilisation", "Navigation, barres d'outils, alignement simple", "Layouts complexes, grilles de cartes"],
-            ["Complexité", "Simple", "Plus avancé"]
+            [
+              "Dimensions",
+              "1D (line OU column)",
+              "2D (lines ET columns)"
+            ],
+            [
+              "Utilisation",
+              "Navigation, barres d'outils, alignement simple",
+              "Layouts complexes, grilles de cartes"
+            ],
+            [
+              "Complexité",
+              "Simple",
+              "Plus avancé"
+            ]
           ]
         }
       ]
@@ -307,11 +560,27 @@
         },
         {
           "type": "table",
-          "headers": ["Breakpoint", "Taille", "Appareil"],
+          "headers": [
+            "Breakpoint",
+            "Taille",
+            "Appareil"
+          ],
           "rows": [
-            ["Mobile", "< 768px", "Smartphones"],
-            ["Tablette", "768px - 1023px", "Tablettes"],
-            ["Desktop", "≥ 1024px", "Ordinateurs"]
+            [
+              "Mobile",
+              "< 768px",
+              "Smartphones"
+            ],
+            [
+              "Tablette",
+              "768px - 1023px",
+              "Tablettes"
+            ],
+            [
+              "Desktop",
+              "≥ 1024px",
+              "Ordinateurs"
+            ]
           ]
         },
         {
@@ -335,13 +604,37 @@
         },
         {
           "type": "table",
-          "headers": ["Pseudo-classe", "Cible", "Exemple"],
+          "headers": [
+            "Pseudo-classe",
+            "Cible",
+            "Exemple"
+          ],
           "rows": [
-            [":hover", "Élément survolé par la souris", "a:hover { color: red; }"],
-            [":focus", "Élément ayant le focus (formulaire)", "input:focus { border: 2px solid blue; }"],
-            [":active", "Élément actif (clic en cours)", "button:active { transform: scale(0.95); }"],
-            [":first-child", "Premier enfant de son parent", "li:first-child { font-weight: bold; }"],
-            [":nth-child(n)", "n-ième enfant", "tr:nth-child(even) { background: #f0f0f0; }"]
+            [
+              ":hover",
+              "Élément survolé par la souris",
+              "a:hover { color: red; }"
+            ],
+            [
+              ":focus",
+              "Élément ayant le focus (formulaire)",
+              "input:focus { border: 2px solid blue; }"
+            ],
+            [
+              ":active",
+              "Élément active (clic en cours)",
+              "button:active { transform: scale(0.95); }"
+            ],
+            [
+              ":first-child",
+              "Premier enfant de son parent",
+              "li:first-child { font-weight: bold; }"
+            ],
+            [
+              ":nth-child(n)",
+              "n-ième enfant",
+              "tr:nth-child(even) { background: #f0f0f0; }"
+            ]
           ]
         },
         {
@@ -354,12 +647,32 @@
         },
         {
           "type": "table",
-          "headers": ["Pseudo-élément", "Cible", "Exemple"],
+          "headers": [
+            "Pseudo-élément",
+            "Cible",
+            "Exemple"
+          ],
           "rows": [
-            ["::before", "Ajoute du contenu AVANT l'élément", "p::before { content: '→ '; }"],
-            ["::after", "Ajoute du contenu APRÈS l'élément", "p::after { content: ' ←'; }"],
-            ["::first-letter", "Première lettre", "p::first-letter { font-size: 2em; }"],
-            ["::first-line", "Première ligne", "p::first-line { font-weight: bold; }"]
+            [
+              "::before",
+              "Ajoute du content AVANT l'élément",
+              "p::before { content: '→ '; }"
+            ],
+            [
+              "::after",
+              "Ajoute du content APRÈS l'élément",
+              "p::after { content: ' ←'; }"
+            ],
+            [
+              "::first-letter",
+              "Première lettre",
+              "p::first-letter { font-size: 2em; }"
+            ],
+            [
+              "::first-line",
+              "Première line",
+              "p::first-line { font-weight: bold; }"
+            ]
           ]
         }
       ]

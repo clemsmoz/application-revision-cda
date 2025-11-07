@@ -22,7 +22,7 @@
         {
           "type": "code",
           "language": "html",
-          "code": "<!-- HTML -->\n<div id=\"container\">\n  <p class=\"texte\">Hello</p>\n</div>\n\n<!-- Structure DOM (arbre d'objets) -->\nDocument\n  └── html\n       └── body\n            └── div#container\n                 └── p.texte\n                      └── \"Hello, \" (TextNode)"
+          "code": "<!-- HTML -->\n<div id=\"container\">\n  <p class=\"text\">Hello</p>\n</div>\n\n<!-- Structure DOM (arbre d'objects) -->\nDocument\n  └── html\n       └── body\n            └── div#container\n                 └── p.text\n                      └── \"Hello, \" (TextNode)"
         }
       ]
     },
@@ -82,7 +82,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Exemple : Afficher un message après 2 secondes\nsetTimeout(() => {\n  console.log(\"2 secondes écoulées !\");\n}, 2000);\n\n// Exemple : Compteur toutes les secondes\nlet compteur = 0;\nconst intervalId = setInterval(() => {\n  compteur++;\n  console.log(compteur);\n  if (compteur === 5) {\n    clearInterval(intervalId); // Arrête après 5 secondes\n  }\n}, 1000);"
+          "code": "// Exemple : Afficher un message après 2 secondes\nsetTimeout(() => {\n  console.log(\"2 secondes écoulées !\");\n}, 2000);\n\n// Exemple : counter toutes les secondes\nlet counter = 0;\nconst intervalId = setInterval(() => {\n  counter++;\n  console.log(counter);\n  if (counter === 5) {\n    clearInterval(intervalId); // Arrête après 5 secondes\n  }\n}, 1000);"
         }
       ]
     },
@@ -105,8 +105,8 @@
           "rows": [
             [
               "querySelector()",
-              "1 élément (le premier)",
-              "Sélectionne le premier élément correspondant au sélecteur CSS",
+              "1 élément (le first)",
+              "Sélectionne le first élément correspondant au sélecteur CSS",
               "document.querySelector('.btn')"
             ],
             [
@@ -132,7 +132,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Sélectionner un élément par ID\nconst header = document.querySelector('#header');\n\n// Sélectionner un élément par classe\nconst bouton = document.querySelector('.btn-primary');\n\n// Sélectionner tous les paragraphes\nconst paragraphes = document.querySelectorAll('p');\n\n// Parcourir les éléments sélectionnés\nparagraphes.forEach(p => {\n  console.log(p.textContent);\n});\n\n// Sélecteur CSS complexe\nconst lien = document.querySelector('nav > ul > li:first-child > a');"
+          "code": "// Sélectionner un élément par ID\nconst header = document.querySelector('#header');\n\n// Sélectionner un élément par class\nconst bouton = document.querySelector('.btn-primary');\n\n// Sélectionner tous les paragraphes\nconst paragraphes = document.querySelectorAll('p');\n\n// Parcourir les éléments sélectionnés\nparagraphes.forEach(p => {\n  console.log(p.textContent);\n});\n\n// Sélecteur CSS complexe\nconst link = document.querySelector('nav > ul > li:first-child > a');"
         },
         {
           "type": "alert",
@@ -152,7 +152,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Créer un élément\nconst div = document.createElement('div');\ndiv.textContent = \"Nouveau contenu\";\ndiv.className = \"ma-classe\";\n\n// Ajouter l'élément au DOM\ndocument.body.appendChild(div);\n\n// Créer une image\nconst img = new Image();\nimg.src = \"logo.png\";\nimg.alt = \"Logo\";\ndocument.body.appendChild(img);\n\n// Insérer avant un élément existant\nconst reference = document.querySelector('#reference');\nreference.parentNode.insertBefore(div, reference);"
+          "code": "// Créer un élément\nconst div = document.createElement('div');\ndiv.textContent = \"New content\";\ndiv.className = \"ma-class\";\n\n// Add l'élément au DOM\ndocument.body.appendChild(div);\n\n// Créer une image\nconst img = new image();\nimg.src = \"logo.png\";\nimg.alt = \"Logo\";\ndocument.body.appendChild(img);\n\n// Insérer avant un élément existant\nconst reference = document.querySelector('#reference');\nreference.parentNode.insertBefore(div, reference);"
         },
         {
           "type": "subtitle",
@@ -161,7 +161,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Supprimer un élément\nconst element = document.querySelector('.a-delete');\nelement.remove();\n\n// Vider un conteneur (supprimer tous ses enfants)\nconst container = document.querySelector('#container');\ncontainer.innerHTML = ''; // Méthode simple mais moins performante\n\n// Ou mieux :\nwhile (container.firstChild) {\n  container.removeChild(container.firstChild);\n}"
+          "code": "// Delete un élément\nconst element = document.querySelector('.a-delete');\nelement.remove();\n\n// Vider un conteneur (Delete tous ses enfants)\nconst container = document.querySelector('#container');\ncontainer.innerHTML = ''; // Méthode simple mais moins performante\n\n// Ou mieux :\nwhile (container.firstChild) {\n  container.removeChild(container.firstChild);\n}"
         },
         {
           "type": "subtitle",
@@ -188,7 +188,7 @@
             [
               "value",
               "Valeur d'un input",
-              "input.value = 'Nouvelle valeur'"
+              "input.value = 'Nouvelle value'"
             ]
           ]
         }
@@ -209,7 +209,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "const element = document.querySelector('.box');\n\n// Modifier un style (camelCase pour les propriétés composées)\nelement.style.backgroundColor = 'blue';\nelement.style.fontSize = '20px';\nelement.style.marginTop = '10px';\n\n// ⚠️ Les noms CSS composés deviennent camelCase :\n// background-color → backgroundColor\n// font-size → fontSize"
+          "code": "const element = document.querySelector('.box');\n\n// Edit un style (camelCase for les propriétés composées)\nelement.style.backgroundColor = 'blue';\nelement.style.fontSize = '20px';\nelement.style.marginTop = '10px';\n\n// ⚠️ Les noms CSS composés deviennent camelCase :\n// background-color → backgroundColor\n// font-size → fontSize"
         },
         {
           "type": "subtitle",
@@ -252,7 +252,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "const bouton = document.querySelector('.btn');\n\n// Ajouter une classe\nbouton.classList.add('btn-primary');\n\n// Retirer une classe\nbouton.classList.remove('btn-secondary');\n\n// Toggle (activer/désactiver)\nbouton.classList.toggle('active');\n\n// Vérifier\nif (bouton.classList.contains('active')) {\n  console.log('Le bouton est active');\n}"
+          "code": "const bouton = document.querySelector('.btn');\n\n// Add une class\nbouton.classList.add('btn-primary');\n\n// Retirer une class\nbouton.classList.remove('btn-secondary');\n\n// Toggle (activer/désactiver)\nbouton.classList.toggle('active');\n\n// Vérifier\nif (bouton.classList.contains('active')) {\n  console.log('Le bouton est active');\n}"
         }
       ]
     },
@@ -350,12 +350,12 @@
             ],
             [
               "change",
-              "Changement de valeur (input)",
+              "Changement de value (input)",
               "select.addEventListener('change', ...)"
             ],
             [
               "input",
-              "Saisie en temps réel",
+              "Saisie en time réel",
               "input.addEventListener('input', ...)"
             ],
             [
@@ -381,7 +381,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Pour supprimer un écouteur, il faut une référence à la fonction\nfunction handleClick() {\n  console.log('Clic');\n}\n\nbouton.addEventListener('click', handleClick);\n\n// Supprimer l'écouteur\nbouton.removeEventListener('click', handleClick);\n\n// ⚠️ Impossible de supprimer une fonction anonyme ou arrow function"
+          "code": "// for Delete un écouteur, il faut une référence à la function\nfunction handleClick() {\n  console.log('Clic');\n}\n\nbouton.addEventListener('click', handleClick);\n\n// Delete l'écouteur\nbouton.removeEventListener('click', handleClick);\n\n// ⚠️ Impossible de Delete une function anonyme ou arrow function"
         }
       ]
     },
@@ -466,7 +466,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Créer une Promise\nconst maPromesse = new Promise((resolve, reject) => {\n  // Opération asynchrone\n  setTimeout(() => {\n    const succes = true;\n    if (succes) {\n      resolve('Opération réussie !'); // Résolution\n    } else {\n      reject('Error !'); // Rejet\n    }\n  }, 2000);\n});\n\n// Utiliser la Promise\nmaPromesse\n  .then((resultat) => {\n    console.log(resultat); // \"Opération réussie !\"\n  })\n  .catch((erreur) => {\n    console.error(erreur);\n  })\n  .finally(() => {\n    console.log('Terminé (succès ou échec)');\n  });"
+          "code": "// Créer une Promise\nconst maPromesse = new Promise((resolve, reject) => {\n  // Opération asynchrone\n  setTimeout(() => {\n    const success = true;\n    if (success) {\n      resolve('Operation successful !'); // Résolution\n    } else {\n      reject('Error !'); // Rejet\n    }\n  }, 2000);\n});\n\n// Utiliser la Promise\nmaPromesse\n  .then((result) => {\n    console.log(result); // \"Operation successful !\"\n  })\n  .catch((error) => {\n    console.error(error);\n  })\n  .finally(() => {\n    console.log('Completed (Success ou échec)');\n  });"
         },
         {
           "type": "subtitle",
@@ -508,7 +508,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Envoyer des données JSON\nfetch('https://api.example.com/users', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json'\n  },\n  body: JSON.stringify({\n    name: 'Alice',\n    email: 'alice@example.com'\n  })\n})\n  .then(response => response.json())\n  .then(data => {\n    console.log('Utilisateur créé :', data);\n  })\n  .catch(error => {\n    console.error('Error :', error);\n  });"
+          "code": "// Send des données JSON\nfetch('https://api.example.com/users', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json'\n  },\n  body: JSON.stringify({\n    name: 'Alice',\n    email: 'alice@example.com'\n  })\n})\n  .then(response => response.json())\n  .then(data => {\n    console.log('user Created :', data);\n  })\n  .catch(error => {\n    console.error('Error :', error);\n  });"
         },
         {
           "type": "table",
@@ -553,7 +553,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Fonction asynchrone\nasync function fetchUsers() {\n  try {\n    const response = await fetch('https://api.example.com/users');\n    if (!response.ok) {\n      throw new Error('Error réseau');\n    }\n    const users = await response.json();\n    console.log(users);\n    return users;\n  } catch (error) {\n    console.error('Error :', error);\n  }\n}\n\n// Appel de la fonction\nfetchUsers();"
+          "code": "// function asynchrone\nasync function fetchUsers() {\n  try {\n    const response = await fetch('https://api.example.com/users');\n    if (!response.ok) {\n      throw new Error('Error réseau');\n    }\n    const users = await response.json();\n    console.log(users);\n    return users;\n  } catch (error) {\n    console.error('Error :', error);\n  }\n}\n\n// Appel de la function\nfetchUsers();"
         },
         {
           "type": "subtitle",
@@ -608,7 +608,7 @@
         {
           "type": "code",
           "language": "javascript",
-          "code": "// Utiliser console.log pour tracer l'exécution\nasync function fetchData() {\n  console.log('Début de la requête');\n  const response = await fetch('/api/data');\n  console.log('Réponse reçue :', response);\n  const data = await response.json();\n  console.log('Données parsées :', data);\n  return data;\n}"
+          "code": "// Utiliser console.log for tracer l'exécution\nasync function fetchData() {\n  console.log('Début de la requête');\n  const response = await fetch('/api/data');\n  console.log('Réponse reçue :', response);\n  const data = await response.json();\n  console.log('Données parsées :', data);\n  return data;\n}"
         },
         {
           "type": "alert",

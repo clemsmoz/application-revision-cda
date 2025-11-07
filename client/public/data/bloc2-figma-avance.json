@@ -1,0 +1,134 @@
+{
+  "id": "bloc2-figma-avance",
+  "bloc": "bloc2",
+  "title": "Figma - Niveau Avancé",
+  "icon": "🎨",
+  "color": "#F24E1E",
+  "description": "Techniques avancées de Figma : composants variants, auto-layout, plugins, prototypage interactif et design systems.",
+  "sections": [
+    {
+      "id": "composants-variants",
+      "title": "Composants et Variants",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **variants** permettent de créer des variantes d'un même composant (états, tailles, couleurs)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Composant** : Élément réutilisable (bouton, carte)",
+            "**Variant** : Variante du composant (primary/secondary, small/large)",
+            "**Properties** : Propriétés personnalisées (boolean, text)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "auto-layout",
+      "title": "Auto Layout",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'**Auto Layout** rend les frames responsives automatiquement."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Direction** : Horizontal ou vertical",
+            "**Spacing** : Espacement entre éléments",
+            "**Padding** : Marges internes",
+            "**Resizing** : Hug contents ou Fill container"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prototypage",
+      "title": "Prototypage Interactif",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Créer des prototypes interactifs pour tester les parcours utilisateurs."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Interaction",
+            "Usage"
+          ],
+          "rows": [
+            [
+              "On Click",
+              "Navigation au clic"
+            ],
+            [
+              "On Hover",
+              "Effet au survol"
+            ],
+            [
+              "On Drag",
+              "Glisser-déposer"
+            ],
+            [
+              "Smart Animate",
+              "Transitions fluides"
+            ],
+            [
+              "Overlay",
+              "Modales, tooltips"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plugins",
+      "title": "Plugins Essentiels",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Plugin",
+            "Usage"
+          ],
+          "rows": [
+            [
+              "Unsplash",
+              "Images gratuites"
+            ],
+            [
+              "Iconify",
+              "Bibliothèque d'icônes"
+            ],
+            [
+              "Content Reel",
+              "Faux content (lorem ipsum, noms)"
+            ],
+            [
+              "Stark",
+              "Vérification accessibilité"
+            ],
+            [
+              "Autoflow",
+              "Diagrammes de flux"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Variants : variantes d'un composant (états, tailles).",
+    "Auto Layout : frames responsives automatiques.",
+    "Prototypage : interactions (click, hover, drag), Smart Animate.",
+    "Plugins : Unsplash, Iconify, Content Reel, Stark."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Figma Learn",
+      "url": "https://www.figma.com/resources/learn-design/"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "bloc2-mise-en-place-bdd",
+  "bloc": "bloc2",
+  "title": "Mise en Place d'une Base de Données",
+  "icon": "🗄️",
+  "color": "#2980B9",
+  "description": "Installation, configuration et administration d'une base de données : PostgreSQL, MySQL, MongoDB, sauvegardes et optimisation.",
+  "sections": [
+    {
+      "id": "installation",
+      "title": "Installation et Configuration",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Installation d'une base de données en local ou sur serveur."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# PostgreSQL (Ubuntu)\nsudo apt update\nsudo apt install postgresql postgresql-contrib\n\n# Démarrer le service\nsudo systemctl start postgresql\n\n# Se connecter\nsudo -u postgres psql\n\n# Créer un user et une database\nCREATE USER myuser WITH PASSWORD 'mypassword';\nCREATE DATABASE mydb OWNER myuser;"
+        }
+      ]
+    },
+    {
+      "id": "sauvegarde",
+      "title": "Sauvegardes",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **sauvegardes** protègent contre la perte de données."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Complète",
+              "Sauvegarde de toute la base"
+            ],
+            [
+              "Incrémentale",
+              "Seulement les changements depuis la dernière sauvegarde"
+            ],
+            [
+              "Différentielle",
+              "Changements depuis la dernière sauvegarde complète"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "code": "# Sauvegarde PostgreSQL\npg_dump mydb > backup.sql\n\n# Restauration\npsql mydb < backup.sql\n\n# Sauvegarde automatique (cron)\n0 2 * * * pg_dump mydb > /backups/mydb_$(date +\\%Y\\%m\\%d).sql"
+        }
+      ]
+    },
+    {
+      "id": "optimisation",
+      "title": "Optimisation",
+      "content": [
+        {
+          "type": "list",
+          "items": [
+            "**Index** : Accélérer les requêtes SELECT",
+            "**EXPLAIN** : Analyser les plans d'exécution",
+            "**Vacuum** (PostgreSQL) : Nettoyer les données obsolètes",
+            "**Connection pooling** : Réutiliser les connexions",
+            "**Partitionnement** : Diviser les grandes tables"
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Installation : PostgreSQL, MySQL, MongoDB selon les besoins.",
+    "Sauvegardes : complètes, incrémentales, automatisées (cron).",
+    "Optimisation : index, EXPLAIN, vacuum, connection pooling."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "PostgreSQL Docs",
+      "url": "https://www.postgresql.org/docs/"
+    }
+  ]
+}

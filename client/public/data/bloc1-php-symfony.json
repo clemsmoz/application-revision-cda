@@ -25,7 +25,7 @@
             [
               "Variables",
               "Commencent par $",
-              "$nom = 'Alice';"
+              "$name = 'Alice';"
             ],
             [
               "Tableaux",
@@ -39,7 +39,7 @@
             ],
             [
               "Classes",
-              "Programmation orientée objet",
+              "Programmation orientée object",
               "class User { public $name; }"
             ]
           ]

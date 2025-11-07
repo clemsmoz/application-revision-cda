@@ -61,7 +61,7 @@
             [
               "Text",
               "span/p",
-              "Affichage de texte"
+              "Affichage de text"
             ],
             [
               "Image",
@@ -76,7 +76,7 @@
             [
               "TextInput",
               "input",
-              "Saisie de texte"
+              "Saisie de text"
             ],
             [
               "TouchableOpacity",

@@ -1,0 +1,238 @@
+{
+  "id": "bloc1-cahier-charges",
+  "bloc": "bloc1",
+  "title": "Cahier des Charges Fonctionnel et Technique",
+  "icon": "📋",
+  "color": "#8E44AD",
+  "description": "Rédaction d'un cahier des charges complet pour un projet digital : analyse des besoins, spécifications fonctionnelles et techniques, planning et budget.",
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Qu'est-ce qu'un Cahier des Charges ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **cahier des charges** (CDC) est un document contractuel qui définit les besoins, les objectifs et les contraintes d'un projet. Il sert de référence pour toutes les parties prenantes."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type",
+            "Contenu"
+          ],
+          "rows": [
+            [
+              "Cahier des Charges Fonctionnel (CCF)",
+              "Besoins users, fonctionnalités, parcours"
+            ],
+            [
+              "Cahier des Charges Technique (CCT)",
+              "Architecture, technologies, contraintes techniques"
+            ],
+            [
+              "Cahier des Charges Complet",
+              "CCF + CCT + planning + budget"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "title": "Structure d'un Cahier des Charges",
+      "content": [
+        {
+          "type": "list",
+          "items": [
+            "**1. Présentation du projet** : Contexte, objectifs, cible",
+            "**2. Périmètre** : Ce qui est inclus/exclu",
+            "**3. Besoins fonctionnels** : Fonctionnalités attendues",
+            "**4. Besoins techniques** : Architecture, technologies, hébergement",
+            "**5. Contraintes** : Délais, budget, normes (RGPD, accessibilité)",
+            "**6. Livrables** : Ce qui sera fourni (code, documentation, formation)",
+            "**7. Planning** : Phases, jalons, deadlines",
+            "**8. Budget** : Estimation des coûts",
+            "**9. Critères d'acceptation** : Comment valider le projet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "besoins-fonctionnels",
+      "title": "Spécifications Fonctionnelles",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **spécifications fonctionnelles** décrivent **ce que** le système doit faire du point de vue utilisateur."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Élément",
+            "Description"
+          ],
+          "rows": [
+            [
+              "User Stories",
+              "En tant que [rôle], je veux [action] afin de [bénéfice]"
+            ],
+            [
+              "Cas d'usage",
+              "Scénarios d'utilisation détaillés"
+            ],
+            [
+              "Wireframes/Maquettes",
+              "Représentation visuelle des interfaces"
+            ],
+            [
+              "Règles métier",
+              "Logique fonctionnelle (calculs, validations)"
+            ],
+            [
+              "Parcours user",
+              "Étapes de navigation"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "markdown",
+          "code": "### User Story Exemple\n\n**En while que** visiteur,  \n**Je veux** créer un compte,  \n**Afin de** sauvegarder mes préférences.\n\n**Critères d'acceptation** :\n- Formulaire avec email, mot de passe, confirmation\n- Validation email (format, unicité)\n- Mot de passe : min 8 caractères, 1 majuscule, 1 chiffre\n- email de confirmation envoyé\n- Redirection vers array de bord après inscription"
+        }
+      ]
+    },
+    {
+      "id": "besoins-techniques",
+      "title": "Spécifications Techniques",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **spécifications techniques** décrivent **comment** le système sera construit."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Aspect",
+            "Exemples"
+          ],
+          "rows": [
+            [
+              "Architecture",
+              "Monolithique, Microservices, Serverless"
+            ],
+            [
+              "Technologies",
+              "React, Node.js, PostgreSQL, Docker"
+            ],
+            [
+              "Hébergement",
+              "AWS, Azure, OVH, Vercel"
+            ],
+            [
+              "API",
+              "REST, GraphQL, WebSocket"
+            ],
+            [
+              "Sécurité",
+              "HTTPS, JWT, OAuth2, chiffrement"
+            ],
+            [
+              "Performance",
+              "Temps de réponse < 200ms, 1000 users concurrents"
+            ],
+            [
+              "Compatibilité",
+              "Navigateurs (Chrome, Firefox, Safari), responsive"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planning-budget",
+      "title": "Planning et Budget",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **planning** découpe le projet en phases avec des jalons. Le **budget** estime les coûts (développement, hébergement, maintenance)."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Phase",
+            "Durée",
+            "Livrables"
+          ],
+          "rows": [
+            [
+              "Cadrage",
+              "1 semaine",
+              "CDC validé, maquettes"
+            ],
+            [
+              "Développement",
+              "6 semaines",
+              "MVP fonctionnel"
+            ],
+            [
+              "Tests",
+              "1 semaine",
+              "Rapport de tests, corrections"
+            ],
+            [
+              "Déploiement",
+              "1 semaine",
+              "Application en production"
+            ],
+            [
+              "Formation",
+              "2 days",
+              "Documentation, formation users"
+            ]
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "warning",
+          "text": "Prévoir une marge de 20-30% sur le planning pour les imprévus."
+        }
+      ]
+    },
+    {
+      "id": "bonnes-pratiques",
+      "title": "Bonnes Pratiques",
+      "content": [
+        {
+          "type": "list",
+          "items": [
+            "**Clarté** : Langage simple, pas de jargon technique pour les parties fonctionnelles",
+            "**Précision** : Éviter les termes vagues (\"rapide\", \"performant\") → quantifier",
+            "**Priorisation** : MoSCoW (Must have, Should have, Could have, Won't have)",
+            "**Validation** : Faire valider par le client à chaque étape",
+            "**Évolutivité** : Prévoir les évolutions futures",
+            "**Traçabilité** : Numéroter les exigences pour le suivi"
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Cahier des charges : document contractuel définissant besoins, objectifs, contraintes.",
+    "Structure : présentation, périmètre, besoins fonctionnels/techniques, planning, budget.",
+    "Spécifications fonctionnelles : user stories, cas d'usage, wireframes.",
+    "Spécifications techniques : architecture, technologies, sécurité, performance.",
+    "Bonnes pratiques : clarté, précision, priorisation (MoSCoW), validation client."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Rédiger un CDC",
+      "url": "https://www.cahiersdescharges.com/"
+    },
+    {
+      "type": "doc",
+      "title": "User Stories",
+      "url": "https://www.mountaingoatsoftware.com/agile/user-stories"
+    }
+  ]
+}

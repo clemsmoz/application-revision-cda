@@ -1,268 +1,1504 @@
 {
-  "bloc1": [
+  "version": "2.0",
+  "totalQuestions": 107,
+  "questions": [
     {
-      "id": "q1-algo-1",
+      "id": 1,
       "module": "bloc1-algorithmique",
-      "question": "Quelle est la complexité temporelle d'une recherche dans un tableau non trié ?",
+      "bloc": "bloc1",
+      "question": "Quelle est la complexité temporelle d'une recherche binaire ?",
       "options": [
         "O(1)",
         "O(log n)",
         "O(n)",
         "O(n²)"
       ],
-      "correctAnswer": 2,
-      "explanation": "La recherche dans un tableau non trié nécessite de parcourir potentiellement tous les éléments, d'où une complexité O(n)."
+      "correct": 1,
+      "explanation": "La recherche binaire divise l'espace de recherche par 2 à chaque itération, d'où une complexité O(log n)."
     },
     {
-      "id": "q1-algo-2",
+      "id": 2,
       "module": "bloc1-algorithmique",
-      "question": "Qu'est-ce qu'une variable en algorithmique ?",
+      "bloc": "bloc1",
+      "question": "Quel algorithme de tri a une complexité moyenne de O(n log n) ?",
       "options": [
-        "Un espace mémoire nommé pour stocker une valeur",
-        "Une fonction",
-        "Une boucle",
-        "Un commentaire"
+        "Tri à bulles",
+        "Tri par insertion",
+        "Tri fusion",
+        "Tri par sélection"
       ],
-      "correctAnswer": 0,
-      "explanation": "Une variable est un espace mémoire identifié par un nom, permettant de stocker et manipuler des valeurs."
+      "correct": 2,
+      "explanation": "Le tri fusion (merge sort) a une complexité O(n log n) dans tous les cas."
     },
     {
-      "id": "q1-git-1",
+      "id": 3,
+      "module": "bloc1-algorithmique",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un algorithme glouton (greedy) ?",
+      "options": [
+        "Un algorithme qui teste toutes les solutions",
+        "Un algorithme qui fait le meilleur choix local à chaque étape",
+        "Un algorithme récursif",
+        "Un algorithme de tri"
+      ],
+      "correct": 1,
+      "explanation": "Un algorithme glouton fait le choix optimal local à chaque étape en espérant obtenir une solution globale optimale."
+    },
+    {
+      "id": 4,
+      "module": "bloc1-cahier-charges",
+      "bloc": "bloc1",
+      "question": "Que contient un cahier des charges fonctionnel ?",
+      "options": [
+        "Le code source",
+        "Les besoins et fonctionnalités attendues",
+        "Les tests unitaires",
+        "La documentation technique"
+      ],
+      "correct": 1,
+      "explanation": "Le cahier des charges fonctionnel décrit les besoins, objectifs et fonctionnalités du projet."
+    },
+    {
+      "id": 5,
+      "module": "bloc1-cahier-charges",
+      "bloc": "bloc1",
+      "question": "Quelle méthode permet de prioriser les fonctionnalités ?",
+      "options": [
+        "MoSCoW",
+        "SOLID",
+        "DRY",
+        "KISS"
+      ],
+      "correct": 0,
+      "explanation": "La méthode MoSCoW classe les fonctionnalités en Must have, Should have, Could have, Won't have."
+    },
+    {
+      "id": 6,
+      "module": "bloc1-cahier-charges",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un user story ?",
+      "options": [
+        "Une histoire d'utilisateur",
+        "Une description de fonctionnalité du point de vue utilisateur",
+        "Un test utilisateur",
+        "Un scénario de test"
+      ],
+      "correct": 1,
+      "explanation": "Une user story décrit une fonctionnalité du point de vue de l'utilisateur final."
+    },
+    {
+      "id": 7,
+      "module": "bloc1-communication-projet",
+      "bloc": "bloc1",
+      "question": "Quel outil est utilisé pour la gestion de projet agile ?",
+      "options": [
+        "Excel",
+        "Jira",
+        "Photoshop",
+        "MySQL"
+      ],
+      "correct": 1,
+      "explanation": "Jira est un outil populaire pour la gestion de projets agiles (Scrum, Kanban)."
+    },
+    {
+      "id": 8,
+      "module": "bloc1-communication-projet",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un daily standup ?",
+      "options": [
+        "Une réunion quotidienne de 15 minutes",
+        "Un test quotidien",
+        "Un déploiement quotidien",
+        "Un rapport quotidien"
+      ],
+      "correct": 0,
+      "explanation": "Le daily standup est une réunion quotidienne courte (15 min) pour synchroniser l'équipe."
+    },
+    {
+      "id": 9,
+      "module": "bloc1-communication-projet",
+      "bloc": "bloc1",
+      "question": "Quel document présente l'avancement du projet aux parties prenantes ?",
+      "options": [
+        "README",
+        "Rapport de sprint",
+        "Changelog",
+        "Backlog"
+      ],
+      "correct": 1,
+      "explanation": "Le rapport de sprint présente l'avancement, les réalisations et les obstacles du sprint."
+    },
+    {
+      "id": 10,
+      "module": "bloc1-css-avance",
+      "bloc": "bloc1",
+      "question": "Quelle propriété CSS permet de créer une grille ?",
+      "options": [
+        "display: flex",
+        "display: grid",
+        "display: table",
+        "display: block"
+      ],
+      "correct": 1,
+      "explanation": "CSS Grid Layout utilise display: grid pour créer des mises en page en grille."
+    },
+    {
+      "id": 11,
+      "module": "bloc1-css-avance",
+      "bloc": "bloc1",
+      "question": "Que signifie 'rem' en CSS ?",
+      "options": [
+        "Relative à l'élément parent",
+        "Relative à l'élément racine (root)",
+        "Relative à la fenêtre",
+        "Relative au pixel"
+      ],
+      "correct": 1,
+      "explanation": "rem (root em) est relatif à la taille de police de l'élément racine (<html>)."
+    },
+    {
+      "id": 12,
+      "module": "bloc1-css-avance",
+      "bloc": "bloc1",
+      "question": "Quelle pseudo-classe cible le premier enfant ?",
+      "options": [
+        ":first-of-type",
+        ":first-child",
+        ":nth-child(1)",
+        ":first"
+      ],
+      "correct": 1,
+      "explanation": ":first-child cible le premier élément enfant de son parent."
+    },
+    {
+      "id": 13,
+      "module": "bloc1-environnement-travail",
+      "bloc": "bloc1",
+      "question": "Quel est l'éditeur de code le plus populaire pour le développement web ?",
+      "options": [
+        "Notepad",
+        "VS Code",
+        "Word",
+        "Excel"
+      ],
+      "correct": 1,
+      "explanation": "Visual Studio Code est l'éditeur le plus utilisé par les développeurs web."
+    },
+    {
+      "id": 14,
+      "module": "bloc1-environnement-travail",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un linter ?",
+      "options": [
+        "Un outil de compilation",
+        "Un outil d'analyse de code pour détecter les erreurs",
+        "Un outil de déploiement",
+        "Un outil de test"
+      ],
+      "correct": 1,
+      "explanation": "Un linter analyse le code pour détecter les erreurs, bugs potentiels et violations de style."
+    },
+    {
+      "id": 15,
+      "module": "bloc1-environnement-travail",
+      "bloc": "bloc1",
+      "question": "Quel outil permet de formater automatiquement le code JavaScript ?",
+      "options": [
+        "ESLint",
+        "Prettier",
+        "Webpack",
+        "Babel"
+      ],
+      "correct": 1,
+      "explanation": "Prettier est un formateur de code automatique qui assure un style cohérent."
+    },
+    {
+      "id": 16,
       "module": "bloc1-git",
+      "bloc": "bloc1",
       "question": "Quelle commande Git permet de créer un nouveau commit ?",
       "options": [
         "git push",
-        "git commit -m 'message'",
+        "git commit",
         "git add",
-        "git branch"
+        "git pull"
       ],
-      "correctAnswer": 1,
-      "explanation": "La commande 'git commit -m' crée un nouveau commit avec un message descriptif."
+      "correct": 1,
+      "explanation": "git commit crée un nouveau commit avec les modifications ajoutées au staging."
     },
     {
-      "id": "q1-git-2",
+      "id": 17,
       "module": "bloc1-git",
-      "question": "Quelle est la différence entre 'git merge' et 'git rebase' ?",
+      "bloc": "bloc1",
+      "question": "Que fait la commande 'git pull' ?",
       "options": [
-        "Aucune différence",
-        "merge crée un commit de fusion, rebase réécrit l'historique",
-        "rebase supprime les branches",
-        "merge est plus rapide"
+        "Envoie les commits vers le dépôt distant",
+        "Récupère et fusionne les changements du dépôt distant",
+        "Crée une nouvelle branche",
+        "Supprime une branche"
       ],
-      "correctAnswer": 1,
-      "explanation": "git merge crée un commit de fusion pour combiner les branches, tandis que git rebase réécrit l'historique en appliquant les commits sur une nouvelle base."
+      "correct": 1,
+      "explanation": "git pull récupère les changements du dépôt distant et les fusionne avec la branche locale."
     },
     {
-      "id": "q1-html-1",
+      "id": 18,
+      "module": "bloc1-git",
+      "bloc": "bloc1",
+      "question": "Comment créer une nouvelle branche Git ?",
+      "options": [
+        "git new branch",
+        "git branch <name>",
+        "git create <name>",
+        "git add branch"
+      ],
+      "correct": 1,
+      "explanation": "git branch <name> crée une nouvelle branche sans y basculer."
+    },
+    {
+      "id": 19,
+      "module": "bloc1-git",
+      "bloc": "bloc1",
+      "question": "Quelle commande affiche l'historique des commits ?",
+      "options": [
+        "git history",
+        "git log",
+        "git show",
+        "git status"
+      ],
+      "correct": 1,
+      "explanation": "git log affiche l'historique des commits de la branche actuelle."
+    },
+    {
+      "id": 20,
+      "module": "bloc1-git-avance",
+      "bloc": "bloc1",
+      "question": "Que fait 'git rebase' ?",
+      "options": [
+        "Fusionne deux branches",
+        "Réapplique les commits sur une autre base",
+        "Annule le dernier commit",
+        "Crée un tag"
+      ],
+      "correct": 1,
+      "explanation": "git rebase réapplique les commits de la branche courante sur une autre base."
+    },
+    {
+      "id": 21,
+      "module": "bloc1-git-avance",
+      "bloc": "bloc1",
+      "question": "Comment annuler le dernier commit sans perdre les modifications ?",
+      "options": [
+        "git reset --soft HEAD~1",
+        "git revert HEAD",
+        "git undo",
+        "git delete"
+      ],
+      "correct": 0,
+      "explanation": "git reset --soft HEAD~1 annule le dernier commit mais garde les modifications dans le staging."
+    },
+    {
+      "id": 22,
+      "module": "bloc1-git-avance",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un 'cherry-pick' ?",
+      "options": [
+        "Appliquer un commit spécifique d'une branche à une autre",
+        "Supprimer un commit",
+        "Créer une branche",
+        "Fusionner deux branches"
+      ],
+      "correct": 0,
+      "explanation": "git cherry-pick permet d'appliquer un commit spécifique d'une branche à une autre."
+    },
+    {
+      "id": 23,
       "module": "bloc1-html-css",
-      "question": "Quelle balise HTML5 est utilisée pour définir une section de navigation ?",
+      "bloc": "bloc1",
+      "question": "Quelle balise HTML est utilisée pour créer un lien ?",
       "options": [
-        "<div>",
-        "<nav>",
-        "<section>",
-        "<header>"
+        "<link>",
+        "<a>",
+        "<href>",
+        "<url>"
       ],
-      "correctAnswer": 1,
-      "explanation": "La balise <nav> est une balise sémantique HTML5 dédiée aux sections de navigation."
+      "correct": 1,
+      "explanation": "La balise <a> (anchor) est utilisée pour créer des liens hypertextes."
     },
     {
-      "id": "q1-html-2",
+      "id": 24,
       "module": "bloc1-html-css",
-      "question": "Quelle propriété CSS permet de créer une mise en page flexible ?",
+      "bloc": "bloc1",
+      "question": "Quelle propriété CSS centre un élément horizontalement ?",
       "options": [
-        "float",
-        "display: flex",
-        "position: absolute",
-        "margin"
+        "text-align: center",
+        "margin: 0 auto",
+        "align: center",
+        "center: true"
       ],
-      "correctAnswer": 1,
-      "explanation": "display: flex active le modèle Flexbox, permettant de créer des mises en page flexibles et responsives."
+      "correct": 1,
+      "explanation": "margin: 0 auto centre un élément block horizontalement (avec une largeur définie)."
     },
     {
-      "id": "q1-js-1",
+      "id": 25,
+      "module": "bloc1-html-css",
+      "bloc": "bloc1",
+      "question": "Quelle balise définit le contenu principal d'un document HTML5 ?",
+      "options": [
+        "<content>",
+        "<main>",
+        "<body>",
+        "<section>"
+      ],
+      "correct": 1,
+      "explanation": "<main> représente le contenu principal unique du document."
+    },
+    {
+      "id": 26,
+      "module": "bloc1-html-css",
+      "bloc": "bloc1",
+      "question": "Comment inclure un fichier CSS externe ?",
+      "options": [
+        "<style src='style.css'>",
+        "<link rel='stylesheet' href='style.css'>",
+        "<css href='style.css'>",
+        "<import css='style.css'>"
+      ],
+      "correct": 1,
+      "explanation": "<link rel='stylesheet' href='...'> est la méthode standard pour inclure du CSS externe."
+    },
+    {
+      "id": 27,
       "module": "bloc1-javascript-poo",
-      "question": "Comment déclare-t-on une classe en JavaScript ES6 ?",
+      "bloc": "bloc1",
+      "question": "Comment déclarer une classe en JavaScript ?",
       "options": [
-        "function MyClass() {}",
+        "function Class",
         "class MyClass {}",
-        "var MyClass = {}",
-        "const MyClass = function() {}"
+        "new Class",
+        "define class"
       ],
-      "correctAnswer": 1,
-      "explanation": "En ES6, on utilise le mot-clé 'class' pour déclarer une classe."
+      "correct": 1,
+      "explanation": "En ES6+, on utilise le mot-clé 'class' pour déclarer une classe."
     },
     {
-      "id": "q1-js-2",
+      "id": 28,
+      "module": "bloc1-javascript-poo",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce que 'this' dans une classe JavaScript ?",
+      "options": [
+        "Une variable globale",
+        "Une référence à l'instance courante",
+        "Un mot-clé réservé",
+        "Une fonction"
+      ],
+      "correct": 1,
+      "explanation": "'this' fait référence à l'instance courante de la classe."
+    },
+    {
+      "id": 29,
+      "module": "bloc1-javascript-poo",
+      "bloc": "bloc1",
+      "question": "Comment créer une instance d'une classe ?",
+      "options": [
+        "Class.create()",
+        "new Class()",
+        "Class()",
+        "instance Class"
+      ],
+      "correct": 1,
+      "explanation": "On utilise le mot-clé 'new' pour créer une instance d'une classe."
+    },
+    {
+      "id": 30,
+      "module": "bloc1-javascript-poo",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce que l'héritage en POO ?",
+      "options": [
+        "Copier du code",
+        "Une classe qui hérite des propriétés d'une autre",
+        "Partager des variables",
+        "Créer des objets"
+      ],
+      "correct": 1,
+      "explanation": "L'héritage permet à une classe d'hériter des propriétés et méthodes d'une classe parente."
+    },
+    {
+      "id": 31,
       "module": "bloc1-javascript-async",
-      "question": "Quelle méthode permet de faire une requête HTTP en JavaScript ?",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'une Promise en JavaScript ?",
       "options": [
-        "ajax()",
-        "fetch()",
-        "request()",
-        "http()"
+        "Une fonction",
+        "Un objet représentant une opération asynchrone",
+        "Une variable",
+        "Un tableau"
       ],
-      "correctAnswer": 1,
-      "explanation": "fetch() est l'API moderne pour effectuer des requêtes HTTP en JavaScript."
+      "correct": 1,
+      "explanation": "Une Promise représente une valeur qui peut être disponible maintenant, plus tard, ou jamais."
     },
     {
-      "id": "q1-react-1",
+      "id": 32,
+      "module": "bloc1-javascript-async",
+      "bloc": "bloc1",
+      "question": "Que fait 'async/await' ?",
+      "options": [
+        "Rend le code synchrone",
+        "Simplifie l'écriture de code asynchrone",
+        "Accélère l'exécution",
+        "Crée des threads"
+      ],
+      "correct": 1,
+      "explanation": "async/await permet d'écrire du code asynchrone de manière plus lisible, comme du code synchrone."
+    },
+    {
+      "id": 33,
+      "module": "bloc1-javascript-async",
+      "bloc": "bloc1",
+      "question": "Comment gérer les erreurs avec async/await ?",
+      "options": [
+        "if/else",
+        "try/catch",
+        "error()",
+        "catch()"
+      ],
+      "correct": 1,
+      "explanation": "On utilise try/catch pour gérer les erreurs dans les fonctions async."
+    },
+    {
+      "id": 34,
+      "module": "bloc1-javascript-async",
+      "bloc": "bloc1",
+      "question": "Que retourne une fonction async ?",
+      "options": [
+        "Un nombre",
+        "Une Promise",
+        "Un objet",
+        "Un tableau"
+      ],
+      "correct": 1,
+      "explanation": "Une fonction async retourne toujours une Promise."
+    },
+    {
+      "id": 35,
+      "module": "bloc1-methodes-agiles",
+      "bloc": "bloc1",
+      "question": "Quelle est la durée typique d'un sprint Scrum ?",
+      "options": [
+        "1 jour",
+        "1 semaine",
+        "2-4 semaines",
+        "6 mois"
+      ],
+      "correct": 2,
+      "explanation": "Un sprint Scrum dure généralement entre 2 et 4 semaines."
+    },
+    {
+      "id": 36,
+      "module": "bloc1-methodes-agiles",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un Product Backlog ?",
+      "options": [
+        "Liste des bugs",
+        "Liste priorisée des fonctionnalités à développer",
+        "Liste des développeurs",
+        "Liste des tests"
+      ],
+      "correct": 1,
+      "explanation": "Le Product Backlog est la liste priorisée de toutes les fonctionnalités, améliorations et corrections."
+    },
+    {
+      "id": 37,
+      "module": "bloc1-methodes-agiles",
+      "bloc": "bloc1",
+      "question": "Quel est le rôle du Scrum Master ?",
+      "options": [
+        "Coder l'application",
+        "Faciliter le processus Scrum et éliminer les obstacles",
+        "Tester l'application",
+        "Déployer l'application"
+      ],
+      "correct": 1,
+      "explanation": "Le Scrum Master facilite le processus Scrum et aide l'équipe à éliminer les obstacles."
+    },
+    {
+      "id": 38,
+      "module": "bloc1-methodologie-web",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce que le Mobile First ?",
+      "options": [
+        "Développer d'abord pour mobile",
+        "Tester sur mobile en premier",
+        "Déployer sur mobile en premier",
+        "Vendre sur mobile en premier"
+      ],
+      "correct": 0,
+      "explanation": "Mobile First consiste à concevoir et développer d'abord pour les appareils mobiles."
+    },
+    {
+      "id": 39,
+      "module": "bloc1-methodologie-web",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce que le Progressive Enhancement ?",
+      "options": [
+        "Améliorer progressivement l'expérience pour les navigateurs modernes",
+        "Tester progressivement",
+        "Déployer progressivement",
+        "Former progressivement"
+      ],
+      "correct": 0,
+      "explanation": "Le Progressive Enhancement part d'une base fonctionnelle et ajoute des améliorations pour les navigateurs modernes."
+    },
+    {
+      "id": 40,
+      "module": "bloc1-methodologie-web",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un wireframe ?",
+      "options": [
+        "Un schéma de base de données",
+        "Une maquette fonctionnelle basse fidélité",
+        "Un test",
+        "Un framework"
+      ],
+      "correct": 1,
+      "explanation": "Un wireframe est une maquette basse fidélité qui représente la structure d'une interface."
+    },
+    {
+      "id": 41,
+      "module": "bloc1-nodejs-express",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce que Node.js ?",
+      "options": [
+        "Un framework",
+        "Un environnement d'exécution JavaScript côté serveur",
+        "Une base de données",
+        "Un langage de programmation"
+      ],
+      "correct": 1,
+      "explanation": "Node.js est un environnement d'exécution JavaScript basé sur le moteur V8 de Chrome."
+    },
+    {
+      "id": 42,
+      "module": "bloc1-nodejs-express",
+      "bloc": "bloc1",
+      "question": "Comment créer une route GET avec Express ?",
+      "options": [
+        "app.get('/path', callback)",
+        "app.route('/path')",
+        "app.create('/path')",
+        "app.path('/path')"
+      ],
+      "correct": 0,
+      "explanation": "app.get('/path', callback) définit une route GET dans Express."
+    },
+    {
+      "id": 43,
+      "module": "bloc1-nodejs-express",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un middleware dans Express ?",
+      "options": [
+        "Une base de données",
+        "Une fonction qui a accès à req, res et next",
+        "Un template",
+        "Un fichier de configuration"
+      ],
+      "correct": 1,
+      "explanation": "Un middleware est une fonction qui a accès aux objets request, response et à la fonction next()."
+    },
+    {
+      "id": 44,
+      "module": "bloc1-nodejs-avance",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce que l'Event Loop dans Node.js ?",
+      "options": [
+        "Une boucle for",
+        "Le mécanisme qui gère les opérations asynchrones",
+        "Un framework",
+        "Une base de données"
+      ],
+      "correct": 1,
+      "explanation": "L'Event Loop est le mécanisme qui permet à Node.js d'effectuer des opérations non-bloquantes."
+    },
+    {
+      "id": 45,
+      "module": "bloc1-nodejs-avance",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un Stream dans Node.js ?",
+      "options": [
+        "Un flux de données traité par morceaux",
+        "Une base de données",
+        "Un framework",
+        "Un serveur"
+      ],
+      "correct": 0,
+      "explanation": "Les Streams permettent de traiter les données par morceaux plutôt que de tout charger en mémoire."
+    },
+    {
+      "id": 46,
+      "module": "bloc1-nodejs-avance",
+      "bloc": "bloc1",
+      "question": "Quel module Node.js gère le système de fichiers ?",
+      "options": [
+        "http",
+        "fs",
+        "path",
+        "os"
+      ],
+      "correct": 1,
+      "explanation": "Le module 'fs' (File System) permet de manipuler le système de fichiers."
+    },
+    {
+      "id": 47,
+      "module": "bloc1-php-symfony",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce que Symfony ?",
+      "options": [
+        "Un langage de programmation",
+        "Un framework PHP",
+        "Une base de données",
+        "Un serveur web"
+      ],
+      "correct": 1,
+      "explanation": "Symfony est un framework PHP pour le développement d'applications web."
+    },
+    {
+      "id": 48,
+      "module": "bloc1-php-symfony",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un Controller dans Symfony ?",
+      "options": [
+        "Une base de données",
+        "Une classe qui gère les requêtes HTTP",
+        "Un template",
+        "Un fichier de configuration"
+      ],
+      "correct": 1,
+      "explanation": "Un Controller est une classe PHP qui traite les requêtes HTTP et retourne des réponses."
+    },
+    {
+      "id": 49,
+      "module": "bloc1-php-symfony",
+      "bloc": "bloc1",
+      "question": "Quel moteur de templates utilise Symfony ?",
+      "options": [
+        "Blade",
+        "Twig",
+        "Smarty",
+        "Mustache"
+      ],
+      "correct": 1,
+      "explanation": "Symfony utilise Twig comme moteur de templates par défaut."
+    },
+    {
+      "id": 50,
       "module": "bloc1-react",
-      "question": "Quel hook React permet de gérer l'état local d'un composant ?",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un composant React ?",
       "options": [
-        "useEffect",
-        "useState",
-        "useContext",
-        "useReducer"
+        "Une fonction ou classe qui retourne du JSX",
+        "Un fichier CSS",
+        "Une base de données",
+        "Un serveur"
       ],
-      "correctAnswer": 1,
-      "explanation": "useState est le hook React qui permet de déclarer et gérer une variable d'état locale."
+      "correct": 0,
+      "explanation": "Un composant React est une fonction ou classe qui retourne des éléments React (JSX)."
     },
     {
-      "id": "q1-react-2",
+      "id": 51,
       "module": "bloc1-react",
-      "question": "À quoi sert useEffect en React ?",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce que le state dans React ?",
       "options": [
-        "Gérer l'état",
-        "Gérer les effets de bord (side effects)",
-        "Créer des composants",
-        "Gérer le routing"
+        "Un fichier",
+        "Un objet qui contient les données du composant",
+        "Une fonction",
+        "Un style CSS"
       ],
-      "correctAnswer": 1,
-      "explanation": "useEffect permet de gérer les effets de bord comme les appels API, les abonnements, ou les manipulations du DOM."
-    }
-  ],
-  "bloc2": [
-    {
-      "id": "q2-sql-1",
-      "module": "bloc2-sql",
-      "question": "Quelle commande SQL permet de récupérer des données ?",
-      "options": [
-        "INSERT",
-        "SELECT",
-        "UPDATE",
-        "DELETE"
-      ],
-      "correctAnswer": 1,
-      "explanation": "SELECT est la commande SQL pour récupérer (lire) des données depuis une table."
+      "correct": 1,
+      "explanation": "Le state est un objet qui contient les données qui peuvent changer au cours du temps."
     },
     {
-      "id": "q2-sql-2",
-      "module": "bloc2-sql",
-      "question": "Quelle jointure SQL retourne toutes les lignes de la table de gauche ?",
+      "id": 52,
+      "module": "bloc1-react",
+      "bloc": "bloc1",
+      "question": "Comment créer un composant fonctionnel React ?",
       "options": [
-        "INNER JOIN",
-        "LEFT JOIN",
-        "RIGHT JOIN",
-        "FULL JOIN"
+        "class MyComponent extends React.Component",
+        "function MyComponent() { return <div></div> }",
+        "new Component()",
+        "React.create()"
       ],
-      "correctAnswer": 1,
-      "explanation": "LEFT JOIN retourne toutes les lignes de la table de gauche, même si aucune correspondance n'existe dans la table de droite."
+      "correct": 1,
+      "explanation": "Un composant fonctionnel est une simple fonction JavaScript qui retourne du JSX."
     },
     {
-      "id": "q2-uml-1",
-      "module": "bloc2-uml",
-      "question": "Quel diagramme UML représente les interactions entre acteurs et système ?",
+      "id": 53,
+      "module": "bloc1-react",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un Hook en React ?",
       "options": [
-        "Diagramme de classes",
-        "Diagramme de cas d'utilisation",
-        "Diagramme de séquence",
-        "Diagramme d'activité"
+        "Une fonction qui permet d'utiliser des fonctionnalités React",
+        "Un événement",
+        "Un style",
+        "Une route"
       ],
-      "correctAnswer": 1,
-      "explanation": "Le diagramme de cas d'utilisation modélise les interactions entre les acteurs (utilisateurs) et le système."
+      "correct": 0,
+      "explanation": "Les Hooks sont des fonctions qui permettent d'utiliser le state et d'autres fonctionnalités React."
     },
     {
-      "id": "q2-uml-2",
-      "module": "bloc2-uml",
-      "question": "Dans un diagramme de classes, que représente une flèche pleine ?",
+      "id": 54,
+      "module": "bloc1-react-native",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce que React Native ?",
       "options": [
-        "Association",
-        "Héritage",
-        "Agrégation",
-        "Dépendance"
+        "Un framework pour créer des applications mobiles natives",
+        "Une base de données",
+        "Un serveur",
+        "Un langage de programmation"
       ],
-      "correctAnswer": 1,
-      "explanation": "Une flèche pleine avec un triangle vide représente une relation d'héritage (généralisation)."
+      "correct": 0,
+      "explanation": "React Native permet de créer des applications mobiles natives avec React."
     },
     {
-      "id": "q2-nosql-1",
-      "module": "bloc2-nosql",
-      "question": "Quel type de base de données NoSQL est MongoDB ?",
+      "id": 55,
+      "module": "bloc1-react-native",
+      "bloc": "bloc1",
+      "question": "Quelle balise remplace <div> en React Native ?",
       "options": [
-        "Clé-Valeur",
-        "Document",
-        "Colonnes",
-        "Graphe"
+        "<Container>",
+        "<View>",
+        "<Box>",
+        "<Div>"
       ],
-      "correctAnswer": 1,
-      "explanation": "MongoDB est une base de données orientée documents, stockant les données au format JSON/BSON."
-    }
-  ],
-  "bloc3": [
-    {
-      "id": "q3-docker-1",
-      "module": "bloc3-docker",
-      "question": "Quelle est la différence entre une image et un conteneur Docker ?",
-      "options": [
-        "Aucune différence",
-        "Image = modèle statique, Conteneur = instance en exécution",
-        "Conteneur est plus lourd qu'une image",
-        "Image s'exécute, conteneur est stocké"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Une image est un modèle en lecture seule, tandis qu'un conteneur est une instance en cours d'exécution de cette image."
+      "correct": 1,
+      "explanation": "<View> est l'équivalent de <div> en React Native."
     },
     {
-      "id": "q3-docker-2",
-      "module": "bloc3-docker",
-      "question": "Quelle commande Docker permet de lister les conteneurs en cours d'exécution ?",
+      "id": 56,
+      "module": "bloc1-react-native",
+      "bloc": "bloc1",
+      "question": "Comment afficher du texte en React Native ?",
       "options": [
-        "docker images",
-        "docker ps",
-        "docker run",
-        "docker list"
+        "<p>",
+        "<span>",
+        "<Text>",
+        "<Label>"
       ],
-      "correctAnswer": 1,
-      "explanation": "docker ps liste les conteneurs en cours d'exécution. Ajouter -a liste tous les conteneurs (actifs et arrêtés)."
+      "correct": 2,
+      "explanation": "<Text> est le composant pour afficher du texte en React Native."
     },
     {
-      "id": "q3-securite-1",
+      "id": 57,
+      "module": "bloc1-react-tests",
+      "bloc": "bloc1",
+      "question": "Quel outil est utilisé pour tester les composants React ?",
+      "options": [
+        "Mocha",
+        "Jest",
+        "Karma",
+        "Jasmine"
+      ],
+      "correct": 1,
+      "explanation": "Jest est le framework de test recommandé pour React."
+    },
+    {
+      "id": 58,
+      "module": "bloc1-react-tests",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce que React Testing Library ?",
+      "options": [
+        "Une bibliothèque pour tester les composants React",
+        "Un framework CSS",
+        "Une base de données",
+        "Un serveur"
+      ],
+      "correct": 0,
+      "explanation": "React Testing Library aide à tester les composants React de manière proche de l'utilisation réelle."
+    },
+    {
+      "id": 59,
+      "module": "bloc1-react-tests",
+      "bloc": "bloc1",
+      "question": "Comment simuler un clic dans un test React ?",
+      "options": [
+        "click()",
+        "fireEvent.click()",
+        "simulate()",
+        "trigger()"
+      ],
+      "correct": 1,
+      "explanation": "fireEvent.click() de React Testing Library simule un événement de clic."
+    },
+    {
+      "id": 60,
       "module": "bloc1-securite",
-      "question": "Quelle vulnérabilité permet d'injecter du code SQL malveillant ?",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'une attaque XSS ?",
       "options": [
-        "XSS",
-        "Injection SQL",
-        "CSRF",
-        "Clickjacking"
+        "Cross-Site Scripting - injection de scripts malveillants",
+        "Une attaque réseau",
+        "Un virus",
+        "Un spam"
       ],
-      "correctAnswer": 1,
-      "explanation": "L'injection SQL permet à un attaquant d'injecter du code SQL dans une requête pour manipuler la base de données."
+      "correct": 0,
+      "explanation": "XSS (Cross-Site Scripting) consiste à injecter du code JavaScript malveillant dans une page web."
     },
     {
-      "id": "q3-securite-2",
+      "id": 61,
       "module": "bloc1-securite",
+      "bloc": "bloc1",
       "question": "Comment protéger une application contre les injections SQL ?",
       "options": [
-        "Utiliser HTTPS",
-        "Utiliser des requêtes préparées (prepared statements)",
-        "Chiffrer les mots de passe",
-        "Utiliser des tokens CSRF"
+        "Utiliser des requêtes préparées",
+        "Désactiver SQL",
+        "Utiliser MongoDB",
+        "Chiffrer la base de données"
       ],
-      "correctAnswer": 1,
-      "explanation": "Les requêtes préparées (prepared statements) séparent le code SQL des données, empêchant les injections."
+      "correct": 0,
+      "explanation": "Les requêtes préparées (prepared statements) protègent contre les injections SQL."
     },
     {
-      "id": "q3-tests-1",
-      "module": "bloc1-tests-unitaires",
-      "question": "Que signifie le pattern AAA dans les tests unitaires ?",
+      "id": 62,
+      "module": "bloc1-securite",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce que HTTPS ?",
       "options": [
-        "Add, Assert, Act",
-        "Arrange, Act, Assert",
-        "Assert, Arrange, Act",
-        "Act, Add, Assert"
+        "HTTP Sécurisé avec chiffrement SSL/TLS",
+        "Une base de données",
+        "Un framework",
+        "Un serveur"
       ],
-      "correctAnswer": 1,
-      "explanation": "AAA signifie Arrange (préparer), Act (agir), Assert (vérifier). C'est la structure recommandée pour écrire des tests clairs."
+      "correct": 0,
+      "explanation": "HTTPS est la version sécurisée de HTTP, utilisant le chiffrement SSL/TLS."
+    },
+    {
+      "id": 63,
+      "module": "bloc1-securite",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un token JWT ?",
+      "options": [
+        "Un mot de passe",
+        "Un token d'authentification JSON Web Token",
+        "Une base de données",
+        "Un framework"
+      ],
+      "correct": 1,
+      "explanation": "JWT (JSON Web Token) est un standard pour créer des tokens d'authentification."
+    },
+    {
+      "id": 64,
+      "module": "bloc1-tests-unitaires",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un test unitaire ?",
+      "options": [
+        "Test d'une unité de code isolée",
+        "Test de l'interface",
+        "Test de performance",
+        "Test de sécurité"
+      ],
+      "correct": 0,
+      "explanation": "Un test unitaire vérifie le comportement d'une petite unité de code (fonction, méthode) de manière isolée."
+    },
+    {
+      "id": 65,
+      "module": "bloc1-tests-unitaires",
+      "bloc": "bloc1",
+      "question": "Que signifie AAA dans les tests ?",
+      "options": [
+        "Arrange, Act, Assert",
+        "Add, Apply, Analyze",
+        "Always, All, Anywhere",
+        "Auto, Async, Await"
+      ],
+      "correct": 0,
+      "explanation": "AAA (Arrange, Act, Assert) est un pattern pour structurer les tests : préparer, exécuter, vérifier."
+    },
+    {
+      "id": 66,
+      "module": "bloc1-tests-unitaires",
+      "bloc": "bloc1",
+      "question": "Qu'est-ce qu'un mock ?",
+      "options": [
+        "Un objet simulé pour les tests",
+        "Un framework",
+        "Une base de données",
+        "Un serveur"
+      ],
+      "correct": 0,
+      "explanation": "Un mock est un objet simulé qui remplace une dépendance réelle dans les tests."
+    },
+    {
+      "id": 67,
+      "module": "bloc2-conception-bdd",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'une clé primaire ?",
+      "options": [
+        "Un identifiant unique pour chaque ligne",
+        "Une clé de chiffrement",
+        "Un mot de passe",
+        "Un index"
+      ],
+      "correct": 0,
+      "explanation": "Une clé primaire identifie de manière unique chaque enregistrement d'une table."
+    },
+    {
+      "id": 68,
+      "module": "bloc2-conception-bdd",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'une clé étrangère ?",
+      "options": [
+        "Une clé qui référence la clé primaire d'une autre table",
+        "Une clé de chiffrement",
+        "Un mot de passe",
+        "Un index"
+      ],
+      "correct": 0,
+      "explanation": "Une clé étrangère crée une relation entre deux tables en référençant la clé primaire d'une autre table."
+    },
+    {
+      "id": 69,
+      "module": "bloc2-conception-bdd",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce que la normalisation d'une base de données ?",
+      "options": [
+        "Organiser les données pour réduire la redondance",
+        "Chiffrer les données",
+        "Sauvegarder les données",
+        "Indexer les données"
+      ],
+      "correct": 0,
+      "explanation": "La normalisation organise les données pour minimiser la redondance et les anomalies."
+    },
+    {
+      "id": 70,
+      "module": "bloc2-droit-internet",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce que le RGPD ?",
+      "options": [
+        "Règlement Général sur la Protection des Données",
+        "Un framework",
+        "Une base de données",
+        "Un serveur"
+      ],
+      "correct": 0,
+      "explanation": "Le RGPD est le règlement européen sur la protection des données personnelles."
+    },
+    {
+      "id": 71,
+      "module": "bloc2-droit-internet",
+      "bloc": "bloc2",
+      "question": "Combien de temps maximum pour notifier une violation de données selon le RGPD ?",
+      "options": [
+        "24 heures",
+        "48 heures",
+        "72 heures",
+        "1 semaine"
+      ],
+      "correct": 2,
+      "explanation": "Le RGPD impose de notifier une violation de données dans les 72 heures."
+    },
+    {
+      "id": 72,
+      "module": "bloc2-droit-internet",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'une licence open source ?",
+      "options": [
+        "Une licence qui permet d'utiliser et modifier le code librement",
+        "Une licence payante",
+        "Un certificat",
+        "Un brevet"
+      ],
+      "correct": 0,
+      "explanation": "Une licence open source permet d'utiliser, modifier et distribuer le code source librement."
+    },
+    {
+      "id": 73,
+      "module": "bloc2-figma",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce que Figma ?",
+      "options": [
+        "Un outil de design d'interface collaboratif",
+        "Un framework",
+        "Une base de données",
+        "Un serveur"
+      ],
+      "correct": 0,
+      "explanation": "Figma est un outil de design d'interface utilisateur collaboratif basé sur le web."
+    },
+    {
+      "id": 74,
+      "module": "bloc2-figma",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'un composant dans Figma ?",
+      "options": [
+        "Un élément réutilisable",
+        "Un fichier",
+        "Un plugin",
+        "Un export"
+      ],
+      "correct": 0,
+      "explanation": "Un composant est un élément de design réutilisable qui peut être instancié plusieurs fois."
+    },
+    {
+      "id": 75,
+      "module": "bloc2-figma",
+      "bloc": "bloc2",
+      "question": "Comment collaborer en temps réel sur Figma ?",
+      "options": [
+        "Partager le lien du fichier",
+        "Envoyer par email",
+        "Télécharger le fichier",
+        "Utiliser Git"
+      ],
+      "correct": 0,
+      "explanation": "Figma permet la collaboration en temps réel en partageant simplement le lien du fichier."
+    },
+    {
+      "id": 76,
+      "module": "bloc2-figma-avance",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce que l'Auto Layout dans Figma ?",
+      "options": [
+        "Un système de mise en page automatique",
+        "Un plugin",
+        "Un export",
+        "Un composant"
+      ],
+      "correct": 0,
+      "explanation": "Auto Layout permet de créer des designs qui s'adaptent automatiquement au contenu."
+    },
+    {
+      "id": 77,
+      "module": "bloc2-figma-avance",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'une variante de composant ?",
+      "options": [
+        "Différentes versions d'un même composant",
+        "Un fichier",
+        "Un plugin",
+        "Un export"
+      ],
+      "correct": 0,
+      "explanation": "Les variantes permettent de regrouper différentes versions d'un composant (états, tailles, etc.)."
+    },
+    {
+      "id": 78,
+      "module": "bloc2-figma-avance",
+      "bloc": "bloc2",
+      "question": "Comment créer un système de design dans Figma ?",
+      "options": [
+        "Utiliser des composants, styles et variables",
+        "Copier-coller",
+        "Utiliser des plugins",
+        "Exporter en PDF"
+      ],
+      "correct": 0,
+      "explanation": "Un système de design utilise des composants, styles de couleurs/textes et variables réutilisables."
+    },
+    {
+      "id": 79,
+      "module": "bloc2-mise-en-place-bdd",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'un SGBD ?",
+      "options": [
+        "Système de Gestion de Base de Données",
+        "Un framework",
+        "Un langage",
+        "Un serveur web"
+      ],
+      "correct": 0,
+      "explanation": "Un SGBD est un logiciel qui permet de créer, gérer et interroger des bases de données."
+    },
+    {
+      "id": 80,
+      "module": "bloc2-mise-en-place-bdd",
+      "bloc": "bloc2",
+      "question": "Quel est le port par défaut de MySQL ?",
+      "options": [
+        "80",
+        "443",
+        "3306",
+        "5432"
+      ],
+      "correct": 2,
+      "explanation": "MySQL utilise le port 3306 par défaut."
+    },
+    {
+      "id": 81,
+      "module": "bloc2-mise-en-place-bdd",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'une migration de base de données ?",
+      "options": [
+        "Un script qui modifie la structure de la BDD",
+        "Une sauvegarde",
+        "Un export",
+        "Une requête"
+      ],
+      "correct": 0,
+      "explanation": "Une migration est un script qui modifie la structure de la base de données de manière versionnée."
+    },
+    {
+      "id": 82,
+      "module": "bloc2-nosql",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'une base de données NoSQL ?",
+      "options": [
+        "Base de données non relationnelle",
+        "Base de données sans SQL",
+        "Base de données rapide",
+        "Base de données cloud"
+      ],
+      "correct": 0,
+      "explanation": "NoSQL désigne les bases de données non relationnelles (documents, clé-valeur, graphes, etc.)."
+    },
+    {
+      "id": 83,
+      "module": "bloc2-nosql",
+      "bloc": "bloc2",
+      "question": "Quel est un exemple de base de données NoSQL ?",
+      "options": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Oracle"
+      ],
+      "correct": 2,
+      "explanation": "MongoDB est une base de données NoSQL orientée documents."
+    },
+    {
+      "id": 84,
+      "module": "bloc2-nosql",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'un document dans MongoDB ?",
+      "options": [
+        "Un objet JSON/BSON",
+        "Un fichier PDF",
+        "Une table",
+        "Une requête"
+      ],
+      "correct": 0,
+      "explanation": "Un document MongoDB est un objet au format BSON (Binary JSON)."
+    },
+    {
+      "id": 85,
+      "module": "bloc2-sql",
+      "bloc": "bloc2",
+      "question": "Que fait la commande SQL SELECT ?",
+      "options": [
+        "Récupère des données",
+        "Insère des données",
+        "Supprime des données",
+        "Modifie des données"
+      ],
+      "correct": 0,
+      "explanation": "SELECT permet de récupérer des données d'une ou plusieurs tables."
+    },
+    {
+      "id": 86,
+      "module": "bloc2-sql",
+      "bloc": "bloc2",
+      "question": "Comment filtrer les résultats d'une requête SELECT ?",
+      "options": [
+        "FILTER",
+        "WHERE",
+        "IF",
+        "WHEN"
+      ],
+      "correct": 1,
+      "explanation": "La clause WHERE permet de filtrer les résultats selon des conditions."
+    },
+    {
+      "id": 87,
+      "module": "bloc2-sql",
+      "bloc": "bloc2",
+      "question": "Que fait la commande JOIN ?",
+      "options": [
+        "Combine des données de plusieurs tables",
+        "Insère des données",
+        "Supprime des données",
+        "Crée une table"
+      ],
+      "correct": 0,
+      "explanation": "JOIN permet de combiner des lignes de plusieurs tables basées sur une condition."
+    },
+    {
+      "id": 88,
+      "module": "bloc2-sql",
+      "bloc": "bloc2",
+      "question": "Quelle est la différence entre INNER JOIN et LEFT JOIN ?",
+      "options": [
+        "INNER JOIN retourne uniquement les correspondances, LEFT JOIN inclut toutes les lignes de gauche",
+        "Aucune différence",
+        "LEFT JOIN est plus rapide",
+        "INNER JOIN est obsolète"
+      ],
+      "correct": 0,
+      "explanation": "INNER JOIN ne retourne que les lignes qui correspondent, LEFT JOIN inclut toutes les lignes de la table de gauche."
+    },
+    {
+      "id": 89,
+      "module": "bloc2-uml",
+      "bloc": "bloc2",
+      "question": "Que signifie UML ?",
+      "options": [
+        "Unified Modeling Language",
+        "Universal Markup Language",
+        "User Management Logic",
+        "Unique Model Library"
+      ],
+      "correct": 0,
+      "explanation": "UML (Unified Modeling Language) est un langage de modélisation graphique."
+    },
+    {
+      "id": 90,
+      "module": "bloc2-uml",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'un diagramme de classes ?",
+      "options": [
+        "Représentation de la structure statique du système",
+        "Représentation du flux de données",
+        "Représentation des utilisateurs",
+        "Représentation du réseau"
+      ],
+      "correct": 0,
+      "explanation": "Le diagramme de classes représente la structure statique : classes, attributs, méthodes et relations."
+    },
+    {
+      "id": 91,
+      "module": "bloc2-uml",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'un diagramme de séquence ?",
+      "options": [
+        "Représentation des interactions entre objets dans le temps",
+        "Représentation de la structure",
+        "Représentation des utilisateurs",
+        "Représentation du réseau"
+      ],
+      "correct": 0,
+      "explanation": "Le diagramme de séquence montre les interactions entre objets dans un ordre chronologique."
+    },
+    {
+      "id": 92,
+      "module": "bloc2-uml-avance",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'un diagramme d'activité ?",
+      "options": [
+        "Représentation du flux de travail",
+        "Représentation de la structure",
+        "Représentation des utilisateurs",
+        "Représentation du réseau"
+      ],
+      "correct": 0,
+      "explanation": "Le diagramme d'activité représente le flux de travail et les processus métier."
+    },
+    {
+      "id": 93,
+      "module": "bloc2-uml-avance",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'un diagramme d'états-transitions ?",
+      "options": [
+        "Représentation des états d'un objet et transitions",
+        "Représentation de la structure",
+        "Représentation des utilisateurs",
+        "Représentation du réseau"
+      ],
+      "correct": 0,
+      "explanation": "Le diagramme d'états-transitions montre les différents états d'un objet et les événements qui déclenchent les transitions."
+    },
+    {
+      "id": 94,
+      "module": "bloc2-uml-avance",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'un diagramme de composants ?",
+      "options": [
+        "Représentation de l'organisation physique du système",
+        "Représentation des classes",
+        "Représentation des utilisateurs",
+        "Représentation du réseau"
+      ],
+      "correct": 0,
+      "explanation": "Le diagramme de composants montre l'organisation et les dépendances entre les composants logiciels."
+    },
+    {
+      "id": 95,
+      "module": "bloc2-ux-design",
+      "bloc": "bloc2",
+      "question": "Que signifie UX ?",
+      "options": [
+        "User Experience",
+        "User Extension",
+        "Universal Experience",
+        "Unique Exchange"
+      ],
+      "correct": 0,
+      "explanation": "UX (User Experience) désigne l'expérience utilisateur globale."
+    },
+    {
+      "id": 96,
+      "module": "bloc2-ux-design",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'un persona ?",
+      "options": [
+        "Un profil d'utilisateur type",
+        "Un design",
+        "Un framework",
+        "Un test"
+      ],
+      "correct": 0,
+      "explanation": "Un persona est un profil fictif représentant un type d'utilisateur cible."
+    },
+    {
+      "id": 97,
+      "module": "bloc2-ux-design",
+      "bloc": "bloc2",
+      "question": "Qu'est-ce qu'un test utilisateur ?",
+      "options": [
+        "Observer des utilisateurs utiliser le produit",
+        "Tester le code",
+        "Tester la performance",
+        "Tester la sécurité"
+      ],
+      "correct": 0,
+      "explanation": "Un test utilisateur consiste à observer de vrais utilisateurs interagir avec le produit."
+    },
+    {
+      "id": 98,
+      "module": "bloc3-deploiement",
+      "bloc": "bloc3",
+      "question": "Qu'est-ce que le CI/CD ?",
+      "options": [
+        "Continuous Integration / Continuous Deployment",
+        "Code Integration / Code Deployment",
+        "Client Integration / Client Deployment",
+        "Container Integration / Container Deployment"
+      ],
+      "correct": 0,
+      "explanation": "CI/CD automatise l'intégration et le déploiement continu du code."
+    },
+    {
+      "id": 99,
+      "module": "bloc3-deploiement",
+      "bloc": "bloc3",
+      "question": "Qu'est-ce qu'un environnement de staging ?",
+      "options": [
+        "Environnement de pré-production pour tester",
+        "Environnement de développement",
+        "Environnement de production",
+        "Environnement de test"
+      ],
+      "correct": 0,
+      "explanation": "Le staging est un environnement qui réplique la production pour tester avant le déploiement."
+    },
+    {
+      "id": 100,
+      "module": "bloc3-deploiement",
+      "bloc": "bloc3",
+      "question": "Qu'est-ce qu'un rollback ?",
+      "options": [
+        "Revenir à une version précédente",
+        "Déployer une nouvelle version",
+        "Sauvegarder",
+        "Tester"
+      ],
+      "correct": 0,
+      "explanation": "Un rollback consiste à revenir à une version précédente en cas de problème."
+    },
+    {
+      "id": 101,
+      "module": "bloc3-docker",
+      "bloc": "bloc3",
+      "question": "Qu'est-ce que Docker ?",
+      "options": [
+        "Plateforme de conteneurisation",
+        "Base de données",
+        "Framework",
+        "Langage de programmation"
+      ],
+      "correct": 0,
+      "explanation": "Docker est une plateforme pour créer, déployer et exécuter des applications dans des conteneurs."
+    },
+    {
+      "id": 102,
+      "module": "bloc3-docker",
+      "bloc": "bloc3",
+      "question": "Qu'est-ce qu'une image Docker ?",
+      "options": [
+        "Template en lecture seule pour créer des conteneurs",
+        "Un conteneur en cours d'exécution",
+        "Un fichier de configuration",
+        "Un réseau"
+      ],
+      "correct": 0,
+      "explanation": "Une image Docker est un template immuable qui contient l'application et ses dépendances."
+    },
+    {
+      "id": 103,
+      "module": "bloc3-docker",
+      "bloc": "bloc3",
+      "question": "Qu'est-ce qu'un conteneur Docker ?",
+      "options": [
+        "Instance en cours d'exécution d'une image",
+        "Un fichier",
+        "Un réseau",
+        "Un volume"
+      ],
+      "correct": 0,
+      "explanation": "Un conteneur est une instance en cours d'exécution d'une image Docker."
+    },
+    {
+      "id": 104,
+      "module": "bloc3-docker",
+      "bloc": "bloc3",
+      "question": "Qu'est-ce que Docker Compose ?",
+      "options": [
+        "Outil pour définir et exécuter des applications multi-conteneurs",
+        "Un éditeur de code",
+        "Une base de données",
+        "Un framework"
+      ],
+      "correct": 0,
+      "explanation": "Docker Compose permet de définir et gérer des applications composées de plusieurs conteneurs."
+    },
+    {
+      "id": 105,
+      "module": "bloc3-plans-tests",
+      "bloc": "bloc3",
+      "question": "Qu'est-ce qu'un plan de tests ?",
+      "options": [
+        "Document décrivant la stratégie de test",
+        "Un test unitaire",
+        "Un framework",
+        "Une base de données"
+      ],
+      "correct": 0,
+      "explanation": "Un plan de tests décrit la stratégie, les objectifs, les ressources et le calendrier des tests."
+    },
+    {
+      "id": 106,
+      "module": "bloc3-plans-tests",
+      "bloc": "bloc3",
+      "question": "Qu'est-ce qu'un test d'intégration ?",
+      "options": [
+        "Test de l'interaction entre plusieurs composants",
+        "Test d'une fonction isolée",
+        "Test de l'interface",
+        "Test de performance"
+      ],
+      "correct": 0,
+      "explanation": "Un test d'intégration vérifie que plusieurs composants fonctionnent correctement ensemble."
+    },
+    {
+      "id": 107,
+      "module": "bloc3-plans-tests",
+      "bloc": "bloc3",
+      "question": "Qu'est-ce qu'un test end-to-end (E2E) ?",
+      "options": [
+        "Test du parcours utilisateur complet",
+        "Test d'une fonction",
+        "Test de performance",
+        "Test de sécurité"
+      ],
+      "correct": 0,
+      "explanation": "Un test E2E simule un parcours utilisateur complet de bout en bout."
     }
   ]
 }

@@ -1,0 +1,108 @@
+{
+  "id": "bloc2-uml-avance",
+  "bloc": "bloc2",
+  "title": "UML Avancé - Conception d'Application Complexe",
+  "icon": "📐",
+  "color": "#9B59B6",
+  "description": "Modélisation avancée avec UML : patterns de conception, diagrammes de composants et de déploiement, architecture logicielle.",
+  "sections": [
+    {
+      "id": "patterns",
+      "title": "Patterns de Conception",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **design patterns** sont des solutions éprouvées à des problèmes récurrents."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pattern",
+            "Type",
+            "Usage"
+          ],
+          "rows": [
+            [
+              "Singleton",
+              "Créationnel",
+              "Une seule instance (connexion DB)"
+            ],
+            [
+              "Factory",
+              "Créationnel",
+              "Créer des objects sans spécifier la classe"
+            ],
+            [
+              "Observer",
+              "Comportemental",
+              "Notification d'événements"
+            ],
+            [
+              "Strategy",
+              "Comportemental",
+              "Algorithmes interchangeables"
+            ],
+            [
+              "Decorator",
+              "Structurel",
+              "Ajouter des fonctionnalités dynamiquement"
+            ],
+            [
+              "MVC",
+              "Architectural",
+              "Séparation Modèle-Vue-Contrôleur"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diagramme-composants",
+      "title": "Diagramme de Composants",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **diagramme de composants** montre l'organisation physique du système (modules, bibliothèques, interfaces)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Composant** : Module logiciel réutilisable",
+            "**Interface** : Contrat entre composants",
+            "**Dépendance** : Relation entre composants"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diagramme-deploiement",
+      "title": "Diagramme de Déploiement",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **diagramme de déploiement** représente l'infrastructure matérielle et la répartition des composants."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Nœud** : Serveur, machine, conteneur",
+            "**Artefact** : Fichier exécutable, JAR, WAR",
+            "**Communication** : Protocoles (HTTP, TCP)"
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Design patterns : Singleton, Factory, Observer, Strategy, Decorator, MVC.",
+    "Diagramme de composants : organisation physique (modules, interfaces).",
+    "Diagramme de déploiement : infrastructure matérielle et répartition."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Design Patterns",
+      "url": "https://refactoring.guru/design-patterns"
+    }
+  ]
+}

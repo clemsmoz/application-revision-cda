@@ -1,0 +1,175 @@
+{
+  "id": "bloc1-react-tests",
+  "bloc": "bloc1",
+  "title": "React - Interactions et Tests",
+  "icon": "🧪",
+  "color": "#61DAFB",
+  "description": "Techniques avancées de React : gestion d'état complexe avec Context API et Redux, hooks personnalisés, tests unitaires et d'intégration avec Jest et React Testing Library.",
+  "sections": [
+    {
+      "id": "context-api",
+      "title": "Context API",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le **Context API** permet de partager des données entre composants sans passer par les props (évite le prop drilling)."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Créer un Context\nimport { createContext, useContext, useState } from 'react';\n\nconst ThemeContext = createContext();\n\n// Provider\nexport function ThemeProvider({ children }) {\n  const [theme, setTheme] = useState('light');\n  \n  return (\n    <ThemeContext.Provider value={{ theme, setTheme }}>\n      {children}\n    </ThemeContext.Provider>\n  );\n}\n\n// Utiliser le Context\nfunction Button() {\n  const { theme, setTheme } = useContext(ThemeContext);\n  \n  return (\n    <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>\n      Toggle Theme ({theme})\n    </button>\n  );\n}"
+        },
+        {
+          "type": "alert",
+          "level": "info",
+          "text": "Utilisez Context API pour les données globales (thème, langue, utilisateur). Pour un état complexe, préférez Redux."
+        }
+      ]
+    },
+    {
+      "id": "redux",
+      "title": "Redux",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Redux** est une bibliothèque de gestion d'état prévisible pour JavaScript. Elle centralise l'état de l'application dans un store unique."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Store",
+              "Contient l'état global de l'application"
+            ],
+            [
+              "Action",
+              "Objet décrivant un changement (type + payload)"
+            ],
+            [
+              "Reducer",
+              "Fonction pure qui calcule le nouvel état"
+            ],
+            [
+              "Dispatch",
+              "Envoie une action au store"
+            ],
+            [
+              "Selector",
+              "Extrait des données du store"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Redux Toolkit (moderne)\nimport { createSlice, configureStore } from '@reduxjs/toolkit';\n\n// Slice\nconst counterSlice = createSlice({\n  name: 'counter',\n  initialState: { value: 0 },\n  reducers: {\n    increment: (state) => { state.value += 1; },\n    decrement: (state) => { state.value -= 1; },\n    incrementByAmount: (state, action) => {\n      state.value += action.payload;\n    }\n  }\n});\n\n// Store\nconst store = configureStore({\n  reducer: {\n    counter: counterSlice.reducer\n  }\n});\n\n// Utilisation dans un composant\nimport { useSelector, useDispatch } from 'react-redux';\n\nfunction Counter() {\n  const count = useSelector((state) => state.counter.value);\n  const dispatch = useDispatch();\n  \n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => dispatch(increment())}>+</button>\n      <button onClick={() => dispatch(decrement())}>-</button>\n    </div>\n  );\n}"
+        }
+      ]
+    },
+    {
+      "id": "hooks-personnalises",
+      "title": "Hooks Personnalisés",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les **hooks personnalisés** permettent de réutiliser de la logique entre composants."
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Hook personnalisé for fetch\nimport { useState, useEffect } from 'react';\n\nfunction useFetch(url) {\n  const [data, setData] = useState(null);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState(null);\n  \n  useEffect(() => {\n    fetch(url)\n      .then(res => res.json())\n      .then(data => {\n        setData(data);\n        setLoading(false);\n      })\n      .catch(err => {\n        setError(err);\n        setLoading(false);\n      });\n  }, [url]);\n  \n  return { data, loading, error };\n}\n\n// Utilisation\nfunction UserProfile({ userId }) {\n  const { data: user, loading, error } = useFetch(`/api/users/${userId}`);\n  \n  if (loading) return <p>Loading...</p>;\n  if (error) return <p>Error: {error.message}</p>;\n  \n  return <div>{user.name}</div>;\n}"
+        },
+        {
+          "type": "alert",
+          "level": "tip",
+          "text": "Les hooks personnalisés doivent toujours commencer par 'use' (convention)."
+        }
+      ]
+    },
+    {
+      "id": "tests",
+      "title": "Tests avec Jest et React Testing Library",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Jest** est un framework de tests JavaScript. **React Testing Library** permet de tester les composants React de manière proche de l'utilisation réelle."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type de Test",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Unitaire",
+              "Teste une fonction ou un composant isolé"
+            ],
+            [
+              "Intégration",
+              "Teste l'interaction entre plusieurs composants"
+            ],
+            [
+              "E2E (End-to-End)",
+              "Teste l'application complète (Cypress, Playwright)"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Composant à tester\nfunction Button({ onClick, children }) {\n  return <button onClick={onClick}>{children}</button>;\n}\n\n// Test\nimport { render, screen, fireEvent } from '@testing-library/react';\nimport Button from './Button';\n\ntest('button calls onClick when clicked', () => {\n  const handleClick = jest.fn();\n  render(<Button onClick={handleClick}>Click me</Button>);\n  \n  const button = screen.getByText('Click me');\n  fireEvent.click(button);\n  \n  expect(handleClick).toHaveBeenCalledTimes(1);\n});"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Commandes Jest** : `npm test` (lancer les tests), `npm test -- --coverage` (rapport de couverture)."
+        }
+      ]
+    },
+    {
+      "id": "bonnes-pratiques",
+      "title": "Bonnes Pratiques",
+      "content": [
+        {
+          "type": "list",
+          "items": [
+            "**Éviter le prop drilling** : Utiliser Context API ou Redux pour les données globales",
+            "**Hooks personnalisés** : Extraire la logique réutilisable",
+            "**Tests** : Tester le comportement, pas l'implémentation",
+            "**Immutabilité** : Ne jamais muter l'état directement",
+            "**Performance** : Utiliser React.memo, useMemo, useCallback pour optimiser",
+            "**Accessibilité** : Utiliser des attributs ARIA et tester avec screen readers"
+          ]
+        }
+      ]
+    }
+  ],
+  "keyPoints": [
+    "Context API : partager des données sans prop drilling.",
+    "Redux : gestion d'état centralisée pour applications complexes.",
+    "Hooks personnalisés : réutiliser de la logique entre composants.",
+    "Tests : Jest + React Testing Library pour tester le comportement.",
+    "Bonnes pratiques : immutabilité, performance, accessibilité."
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "React Context",
+      "url": "https://react.dev/reference/react/useContext"
+    },
+    {
+      "type": "doc",
+      "title": "Redux Toolkit",
+      "url": "https://redux-toolkit.js.org/"
+    },
+    {
+      "type": "doc",
+      "title": "React Testing Library",
+      "url": "https://testing-library.com/react"
+    }
+  ]
+}

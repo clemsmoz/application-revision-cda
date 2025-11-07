@@ -27,7 +27,7 @@
             ],
             [
               "Production (Prod)",
-              "Environnement accessible aux utilisateurs finaux"
+              "Environnement accessible aux users finaux"
             ]
           ]
         }
@@ -50,11 +50,11 @@
             ],
             [
               "Canary",
-              "Déploiement progressif sur un sous-ensemble d'utilisateurs"
+              "Déploiement progressif sur un sous-ensemble d'users"
             ],
             [
               "Rolling",
-              "Mise à jour progressive des serveurs"
+              "Mise à day progressive des serveurs"
             ],
             [
               "Feature Flags",

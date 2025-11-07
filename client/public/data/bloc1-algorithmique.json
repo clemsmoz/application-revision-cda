@@ -36,12 +36,37 @@
         },
         {
           "type": "table",
-          "headers": ["Opérateur", "Symbole", "Priorité", "Exemple"],
+          "headers": [
+            "Opérateur",
+            "Symbole",
+            "Priorité",
+            "Exemple"
+          ],
           "rows": [
-            ["Parenthèses", "()", "1 (plus haute)", "(2 + 3) × 4 = 20"],
-            ["Puissance", "^", "2", "2^3 = 8"],
-            ["Multiplication / Division", "× /", "3", "4 × 5 / 2 = 10"],
-            ["Addition / Soustraction", "+ -", "4 (plus basse)", "10 + 5 - 3 = 12"]
+            [
+              "Parenthèses",
+              "()",
+              "1 (plus haute)",
+              "(2 + 3) × 4 = 20"
+            ],
+            [
+              "Puissance",
+              "^",
+              "2",
+              "2^3 = 8"
+            ],
+            [
+              "Multiplication / Division",
+              "× /",
+              "3",
+              "4 × 5 / 2 = 10"
+            ],
+            [
+              "Addition / Soustraction",
+              "+ -",
+              "4 (plus basse)",
+              "10 + 5 - 3 = 12"
+            ]
           ]
         },
         {
@@ -59,11 +84,31 @@
         },
         {
           "type": "table",
-          "headers": ["Opérateur", "Symbole", "Description", "Exemple"],
+          "headers": [
+            "Opérateur",
+            "Symbole",
+            "Description",
+            "Exemple"
+          ],
           "rows": [
-            ["AND (ET)", "&&, AND", "Vrai si les deux conditions sont vraies", "(x > 5) AND (x < 10)"],
-            ["OR (OU)", "||, OR", "Vrai si au moins une condition est vraie", "(x < 0) OR (x > 100)"],
-            ["NOT (NON)", "!, NOT", "Inverse la valeur logique", "NOT (x == 5)"]
+            [
+              "AND (ET)",
+              "&&, AND",
+              "Vrai si les deux conditions sont vraies",
+              "(x > 5) AND (x < 10)"
+            ],
+            [
+              "OR (OU)",
+              "||, OR",
+              "Vrai si au moins une condition est vraie",
+              "(x < 0) OR (x > 100)"
+            ],
+            [
+              "NOT (NON)",
+              "!, NOT",
+              "Inverse la value logique",
+              "NOT (x == 5)"
+            ]
           ]
         }
       ]
@@ -83,7 +128,7 @@
         {
           "type": "code",
           "language": "pseudo",
-          "code": "SI condition ALORS\n    // Instructions si la condition est vraie\nSINON\n    // Instructions si la condition est fausse\nFIN SI"
+          "code": "if condition ALORS\n    // Instructions if la condition est vraie\nelse\n    // Instructions if la condition est fausse\nFIN if"
         },
         {
           "type": "alert",
@@ -115,12 +160,37 @@
         },
         {
           "type": "table",
-          "headers": ["Type de Boucle", "Quand l'utiliser", "Syntaxe", "Risque"],
+          "headers": [
+            "Type de Boucle",
+            "Quand l'utiliser",
+            "Syntaxe",
+            "Risque"
+          ],
           "rows": [
-            ["FOR (Pour)", "Nombre d'itérations connu à l'avance", "FOR i = 1 TO n", "Boucle infinie si mal configurée"],
-            ["WHILE (Tant que) - Pré-testée", "Condition testée AVANT l'exécution", "WHILE condition DO", "Ne s'exécute jamais si condition fausse dès le départ"],
-            ["DO WHILE - Post-testée", "Condition testée APRÈS l'exécution (au moins 1 passage)", "DO ... WHILE condition", "S'exécute au moins une fois"],
-            ["DO UNTIL (Jusqu'à)", "Arrêt quand la condition devient vraie", "DO ... UNTIL condition", "Inverse logique de WHILE"]
+            [
+              "FOR (Pour)",
+              "Nombre d'itérations connu à l'avance",
+              "FOR i = 1 TO n",
+              "Boucle infinie si mal configurée"
+            ],
+            [
+              "WHILE (Tant que) - Pré-testée",
+              "Condition testée AVANT l'exécution",
+              "WHILE condition DO",
+              "Ne s'exécute jamais si condition fausse dès le départ"
+            ],
+            [
+              "DO WHILE - Post-testée",
+              "Condition testée APRÈS l'exécution (au moins 1 passage)",
+              "DO ... WHILE condition",
+              "S'exécute au moins une fois"
+            ],
+            [
+              "DO UNTIL (Jusqu'à)",
+              "Arrêt quand la condition devient vraie",
+              "DO ... UNTIL condition",
+              "Inverse logique de WHILE"
+            ]
           ]
         },
         {
@@ -135,7 +205,7 @@
         {
           "type": "code",
           "language": "pseudo",
-          "code": "somme ← 0\nPOUR i DE 1 À N FAIRE\n    somme ← somme + i\nFIN POUR\nAFFICHER somme"
+          "code": "sum ← 0\nfor i DE 1 À N do\n    sum ← sum + i\nFIN for\nAFFICHER sum"
         }
       ]
     },
@@ -149,10 +219,25 @@
         },
         {
           "type": "table",
-          "headers": ["Concept", "Rôle", "Retourne une valeur ?", "Exemple"],
+          "headers": [
+            "Concept",
+            "Rôle",
+            "Retourne une valeur ?",
+            "Exemple"
+          ],
           "rows": [
-            ["Procédure (Sub)", "Exécute un traitement sans retourner de valeur", "Non", "AfficherMessage()"],
-            ["Fonction", "Exécute un traitement et retourne UNE valeur typée", "Oui", "CalculerMoyenne() → nombre"]
+            [
+              "Procédure (Sub)",
+              "Exécute un traitement sans retourner de value",
+              "Non",
+              "AfficherMessage()"
+            ],
+            [
+              "Fonction",
+              "Exécute un traitement et retourne UNE value typée",
+              "Oui",
+              "CalculerMoyenne() → number"
+            ]
           ]
         },
         {
@@ -161,10 +246,25 @@
         },
         {
           "type": "table",
-          "headers": ["Mode", "Mot-clé", "Comportement", "Utilisation"],
+          "headers": [
+            "Mode",
+            "Mot-clé",
+            "Comportement",
+            "Utilisation"
+          ],
           "rows": [
-            ["Par Recopie (Valeur)", "ByVal", "La valeur est copiée. L'original est protégé.", "Quand on ne veut pas modifier la variable d'origine"],
-            ["Par Référence", "ByRef", "La variable originale peut être modifiée par la fonction.", "Quand on veut modifier la variable d'origine (attention aux effets de bord)"]
+            [
+              "Par Recopie (Valeur)",
+              "ByVal",
+              "La value est copiée. L'original est protégé.",
+              "Quand on ne veut pas modifier la variable d'origine"
+            ],
+            [
+              "Par Référence",
+              "ByRef",
+              "La variable originale peut être modifiée par la fonction.",
+              "Quand on veut modifier la variable d'origine (attention aux effets de bord)"
+            ]
           ]
         },
         {
@@ -184,11 +284,31 @@
         },
         {
           "type": "table",
-          "headers": ["Type de Portée", "Déclaration", "Accessible", "Durée de vie"],
+          "headers": [
+            "Type de Portée",
+            "Déclaration",
+            "Accessible",
+            "Durée de vie"
+          ],
           "rows": [
-            ["Locale", "À l'intérieur d'une fonction/procédure", "Uniquement dans cette fonction", "Détruite à la fin de la fonction"],
-            ["Globale (Module)", "En dehors de toute fonction", "Dans tout le module", "Toute l'exécution du programme"],
-            ["Publique", "Avec mot-clé Public", "Dans tous les modules", "Toute l'exécution du programme"]
+            [
+              "Locale",
+              "À l'intérieur d'une fonction/procédure",
+              "Uniquement dans cette fonction",
+              "Détruite à la end de la fonction"
+            ],
+            [
+              "Globale (Module)",
+              "En dehors de toute fonction",
+              "Dans tout le module",
+              "Toute l'exécution du programme"
+            ],
+            [
+              "Publique",
+              "Avec mot-clé Public",
+              "Dans tous les modules",
+              "Toute l'exécution du programme"
+            ]
           ]
         },
         {
@@ -217,7 +337,7 @@
         {
           "type": "code",
           "language": "pseudo",
-          "code": "// Déclaration d'un tableau de 10 entiers\nDÉCLARER notes[10] : ENTIER\n\n// Remplissage\nPOUR i DE 0 À 9 FAIRE\n    notes[i] ← SAISIR()\nFIN POUR"
+          "code": "// Déclaration d'un array de 10 entiers\nDÉCLARER notes[10] : ENTIER\n\n// Remplissage\nfor i DE 0 À 9 do\n    notes[i] ← SAISIR()\nFIN for"
         },
         {
           "type": "subtitle",
@@ -230,7 +350,7 @@
         {
           "type": "code",
           "language": "pseudo",
-          "code": "// Déclaration d'une matrice 3×3\nDÉCLARER matrice[3][3] : ENTIER\n\n// Parcours avec deux boucles imbriquées\nPOUR i DE 0 À 2 FAIRE\n    POUR j DE 0 À 2 FAIRE\n        matrice[i][j] ← i * j\n    FIN POUR\nFIN POUR"
+          "code": "// Déclaration d'une matrice 3×3\nDÉCLARER matrice[3][3] : ENTIER\n\n// Parcours avec deux boucles imbriquées\nfor i DE 0 À 2 do\n    for j DE 0 À 2 do\n        matrice[i][j] ← i * j\n    FIN for\nFIN for"
         },
         {
           "type": "alert",
@@ -253,12 +373,32 @@
         },
         {
           "type": "table",
-          "headers": ["Opération", "Description", "Exemple"],
+          "headers": [
+            "Opération",
+            "Description",
+            "Exemple"
+          ],
           "rows": [
-            ["Longueur", "Obtenir le nombre de caractères", "LENGTH(\"Bonjour\") → 7"],
-            ["Extraction", "Extraire une sous-chaîne", "SUBSTRING(\"Bonjour\", 0, 3) → \"Bon\""],
-            ["Concaténation", "Assembler deux chaînes", "\"Bon\" + \"jour\" → \"Bonjour\""],
-            ["Recherche", "Trouver un caractère/mot", "FIND(\"Bonjour\", \"jour\") → 3"]
+            [
+              "Longueur",
+              "Obtenir le number de caractères",
+              "LENGTH(\"Hello\") → 7"
+            ],
+            [
+              "Extraction",
+              "Extraire une sous-chaîne",
+              "SUBSTRING(\"Hello\", 0, 3) → \"Bon\""
+            ],
+            [
+              "Concaténation",
+              "Assembler deux chaînes",
+              "\"Bon\" + \"day\" → \"Hello\""
+            ],
+            [
+              "Recherche",
+              "Trouver un caractère/mot",
+              "FIND(\"Hello\", \"day\") → 3"
+            ]
           ]
         },
         {

@@ -29,22 +29,22 @@
           "rows": [
             [
               "Table (Relation)",
-              "Collection de données organisées en lignes et colonnes",
+              "Collection de données organisées en lines et columns",
               "Table `users`"
             ],
             [
               "Ligne (Tuple)",
               "Enregistrement unique dans une table",
-              "Un utilisateur spécifique"
+              "Un user spécifique"
             ],
             [
               "Colonne (Attribut)",
               "Propriété d'un enregistrement",
-              "`nom`, `email`, `age`"
+              "`name`, `email`, `age`"
             ],
             [
               "Clé Primaire (PK)",
-              "Identifiant unique d'une ligne",
+              "Identifiant unique d'une line",
               "`id` (auto-incrémenté)"
             ],
             [
@@ -110,7 +110,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "CREATE TABLE users (\n  id INT PRIMARY KEY AUTO_INCREMENT,\n  name VARCHAR(100) NOT NULL,\n  email VARCHAR(255) UNIQUE NOT NULL,\n  age INT CHECK (age >= 18),\n  date_inscription DATETIME DEFAULT CURRENT_TIMESTAMP\n);"
+          "code": "CREATE table users (\n  id INT PRIMARY KEY AUTO_INCREMENT,\n  name VARCHAR(100) NOT NULL,\n  email VARCHAR(255) UNIQUE NOT NULL,\n  age INT CHECK (age >= 18),\n  date_inscription DATETIME DEFAULT CURRENT_TIMESTAMP\n);"
         },
         {
           "type": "table",
@@ -127,8 +127,8 @@
             ],
             [
               "VARCHAR(n)",
-              "Chaîne de caractères (longueur variable)",
-              "nom VARCHAR(100)"
+              "Chaîne de caractères (length variable)",
+              "name VARCHAR(100)"
             ],
             [
               "TEXT",
@@ -142,7 +142,7 @@
             ],
             [
               "DATETIME",
-              "Date et heure",
+              "Date et time",
               "created_at DATETIME"
             ],
             [
@@ -153,7 +153,7 @@
             [
               "DECIMAL(p,s)",
               "Nombre décimal (précision, échelle)",
-              "prix DECIMAL(10,2)"
+              "price DECIMAL(10,2)"
             ]
           ]
         },
@@ -171,7 +171,7 @@
           "rows": [
             [
               "PRIMARY KEY",
-              "Identifiant unique de la ligne",
+              "Identifiant unique de la line",
               "id INT PRIMARY KEY"
             ],
             [
@@ -181,13 +181,13 @@
             ],
             [
               "UNIQUE",
-              "Valeur unique dans la colonne",
+              "Valeur unique dans la column",
               "email VARCHAR(255) UNIQUE"
             ],
             [
               "NOT NULL",
               "Valeur obligatoire",
-              "nom VARCHAR(100) NOT NULL"
+              "name VARCHAR(100) NOT NULL"
             ],
             [
               "CHECK",
@@ -208,7 +208,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Ajouter une colonne\nALTER TABLE users ADD COLUMN telephone VARCHAR(20);\n\n-- Modifier une colonne\nALTER TABLE users MODIFY COLUMN name VARCHAR(150);\n\n-- Supprimer une colonne\nALTER TABLE users DROP COLUMN telephone;\n\n-- Ajouter une contrainte\nALTER TABLE users ADD CONSTRAINT fk_role\n  FOREIGN KEY (role_id) REFERENCES roles(id);"
+          "code": "-- Add une column\nALTER table users ADD COLUMN phone VARCHAR(20);\n\n-- Edit une column\nALTER table users MODIFY COLUMN name VARCHAR(150);\n\n-- Delete une column\nALTER table users DROP COLUMN phone;\n\n-- Add une contrainte\nALTER table users ADD CONSTRAINT fk_role\n  FOREIGN KEY (role_id) REFERENCES roles(id);"
         },
         {
           "type": "subtitle",
@@ -217,7 +217,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Supprimer une table\nDROP TABLE users;\n\n-- Supprimer si elle existe (évite les erreurs)\nDROP TABLE IF EXISTS users;"
+          "code": "-- Delete une table\nDROP table users;\n\n-- Delete if elle existe (évite les erreurs)\nDROP table IF EXISTS users;"
         }
       ]
     },
@@ -236,7 +236,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Insérer un enregistrement\nINSERT INTO users (name, email, age)\nVALUES ('Alice', 'alice@example.com', 25);\n\n-- Insérer plusieurs enregistrements\nINSERT INTO users (name, email, age) VALUES\n  ('Bob', 'bob@example.com', 30),\n  ('Charlie', 'charlie@example.com', 28);\n\n-- Insérer avec toutes les colonnes (dans l'ordre)\nINSERT INTO users\nVALUES (NULL, 'David', 'david@example.com', 35, NOW());"
+          "code": "-- Insérer un enregistrement\nINSERT INTO users (name, email, age)\nVALUES ('Alice', 'alice@example.com', 25);\n\n-- Insérer plusieurs enregistrements\nINSERT INTO users (name, email, age) VALUES\n  ('Bob', 'bob@example.com', 30),\n  ('Charlie', 'charlie@example.com', 28);\n\n-- Insérer avec toutes les columns (dans l'ordre)\nINSERT INTO users\nVALUES (NULL, 'David', 'david@example.com', 35, NOW());"
         },
         {
           "type": "subtitle",
@@ -245,7 +245,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Sélectionner toutes les colonnes\nSELECT * FROM users;\n\n-- Sélectionner des colonnes spécifiques\nSELECT name, email FROM users;\n\n-- Avec condition WHERE\nSELECT * FROM users WHERE age >= 25;\n\n-- Avec plusieurs conditions\nSELECT * FROM users\nWHERE age >= 25 AND email LIKE '%@example.com';\n\n-- Trier les résultats\nSELECT * FROM users ORDER BY age DESC;\n\n-- Limiter le nombre de résultats\nSELECT * FROM users LIMIT 10;\n\n-- Pagination\nSELECT * FROM users LIMIT 10 OFFSET 20; -- Page 3 (20 enregistrements sautés)"
+          "code": "-- Sélectionner toutes les columns\nSELECT * FROM users;\n\n-- Sélectionner des columns spécifiques\nSELECT name, email FROM users;\n\n-- Avec condition WHERE\nSELECT * FROM users WHERE age >= 25;\n\n-- Avec plusieurs conditions\nSELECT * FROM users\nWHERE age >= 25 AND email LIKE '%@example.com';\n\n-- Sort les résultats\nSELECT * FROM users ORDER BY age DESC;\n\n-- Limiter le number de résultats\nSELECT * FROM users LIMIT 10;\n\n-- Pagination\nSELECT * FROM users LIMIT 10 OFFSET 20; -- Page 3 (20 enregistrements sautés)"
         },
         {
           "type": "subtitle",
@@ -291,18 +291,18 @@
             ],
             [
               "BETWEEN",
-              "Entre deux valeurs",
+              "Entre deux values",
               "age BETWEEN 20 AND 30"
             ],
             [
               "IN",
-              "Dans une liste",
+              "Dans une list",
               "age IN (20, 25, 30)"
             ],
             [
               "LIKE",
               "Correspondance de motif",
-              "nom LIKE 'A%' (commence par A)"
+              "name LIKE 'A%' (commence par A)"
             ],
             [
               "IS NULL",
@@ -323,7 +323,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Modifier un enregistrement\nUPDATE users\nSET age = 26\nWHERE id = 1;\n\n-- Modifier plusieurs colonnes\nUPDATE users\nSET name = 'Alice Dupont', age = 26\nWHERE id = 1;\n\n-- Modifier plusieurs enregistrements\nUPDATE users\nSET age = age + 1\nWHERE age < 30;"
+          "code": "-- Edit un enregistrement\nUPDATE users\nSET age = 26\nWHERE id = 1;\n\n-- Edit plusieurs columns\nUPDATE users\nSET name = 'Alice Dupont', age = 26\nWHERE id = 1;\n\n-- Edit plusieurs enregistrements\nUPDATE users\nSET age = age + 1\nWHERE age < 30;"
         },
         {
           "type": "alert",
@@ -337,7 +337,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Supprimer un enregistrement\nDELETE FROM users WHERE id = 1;\n\n-- Supprimer plusieurs enregistrements\nDELETE FROM users WHERE age < 18;\n\n-- Vider la table (delete tous les enregistrements)\nDELETE FROM users; -- ⚠️ Dangereux !\n\n-- Ou mieux (plus rapide, réinitialise les auto-incréments)\nTRUNCATE TABLE users;"
+          "code": "-- Delete un enregistrement\nDELETE FROM users WHERE id = 1;\n\n-- Delete plusieurs enregistrements\nDELETE FROM users WHERE age < 18;\n\n-- Vider la table (delete tous les enregistrements)\nDELETE FROM users; -- ⚠️ Dangereux !\n\n-- Ou mieux (plus rapide, réinitialise les auto-incréments)\nTRUNCATE table users;"
         }
       ]
     },
@@ -352,7 +352,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Tables d'exemple\nCREATE TABLE users (\n  id INT PRIMARY KEY,\n  name VARCHAR(100)\n);\n\nCREATE TABLE orders (\n  id INT PRIMARY KEY,\n  user_id INT,\n  montant DECIMAL(10,2),\n  FOREIGN KEY (user_id) REFERENCES users(id)\n);"
+          "code": "-- Tables d'exemple\nCREATE table users (\n  id INT PRIMARY KEY,\n  name VARCHAR(100)\n);\n\nCREATE table orders (\n  id INT PRIMARY KEY,\n  user_id INT,\n  amount DECIMAL(10,2),\n  FOREIGN KEY (user_id) REFERENCES users(id)\n);"
         },
         {
           "type": "subtitle",
@@ -365,7 +365,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "SELECT users.name, orders.montant\nFROM users\nINNER JOIN orders ON users.id = orders.user_id;"
+          "code": "SELECT users.name, orders.amount\nFROM users\nINNER JOIN orders ON users.id = orders.user_id;"
         },
         {
           "type": "subtitle",
@@ -378,7 +378,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "SELECT users.name, orders.montant\nFROM users\nLEFT JOIN orders ON users.id = orders.user_id;\n-- Retourne tous les users, même ceux sans commande (montant = NULL)"
+          "code": "SELECT users.name, orders.amount\nFROM users\nLEFT JOIN orders ON users.id = orders.user_id;\n-- Retourne tous les users, même ceux sans order (amount = NULL)"
         },
         {
           "type": "subtitle",
@@ -391,7 +391,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "SELECT users.name, orders.montant\nFROM users\nRIGHT JOIN orders ON users.id = orders.user_id;\n-- Retourne toutes les commandes, même celles sans user associé"
+          "code": "SELECT users.name, orders.amount\nFROM users\nRIGHT JOIN orders ON users.id = orders.user_id;\n-- Retourne toutes les orders, même celles sans user associé"
         },
         {
           "type": "table",
@@ -404,21 +404,21 @@
             [
               "INNER JOIN",
               "Correspondances uniquement",
-              "Utilisateurs ayant passé des commandes"
+              "Utilisateurs ayant passé des orders"
             ],
             [
               "LEFT JOIN",
-              "Toutes les lignes de gauche",
-              "Tous les utilisateurs (avec ou sans commandes)"
+              "Toutes les lines de gauche",
+              "Tous les users (avec ou sans orders)"
             ],
             [
               "RIGHT JOIN",
-              "Toutes les lignes de droite",
-              "Toutes les commandes (avec ou sans utilisateur)"
+              "Toutes les lines de droite",
+              "Toutes les orders (avec ou sans user)"
             ],
             [
               "FULL OUTER JOIN",
-              "Toutes les lignes des deux tables",
+              "Toutes les lines des deux tables",
               "Rarement utilisé (non supporté par MySQL)"
             ]
           ]
@@ -443,17 +443,17 @@
           "rows": [
             [
               "COUNT()",
-              "Compte le nombre de lignes",
+              "Compte le number de lines",
               "SELECT COUNT(*) FROM users;"
             ],
             [
               "SUM()",
-              "Somme des valeurs",
-              "SELECT SUM(montant) FROM orders;"
+              "Somme des values",
+              "SELECT SUM(amount) FROM orders;"
             ],
             [
               "AVG()",
-              "Moyenne des valeurs",
+              "Moyenne des values",
               "SELECT AVG(age) FROM users;"
             ],
             [
@@ -471,7 +471,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Nombre total d'users\nSELECT COUNT(*) AS total_users FROM users;\n\n-- Âge moyen\nSELECT AVG(age) AS age_moyen FROM users;\n\n-- Montant total des commandes\nSELECT SUM(montant) AS total FROM orders;"
+          "code": "-- number total d'users\nSELECT COUNT(*) AS total_users FROM users;\n\n-- Âge moyen\nSELECT AVG(age) AS age_moyen FROM users;\n\n-- Montant total des orders\nSELECT SUM(amount) AS total FROM orders;"
         },
         {
           "type": "subtitle",
@@ -484,7 +484,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Nombre de commandes par user\nSELECT user_id, COUNT(*) AS nb_commandes\nFROM orders\nGROUP BY user_id;\n\n-- Montant total des commandes par user\nSELECT user_id, SUM(montant) AS total\nFROM orders\nGROUP BY user_id;\n\n-- Avec jointure\nSELECT users.name, COUNT(orders.id) AS nb_commandes\nFROM users\nLEFT JOIN orders ON users.id = orders.user_id\nGROUP BY users.id, users.name;"
+          "code": "-- number de orders par user\nSELECT user_id, COUNT(*) AS nb_commandes\nFROM orders\nGROUP BY user_id;\n\n-- Montant total des orders par user\nSELECT user_id, SUM(amount) AS total\nFROM orders\nGROUP BY user_id;\n\n-- Avec jointure\nSELECT users.name, COUNT(orders.id) AS nb_commandes\nFROM users\nLEFT JOIN orders ON users.id = orders.user_id\nGROUP BY users.id, users.name;"
         },
         {
           "type": "subtitle",
@@ -497,7 +497,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Utilisateurs ayant passé plus de 3 commandes\nSELECT user_id, COUNT(*) AS nb_commandes\nFROM orders\nGROUP BY user_id\nHAVING COUNT(*) > 3;\n\n-- Utilisateurs ayant dépensé plus de 1000€\nSELECT user_id, SUM(montant) AS total\nFROM orders\nGROUP BY user_id\nHAVING SUM(montant) > 1000;"
+          "code": "-- Utilisateurs ayant passé plus de 3 orders\nSELECT user_id, COUNT(*) AS nb_commandes\nFROM orders\nGROUP BY user_id\nHAVING COUNT(*) > 3;\n\n-- Utilisateurs ayant dépensé plus de 1000€\nSELECT user_id, SUM(amount) AS total\nFROM orders\nGROUP BY user_id\nHAVING SUM(amount) > 1000;"
         }
       ]
     },
@@ -512,7 +512,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Utilisateurs ayant passé au moins une commande\nSELECT * FROM users\nWHERE id IN (SELECT DISTINCT user_id FROM orders);\n\n-- Utilisateurs ayant dépensé plus que la moyenne\nSELECT * FROM users\nWHERE id IN (\n  SELECT user_id FROM orders\n  GROUP BY user_id\n  HAVING SUM(montant) > (SELECT AVG(montant) FROM orders)\n);\n\n-- Sous-requête dans SELECT\nSELECT name,\n  (SELECT COUNT(*) FROM orders WHERE orders.user_id = users.id) AS nb_commandes\nFROM users;"
+          "code": "-- Utilisateurs ayant passé au moins une order\nSELECT * FROM users\nWHERE id IN (SELECT DISTINCT user_id FROM orders);\n\n-- Utilisateurs ayant dépensé plus que la average\nSELECT * FROM users\nWHERE id IN (\n  SELECT user_id FROM orders\n  GROUP BY user_id\n  HAVING SUM(amount) > (SELECT AVG(amount) FROM orders)\n);\n\n-- Sous-requête dans SELECT\nSELECT name,\n  (SELECT COUNT(*) FROM orders WHERE orders.user_id = users.id) AS nb_commandes\nFROM users;"
         }
       ]
     },
@@ -532,7 +532,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Démarrer une transaction\nSTART TRANSACTION;\n\n-- Opérations\nUPDATE comptes SET solde = solde - 100 WHERE id = 1;\nUPDATE comptes SET solde = solde + 100 WHERE id = 2;\n\n-- Valider la transaction\nCOMMIT;\n\n-- Ou annuler en cas d'erreur\nROLLBACK;"
+          "code": "-- Démarrer une transaction\nSTART TRANSACTION;\n\n-- Opérations\nUPDATE accounts SET balance = balance - 100 WHERE id = 1;\nUPDATE accounts SET balance = balance + 100 WHERE id = 2;\n\n-- Submit la transaction\nCOMMIT;\n\n-- Ou Cancel en cas d'error\nROLLBACK;"
         },
         {
           "type": "alert",
@@ -553,7 +553,7 @@
         {
           "type": "code",
           "language": "sql",
-          "code": "-- Créer un index\nCREATE INDEX idx_email ON users(email);\n\n-- Index sur plusieurs colonnes\nCREATE INDEX idx_nom_prenom ON users(name, firstName);\n\n-- Supprimer un index\nDROP INDEX idx_email ON users;"
+          "code": "-- Créer un index\nCREATE INDEX idx_email ON users(email);\n\n-- Index sur plusieurs columns\nCREATE INDEX idx_nom_prenom ON users(name, firstName);\n\n-- Delete un index\nDROP INDEX idx_email ON users;"
         },
         {
           "type": "table",

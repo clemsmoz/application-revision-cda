@@ -159,16 +159,16 @@
             [
               "PlantUML",
               "Open Source (code)",
-              "Diagrammes en mode texte, versionnable"
+              "Diagrammes en mode text, versionnable"
             ],
             [
               "Lucidchart",
-              "En ligne",
+              "En line",
               "Collaboratif, facile à prendre en main"
             ],
             [
               "Draw.io (diagrams.net)",
-              "Gratuit, en ligne",
+              "Gratuit, en line",
               "Polyvalent, pas spécialisé UML"
             ]
           ]
@@ -250,7 +250,7 @@
         {
           "type": "code",
           "language": "text",
-          "code": "┌─────────────────────────────────────┐\n│         Système E-Commerce          │\n│                                     │\n│   ┌──────────────┐                  │\n│   │ S'authentifier│                 │\n│   └──────────────┘                  │\n│          ↑                          │\n│   ┌──────────────┐                  │\n│   │Passer commande│                 │\n│   └──────────────┘                  │\n│          ↑                          │\n└──────────┼──────────────────────────┘\n           │\n        Client\n        (👤)"
+          "code": "┌─────────────────────────────────────┐\n│         Système E-Commerce          │\n│                                     │\n│   ┌──────────────┐                  │\n│   │ S'authentifier│                 │\n│   └──────────────┘                  │\n│          ↑                          │\n│   ┌──────────────┐                  │\n│   │Passer order│                 │\n│   └──────────────┘                  │\n│          ↑                          │\n└──────────┼──────────────────────────┘\n           │\n        client\n        (👤)"
         },
         {
           "type": "subtitle",
@@ -267,12 +267,12 @@
             [
               "<<include>>",
               "Factorisation : le cas A inclut TOUJOURS le cas B",
-              "\"Passer commande\" include \"Vérifier stock\""
+              "\"Passer order\" include \"Vérifier stock\""
             ],
             [
               "<<extend>>",
               "Extension conditionnelle : le cas B étend le cas A dans certains cas",
-              "\"Passer commande\" extend \"Appliquer code promo\""
+              "\"Passer order\" extend \"Appliquer code promo\""
             ]
           ]
         },
@@ -324,7 +324,7 @@
           "rows": [
             [
               "État initial",
-              "Cercle noir plein",
+              "Cercle noir full",
               "Point de départ"
             ],
             [
@@ -357,7 +357,7 @@
         {
           "type": "code",
           "language": "text",
-          "code": "Exemple : États d'une commande\n\n  ●  (état initial)\n  ↓\n┌─────────────┐\n│  En attente │\n└─────────────┘\n  ↓ [paiement validé]\n┌─────────────┐\n│  En cours   │\n└─────────────┘\n  ↓ [expédition]\n┌─────────────┐\n│   Livrée    │\n└─────────────┘\n  ↓\n  ◉  (état final)"
+          "code": "Exemple : États d'une order\n\n  ●  (état initial)\n  ↓\n┌─────────────┐\n│  Pending │\n└─────────────┘\n  ↓ [paiement validé]\n┌─────────────┐\n│  In progress   │\n└─────────────┘\n  ↓ [expédition]\n┌─────────────┐\n│   Livrée    │\n└─────────────┘\n  ↓\n  ◉  (état final)"
         },
         {
           "type": "subtitle",
@@ -366,7 +366,7 @@
         {
           "type": "code",
           "language": "text",
-          "code": "événement [condition] / action\n\nExemple :\npaiement [montant > 0] / envoyer confirmation"
+          "code": "événement [condition] / action\n\nExemple :\npaiement [amount > 0] / Send confirmation"
         },
         {
           "type": "subtitle",
@@ -410,7 +410,7 @@
           "rows": [
             [
               "Nœud initial",
-              "Cercle noir plein",
+              "Cercle noir full",
               "Point de départ"
             ],
             [
@@ -458,7 +458,7 @@
         {
           "type": "code",
           "language": "text",
-          "code": "Exemple : Processus de commande\n\n  ●  (début)\n  ↓\n┌──────────────────┐\n│ Saisir commande  │\n└──────────────────┘\n  ↓\n  ◇  [stock disponible ?]\n  ├─ Oui → ┌──────────────┐\n  │        │ Préparer     │\n  │        └──────────────┘\n  │             ↓\n  │        ┌──────────────┐\n  │        │ Expédier     │\n  │        └──────────────┘\n  │\n  └─ Non → ┌──────────────┐\n           │ Notifier     │\n           └──────────────┘\n                ↓\n                ◉  (fin)"
+          "code": "Exemple : Processus de order\n\n  ●  (début)\n  ↓\n┌──────────────────┐\n│ Saisir order  │\n└──────────────────┘\n  ↓\n  ◇  [stock available ?]\n  ├─ Oui → ┌──────────────┐\n  │        │ Préparer     │\n  │        └──────────────┘\n  │             ↓\n  │        ┌──────────────┐\n  │        │ Expédier     │\n  │        └──────────────┘\n  │\n  └─ Non → ┌──────────────┐\n           │ Notifier     │\n           └──────────────┘\n                ↓\n                ◉  (end)"
         },
         {
           "type": "subtitle",
@@ -504,7 +504,7 @@
         {
           "type": "code",
           "language": "text",
-          "code": "┌─────────────────────┐\n│      Utilisateur    │ ← Nom de la classe\n├─────────────────────┤\n│ - id: int           │ ← Attributs (- = privé, + = public, # = protégé)\n│ - name: string       │\n│ - email: string     │\n├─────────────────────┤\n│ + seConnecter()     │ ← Méthodes\n│ + seDeconnecter()   │\n└─────────────────────┘"
+          "code": "┌─────────────────────┐\n│      user    │ ← name de la class\n├─────────────────────┤\n│ - id: int           │ ← Attributs (- = privé, + = public, # = protégé)\n│ - name: string       │\n│ - email: string     │\n├─────────────────────┤\n│ + seConnecter()     │ ← Méthodes\n│ + seDeconnecter()   │\n└─────────────────────┘"
         },
         {
           "type": "subtitle",
@@ -587,7 +587,7 @@
         {
           "type": "code",
           "language": "text",
-          "code": "Exemple : Client et Commandes\n\n┌─────────┐         1      0..*    ┌─────────┐\n│ Client  │─────────────────────────│Commande │\n└─────────┘                         └─────────┘\n\nUn client peut avoir 0 ou plusieurs commandes.\nUne commande appartient à exactement 1 client."
+          "code": "Exemple : client et Commandes\n\n┌─────────┐         1      0..*    ┌─────────┐\n│ client  │─────────────────────────│Commande │\n└─────────┘                         └─────────┘\n\nUn client peut avoir 0 ou plusieurs orders.\nUne order appartient à exactement 1 client."
         }
       ]
     },
@@ -625,18 +625,18 @@
             ],
             [
               "Activation",
-              "Rectangle sur la ligne de vie (période d'activité)"
+              "Rectangle sur la line de vie (période d'activité)"
             ],
             [
               "Message de retour",
-              "Flèche pointillée (valeur de retour)"
+              "Flèche pointillée (value de retour)"
             ]
           ]
         },
         {
           "type": "code",
           "language": "text",
-          "code": "Exemple : Authentification\n\nClient    Contrôleur    Service    BDD\n  │            │           │         │\n  │─login()───>│           │         │\n  │            │─verify()─>│         │\n  │            │           │─query()>│\n  │            │           │<────────│\n  │            │<──────────│         │\n  │<───token───│           │         │\n  │            │           │         │"
+          "code": "Exemple : Authentification\n\nclient    Contrôleur    Service    BDD\n  │            │           │         │\n  │─login()───>│           │         │\n  │            │─verify()─>│         │\n  │            │           │─query()>│\n  │            │           │<────────│\n  │            │<──────────│         │\n  │<───token───│           │         │\n  │            │           │         │"
         },
         {
           "type": "subtitle",
@@ -668,12 +668,12 @@
             [
               "Création",
               "─────> (avec <<create>>)",
-              "Création d'un objet"
+              "Création d'un object"
             ],
             [
               "Destruction",
               "X",
-              "Destruction d'un objet"
+              "Destruction d'un object"
             ]
           ]
         }
