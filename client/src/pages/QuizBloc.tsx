@@ -58,7 +58,8 @@ export default function QuizBloc() {
         const response = await fetch('/data/quiz-questions.json');
         if (response.ok) {
           const data = await response.json();
-          const blocQuestions = data[blocId] || [];
+          // Filtrer les questions par bloc
+          const blocQuestions = data.questions?.filter((q: any) => q.bloc === blocId) || [];
           setQuestions(blocQuestions);
           setAnsweredQuestions(new Array(blocQuestions.length).fill(false));
         }
