@@ -59,7 +59,31 @@ export default function QuizBloc() {
         if (response.ok) {
           const data = await response.json();
           // Filtrer les questions par bloc
-          const blocQuestions = data.questions?.filter((q: any) => q.bloc === blocId) || [];
+          let blocQuestions = data.questions?.filter((q: any) => q.bloc === blocId) || [];
+          
+          // Charger la configuration si elle existe
+          const configStr = localStorage.getItem(`quiz-config-${blocId}`);
+          if (configStr) {
+            try {
+              const config = JSON.parse(configStr);
+              
+              // Limiter le nombre de questions
+              if (config.questionCount && config.questionCount < blocQuestions.length) {
+                blocQuestions = blocQuestions.slice(0, config.questionCount);
+              }
+              
+              // Mélanger les questions si demandé
+              if (config.randomOrder) {
+                blocQuestions = blocQuestions.sort(() => Math.random() - 0.5);
+              }
+              
+              // Nettoyer la config après utilisation
+              localStorage.removeItem(`quiz-config-${blocId}`);
+            } catch (e) {
+              console.error('Erreur lors du chargement de la config:', e);
+            }
+          }
+          
           setQuestions(blocQuestions);
           setAnsweredQuestions(new Array(blocQuestions.length).fill(false));
         }

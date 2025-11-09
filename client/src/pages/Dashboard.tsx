@@ -12,7 +12,7 @@ export default function Dashboard() {
       description: 'Algorithmique, Git, HTML/CSS, JavaScript, React, Tests, Sécurité',
       icon: Code,
       color: 'from-blue-500 to-blue-600',
-      modules: 12,
+      modules: 20,
     },
     {
       id: 'bloc2',
@@ -21,7 +21,7 @@ export default function Dashboard() {
       description: 'UX/UI, Figma, SQL, UML, NoSQL, Conception BDD, Droit',
       icon: Database,
       color: 'from-purple-500 to-purple-600',
-      modules: 7,
+      modules: 10,
     },
     {
       id: 'bloc3',
@@ -37,13 +37,13 @@ export default function Dashboard() {
   const stats = [
     {
       label: 'Modules',
-      value: '22',
+      value: '33',
       icon: BookOpen,
       color: 'text-blue-600',
     },
     {
       label: 'Questions Quiz',
-      value: '20+',
+      value: '107',
       icon: Brain,
       color: 'text-purple-600',
     },
@@ -67,7 +67,7 @@ export default function Dashboard() {
           Application de Révision CDA
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Révisez efficacement les 22 modules du programme Concepteur Développeur d'Applications
+          Révisez efficacement les 33 modules du programme Concepteur Développeur d'Applications
           avec des fiches détaillées et des quiz interactifs.
         </p>
       </div>

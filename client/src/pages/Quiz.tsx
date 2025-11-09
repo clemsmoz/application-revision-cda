@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Code, Database, Rocket, ArrowRight, Brain, BarChart } from 'lucide-react';
+import { Code, Database, Rocket, ArrowRight, Brain, BarChart, Settings } from 'lucide-react';
 import { useQuizHistory } from '@/hooks/useQuizHistory';
 
 export default function Quiz() {
@@ -115,12 +115,20 @@ export default function Quiz() {
                     <span className="text-gray-500">{bloc.questions} questions</span>
                     <span className="text-gray-500">~{Math.ceil(bloc.questions * 1.5)} min</span>
                   </div>
-                  <Link href={`/quiz/${bloc.id}`}>
-                    <Button className="w-full">
-                      Commencer le quiz
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
+                  <div className="flex gap-2">
+                    <Link href={`/quiz/${bloc.id}/config`} className="flex-1">
+                      <Button variant="outline" className="w-full">
+                        <Settings className="w-4 h-4 mr-2" />
+                        Configurer
+                      </Button>
+                    </Link>
+                    <Link href={`/quiz/${bloc.id}`} className="flex-1">
+                      <Button className="w-full">
+                        Démarrer
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             );
