@@ -51,7 +51,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Extensions VS Code essentielles** : ESLint, Prettier, GitLens, Live Server, Auto Rename Tag, Path Intellisense."
+          "text": "Extensions VS Code essentielles : ESLint, Prettier, GitLens, Live Server, Auto Rename Tag, Path Intellisense."
         }
       ]
     },
@@ -106,7 +106,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Terminaux modernes** : Windows Terminal, iTerm2 (macOS), Terminator (Linux), Hyper."
+          "text": "Terminaux modernes : Windows Terminal, iTerm2 (macOS), Terminator (Linux), Hyper."
         }
       ]
     },
@@ -160,12 +160,12 @@
         {
           "type": "list",
           "items": [
-            "**Organisation** : Structure de dossiers claire et cohérente",
-            "**Nommage** : Conventions de nommage (camelCase, snake_case, kebab-case)",
-            "**Sauvegarde** : Commits Git réguliers",
-            "**Documentation** : README.md à jour",
-            "**Environnements** : Séparer dev, staging, production",
-            "**Variables d'environnement** : Utiliser fichiers de configuration pour les secrets"
+            "Organisation : Structure de dossiers claire et cohérente",
+            "Nommage : Conventions de nommage (camelCase, snake_case, kebab-case)",
+            "Sauvegarde : Commits Git réguliers",
+            "Documentation : README.md à jour",
+            "Environnements : Séparer dev, staging, production",
+            "Variables d'environnement : Utiliser fichiers de configuration pour les secrets"
           ]
         }
       ]

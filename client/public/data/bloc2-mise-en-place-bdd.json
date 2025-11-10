@@ -27,7 +27,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **sauvegardes** protègent contre la perte de données."
+          "text": "Les sauvegardes protègent contre la perte de données."
         },
         {
           "type": "table",
@@ -64,11 +64,11 @@
         {
           "type": "list",
           "items": [
-            "**Index** : Accélérer les requêtes SELECT",
-            "**EXPLAIN** : Analyser les plans d'exécution",
-            "**Vacuum** (PostgreSQL) : Nettoyer les données obsolètes",
-            "**Connection pooling** : Réutiliser les connexions",
-            "**Partitionnement** : Diviser les grandes tables"
+            "Index : Accélérer les requêtes SELECT",
+            "EXPLAIN : Analyser les plans d'exécution",
+            "Vacuum (PostgreSQL) : Nettoyer les données obsolètes",
+            "Connection pooling : Réutiliser les connexions",
+            "Partitionnement : Diviser les grandes tables"
           ]
         }
       ]

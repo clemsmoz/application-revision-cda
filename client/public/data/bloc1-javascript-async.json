@@ -17,7 +17,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Le **DOM** est une **API** (Application Programming Interface) qui permet à JavaScript d'accéder et de manipuler les éléments HTML et CSS d'une page web en temps réel."
+          "text": "Le DOM est une API (Application Programming Interface) qui permet à JavaScript d'accéder et de manipuler les éléments HTML et CSS d'une page web en temps réel."
         },
         {
           "type": "code",
@@ -32,7 +32,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "**window** est l'objet global du navigateur. Il représente la fenêtre du navigateur et contient toutes les variables globales et fonctions."
+          "text": "window est l'objet global du navigateur. Il représente la fenêtre du navigateur et contient toutes les variables globales et fonctions."
         },
         {
           "type": "table",
@@ -92,7 +92,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Pour manipuler le DOM, il faut d'abord **sélectionner** les éléments HTML. Les méthodes modernes **querySelector()** et **querySelectorAll()** sont universelles et efficaces."
+          "text": "Pour manipuler le DOM, il faut d'abord sélectionner les éléments HTML. Les méthodes modernes querySelector() et querySelectorAll() sont universelles et efficaces."
         },
         {
           "type": "table",
@@ -137,7 +137,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**querySelectorAll()** retourne une **NodeList** (pas un tableau). Pour utiliser les méthodes de tableau, convertir avec `Array.from(nodeList)` ou `[...nodeList]`."
+          "text": "querySelectorAll() retourne une NodeList (pas un tableau). Pour utiliser les méthodes de tableau, convertir avec `Array.from(nodeList)` ou `[...nodeList]`."
         }
       ]
     },
@@ -217,7 +217,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Plutôt que de modifier les styles inline, il est préférable d'ajouter/retirer des **classes CSS** définies dans une feuille de style."
+          "text": "Plutôt que de modifier les styles inline, il est préférable d'ajouter/retirer des classes CSS définies dans une feuille de style."
         },
         {
           "type": "table",
@@ -262,7 +262,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "La **programmation événementielle** permet de réagir aux actions de l'utilisateur (clics, saisies clavier, mouvements de souris, etc.)."
+          "text": "La programmation événementielle permet de réagir aux actions de l'utilisateur (clics, saisies clavier, mouvements de souris, etc.)."
         },
         {
           "type": "subtitle",
@@ -270,7 +270,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Lorsqu'un événement se produit, il se propage en **trois phases** :"
+          "text": "Lorsqu'un événement se produit, il se propage en trois phases :"
         },
         {
           "type": "code",
@@ -280,7 +280,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "Par défaut, les écouteurs d'événements sont attachés en phase **BUBBLING**. On peut choisir la phase CAPTURE en passant `true` comme 3ème paramètre."
+          "text": "Par défaut, les écouteurs d'événements sont attachés en phase BUBBLING. On peut choisir la phase CAPTURE en passant `true` comme 3ème paramètre."
         }
       ]
     },
@@ -290,7 +290,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Un **écouteur d'événements** (event listener) est une fonction qui s'exécute lorsqu'un événement se produit."
+          "text": "Un écouteur d'événements (event listener) est une fonction qui s'exécute lorsqu'un événement se produit."
         },
         {
           "type": "subtitle",
@@ -391,7 +391,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les événements clavier sont écoutés sur **window** ou sur un élément spécifique (input)."
+          "text": "Les événements clavier sont écoutés sur window ou sur un élément spécifique (input)."
         },
         {
           "type": "code",
@@ -441,7 +441,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "JavaScript est **monothread** : il ne peut exécuter qu'une seule instruction à la fois. Les opérations longues (requêtes réseau, lecture de fichiers) bloqueraient l'interface."
+          "text": "JavaScript est monothread : il ne peut exécuter qu'une seule instruction à la fois. Les opérations longues (requêtes réseau, lecture de fichiers) bloqueraient l'interface."
         },
         {
           "type": "definition",
@@ -461,7 +461,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Une **Promise** représente une valeur qui sera disponible maintenant, plus tard, ou jamais. Elle a trois états : **pending** (en attente), **fulfilled** (résolue), **rejected** (rejetée)."
+          "text": "Une Promise représente une valeur qui sera disponible maintenant, plus tard, ou jamais. Elle a trois états : pending (en attente), fulfilled (résolue), rejected (rejetée)."
         },
         {
           "type": "code",
@@ -480,7 +480,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**then()** et **catch()** retournent toujours une Promise, permettant le **chaînage**."
+          "text": "then() et catch() retournent toujours une Promise, permettant le chaînage."
         }
       ]
     },
@@ -490,7 +490,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "L'**API Fetch** permet d'effectuer des requêtes HTTP (GET, POST, PUT, DELETE) de manière moderne et basée sur les Promises."
+          "text": "L'API Fetch permet d'effectuer des requêtes HTTP (GET, POST, PUT, DELETE) de manière moderne et basée sur les Promises."
         },
         {
           "type": "subtitle",
@@ -548,7 +548,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "**async/await** est une syntaxe moderne qui rend le code asynchrone plus lisible, en le faisant ressembler à du code synchrone."
+          "text": "async/await est une syntaxe moderne qui rend le code asynchrone plus lisible, en le faisant ressembler à du code synchrone."
         },
         {
           "type": "code",
@@ -562,10 +562,10 @@
         {
           "type": "list",
           "items": [
-            "**async** rend une fonction asynchrone (elle retourne toujours une Promise)",
-            "**await** ne peut être utilisé QUE dans une fonction async",
-            "**await** attend la résolution de la Promise avant de continuer",
-            "Utiliser **try/catch** pour gérer les erreurs"
+            "async rend une fonction asynchrone (elle retourne toujours une Promise)",
+            "await ne peut être utilisé QUE dans une fonction async",
+            "await attend la résolution de la Promise avant de continuer",
+            "Utiliser try/catch pour gérer les erreurs"
           ]
         },
         {
@@ -576,7 +576,7 @@
         {
           "type": "alert",
           "level": "warning",
-          "text": "**await** bloque l'exécution de la fonction async, mais **pas le reste du programme**. Le traitement asynchrone est toujours là, simplement masqué par la syntaxe."
+          "text": "await bloque l'exécution de la fonction async, mais pas le reste du programme. Le traitement asynchrone est toujours là, simplement masqué par la syntaxe."
         }
       ]
     },
@@ -586,7 +586,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le débogage du code asynchrone est plus complexe. Utiliser les **outils de développement du navigateur**."
+          "text": "Le débogage du code asynchrone est plus complexe. Utiliser les outils de développement du navigateur."
         },
         {
           "type": "subtitle",
@@ -613,7 +613,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Principe fondamental du front-end** : Toujours un double travail → Gérer les variables du modèle JS + Répercuter leur état dans le DOM."
+          "text": "Principe fondamental du front-end : Toujours un double travail → Gérer les variables du modèle JS + Répercuter leur état dans le DOM."
         }
       ]
     }

@@ -52,7 +52,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **streams** permettent de traiter des données volumineuses par morceaux (chunks) sans charger tout en mémoire."
+          "text": "Les streams permettent de traiter des données volumineuses par morceaux (chunks) sans charger tout en mémoire."
         },
         {
           "type": "table",
@@ -113,12 +113,12 @@
         {
           "type": "list",
           "items": [
-            "**Clustering** : Utiliser tous les cœurs CPU avec le module `cluster`",
-            "**Caching** : Redis pour mettre en cache les requêtes fréquentes",
-            "**Compression** : Compresser les réponses HTTP avec `compression`",
-            "**Connection pooling** : Réutiliser les connexions DB",
-            "**Profiling** : Identifier les bottlenecks avec `--inspect` et Chrome DevTools",
-            "**Load balancing** : Répartir la charge avec Nginx ou HAProxy"
+            "Clustering : Utiliser tous les cœurs CPU avec le module `cluster`",
+            "Caching : Redis pour mettre en cache les requêtes fréquentes",
+            "Compression : Compresser les réponses HTTP avec `compression`",
+            "Connection pooling : Réutiliser les connexions DB",
+            "Profiling : Identifier les bottlenecks avec `--inspect` et Chrome DevTools",
+            "Load balancing : Répartir la charge avec Nginx ou HAProxy"
           ]
         },
         {

@@ -12,14 +12,14 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **variants** permettent de créer des variantes d'un même composant (états, tailles, couleurs)."
+          "text": "Les variants permettent de créer des variantes d'un même composant (états, tailles, couleurs)."
         },
         {
           "type": "list",
           "items": [
-            "**Composant** : Élément réutilisable (bouton, carte)",
-            "**Variant** : Variante du composant (primary/secondary, small/large)",
-            "**Properties** : Propriétés personnalisées (boolean, text)"
+            "Composant : Élément réutilisable (bouton, carte)",
+            "Variant : Variante du composant (primary/secondary, small/large)",
+            "Properties : Propriétés personnalisées (boolean, text)"
           ]
         }
       ]
@@ -30,15 +30,15 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "L'**Auto Layout** rend les frames responsives automatiquement."
+          "text": "L'Auto Layout rend les frames responsives automatiquement."
         },
         {
           "type": "list",
           "items": [
-            "**Direction** : Horizontal ou vertical",
-            "**Spacing** : Espacement entre éléments",
-            "**Padding** : Marges internes",
-            "**Resizing** : Hug contents ou Fill container"
+            "Direction : Horizontal ou vertical",
+            "Spacing : Espacement entre éléments",
+            "Padding : Marges internes",
+            "Resizing : Hug contents ou Fill container"
           ]
         }
       ]

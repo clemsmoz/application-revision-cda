@@ -12,7 +12,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **cahier des charges** (CDC) est un document contractuel qui définit les besoins, les objectifs et les contraintes d'un projet. Il sert de référence pour toutes les parties prenantes."
+          "text": "Le cahier des charges (CDC) est un document contractuel qui définit les besoins, les objectifs et les contraintes d'un projet. Il sert de référence pour toutes les parties prenantes."
         },
         {
           "type": "table",
@@ -44,15 +44,15 @@
         {
           "type": "list",
           "items": [
-            "**1. Présentation du projet** : Contexte, objectifs, cible",
-            "**2. Périmètre** : Ce qui est inclus/exclu",
-            "**3. Besoins fonctionnels** : Fonctionnalités attendues",
-            "**4. Besoins techniques** : Architecture, technologies, hébergement",
-            "**5. Contraintes** : Délais, budget, normes (RGPD, accessibilité)",
-            "**6. Livrables** : Ce qui sera fourni (code, documentation, formation)",
-            "**7. Planning** : Phases, jalons, deadlines",
-            "**8. Budget** : Estimation des coûts",
-            "**9. Critères d'acceptation** : Comment valider le projet"
+            "1. Présentation du projet : Contexte, objectifs, cible",
+            "2. Périmètre : Ce qui est inclus/exclu",
+            "3. Besoins fonctionnels : Fonctionnalités attendues",
+            "4. Besoins techniques : Architecture, technologies, hébergement",
+            "5. Contraintes : Délais, budget, normes (RGPD, accessibilité)",
+            "6. Livrables : Ce qui sera fourni (code, documentation, formation)",
+            "7. Planning : Phases, jalons, deadlines",
+            "8. Budget : Estimation des coûts",
+            "9. Critères d'acceptation : Comment valider le projet"
           ]
         }
       ]
@@ -63,7 +63,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **spécifications fonctionnelles** décrivent **ce que** le système doit faire du point de vue utilisateur."
+          "text": "Les spécifications fonctionnelles décrivent ce que le système doit faire du point de vue utilisateur."
         },
         {
           "type": "table",
@@ -97,7 +97,7 @@
         {
           "type": "code",
           "language": "markdown",
-          "code": "### User Story Exemple\n\n**En while que** visiteur,  \n**Je veux** créer un compte,  \n**Afin de** sauvegarder mes préférences.\n\n**Critères d'acceptation** :\n- Formulaire avec email, mot de passe, confirmation\n- Validation email (format, unicité)\n- Mot de passe : min 8 caractères, 1 majuscule, 1 chiffre\n- email de confirmation envoyé\n- Redirection vers array de bord après inscription"
+          "code": "### User Story Exemple\n\nEn while que visiteur,  \nJe veux créer un compte,  \nAfin de sauvegarder mes préférences.\n\nCritères d'acceptation :\n- Formulaire avec email, mot de passe, confirmation\n- Validation email (format, unicité)\n- Mot de passe : min 8 caractères, 1 majuscule, 1 chiffre\n- email de confirmation envoyé\n- Redirection vers array de bord après inscription"
         }
       ]
     },
@@ -107,7 +107,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **spécifications techniques** décrivent **comment** le système sera construit."
+          "text": "Les spécifications techniques décrivent comment le système sera construit."
         },
         {
           "type": "table",
@@ -154,7 +154,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **planning** découpe le projet en phases avec des jalons. Le **budget** estime les coûts (développement, hébergement, maintenance)."
+          "text": "Le planning découpe le projet en phases avec des jalons. Le budget estime les coûts (développement, hébergement, maintenance)."
         },
         {
           "type": "table",
@@ -205,12 +205,12 @@
         {
           "type": "list",
           "items": [
-            "**Clarté** : Langage simple, pas de jargon technique pour les parties fonctionnelles",
-            "**Précision** : Éviter les termes vagues (\"rapide\", \"performant\") → quantifier",
-            "**Priorisation** : MoSCoW (Must have, Should have, Could have, Won't have)",
-            "**Validation** : Faire valider par le client à chaque étape",
-            "**Évolutivité** : Prévoir les évolutions futures",
-            "**Traçabilité** : Numéroter les exigences pour le suivi"
+            "Clarté : Langage simple, pas de jargon technique pour les parties fonctionnelles",
+            "Précision : Éviter les termes vagues (\"rapide\", \"performant\") → quantifier",
+            "Priorisation : MoSCoW (Must have, Should have, Could have, Won't have)",
+            "Validation : Faire valider par le client à chaque étape",
+            "Évolutivité : Prévoir les évolutions futures",
+            "Traçabilité : Numéroter les exigences pour le suivi"
           ]
         }
       ]

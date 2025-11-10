@@ -12,7 +12,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **rebase** et le **merge** sont deux stratégies pour intégrer les modifications d'une branche dans une autre."
+          "text": "Le rebase et le merge sont deux stratégies pour intégrer les modifications d'une branche dans une autre."
         },
         {
           "type": "table",
@@ -98,15 +98,15 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **Pull Requests** (GitHub) ou **Merge Requests** (GitLab) permettent de proposer des modifications et de les faire réviser avant fusion."
+          "text": "Les Pull Requests (GitHub) ou Merge Requests (GitLab) permettent de proposer des modifications et de les faire réviser avant fusion."
         },
         {
           "type": "list",
           "items": [
-            "**Code Review** : Relecture par les pairs",
-            "**Tests automatiques** : CI/CD vérifie les tests",
-            "**Discussions** : Commentaires sur le code",
-            "**Approbation** : Validation avant merge"
+            "Code Review : Relecture par les pairs",
+            "Tests automatiques : CI/CD vérifie les tests",
+            "Discussions : Commentaires sur le code",
+            "Approbation : Validation avant merge"
           ]
         }
       ]

@@ -12,7 +12,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le Web repose sur une architecture **client-serveur**. Le **front-end** est la partie qui gère l'interface utilisateur dans le navigateur."
+          "text": "Le Web repose sur une architecture client-serveur. Le front-end est la partie qui gère l'interface utilisateur dans le navigateur."
         },
         {
           "type": "definition",
@@ -21,7 +21,7 @@
         },
         {
           "type": "paragraph",
-          "text": "React est basé sur **HTML/CSS/JavaScript** et permet d'implémenter des fonctionnalités dans l'interface de manière efficace et maintenable."
+          "text": "React est basé sur HTML/CSS/JavaScript et permet d'implémenter des fonctionnalités dans l'interface de manière efficace et maintenable."
         },
         {
           "type": "table",
@@ -56,7 +56,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "React utilise le concept de **Single Page Application** : l'intégralité de l'application est chargée dès la première page, puis seules les zones nécessaires sont mises à jour."
+          "text": "React utilise le concept de Single Page Application : l'intégralité de l'application est chargée dès la première page, puis seules les zones nécessaires sont mises à jour."
         },
         {
           "type": "table",
@@ -86,7 +86,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Avantages SPA** : Communication client-serveur optimisée, interface plus réactive, meilleure expérience utilisateur."
+          "text": "Avantages SPA : Communication client-serveur optimisée, interface plus réactive, meilleure expérience utilisateur."
         }
       ]
     },
@@ -130,11 +130,11 @@
         },
         {
           "type": "paragraph",
-          "text": "**Objectif commun** : Rendre facile, rapide et maintenable la création d'interfaces web modernes."
+          "text": "Objectif commun : Rendre facile, rapide et maintenable la création d'interfaces web modernes."
         },
         {
           "type": "paragraph",
-          "text": "**Principes communs** : SPA, affichage partiel, requêtes AJAX, composants réutilisables."
+          "text": "Principes communs : SPA, affichage partiel, requêtes AJAX, composants réutilisables."
         }
       ]
     },
@@ -144,7 +144,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Pour créer une nouvelle application React, on utilise **Node.js** et l'outil **create-react-app** (ou Vite, plus moderne)."
+          "text": "Pour créer une nouvelle application React, on utilise Node.js et l'outil create-react-app (ou Vite, plus moderne)."
         },
         {
           "type": "code",
@@ -153,7 +153,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Node.js** permet d'avoir un serveur web de développement sur la machine locale. Le **rafraîchissement automatique** (Hot Module Replacement) met à jour l'application dans le navigateur dès qu'on sauvegarde un fichier."
+          "text": "Node.js permet d'avoir un serveur web de développement sur la machine locale. Le rafraîchissement automatique (Hot Module Replacement) met à jour l'application dans le navigateur dès qu'on sauvegarde un fichier."
         },
         {
           "type": "subtitle",
@@ -172,7 +172,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **composant** est la brique de base d'une application React. Il doit être **simple** et **réutilisable**. Il s'utilise comme une balise HTML personnalisée."
+          "text": "Le composant est la brique de base d'une application React. Il doit être simple et réutilisable. Il s'utilise comme une balise HTML personnalisée."
         },
         {
           "type": "code",
@@ -196,7 +196,7 @@
         {
           "type": "alert",
           "level": "warning",
-          "text": "**Différences JSX vs HTML** : `className` au lieu de `class`, `htmlFor` au lieu de `for`, attributs en camelCase (`onClick`, `onChange`)."
+          "text": "Différences JSX vs HTML : `className` au lieu de `class`, `htmlFor` au lieu de `for`, attributs en camelCase (`onClick`, `onChange`)."
         },
         {
           "type": "subtitle",
@@ -204,7 +204,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Bootstrap** est souvent utilisé avec React pour avoir rapidement des composants graphiques basiques (boutons, formulaires, grilles)."
+          "text": "Bootstrap est souvent utilisé avec React pour avoir rapidement des composants graphiques basiques (boutons, formulaires, grilles)."
         },
         {
           "type": "code",
@@ -224,7 +224,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Le state est géré avec le **hook useState()**."
+          "text": "Le state est géré avec le hook useState()."
         },
         {
           "type": "code",
@@ -234,7 +234,7 @@
         {
           "type": "alert",
           "level": "warning",
-          "text": "**Ne JAMAIS modifier directement le state** : `count++` ❌. Toujours utiliser le setter : `setCount(count + 1)` ✅."
+          "text": "Ne JAMAIS modifier directement le state : `count++` ❌. Toujours utiliser le setter : `setCount(count + 1)` ✅."
         },
         {
           "type": "subtitle",
@@ -242,7 +242,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**useEffect()** permet d'exécuter du code au démarrage du composant ou lorsque certaines variables changent."
+          "text": "useEffect() permet d'exécuter du code au démarrage du composant ou lorsque certaines variables changent."
         },
         {
           "type": "code",
@@ -278,7 +278,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "**useCallback()** permet d'optimiser les performances en mémorisant une fonction pour éviter qu'elle soit recréée à chaque re-render."
+          "text": "useCallback() permet d'optimiser les performances en mémorisant une fonction pour éviter qu'elle soit recréée à chaque re-render."
         },
         {
           "type": "code",
@@ -288,7 +288,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**React Developer Tools** : Extension navigateur indispensable pour déboguer les composants, le state et les props."
+          "text": "React Developer Tools : Extension navigateur indispensable pour déboguer les composants, le state et les props."
         }
       ]
     },
@@ -298,7 +298,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "L'affichage conditionnel se gère en JavaScript avec **if/else** ou l'**opérateur ternaire** (plus courant)."
+          "text": "L'affichage conditionnel se gère en JavaScript avec if/else ou l'opérateur ternaire (plus courant)."
         },
         {
           "type": "code",
@@ -322,7 +322,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "L'affichage de listes se gère avec la méthode **map()** de JavaScript."
+          "text": "L'affichage de listes se gère avec la méthode map() de JavaScript."
         },
         {
           "type": "code",
@@ -332,7 +332,7 @@
         {
           "type": "alert",
           "level": "danger",
-          "text": "**La prop `key` est obligatoire** lors de l'affichage de listes. Elle permet à React d'optimiser les mises à jour en identifiant chaque élément de manière unique."
+          "text": "La prop `key` est obligatoire lors de l'affichage de listes. Elle permet à React d'optimiser les mises à jour en identifiant chaque élément de manière unique."
         },
         {
           "type": "code",
@@ -370,7 +370,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Bonne pratique** : Déclarer et typer les props avec le module **prop-types**."
+          "text": "Bonne pratique : Déclarer et typer les props avec le module prop-types."
         },
         {
           "type": "code",
@@ -390,7 +390,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les props avec fonction permettent de **remonter des événements et des données** d'un composant enfant vers un composant parent."
+          "text": "Les props avec fonction permettent de remonter des événements et des données d'un composant enfant vers un composant parent."
         },
         {
           "type": "code",
@@ -400,7 +400,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**useEffect() avec dépendances** : Se déclenche à chaque mise à jour d'une des variables listées dans le tableau de dépendances."
+          "text": "useEffect() avec dépendances : Se déclenche à chaque mise à jour d'une des variables listées dans le tableau de dépendances."
         }
       ]
     },
@@ -410,7 +410,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "**Factoriser régulièrement** permet de maintenir les composants simples et lisibles. Un composant doit avoir une seule responsabilité."
+          "text": "Factoriser régulièrement permet de maintenir les composants simples et lisibles. Un composant doit avoir une seule responsabilité."
         },
         {
           "type": "code",
@@ -425,7 +425,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le module **react-router-dom** permet d'ajouter une navigation entre plusieurs pages dans une SPA."
+          "text": "Le module react-router-dom permet d'ajouter une navigation entre plusieurs pages dans une SPA."
         },
         {
           "type": "code",
@@ -440,11 +440,11 @@
         {
           "type": "alert",
           "level": "danger",
-          "text": "**Ne JAMAIS utiliser `<a href>`** dans une application React : cela recharge la page et fait sortir de l'application. Toujours utiliser **`<Link to>`**."
+          "text": "Ne JAMAIS utiliser `<a href>` dans une application React : cela recharge la page et fait sortir de l'application. Toujours utiliser `<Link to>`."
         },
         {
           "type": "paragraph",
-          "text": "L'**historique est simulé**, donnant l'illusion d'une navigation classique (boutons précédent/suivant du navigateur fonctionnent)."
+          "text": "L'historique est simulé, donnant l'illusion d'une navigation classique (boutons précédent/suivant du navigateur fonctionnent)."
         }
       ]
     },
@@ -454,7 +454,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Bootstrap fait gagner du temps grâce au **système de grille 12 colonnes** pour rendre l'application responsive."
+          "text": "Bootstrap fait gagner du temps grâce au système de grille 12 colonnes pour rendre l'application responsive."
         },
         {
           "type": "code",
@@ -464,7 +464,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Console développeur** : Permet de simuler une navigation mobile (mode responsive) pour tester l'affichage sur différentes tailles d'écran."
+          "text": "Console développeur : Permet de simuler une navigation mobile (mode responsive) pour tester l'affichage sur différentes tailles d'écran."
         }
       ]
     }

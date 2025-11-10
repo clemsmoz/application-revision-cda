@@ -17,7 +17,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Les tests unitaires font partie de la **pyramide des tests** : Tests Unitaires (base) → Tests d'Intégration → Tests E2E (sommet)."
+          "text": "Les tests unitaires font partie de la pyramide des tests : Tests Unitaires (base) → Tests d'Intégration → Tests E2E (sommet)."
         },
         {
           "type": "table",
@@ -98,7 +98,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Un test suit généralement le pattern **AAA** : Arrange (préparer), Act (agir), Assert (vérifier)."
+          "text": "Un test suit généralement le pattern AAA : Arrange (préparer), Act (agir), Assert (vérifier)."
         },
         {
           "type": "code",
@@ -176,14 +176,14 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **TDD** est une méthodologie où les tests sont écrits **avant** le code de production."
+          "text": "Le TDD est une méthodologie où les tests sont écrits avant le code de production."
         },
         {
           "type": "list",
           "items": [
-            "**Red** : Écrire un test qui échoue",
-            "**Green** : Écrire le code minimal pour faire passer le test",
-            "**Refactor** : Améliorer le code tout en gardant les tests verts"
+            "Red : Écrire un test qui échoue",
+            "Green : Écrire le code minimal pour faire passer le test",
+            "Refactor : Améliorer le code tout en gardant les tests verts"
           ]
         }
       ]

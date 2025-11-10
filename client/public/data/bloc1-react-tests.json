@@ -12,7 +12,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **Context API** permet de partager des données entre composants sans passer par les props (évite le prop drilling)."
+          "text": "Le Context API permet de partager des données entre composants sans passer par les props (évite le prop drilling)."
         },
         {
           "type": "code",
@@ -32,7 +32,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "**Redux** est une bibliothèque de gestion d'état prévisible pour JavaScript. Elle centralise l'état de l'application dans un store unique."
+          "text": "Redux est une bibliothèque de gestion d'état prévisible pour JavaScript. Elle centralise l'état de l'application dans un store unique."
         },
         {
           "type": "table",
@@ -76,7 +76,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **hooks personnalisés** permettent de réutiliser de la logique entre composants."
+          "text": "Les hooks personnalisés permettent de réutiliser de la logique entre composants."
         },
         {
           "type": "code",
@@ -96,7 +96,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "**Jest** est un framework de tests JavaScript. **React Testing Library** permet de tester les composants React de manière proche de l'utilisation réelle."
+          "text": "Jest est un framework de tests JavaScript. React Testing Library permet de tester les composants React de manière proche de l'utilisation réelle."
         },
         {
           "type": "table",
@@ -126,7 +126,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Commandes Jest** : `npm test` (lancer les tests), `npm test -- --coverage` (rapport de couverture)."
+          "text": "Commandes Jest : `npm test` (lancer les tests), `npm test -- --coverage` (rapport de couverture)."
         }
       ]
     },
@@ -137,12 +137,12 @@
         {
           "type": "list",
           "items": [
-            "**Éviter le prop drilling** : Utiliser Context API ou Redux pour les données globales",
-            "**Hooks personnalisés** : Extraire la logique réutilisable",
-            "**Tests** : Tester le comportement, pas l'implémentation",
-            "**Immutabilité** : Ne jamais muter l'état directement",
-            "**Performance** : Utiliser React.memo, useMemo, useCallback pour optimiser",
-            "**Accessibilité** : Utiliser des attributs ARIA et tester avec screen readers"
+            "Éviter le prop drilling : Utiliser Context API ou Redux pour les données globales",
+            "Hooks personnalisés : Extraire la logique réutilisable",
+            "Tests : Tester le comportement, pas l'implémentation",
+            "Immutabilité : Ne jamais muter l'état directement",
+            "Performance : Utiliser React.memo, useMemo, useCallback pour optimiser",
+            "Accessibilité : Utiliser des attributs ARIA et tester avec screen readers"
           ]
         }
       ]

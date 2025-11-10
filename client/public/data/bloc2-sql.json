@@ -17,7 +17,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Le modèle relationnel repose sur la **théorie des ensembles** et l'**algèbre relationnelle**. Les données sont structurées et respectent des contraintes d'intégrité."
+          "text": "Le modèle relationnel repose sur la théorie des ensembles et l'algèbre relationnelle. Les données sont structurées et respectent des contraintes d'intégrité."
         },
         {
           "type": "table",
@@ -101,7 +101,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **LDD** (DDL en anglais) permet de définir la structure de la base de données : créer, modifier et supprimer des tables, des index, etc."
+          "text": "Le LDD (DDL en anglais) permet de définir la structure de la base de données : créer, modifier et supprimer des tables, des index, etc."
         },
         {
           "type": "subtitle",
@@ -227,7 +227,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **LMD** (DML en anglais) permet de manipuler les données : insérer, lire, modifier et supprimer des enregistrements."
+          "text": "Le LMD (DML en anglais) permet de manipuler les données : insérer, lire, modifier et supprimer des enregistrements."
         },
         {
           "type": "subtitle",
@@ -328,7 +328,7 @@
         {
           "type": "alert",
           "level": "danger",
-          "text": "**⚠️ ATTENTION** : Toujours utiliser WHERE avec UPDATE et DELETE, sinon TOUTES les lignes seront modifiées/supprimées !"
+          "text": "⚠️ ATTENTION : Toujours utiliser WHERE avec UPDATE et DELETE, sinon TOUTES les lignes seront modifiées/supprimées !"
         },
         {
           "type": "subtitle",
@@ -347,7 +347,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **jointures** permettent de combiner des données de plusieurs tables en fonction de relations entre elles."
+          "text": "Les jointures permettent de combiner des données de plusieurs tables en fonction de relations entre elles."
         },
         {
           "type": "code",
@@ -431,7 +431,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **fonctions d'agrégation** permettent de calculer des statistiques sur un ensemble de lignes."
+          "text": "Les fonctions d'agrégation permettent de calculer des statistiques sur un ensemble de lignes."
         },
         {
           "type": "table",
@@ -479,7 +479,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**GROUP BY** permet de regrouper les résultats par une ou plusieurs colonnes."
+          "text": "GROUP BY permet de regrouper les résultats par une ou plusieurs colonnes."
         },
         {
           "type": "code",
@@ -492,7 +492,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**HAVING** filtre les résultats après le regroupement (contrairement à WHERE qui filtre avant)."
+          "text": "HAVING filtre les résultats après le regroupement (contrairement à WHERE qui filtre avant)."
         },
         {
           "type": "code",
@@ -507,7 +507,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Une **sous-requête** est une requête imbriquée dans une autre requête."
+          "text": "Une sous-requête est une requête imbriquée dans une autre requête."
         },
         {
           "type": "code",
@@ -527,7 +527,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Les transactions garantissent les propriétés **ACID** : Atomicité, Cohérence, Isolation, Durabilité."
+          "text": "Les transactions garantissent les propriétés ACID : Atomicité, Cohérence, Isolation, Durabilité."
         },
         {
           "type": "code",
@@ -537,7 +537,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Utiliser les transactions** pour garantir la cohérence des données lors d'opérations critiques (transferts bancaires, commandes, etc.)."
+          "text": "Utiliser les transactions pour garantir la cohérence des données lors d'opérations critiques (transferts bancaires, commandes, etc.)."
         }
       ]
     },
@@ -579,7 +579,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Créer des index** sur les colonnes fréquemment utilisées dans WHERE, JOIN et ORDER BY."
+          "text": "Créer des index sur les colonnes fréquemment utilisées dans WHERE, JOIN et ORDER BY."
         }
       ]
     }

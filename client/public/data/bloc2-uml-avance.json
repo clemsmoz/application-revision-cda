@@ -12,7 +12,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **design patterns** sont des solutions éprouvées à des problèmes récurrents."
+          "text": "Les design patterns sont des solutions éprouvées à des problèmes récurrents."
         },
         {
           "type": "table",
@@ -62,14 +62,14 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **diagramme de composants** montre l'organisation physique du système (modules, bibliothèques, interfaces)."
+          "text": "Le diagramme de composants montre l'organisation physique du système (modules, bibliothèques, interfaces)."
         },
         {
           "type": "list",
           "items": [
-            "**Composant** : Module logiciel réutilisable",
-            "**Interface** : Contrat entre composants",
-            "**Dépendance** : Relation entre composants"
+            "Composant : Module logiciel réutilisable",
+            "Interface : Contrat entre composants",
+            "Dépendance : Relation entre composants"
           ]
         }
       ]
@@ -80,14 +80,14 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **diagramme de déploiement** représente l'infrastructure matérielle et la répartition des composants."
+          "text": "Le diagramme de déploiement représente l'infrastructure matérielle et la répartition des composants."
         },
         {
           "type": "list",
           "items": [
-            "**Nœud** : Serveur, machine, conteneur",
-            "**Artefact** : Fichier exécutable, JAR, WAR",
-            "**Communication** : Protocoles (HTTP, TCP)"
+            "Nœud : Serveur, machine, conteneur",
+            "Artefact : Fichier exécutable, JAR, WAR",
+            "Communication : Protocoles (HTTP, TCP)"
           ]
         }
       ]

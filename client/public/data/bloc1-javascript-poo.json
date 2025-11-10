@@ -12,7 +12,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "JavaScript est **le** langage de programmation du Web. Il est exécuté directement dans le navigateur et permet de rendre les pages web dynamiques et interactives."
+          "text": "JavaScript est le langage de programmation du Web. Il est exécuté directement dans le navigateur et permet de rendre les pages web dynamiques et interactives."
         },
         {
           "type": "table",
@@ -46,7 +46,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Environnement de travail** : Utiliser VS Code avec les extensions ESLint et Prettier pour un code propre et maintenable."
+          "text": "Environnement de travail : Utiliser VS Code avec les extensions ESLint et Prettier pour un code propre et maintenable."
         }
       ]
     },
@@ -56,7 +56,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Une **variable** est un identifiant associé à une valeur. En JavaScript moderne (ES6+), on utilise `let` (variable modifiable) et `const` (constante)."
+          "text": "Une variable est un identifiant associé à une valeur. En JavaScript moderne (ES6+), on utilise `let` (variable modifiable) et `const` (constante)."
         },
         {
           "type": "code",
@@ -165,9 +165,9 @@
               "10 % 3 → 1"
             ],
             [
-              "**",
+              "",
               "Puissance",
-              "2 ** 3 → 8"
+              "2  3 → 8"
             ],
             [
               "++",
@@ -238,7 +238,7 @@
         {
           "type": "alert",
           "level": "warning",
-          "text": "**Toujours utiliser === et !== (égalité stricte)** pour éviter les conversions de type implicites et les bugs."
+          "text": "Toujours utiliser === et !== (égalité stricte) pour éviter les conversions de type implicites et les bugs."
         },
         {
           "type": "subtitle",
@@ -314,7 +314,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Valeurs Falsy en JavaScript** : `false`, `0`, `\"\"` (chaîne vide), `null`, `undefined`, `NaN`. Toutes les autres valeurs sont **truthy**."
+          "text": "Valeurs Falsy en JavaScript : `false`, `0`, `\"\"` (chaîne vide), `null`, `undefined`, `NaN`. Toutes les autres valeurs sont truthy."
         }
       ]
     },
@@ -369,7 +369,7 @@
         {
           "type": "alert",
           "level": "danger",
-          "text": "**Attention aux boucles infinies !** Toujours vérifier que la condition de sortie peut être atteinte."
+          "text": "Attention aux boucles infinies ! Toujours vérifier que la condition de sortie peut être atteinte."
         }
       ]
     },
@@ -379,7 +379,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Un **tableau** est une collection ordonnée d'éléments. Les indices commencent à **0**."
+          "text": "Un tableau est une collection ordonnée d'éléments. Les indices commencent à 0."
         },
         {
           "type": "code",
@@ -452,7 +452,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Destructuring** : `let [a, b] = [1, 2];` permet d'extraire facilement les valeurs d'un tableau."
+          "text": "Destructuring : `let [a, b] = [1, 2];` permet d'extraire facilement les valeurs d'un tableau."
         }
       ]
     },
@@ -462,7 +462,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **fonctions** permettent de regrouper du code réutilisable, d'améliorer la lisibilité et de simplifier la maintenance."
+          "text": "Les fonctions permettent de regrouper du code réutilisable, d'améliorer la lisibilité et de simplifier la maintenance."
         },
         {
           "type": "subtitle",
@@ -512,7 +512,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Passage par valeur vs référence** : Les primitives (number, string, boolean) sont passées par valeur. Les objets et tableaux sont passés par référence."
+          "text": "Passage par valeur vs référence : Les primitives (number, string, boolean) sont passées par valeur. Les objets et tableaux sont passés par référence."
         }
       ]
     },
@@ -522,7 +522,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "JavaScript est un langage **orienté objet** basé sur les prototypes. Depuis ES6, on utilise la syntaxe `class` pour créer des objets."
+          "text": "JavaScript est un langage orienté objet basé sur les prototypes. Depuis ES6, on utilise la syntaxe `class` pour créer des objets."
         },
         {
           "type": "subtitle",
@@ -536,7 +536,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**this** représente l'instance actuelle de la classe. Dans le constructeur, `this` est l'objet en cours de création."
+          "text": "this représente l'instance actuelle de la classe. Dans le constructeur, `this` est l'objet en cours de création."
         },
         {
           "type": "subtitle",
@@ -573,7 +573,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Les membres **statiques** appartiennent à la classe elle-même, pas aux instances."
+          "text": "Les membres statiques appartiennent à la classe elle-même, pas aux instances."
         },
         {
           "type": "code",
@@ -588,7 +588,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "L'**héritage** permet à une classe enfant d'hériter des propriétés et méthodes d'une classe parente. En JavaScript, l'héritage est **unique** (une seule classe parente)."
+          "text": "L'héritage permet à une classe enfant d'hériter des propriétés et méthodes d'une classe parente. En JavaScript, l'héritage est unique (une seule classe parente)."
         },
         {
           "type": "code",
@@ -598,7 +598,7 @@
         {
           "type": "alert",
           "level": "warning",
-          "text": "**super()** doit être appelé AVANT d'utiliser `this` dans le constructeur de la classe enfant."
+          "text": "super() doit être appelé AVANT d'utiliser `this` dans le constructeur de la classe enfant."
         },
         {
           "type": "subtitle",
@@ -606,7 +606,7 @@
         },
         {
           "type": "paragraph",
-          "text": "L'héritage représente une relation **\"est un\"** : un Chien **est un** Animal."
+          "text": "L'héritage représente une relation \"est un\" : un Chien est un Animal."
         }
       ]
     },
@@ -674,7 +674,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Les instances de String sont **immutables** : les méthodes retournent une nouvelle chaîne sans modifier l'originale."
+          "text": "Les instances de String sont immutables : les méthodes retournent une nouvelle chaîne sans modifier l'originale."
         },
         {
           "type": "table",
@@ -737,7 +737,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **arrow functions** ont un comportement spécial avec `this` : elles héritent du contexte du bloc englobant."
+          "text": "Les arrow functions ont un comportement spécial avec `this` : elles héritent du contexte du bloc englobant."
         },
         {
           "type": "code",
@@ -747,7 +747,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Bonne pratique** : Utiliser les arrow functions pour les callbacks et les fonctions courtes pour simplifier l'écriture et éviter les problèmes de contexte."
+          "text": "Bonne pratique : Utiliser les arrow functions pour les callbacks et les fonctions courtes pour simplifier l'écriture et éviter les problèmes de contexte."
         }
       ]
     }

@@ -12,7 +12,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Après plus de 30 ans d'existence, le Web a révolutionné notre quotidien. Derrière chaque site web se cachent principalement deux langages : **HTML** (structure) et **CSS** (style)."
+          "text": "Après plus de 30 ans d'existence, le Web a révolutionné notre quotidien. Derrière chaque site web se cachent principalement deux langages : HTML (structure) et CSS (style)."
         },
         {
           "type": "table",
@@ -60,7 +60,7 @@
         },
         {
           "type": "paragraph",
-          "text": "La structure d'une page web repose sur le principe des **boîtes** : chaque élément HTML est une boîte que l'on emboîte dans d'autres boîtes."
+          "text": "La structure d'une page web repose sur le principe des boîtes : chaque élément HTML est une boîte que l'on emboîte dans d'autres boîtes."
         },
         {
           "type": "code",
@@ -70,7 +70,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Structure obligatoire** : Une page HTML valide doit toujours contenir `<!DOCTYPE html>`, `<html>`, `<head>` et `<body>`."
+          "text": "Structure obligatoire : Une page HTML valide doit toujours contenir `<!DOCTYPE html>`, `<html>`, `<head>` et `<body>`."
         }
       ]
     },
@@ -80,7 +80,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Il existe plus de **100 balises** dans HTML5. Chaque balise a un rôle sémantique spécifique."
+          "text": "Il existe plus de 100 balises dans HTML5. Chaque balise a un rôle sémantique spécifique."
         },
         {
           "type": "table",
@@ -169,7 +169,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **attributs** apportent des informations supplémentaires à une balise. Ils sont placés dans la balise ouvrante."
+          "text": "Les attributs apportent des informations supplémentaires à une balise. Ils sont placés dans la balise ouvrante."
         },
         {
           "type": "table",
@@ -219,7 +219,7 @@
         {
           "type": "alert",
           "level": "warning",
-          "text": "**Accessibilité** : L'attribut `alt` est **obligatoire** pour les images afin de rendre le contenu accessible aux lecteurs d'écran."
+          "text": "Accessibilité : L'attribut `alt` est obligatoire pour les images afin de rendre le contenu accessible aux lecteurs d'écran."
         }
       ]
     },
@@ -229,7 +229,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les formulaires permettent de **collecter des données** auprès des utilisateurs (authentification, recherche, commentaires, etc.)."
+          "text": "Les formulaires permettent de collecter des données auprès des utilisateurs (authentification, recherche, commentaires, etc.)."
         },
         {
           "type": "code",
@@ -343,7 +343,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **sélecteurs** permettent de cibler les éléments HTML sur lesquels appliquer les styles."
+          "text": "Les sélecteurs permettent de cibler les éléments HTML sur lesquels appliquer les styles."
         },
         {
           "type": "table",
@@ -407,7 +407,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Spécificité** : ID (100) > Classe (10) > Balise (1). Plus la spécificité est élevée, plus la règle est prioritaire."
+          "text": "Spécificité : ID (100) > Classe (10) > Balise (1). Plus la spécificité est élevée, plus la règle est prioritaire."
         }
       ]
     },
@@ -417,7 +417,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Il existe plus de **600 propriétés CSS**. Voici les plus importantes :"
+          "text": "Il existe plus de 600 propriétés CSS. Voici les plus importantes :"
         },
         {
           "type": "table",
@@ -490,7 +490,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Flexbox** permet d'aligner et de distribuer des éléments dans un conteneur, même si leur taille est inconnue ou dynamique."
+          "text": "Flexbox permet d'aligner et de distribuer des éléments dans un conteneur, même si leur taille est inconnue ou dynamique."
         },
         {
           "type": "code",
@@ -503,7 +503,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**CSS Grid** permet de créer des mises en page complexes en deux dimensions (lignes et colonnes)."
+          "text": "CSS Grid permet de créer des mises en page complexes en deux dimensions (lignes et colonnes)."
         },
         {
           "type": "code",
@@ -543,7 +543,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **Responsive Web Design** permet d'adapter l'affichage d'un site aux différentes tailles d'écran (mobile, tablette, desktop)."
+          "text": "Le Responsive Web Design permet d'adapter l'affichage d'un site aux différentes tailles d'écran (mobile, tablette, desktop)."
         },
         {
           "type": "subtitle",
@@ -551,7 +551,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Les **media queries** appliquent des styles différents selon la taille de l'écran."
+          "text": "Les media queries appliquent des styles différents selon la taille de l'écran."
         },
         {
           "type": "code",
@@ -586,7 +586,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Mobile First** : Concevoir d'abord pour mobile, puis ajouter des styles pour les écrans plus grands (approche recommandée)."
+          "text": "Mobile First : Concevoir d'abord pour mobile, puis ajouter des styles pour les écrans plus grands (approche recommandée)."
         }
       ]
     },
@@ -600,7 +600,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Les **pseudo-classes** ciblent des éléments dans un **état spécifique**."
+          "text": "Les pseudo-classes ciblent des éléments dans un état spécifique."
         },
         {
           "type": "table",
@@ -643,7 +643,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Les **pseudo-éléments** ciblent une **partie** d'un élément ou ajoutent du contenu."
+          "text": "Les pseudo-éléments ciblent une partie d'un élément ou ajoutent du contenu."
         },
         {
           "type": "table",
@@ -683,7 +683,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "La **cascade** détermine quelle règle CSS est appliquée lorsque plusieurs règles ciblent le même élément."
+          "text": "La cascade détermine quelle règle CSS est appliquée lorsque plusieurs règles ciblent le même élément."
         },
         {
           "type": "subtitle",
@@ -692,18 +692,18 @@
         {
           "type": "list",
           "items": [
-            "1. **!important** (à éviter sauf cas exceptionnel)",
-            "2. **Styles inline** (dans l'attribut `style`)",
-            "3. **ID** (#monID)",
-            "4. **Classe, attribut, pseudo-classe** (.maClasse, [type=\"text\"], :hover)",
-            "5. **Balise, pseudo-élément** (p, ::before)",
-            "6. **Ordre d'apparition** (la dernière règle écrase les précédentes)"
+            "1. !important (à éviter sauf cas exceptionnel)",
+            "2. Styles inline (dans l'attribut `style`)",
+            "3. ID (#monID)",
+            "4. Classe, attribut, pseudo-classe (.maClasse, [type=\"text\"], :hover)",
+            "5. Balise, pseudo-élément (p, ::before)",
+            "6. Ordre d'apparition (la dernière règle écrase les précédentes)"
           ]
         },
         {
           "type": "alert",
           "level": "warning",
-          "text": "**Éviter !important** : Il rend le code difficile à maintenir. Préférer augmenter la spécificité du sélecteur."
+          "text": "Éviter !important : Il rend le code difficile à maintenir. Préférer augmenter la spécificité du sélecteur."
         }
       ]
     }

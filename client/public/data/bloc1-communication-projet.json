@@ -58,15 +58,15 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **reporting** informe les parties prenantes de l'avancement du projet."
+          "text": "Le reporting informe les parties prenantes de l'avancement du projet."
         },
         {
           "type": "list",
           "items": [
-            "**Rapport d'avancement** : Tâches terminées, en cours, à venir",
-            "**Indicateurs** : Vélocité, burn-down chart, taux de complétion",
-            "**Risques** : Identification et plan de mitigation",
-            "**Budget** : Dépenses vs prévisionnel"
+            "Rapport d'avancement : Tâches terminées, en cours, à venir",
+            "Indicateurs : Vélocité, burn-down chart, taux de complétion",
+            "Risques : Identification et plan de mitigation",
+            "Budget : Dépenses vs prévisionnel"
           ]
         }
       ]

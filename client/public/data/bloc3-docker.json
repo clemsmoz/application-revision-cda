@@ -17,7 +17,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Docker** résout le problème classique : \"Ça marche sur ma machine, mais pas en production\". Les conteneurs garantissent que l'application s'exécute de manière identique partout."
+          "text": "Docker résout le problème classique : \"Ça marche sur ma machine, mais pas en production\". Les conteneurs garantissent que l'application s'exécute de manière identique partout."
         },
         {
           "type": "table",
@@ -51,7 +51,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Conteneur ≠ VM** : Un conteneur partage le noyau de l'OS hôte, ce qui le rend beaucoup plus léger et rapide."
+          "text": "Conteneur ≠ VM : Un conteneur partage le noyau de l'OS hôte, ce qui le rend beaucoup plus léger et rapide."
         }
       ]
     },
@@ -70,7 +70,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Les images sont construites à partir d'un **Dockerfile** et stockées dans un **registre** (Docker Hub, GitLab Registry, etc.)."
+          "text": "Les images sont construites à partir d'un Dockerfile et stockées dans un registre (Docker Hub, GitLab Registry, etc.)."
         },
         {
           "type": "subtitle",
@@ -83,7 +83,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Analogie** : Image = Classe, Conteneur = Instance (objet)."
+          "text": "Analogie : Image = Classe, Conteneur = Instance (objet)."
         },
         {
           "type": "table",
@@ -209,7 +209,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Un **Dockerfile** est un fichier texte contenant les instructions pour construire une image Docker."
+          "text": "Un Dockerfile est un fichier texte contenant les instructions pour construire une image Docker."
         },
         {
           "type": "subtitle",
@@ -291,7 +291,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Bonnes pratiques** : Utiliser des images de base légères (alpine), copier package.json avant le code source (cache des layers), ne pas inclure node_modules dans l'image."
+          "text": "Bonnes pratiques : Utiliser des images de base légères (alpine), copier package.json avant le code source (cache des layers), ne pas inclure node_modules dans l'image."
         }
       ]
     },
@@ -301,7 +301,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Par défaut, les données d'un conteneur sont **éphémères** : elles disparaissent quand le conteneur est supprimé. Les **volumes** permettent de persister les données."
+          "text": "Par défaut, les données d'un conteneur sont éphémères : elles disparaissent quand le conteneur est supprimé. Les volumes permettent de persister les données."
         },
         {
           "type": "subtitle",
@@ -349,7 +349,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **réseaux Docker** permettent aux conteneurs de communiquer entre eux."
+          "text": "Les réseaux Docker permettent aux conteneurs de communiquer entre eux."
         },
         {
           "type": "table",
@@ -403,7 +403,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Docker Compose** simplifie le déploiement d'applications complexes (application + base de données + cache, etc.)."
+          "text": "Docker Compose simplifie le déploiement d'applications complexes (application + base de données + cache, etc.)."
         },
         {
           "type": "subtitle",
@@ -477,11 +477,11 @@
         {
           "type": "list",
           "items": [
-            "**Utiliser des images de base légères** : alpine, slim",
-            "**Multi-stage builds** : séparer la construction et l'exécution",
-            "**Minimiser les layers** : regrouper les commandes RUN",
-            "**Utiliser .dockerignore** : exclure node_modules, .git, etc.",
-            "**Ne pas exécuter en root** : créer un utilisateur non-privilégié"
+            "Utiliser des images de base légères : alpine, slim",
+            "Multi-stage builds : séparer la construction et l'exécution",
+            "Minimiser les layers : regrouper les commandes RUN",
+            "Utiliser .dockerignore : exclure node_modules, .git, etc.",
+            "Ne pas exécuter en root : créer un utilisateur non-privilégié"
           ]
         },
         {
@@ -500,10 +500,10 @@
         {
           "type": "list",
           "items": [
-            "**Ne pas stocker de secrets dans l'image** : utiliser des variables d'environnement ou des secrets managers",
-            "**Scanner les vulnérabilités** : docker scan, Trivy, Snyk",
-            "**Mettre à jour régulièrement les images de base**",
-            "**Limiter les ressources** : --memory, --cpus"
+            "Ne pas stocker de secrets dans l'image : utiliser des variables d'environnement ou des secrets managers",
+            "Scanner les vulnérabilités : docker scan, Trivy, Snyk",
+            "Mettre à jour régulièrement les images de base",
+            "Limiter les ressources : --memory, --cpus"
           ]
         }
       ]
@@ -514,7 +514,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Docker est un pilier du **DevOps** et de l'**Infrastructure as Code (IaC)**."
+          "text": "Docker est un pilier du DevOps et de l'Infrastructure as Code (IaC)."
         },
         {
           "type": "subtitle",

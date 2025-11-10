@@ -74,11 +74,11 @@
         {
           "type": "list",
           "items": [
-            "**Utilisabilité** : Facilité d'utilisation",
-            "**Accessibilité** : Utilisable par tous (handicaps, âge)",
-            "**Désirabilité** : Agréable et attrayant",
-            "**Crédibilité** : Inspirer confiance",
-            "**Utilité** : Répond aux besoins réels"
+            "Utilisabilité : Facilité d'utilisation",
+            "Accessibilité : Utilisable par tous (handicaps, âge)",
+            "Désirabilité : Agréable et attrayant",
+            "Crédibilité : Inspirer confiance",
+            "Utilité : Répond aux besoins réels"
           ]
         }
       ]

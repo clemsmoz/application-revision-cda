@@ -94,13 +94,13 @@
         {
           "type": "list",
           "items": [
-            "**Objectifs** : Que veut-on tester ?",
-            "**Périmètre** : Fonctionnalités couvertes",
-            "**Stratégie** : Types de tests, outils, environnements",
-            "**Cas de test** : Scénarios détaillés avec résultats attendus",
-            "**Critères d'acceptation** : Conditions pour valider le test",
-            "**Ressources** : Équipe, outils, budget",
-            "**Planning** : Calendrier des tests"
+            "Objectifs : Que veut-on tester ?",
+            "Périmètre : Fonctionnalités couvertes",
+            "Stratégie : Types de tests, outils, environnements",
+            "Cas de test : Scénarios détaillés avec résultats attendus",
+            "Critères d'acceptation : Conditions pour valider le test",
+            "Ressources : Équipe, outils, budget",
+            "Planning : Calendrier des tests"
           ]
         }
       ]

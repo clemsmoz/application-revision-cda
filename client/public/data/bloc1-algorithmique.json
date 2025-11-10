@@ -12,7 +12,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Un algorithme doit fournir la solution à un problème de manière **optimale** et **compréhensible par tous**. Il s'écrit sous forme de logigramme (utilisation de symboles) ou en langage naturel simple."
+          "text": "Un algorithme doit fournir la solution à un problème de manière optimale et compréhensible par tous. Il s'écrit sous forme de logigramme (utilisation de symboles) ou en langage naturel simple."
         },
         {
           "type": "definition",
@@ -22,7 +22,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "Un algorithme est **toujours améliorable** et **testable**. Il n'existe pas de solution unique à un problème donné."
+          "text": "Un algorithme est toujours améliorable et testable. Il n'existe pas de solution unique à un problème donné."
         }
       ]
     },
@@ -32,7 +32,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Une expression numérique est une suite d'opérations mathématiques (addition, soustraction, multiplication, division, etc.). Les règles mathématiques de base restent appliquées, notamment la **priorité des opérateurs**."
+          "text": "Une expression numérique est une suite d'opérations mathématiques (addition, soustraction, multiplication, division, etc.). Les règles mathématiques de base restent appliquées, notamment la priorité des opérateurs."
         },
         {
           "type": "table",
@@ -72,7 +72,7 @@
         {
           "type": "alert",
           "level": "warning",
-          "text": "**Attention** : En informatique, tout s'écrit sur une seule ligne. Pensez au typage en sortie et aux priorités des opérateurs."
+          "text": "Attention : En informatique, tout s'écrit sur une seule ligne. Pensez au typage en sortie et aux priorités des opérateurs."
         },
         {
           "type": "subtitle",
@@ -80,7 +80,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Les expressions logiques utilisent les opérateurs **AND** (ET), **OR** (OU) et **NOT** (NÉGATION) pour effectuer des comparaisons. Le résultat est toujours **Vrai** (True/1) ou **Faux** (False/0)."
+          "text": "Les expressions logiques utilisent les opérateurs AND (ET), OR (OU) et NOT (NÉGATION) pour effectuer des comparaisons. Le résultat est toujours Vrai (True/1) ou Faux (False/0)."
         },
         {
           "type": "table",
@@ -119,7 +119,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les structures conditionnelles permettent de **choisir une branche d'exécution** en fonction d'une condition logique (Vrai ou Faux)."
+          "text": "Les structures conditionnelles permettent de choisir une branche d'exécution en fonction d'une condition logique (Vrai ou Faux)."
         },
         {
           "type": "subtitle",
@@ -133,7 +133,7 @@
         {
           "type": "alert",
           "level": "warning",
-          "text": "**Attention** : Éviter l'abus d'imbrication de `if/else` pour maintenir la lisibilité du code. Préférer les structures à choix multiples si nécessaire."
+          "text": "Attention : Éviter l'abus d'imbrication de `if/else` pour maintenir la lisibilité du code. Préférer les structures à choix multiples si nécessaire."
         },
         {
           "type": "subtitle",
@@ -141,7 +141,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Lorsque trop de `Si / Alors / Sinon` rendent le programme compliqué, on utilise une **structure à choix multiples** qui teste une variable contre plusieurs valeurs possibles."
+          "text": "Lorsque trop de `Si / Alors / Sinon` rendent le programme compliqué, on utilise une structure à choix multiples qui teste une variable contre plusieurs valeurs possibles."
         },
         {
           "type": "code",
@@ -156,7 +156,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les boucles permettent de **répéter un bloc d'instructions** tant qu'une condition est vraie ou un nombre de fois déterminé."
+          "text": "Les boucles permettent de répéter un bloc d'instructions tant qu'une condition est vraie ou un nombre de fois déterminé."
         },
         {
           "type": "table",
@@ -196,7 +196,7 @@
         {
           "type": "alert",
           "level": "danger",
-          "text": "**Danger : Boucles infinies** - Toujours vérifier que la condition de sortie peut être atteinte. Pensez à incrémenter/décrémenter les compteurs correctement."
+          "text": "Danger : Boucles infinies - Toujours vérifier que la condition de sortie peut être atteinte. Pensez à incrémenter/décrémenter les compteurs correctement."
         },
         {
           "type": "subtitle",
@@ -215,7 +215,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les fonctions et procédures permettent de **découper le code en modules réutilisables** et de séparer les responsabilités."
+          "text": "Les fonctions et procédures permettent de découper le code en modules réutilisables et de séparer les responsabilités."
         },
         {
           "type": "table",
@@ -270,7 +270,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Bonne pratique** : Préférer les fonctions qui retournent une valeur plutôt que les procédures avec passage par référence, pour un code plus lisible et sûr."
+          "text": "Bonne pratique : Préférer les fonctions qui retournent une valeur plutôt que les procédures avec passage par référence, pour un code plus lisible et sûr."
         }
       ]
     },
@@ -280,7 +280,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "La **portée (scope)** d'une variable détermine où elle est accessible dans le programme."
+          "text": "La portée (scope) d'une variable détermine où elle est accessible dans le programme."
         },
         {
           "type": "table",
@@ -314,7 +314,7 @@
         {
           "type": "alert",
           "level": "warning",
-          "text": "**Attention** : Éviter l'abus de variables globales qui rendent le code difficile à déboguer et à maintenir."
+          "text": "Attention : Éviter l'abus de variables globales qui rendent le code difficile à déboguer et à maintenir."
         }
       ]
     },
@@ -324,7 +324,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Un tableau permet de stocker **plusieurs valeurs du même type** sous un seul nom de variable, accessibles via un **indice** (index)."
+          "text": "Un tableau permet de stocker plusieurs valeurs du même type sous un seul nom de variable, accessibles via un indice (index)."
         },
         {
           "type": "subtitle",
@@ -332,7 +332,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Un tableau à une dimension est une **liste** d'éléments. L'indice de départ est généralement **0** dans la plupart des langages."
+          "text": "Un tableau à une dimension est une liste d'éléments. L'indice de départ est généralement 0 dans la plupart des langages."
         },
         {
           "type": "code",
@@ -345,7 +345,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Un tableau bidimensionnel est une **matrice** (lignes × colonnes). Le premier indice représente la ligne, le second la colonne."
+          "text": "Un tableau bidimensionnel est une matrice (lignes × colonnes). Le premier indice représente la ligne, le second la colonne."
         },
         {
           "type": "code",
@@ -355,7 +355,7 @@
         {
           "type": "alert",
           "level": "warning",
-          "text": "**Attention** : Vérifier les limites du tableau pour éviter les erreurs d'accès hors index (index out of bounds)."
+          "text": "Attention : Vérifier les limites du tableau pour éviter les erreurs d'accès hors index (index out of bounds)."
         }
       ]
     },
@@ -369,7 +369,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Une chaîne de caractères est un **tableau de caractères**. Tous les langages proposent des fonctions pour les manipuler."
+          "text": "Une chaîne de caractères est un tableau de caractères. Tous les langages proposent des fonctions pour les manipuler."
         },
         {
           "type": "table",
@@ -407,12 +407,12 @@
         },
         {
           "type": "paragraph",
-          "text": "La manipulation des dates est délicate car elle dépend du **format de zone** (Europe : JJ/MM/AAAA, USA : MM/JJ/AAAA)."
+          "text": "La manipulation des dates est délicate car elle dépend du format de zone (Europe : JJ/MM/AAAA, USA : MM/JJ/AAAA)."
         },
         {
           "type": "alert",
           "level": "info",
-          "text": "**Conseil** : Convertir la date en format nombre (timestamp), la manipuler, puis l'afficher au bon format."
+          "text": "Conseil : Convertir la date en format nombre (timestamp), la manipuler, puis l'afficher au bon format."
         }
       ]
     },
@@ -423,13 +423,13 @@
         {
           "type": "list",
           "items": [
-            "**Diviser pour mieux régner** : Découper un problème complexe en sous-problèmes plus simples.",
-            "**Tester unitairement** : Tester chaque fonction/procédure indépendamment.",
-            "**Indentation et formatage** : Respecter une mise en forme claire pour la lisibilité.",
-            "**Nommer clairement** : Utiliser des noms de variables et fonctions explicites.",
-            "**Commenter le code** : Expliquer les parties complexes ou non évidentes.",
-            "**Éviter la duplication** : Factoriser le code répétitif dans des fonctions.",
-            "**Gérer les erreurs** : Prévoir les cas limites et les erreurs possibles."
+            "Diviser pour mieux régner : Découper un problème complexe en sous-problèmes plus simples.",
+            "Tester unitairement : Tester chaque fonction/procédure indépendamment.",
+            "Indentation et formatage : Respecter une mise en forme claire pour la lisibilité.",
+            "Nommer clairement : Utiliser des noms de variables et fonctions explicites.",
+            "Commenter le code : Expliquer les parties complexes ou non évidentes.",
+            "Éviter la duplication : Factoriser le code répétitif dans des fonctions.",
+            "Gérer les erreurs : Prévoir les cas limites et les erreurs possibles."
           ]
         }
       ]

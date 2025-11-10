@@ -12,7 +12,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **transitions** permettent d'animer les changements de propriétés CSS, tandis que les **animations** offrent un contrôle plus fin avec des keyframes."
+          "text": "Les transitions permettent d'animer les changements de propriétés CSS, tandis que les animations offrent un contrôle plus fin avec des keyframes."
         },
         {
           "type": "code",
@@ -27,7 +27,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **variables CSS** permettent de réutiliser des valeurs et de créer des thèmes dynamiques."
+          "text": "Les variables CSS permettent de réutiliser des valeurs et de créer des thèmes dynamiques."
         },
         {
           "type": "code",

@@ -17,10 +17,10 @@
         {
           "type": "list",
           "items": [
-            "**Individus et interactions** plutôt que processus et outils",
-            "**Logiciel fonctionnel** plutôt que documentation exhaustive",
-            "**Collaboration avec le client** plutôt que négociation contractuelle",
-            "**Adaptation au changement** plutôt que suivi d'un plan"
+            "Individus et interactions plutôt que processus et outils",
+            "Logiciel fonctionnel plutôt que documentation exhaustive",
+            "Collaboration avec le client plutôt que négociation contractuelle",
+            "Adaptation au changement plutôt que suivi d'un plan"
           ]
         }
       ]
@@ -31,7 +31,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Scrum est le framework agile le plus populaire. Il organise le travail en **sprints** (itérations de 1 à 4 semaines)."
+          "text": "Scrum est le framework agile le plus populaire. Il organise le travail en sprints (itérations de 1 à 4 semaines)."
         },
         {
           "type": "table",

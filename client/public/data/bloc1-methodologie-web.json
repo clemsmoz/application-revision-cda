@@ -12,7 +12,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **Design Thinking** est une approche centrée utilisateur pour résoudre des problèmes complexes."
+          "text": "Le Design Thinking est une approche centrée utilisateur pour résoudre des problèmes complexes."
         },
         {
           "type": "table",
@@ -51,7 +51,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "L'**Atomic Design** structure les interfaces en composants réutilisables."
+          "text": "L'Atomic Design structure les interfaces en composants réutilisables."
         },
         {
           "type": "table",
@@ -96,15 +96,15 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "**Mobile-First** : concevoir d'abord pour mobile, puis adapter pour desktop."
+          "text": "Mobile-First : concevoir d'abord pour mobile, puis adapter pour desktop."
         },
         {
           "type": "list",
           "items": [
-            "**Avantages** : Performance, priorité au contenu essentiel",
-            "**Media queries** : min-width (mobile → desktop)",
-            "**Touch-friendly** : Boutons min 44x44px",
-            "**Progressive enhancement** : Ajouter des fonctionnalités pour grands écrans"
+            "Avantages : Performance, priorité au contenu essentiel",
+            "Media queries : min-width (mobile → desktop)",
+            "Touch-friendly : Boutons min 44x44px",
+            "Progressive enhancement : Ajouter des fonctionnalités pour grands écrans"
           ]
         }
       ]

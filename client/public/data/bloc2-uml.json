@@ -17,7 +17,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**UML** permet de modéliser tout type de système (logiciel, matériel, processus métier). Lire, écrire et parler UML sont des compétences **incontournables** en génie logiciel."
+          "text": "UML permet de modéliser tout type de système (logiciel, matériel, processus métier). Lire, écrire et parler UML sont des compétences incontournables en génie logiciel."
         },
         {
           "type": "table",
@@ -42,7 +42,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**UML 2** a introduit un changement de vision important : séparation claire entre structure, comportement et interaction."
+          "text": "UML 2 a introduit un changement de vision important : séparation claire entre structure, comportement et interaction."
         }
       ]
     },
@@ -52,7 +52,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "UML 2 organise les 14 diagrammes en **3 catégories** selon leur objectif."
+          "text": "UML 2 organise les 14 diagrammes en 3 catégories selon leur objectif."
         },
         {
           "type": "subtitle",
@@ -60,14 +60,14 @@
         },
         {
           "type": "paragraph",
-          "text": "**Question** : Quels sont les services rendus par le système ?"
+          "text": "Question : Quels sont les services rendus par le système ?"
         },
         {
           "type": "list",
           "items": [
-            "**Diagramme de cas d'utilisation** (Use Case) : Fonctionnalités du système vues par les acteurs",
-            "**Diagramme de machine à états** (State Machine) : États et transitions d'un objet",
-            "**Diagramme d'activité** (Activity) : Algorithmes, processus métier, workflows"
+            "Diagramme de cas d'utilisation (Use Case) : Fonctionnalités du système vues par les acteurs",
+            "Diagramme de machine à états (State Machine) : États et transitions d'un objet",
+            "Diagramme d'activité (Activity) : Algorithmes, processus métier, workflows"
           ]
         },
         {
@@ -76,14 +76,14 @@
         },
         {
           "type": "paragraph",
-          "text": "**Question** : Comment utilise-t-on le système ? Comment rend-il les services attendus ?"
+          "text": "Question : Comment utilise-t-on le système ? Comment rend-il les services attendus ?"
         },
         {
           "type": "list",
           "items": [
-            "**Diagramme de séquence** (Sequence) : Interactions entre objets dans le temps",
-            "**Diagramme de communication** (Communication) : Interactions avec focus sur les liens",
-            "**Diagramme de temps** (Timing) : Contraintes temporelles"
+            "Diagramme de séquence (Sequence) : Interactions entre objets dans le temps",
+            "Diagramme de communication (Communication) : Interactions avec focus sur les liens",
+            "Diagramme de temps (Timing) : Contraintes temporelles"
           ]
         },
         {
@@ -92,15 +92,15 @@
         },
         {
           "type": "paragraph",
-          "text": "**Question** : Comment est architecturé le système ? De quoi est-il composé ?"
+          "text": "Question : Comment est architecturé le système ? De quoi est-il composé ?"
         },
         {
           "type": "list",
           "items": [
-            "**Diagramme de classes** (Class) : Structure statique (classes, attributs, méthodes, relations)",
-            "**Diagramme d'objets** (Object) : Instances à un moment donné",
-            "**Diagramme de composants** (Component) : Organisation en modules",
-            "**Diagramme de déploiement** (Deployment) : Architecture matérielle"
+            "Diagramme de classes (Class) : Structure statique (classes, attributs, méthodes, relations)",
+            "Diagramme d'objets (Object) : Instances à un moment donné",
+            "Diagramme de composants (Component) : Organisation en modules",
+            "Diagramme de déploiement (Deployment) : Architecture matérielle"
           ]
         },
         {
@@ -136,7 +136,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Plusieurs outils permettent de créer des diagrammes UML. **Visual Paradigm Community Edition** est recommandé dans le cours."
+          "text": "Plusieurs outils permettent de créer des diagrammes UML. Visual Paradigm Community Edition est recommandé dans le cours."
         },
         {
           "type": "table",
@@ -180,11 +180,11 @@
         {
           "type": "list",
           "items": [
-            "Travailler par **projet** (un projet = une application)",
-            "Travailler de manière **itérative** (ne pas chercher la perfection au premier jet)",
+            "Travailler par projet (un projet = une application)",
+            "Travailler de manière itérative (ne pas chercher la perfection au premier jet)",
             "Faire confiance à l'outil (il vérifie le formalisme UML 2)",
-            "**Ne JAMAIS enregistrer dans un dossier partagé sur le cloud** (risque de corruption)",
-            "Utiliser **Ctrl+E** pour dupliquer un élément (pas Ctrl+C/Ctrl+V qui crée un alias)",
+            "Ne JAMAIS enregistrer dans un dossier partagé sur le cloud (risque de corruption)",
+            "Utiliser Ctrl+E pour dupliquer un élément (pas Ctrl+C/Ctrl+V qui crée un alias)",
             "Nommer correctement ses diagrammes"
           ]
         }
@@ -201,7 +201,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ce diagramme répond à la question : **Que fait le système ?** (pas comment il le fait)."
+          "text": "Ce diagramme répond à la question : Que fait le système ? (pas comment il le fait)."
         },
         {
           "type": "subtitle",
@@ -279,7 +279,7 @@
         {
           "type": "alert",
           "level": "warning",
-          "text": "**Erreur fréquente** : Include ≠ obligatoire, Extend ≠ optionnel. Include = factorisation, Extend = extension conditionnelle."
+          "text": "Erreur fréquente : Include ≠ obligatoire, Extend ≠ optionnel. Include = factorisation, Extend = extension conditionnelle."
         },
         {
           "type": "subtitle",
@@ -288,11 +288,11 @@
         {
           "type": "list",
           "items": [
-            "Les acteurs sont **idéalisés** (rôles, pas personnes réelles)",
-            "Un cas d'utilisation définit un **comportement** sans révéler la structure interne",
-            "Le diagramme ne représente **pas un algorithme ou un enchaînement**",
-            "Il est **impossible de produire un diagramme correct au premier jet** : travailler de manière itérative",
-            "Penser au **lecteur** lors de la modélisation"
+            "Les acteurs sont idéalisés (rôles, pas personnes réelles)",
+            "Un cas d'utilisation définit un comportement sans révéler la structure interne",
+            "Le diagramme ne représente pas un algorithme ou un enchaînement",
+            "Il est impossible de produire un diagramme correct au premier jet : travailler de manière itérative",
+            "Penser au lecteur lors de la modélisation"
           ]
         }
       ]
@@ -308,7 +308,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ce diagramme répond à la question : **Dans quels états peut se trouver le système ?**"
+          "text": "Ce diagramme répond à la question : Dans quels états peut se trouver le système ?"
         },
         {
           "type": "subtitle",
@@ -376,7 +376,7 @@
           "type": "list",
           "items": [
             "Visual Paradigm vérifie le formalisme UML 2",
-            "La description des transitions est **libre** : faire attention aux termes employés",
+            "La description des transitions est libre : faire attention aux termes employés",
             "Créer dans l'ordre : états → transitions → super-états → définir les transitions",
             "Lier les informations du diagramme de cas d'utilisation"
           ]
@@ -394,7 +394,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ce diagramme répond à la question : **Comment se déroule un processus ?**"
+          "text": "Ce diagramme répond à la question : Comment se déroule un processus ?"
         },
         {
           "type": "subtitle",
@@ -466,7 +466,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Le diagramme d'activité permet de modéliser des **activités parallèles** (fork/join)."
+          "text": "Le diagramme d'activité permet de modéliser des activités parallèles (fork/join)."
         },
         {
           "type": "code",
@@ -480,8 +480,8 @@
         {
           "type": "list",
           "items": [
-            "Il n'y a **pas de différence visuelle** entre flux de contrôle et flux d'objet (mais ce sont deux concepts différents)",
-            "Utiliser les **régions itératives** pour modéliser les boucles (foreach)",
+            "Il n'y a pas de différence visuelle entre flux de contrôle et flux d'objet (mais ce sont deux concepts différents)",
+            "Utiliser les régions itératives pour modéliser les boucles (foreach)",
             "Créer dans l'ordre : activités → flux → partitions → objets/ports → actions événements",
             "Lier les informations du diagramme de machine à états"
           ]

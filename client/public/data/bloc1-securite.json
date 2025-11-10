@@ -12,7 +12,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "La **sécurité des applications web** vise à protéger les applications contre les attaques malveillantes. Les vulnérabilités peuvent entraîner des fuites de données, des pertes financières et une atteinte à la réputation."
+          "text": "La sécurité des applications web vise à protéger les applications contre les attaques malveillantes. Les vulnérabilités peuvent entraîner des fuites de données, des pertes financières et une atteinte à la réputation."
         },
         {
           "type": "definition",
@@ -60,7 +60,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Le **OWASP Top 10** liste les 10 vulnérabilités web les plus critiques. Tout développeur doit les connaître et savoir s'en protéger."
+          "text": "Le OWASP Top 10 liste les 10 vulnérabilités web les plus critiques. Tout développeur doit les connaître et savoir s'en protéger."
         },
         {
           "type": "table",
@@ -154,7 +154,7 @@
         {
           "type": "alert",
           "level": "danger",
-          "text": "**Ne JAMAIS concaténer des données utilisateur dans des requêtes SQL.** Toujours utiliser des requêtes préparées (prepared statements)."
+          "text": "Ne JAMAIS concaténer des données utilisateur dans des requêtes SQL. Toujours utiliser des requêtes préparées (prepared statements)."
         }
       ]
     },
@@ -213,7 +213,7 @@
         {
           "type": "alert",
           "level": "danger",
-          "text": "**Toujours échapper les données utilisateur** avant de les afficher dans le HTML. Utiliser `htmlspecialchars()` en PHP, `textContent` en JS."
+          "text": "Toujours échapper les données utilisateur avant de les afficher dans le HTML. Utiliser `htmlspecialchars()` en PHP, `textContent` en JS."
         }
       ]
     },
@@ -252,7 +252,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Utiliser des tokens CSRF** pour toutes les actions sensibles (modification, suppression, paiement)."
+          "text": "Utiliser des tokens CSRF pour toutes les actions sensibles (modification, suppression, paiement)."
         }
       ]
     },
@@ -262,7 +262,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "L'**authentification** vérifie l'identité des utilisateurs. Elle doit être robuste pour éviter les accès non autorisés."
+          "text": "L'authentification vérifie l'identité des utilisateurs. Elle doit être robuste pour éviter les accès non autorisés."
         },
         {
           "type": "subtitle",
@@ -271,7 +271,7 @@
         {
           "type": "alert",
           "level": "danger",
-          "text": "**Ne JAMAIS stocker les mots de passe en clair** dans la base de données. Toujours les hacher avec un algorithme sécurisé."
+          "text": "Ne JAMAIS stocker les mots de passe en clair dans la base de données. Toujours les hacher avec un algorithme sécurisé."
         },
         {
           "type": "code",
@@ -315,11 +315,11 @@
         {
           "type": "list",
           "items": [
-            "**Politique de mots de passe forts** : longueur minimale (12 caractères), complexité",
-            "**Limitation des tentatives** : bloquer après X échecs (brute force)",
-            "**Authentification à deux facteurs (2FA)** : SMS, application, clé physique",
-            "**Sessions sécurisées** : cookies HttpOnly, Secure, SameSite",
-            "**Expiration des sessions** : déconnexion automatique après inactivité"
+            "Politique de mots de passe forts : longueur minimale (12 caractères), complexité",
+            "Limitation des tentatives : bloquer après X échecs (brute force)",
+            "Authentification à deux facteurs (2FA) : SMS, application, clé physique",
+            "Sessions sécurisées : cookies HttpOnly, Secure, SameSite",
+            "Expiration des sessions : déconnexion automatique après inactivité"
           ]
         }
       ]
@@ -330,7 +330,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "L'**autorisation** contrôle les permissions d'accès aux ressources. Un utilisateur authentifié ne doit pas pouvoir accéder à toutes les ressources."
+          "text": "L'autorisation contrôle les permissions d'accès aux ressources. Un utilisateur authentifié ne doit pas pouvoir accéder à toutes les ressources."
         },
         {
           "type": "subtitle",
@@ -338,7 +338,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Chaque utilisateur ne doit avoir que les permissions **strictement nécessaires** à son rôle."
+          "text": "Chaque utilisateur ne doit avoir que les permissions strictement nécessaires à son rôle."
         },
         {
           "type": "code",
@@ -351,7 +351,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Attribuer des **rôles** aux utilisateurs (admin, éditeur, lecteur) et des **permissions** aux rôles."
+          "text": "Attribuer des rôles aux utilisateurs (admin, éditeur, lecteur) et des permissions aux rôles."
         },
         {
           "type": "code",
@@ -371,7 +371,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**HTTPS** protège contre l'interception des données (man-in-the-middle) et garantit l'authenticité du serveur."
+          "text": "HTTPS protège contre l'interception des données (man-in-the-middle) et garantit l'authenticité du serveur."
         },
         {
           "type": "table",
@@ -401,7 +401,7 @@
         {
           "type": "alert",
           "level": "danger",
-          "text": "**Toujours utiliser HTTPS** pour les applications web, surtout celles manipulant des données sensibles (authentification, paiement)."
+          "text": "Toujours utiliser HTTPS pour les applications web, surtout celles manipulant des données sensibles (authentification, paiement)."
         },
         {
           "type": "subtitle",
@@ -410,9 +410,9 @@
         {
           "type": "list",
           "items": [
-            "**Let's Encrypt** : certificats gratuits et automatisés",
-            "**Cloudflare** : certificats gratuits avec CDN",
-            "**Autorités de certification commerciales** : DigiCert, Comodo, etc."
+            "Let's Encrypt : certificats gratuits et automatisés",
+            "Cloudflare : certificats gratuits avec CDN",
+            "Autorités de certification commerciales : DigiCert, Comodo, etc."
           ]
         }
       ]
@@ -423,7 +423,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les **en-têtes HTTP de sécurité** permettent de renforcer la sécurité des applications web."
+          "text": "Les en-têtes HTTP de sécurité permettent de renforcer la sécurité des applications web."
         },
         {
           "type": "table",
@@ -478,7 +478,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "**Ne jamais faire confiance aux données utilisateur.** Toujours valider et nettoyer les entrées."
+          "text": "Ne jamais faire confiance aux données utilisateur. Toujours valider et nettoyer les entrées."
         },
         {
           "type": "subtitle",
@@ -509,7 +509,7 @@
         {
           "type": "alert",
           "level": "info",
-          "text": "**Valider côté serveur ET côté client.** La validation client améliore l'UX, mais la validation serveur est obligatoire (le client peut être contourné)."
+          "text": "Valider côté serveur ET côté client. La validation client améliore l'UX, mais la validation serveur est obligatoire (le client peut être contourné)."
         }
       ]
     }
