@@ -13,7 +13,7 @@
         "O(n)",
         "O(n²)"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "La recherche binaire divise l'espace de recherche par 2 à chaque itération, d'où une complexité O(log n)."
     },
     {
@@ -27,7 +27,7 @@
         "Tri fusion",
         "Tri par sélection"
       ],
-      "correct": 2,
+      "correctAnswer": 2,
       "explanation": "Le tri fusion (merge sort) a une complexité O(n log n) dans tous les cas."
     },
     {
@@ -41,7 +41,7 @@
         "Un algorithme récursif",
         "Un algorithme de tri"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Un algorithme glouton fait le choix optimal local à chaque étape en espérant obtenir une solution globale optimale."
     },
     {
@@ -55,7 +55,7 @@
         "Les tests unitaires",
         "La documentation technique"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Le cahier des charges fonctionnel décrit les besoins, objectifs et fonctionnalités du projet."
     },
     {
@@ -69,7 +69,7 @@
         "DRY",
         "KISS"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "La méthode MoSCoW classe les fonctionnalités en Must have, Should have, Could have, Won't have."
     },
     {
@@ -83,7 +83,7 @@
         "Un test utilisateur",
         "Un scénario de test"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Une user story décrit une fonctionnalité du point de vue de l'utilisateur final."
     },
     {
@@ -97,7 +97,7 @@
         "Photoshop",
         "MySQL"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Jira est un outil populaire pour la gestion de projets agiles (Scrum, Kanban)."
     },
     {
@@ -111,7 +111,7 @@
         "Un déploiement quotidien",
         "Un rapport quotidien"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Le daily standup est une réunion quotidienne courte (15 min) pour synchroniser l'équipe."
     },
     {
@@ -125,7 +125,7 @@
         "Changelog",
         "Backlog"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Le rapport de sprint présente l'avancement, les réalisations et les obstacles du sprint."
     },
     {
@@ -139,7 +139,7 @@
         "display: table",
         "display: block"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "CSS Grid Layout utilise display: grid pour créer des mises en page en grille."
     },
     {
@@ -153,7 +153,7 @@
         "Relative à la fenêtre",
         "Relative au pixel"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "rem (root em) est relatif à la taille de police de l'élément racine (<html>)."
     },
     {
@@ -167,7 +167,7 @@
         ":nth-child(1)",
         ":first"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": ":first-child cible le premier élément enfant de son parent."
     },
     {
@@ -181,7 +181,7 @@
         "Word",
         "Excel"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Visual Studio Code est l'éditeur le plus utilisé par les développeurs web."
     },
     {
@@ -195,7 +195,7 @@
         "Un outil de déploiement",
         "Un outil de test"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Un linter analyse le code pour détecter les erreurs, bugs potentiels et violations de style."
     },
     {
@@ -209,7 +209,7 @@
         "Webpack",
         "Babel"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Prettier est un formateur de code automatique qui assure un style cohérent."
     },
     {
@@ -223,7 +223,7 @@
         "git add",
         "git pull"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "git commit crée un nouveau commit avec les modifications ajoutées au staging."
     },
     {
@@ -237,7 +237,7 @@
         "Crée une nouvelle branche",
         "Supprime une branche"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "git pull récupère les changements du dépôt distant et les fusionne avec la branche locale."
     },
     {
@@ -251,7 +251,7 @@
         "git create <name>",
         "git add branch"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "git branch <name> crée une nouvelle branche sans y basculer."
     },
     {
@@ -265,7 +265,7 @@
         "git show",
         "git status"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "git log affiche l'historique des commits de la branche actuelle."
     },
     {
@@ -279,7 +279,7 @@
         "Annule le dernier commit",
         "Crée un tag"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "git rebase réapplique les commits de la branche courante sur une autre base."
     },
     {
@@ -293,7 +293,7 @@
         "git undo",
         "git delete"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "git reset --soft HEAD~1 annule le dernier commit mais garde les modifications dans le staging."
     },
     {
@@ -307,7 +307,7 @@
         "Créer une branche",
         "Fusionner deux branches"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "git cherry-pick permet d'appliquer un commit spécifique d'une branche à une autre."
     },
     {
@@ -321,7 +321,7 @@
         "<href>",
         "<url>"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "La balise <a> (anchor) est utilisée pour créer des liens hypertextes."
     },
     {
@@ -335,7 +335,7 @@
         "align: center",
         "center: true"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "margin: 0 auto centre un élément block horizontalement (avec une largeur définie)."
     },
     {
@@ -349,7 +349,7 @@
         "<body>",
         "<section>"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "<main> représente le contenu principal unique du document."
     },
     {
@@ -363,7 +363,7 @@
         "<css href='style.css'>",
         "<import css='style.css'>"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "<link rel='stylesheet' href='...'> est la méthode standard pour inclure du CSS externe."
     },
     {
@@ -377,7 +377,7 @@
         "new Class",
         "define class"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "En ES6+, on utilise le mot-clé 'class' pour déclarer une classe."
     },
     {
@@ -391,7 +391,7 @@
         "Un mot-clé réservé",
         "Une fonction"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "'this' fait référence à l'instance courante de la classe."
     },
     {
@@ -405,7 +405,7 @@
         "Class()",
         "instance Class"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "On utilise le mot-clé 'new' pour créer une instance d'une classe."
     },
     {
@@ -419,7 +419,7 @@
         "Partager des variables",
         "Créer des objets"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "L'héritage permet à une classe d'hériter des propriétés et méthodes d'une classe parente."
     },
     {
@@ -433,7 +433,7 @@
         "Une variable",
         "Un tableau"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Une Promise représente une valeur qui peut être disponible maintenant, plus tard, ou jamais."
     },
     {
@@ -447,7 +447,7 @@
         "Accélère l'exécution",
         "Crée des threads"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "async/await permet d'écrire du code asynchrone de manière plus lisible, comme du code synchrone."
     },
     {
@@ -461,7 +461,7 @@
         "error()",
         "catch()"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "On utilise try/catch pour gérer les erreurs dans les fonctions async."
     },
     {
@@ -475,7 +475,7 @@
         "Un objet",
         "Un tableau"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Une fonction async retourne toujours une Promise."
     },
     {
@@ -489,7 +489,7 @@
         "2-4 semaines",
         "6 mois"
       ],
-      "correct": 2,
+      "correctAnswer": 2,
       "explanation": "Un sprint Scrum dure généralement entre 2 et 4 semaines."
     },
     {
@@ -503,7 +503,7 @@
         "Liste des développeurs",
         "Liste des tests"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Le Product Backlog est la liste priorisée de toutes les fonctionnalités, améliorations et corrections."
     },
     {
@@ -517,7 +517,7 @@
         "Tester l'application",
         "Déployer l'application"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Le Scrum Master facilite le processus Scrum et aide l'équipe à éliminer les obstacles."
     },
     {
@@ -531,7 +531,7 @@
         "Déployer sur mobile en premier",
         "Vendre sur mobile en premier"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Mobile First consiste à concevoir et développer d'abord pour les appareils mobiles."
     },
     {
@@ -545,7 +545,7 @@
         "Déployer progressivement",
         "Former progressivement"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Le Progressive Enhancement part d'une base fonctionnelle et ajoute des améliorations pour les navigateurs modernes."
     },
     {
@@ -559,7 +559,7 @@
         "Un test",
         "Un framework"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Un wireframe est une maquette basse fidélité qui représente la structure d'une interface."
     },
     {
@@ -573,7 +573,7 @@
         "Une base de données",
         "Un langage de programmation"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Node.js est un environnement d'exécution JavaScript basé sur le moteur V8 de Chrome."
     },
     {
@@ -587,7 +587,7 @@
         "app.create('/path')",
         "app.path('/path')"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "app.get('/path', callback) définit une route GET dans Express."
     },
     {
@@ -601,7 +601,7 @@
         "Un template",
         "Un fichier de configuration"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Un middleware est une fonction qui a accès aux objets request, response et à la fonction next()."
     },
     {
@@ -615,7 +615,7 @@
         "Un framework",
         "Une base de données"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "L'Event Loop est le mécanisme qui permet à Node.js d'effectuer des opérations non-bloquantes."
     },
     {
@@ -629,7 +629,7 @@
         "Un framework",
         "Un serveur"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Les Streams permettent de traiter les données par morceaux plutôt que de tout charger en mémoire."
     },
     {
@@ -643,7 +643,7 @@
         "path",
         "os"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Le module 'fs' (File System) permet de manipuler le système de fichiers."
     },
     {
@@ -657,7 +657,7 @@
         "Une base de données",
         "Un serveur web"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Symfony est un framework PHP pour le développement d'applications web."
     },
     {
@@ -671,7 +671,7 @@
         "Un template",
         "Un fichier de configuration"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Un Controller est une classe PHP qui traite les requêtes HTTP et retourne des réponses."
     },
     {
@@ -685,7 +685,7 @@
         "Smarty",
         "Mustache"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Symfony utilise Twig comme moteur de templates par défaut."
     },
     {
@@ -699,7 +699,7 @@
         "Une base de données",
         "Un serveur"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un composant React est une fonction ou classe qui retourne des éléments React (JSX)."
     },
     {
@@ -713,7 +713,7 @@
         "Une fonction",
         "Un style CSS"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Le state est un objet qui contient les données qui peuvent changer au cours du temps."
     },
     {
@@ -727,7 +727,7 @@
         "new Component()",
         "React.create()"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Un composant fonctionnel est une simple fonction JavaScript qui retourne du JSX."
     },
     {
@@ -741,7 +741,7 @@
         "Un style",
         "Une route"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Les Hooks sont des fonctions qui permettent d'utiliser le state et d'autres fonctionnalités React."
     },
     {
@@ -755,7 +755,7 @@
         "Un serveur",
         "Un langage de programmation"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "React Native permet de créer des applications mobiles natives avec React."
     },
     {
@@ -769,7 +769,7 @@
         "<Box>",
         "<Div>"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "<View> est l'équivalent de <div> en React Native."
     },
     {
@@ -783,7 +783,7 @@
         "<Text>",
         "<Label>"
       ],
-      "correct": 2,
+      "correctAnswer": 2,
       "explanation": "<Text> est le composant pour afficher du texte en React Native."
     },
     {
@@ -797,7 +797,7 @@
         "Karma",
         "Jasmine"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "Jest est le framework de test recommandé pour React."
     },
     {
@@ -811,7 +811,7 @@
         "Une base de données",
         "Un serveur"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "React Testing Library aide à tester les composants React de manière proche de l'utilisation réelle."
     },
     {
@@ -825,7 +825,7 @@
         "simulate()",
         "trigger()"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "fireEvent.click() de React Testing Library simule un événement de clic."
     },
     {
@@ -839,7 +839,7 @@
         "Un virus",
         "Un spam"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "XSS (Cross-Site Scripting) consiste à injecter du code JavaScript malveillant dans une page web."
     },
     {
@@ -853,7 +853,7 @@
         "Utiliser MongoDB",
         "Chiffrer la base de données"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Les requêtes préparées (prepared statements) protègent contre les injections SQL."
     },
     {
@@ -867,7 +867,7 @@
         "Un framework",
         "Un serveur"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "HTTPS est la version sécurisée de HTTP, utilisant le chiffrement SSL/TLS."
     },
     {
@@ -881,7 +881,7 @@
         "Une base de données",
         "Un framework"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "JWT (JSON Web Token) est un standard pour créer des tokens d'authentification."
     },
     {
@@ -895,7 +895,7 @@
         "Test de performance",
         "Test de sécurité"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un test unitaire vérifie le comportement d'une petite unité de code (fonction, méthode) de manière isolée."
     },
     {
@@ -909,7 +909,7 @@
         "Always, All, Anywhere",
         "Auto, Async, Await"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "AAA (Arrange, Act, Assert) est un pattern pour structurer les tests : préparer, exécuter, vérifier."
     },
     {
@@ -923,7 +923,7 @@
         "Une base de données",
         "Un serveur"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un mock est un objet simulé qui remplace une dépendance réelle dans les tests."
     },
     {
@@ -937,7 +937,7 @@
         "Un mot de passe",
         "Un index"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Une clé primaire identifie de manière unique chaque enregistrement d'une table."
     },
     {
@@ -951,7 +951,7 @@
         "Un mot de passe",
         "Un index"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Une clé étrangère crée une relation entre deux tables en référençant la clé primaire d'une autre table."
     },
     {
@@ -965,7 +965,7 @@
         "Sauvegarder les données",
         "Indexer les données"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "La normalisation organise les données pour minimiser la redondance et les anomalies."
     },
     {
@@ -979,7 +979,7 @@
         "Une base de données",
         "Un serveur"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Le RGPD est le règlement européen sur la protection des données personnelles."
     },
     {
@@ -993,7 +993,7 @@
         "72 heures",
         "1 semaine"
       ],
-      "correct": 2,
+      "correctAnswer": 2,
       "explanation": "Le RGPD impose de notifier une violation de données dans les 72 heures."
     },
     {
@@ -1007,7 +1007,7 @@
         "Un certificat",
         "Un brevet"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Une licence open source permet d'utiliser, modifier et distribuer le code source librement."
     },
     {
@@ -1021,7 +1021,7 @@
         "Une base de données",
         "Un serveur"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Figma est un outil de design d'interface utilisateur collaboratif basé sur le web."
     },
     {
@@ -1035,7 +1035,7 @@
         "Un plugin",
         "Un export"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un composant est un élément de design réutilisable qui peut être instancié plusieurs fois."
     },
     {
@@ -1049,7 +1049,7 @@
         "Télécharger le fichier",
         "Utiliser Git"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Figma permet la collaboration en temps réel en partageant simplement le lien du fichier."
     },
     {
@@ -1063,7 +1063,7 @@
         "Un export",
         "Un composant"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Auto Layout permet de créer des designs qui s'adaptent automatiquement au contenu."
     },
     {
@@ -1077,7 +1077,7 @@
         "Un plugin",
         "Un export"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Les variantes permettent de regrouper différentes versions d'un composant (états, tailles, etc.)."
     },
     {
@@ -1091,7 +1091,7 @@
         "Utiliser des plugins",
         "Exporter en PDF"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un système de design utilise des composants, styles de couleurs/textes et variables réutilisables."
     },
     {
@@ -1105,7 +1105,7 @@
         "Un langage",
         "Un serveur web"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un SGBD est un logiciel qui permet de créer, gérer et interroger des bases de données."
     },
     {
@@ -1119,7 +1119,7 @@
         "3306",
         "5432"
       ],
-      "correct": 2,
+      "correctAnswer": 2,
       "explanation": "MySQL utilise le port 3306 par défaut."
     },
     {
@@ -1133,7 +1133,7 @@
         "Un export",
         "Une requête"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Une migration est un script qui modifie la structure de la base de données de manière versionnée."
     },
     {
@@ -1147,7 +1147,7 @@
         "Base de données rapide",
         "Base de données cloud"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "NoSQL désigne les bases de données non relationnelles (documents, clé-valeur, graphes, etc.)."
     },
     {
@@ -1161,7 +1161,7 @@
         "MongoDB",
         "Oracle"
       ],
-      "correct": 2,
+      "correctAnswer": 2,
       "explanation": "MongoDB est une base de données NoSQL orientée documents."
     },
     {
@@ -1175,7 +1175,7 @@
         "Une table",
         "Une requête"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un document MongoDB est un objet au format BSON (Binary JSON)."
     },
     {
@@ -1189,7 +1189,7 @@
         "Supprime des données",
         "Modifie des données"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "SELECT permet de récupérer des données d'une ou plusieurs tables."
     },
     {
@@ -1203,7 +1203,7 @@
         "IF",
         "WHEN"
       ],
-      "correct": 1,
+      "correctAnswer": 1,
       "explanation": "La clause WHERE permet de filtrer les résultats selon des conditions."
     },
     {
@@ -1217,7 +1217,7 @@
         "Supprime des données",
         "Crée une table"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "JOIN permet de combiner des lignes de plusieurs tables basées sur une condition."
     },
     {
@@ -1231,7 +1231,7 @@
         "LEFT JOIN est plus rapide",
         "INNER JOIN est obsolète"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "INNER JOIN ne retourne que les lignes qui correspondent, LEFT JOIN inclut toutes les lignes de la table de gauche."
     },
     {
@@ -1245,7 +1245,7 @@
         "User Management Logic",
         "Unique Model Library"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "UML (Unified Modeling Language) est un langage de modélisation graphique."
     },
     {
@@ -1259,7 +1259,7 @@
         "Représentation des utilisateurs",
         "Représentation du réseau"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Le diagramme de classes représente la structure statique : classes, attributs, méthodes et relations."
     },
     {
@@ -1273,7 +1273,7 @@
         "Représentation des utilisateurs",
         "Représentation du réseau"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Le diagramme de séquence montre les interactions entre objets dans un ordre chronologique."
     },
     {
@@ -1287,7 +1287,7 @@
         "Représentation des utilisateurs",
         "Représentation du réseau"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Le diagramme d'activité représente le flux de travail et les processus métier."
     },
     {
@@ -1301,7 +1301,7 @@
         "Représentation des utilisateurs",
         "Représentation du réseau"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Le diagramme d'états-transitions montre les différents états d'un objet et les événements qui déclenchent les transitions."
     },
     {
@@ -1315,7 +1315,7 @@
         "Représentation des utilisateurs",
         "Représentation du réseau"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Le diagramme de composants montre l'organisation et les dépendances entre les composants logiciels."
     },
     {
@@ -1329,7 +1329,7 @@
         "Universal Experience",
         "Unique Exchange"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "UX (User Experience) désigne l'expérience utilisateur globale."
     },
     {
@@ -1343,7 +1343,7 @@
         "Un framework",
         "Un test"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un persona est un profil fictif représentant un type d'utilisateur cible."
     },
     {
@@ -1357,7 +1357,7 @@
         "Tester la performance",
         "Tester la sécurité"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un test utilisateur consiste à observer de vrais utilisateurs interagir avec le produit."
     },
     {
@@ -1371,7 +1371,7 @@
         "Client Integration / Client Deployment",
         "Container Integration / Container Deployment"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "CI/CD automatise l'intégration et le déploiement continu du code."
     },
     {
@@ -1385,7 +1385,7 @@
         "Environnement de production",
         "Environnement de test"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Le staging est un environnement qui réplique la production pour tester avant le déploiement."
     },
     {
@@ -1399,7 +1399,7 @@
         "Sauvegarder",
         "Tester"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un rollback consiste à revenir à une version précédente en cas de problème."
     },
     {
@@ -1413,7 +1413,7 @@
         "Framework",
         "Langage de programmation"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Docker est une plateforme pour créer, déployer et exécuter des applications dans des conteneurs."
     },
     {
@@ -1427,7 +1427,7 @@
         "Un fichier de configuration",
         "Un réseau"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Une image Docker est un template immuable qui contient l'application et ses dépendances."
     },
     {
@@ -1441,7 +1441,7 @@
         "Un réseau",
         "Un volume"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un conteneur est une instance en cours d'exécution d'une image Docker."
     },
     {
@@ -1455,7 +1455,7 @@
         "Une base de données",
         "Un framework"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Docker Compose permet de définir et gérer des applications composées de plusieurs conteneurs."
     },
     {
@@ -1469,7 +1469,7 @@
         "Un framework",
         "Une base de données"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un plan de tests décrit la stratégie, les objectifs, les ressources et le calendrier des tests."
     },
     {
@@ -1483,7 +1483,7 @@
         "Test de l'interface",
         "Test de performance"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un test d'intégration vérifie que plusieurs composants fonctionnent correctement ensemble."
     },
     {
@@ -1497,7 +1497,7 @@
         "Test de performance",
         "Test de sécurité"
       ],
-      "correct": 0,
+      "correctAnswer": 0,
       "explanation": "Un test E2E simule un parcours utilisateur complet de bout en bout."
     }
   ]
