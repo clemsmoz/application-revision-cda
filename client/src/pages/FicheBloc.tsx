@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRoute } from 'wouter';
+import { useDataCache } from '@/hooks/useDataCache';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -42,10 +43,10 @@ export default function FicheBloc() {
     bloc3: { title: 'Bloc 3 : Préparer le déploiement d\'une application sécurisée', color: 'green' },
   };
 
-  useEffect(() => {
-    async function loadModules() {
-      try {
-        setLoading(true);
+  // Configuration du cache pour les modules
+  const { data: cachedModules, loading: cacheLoading } = useDataCache<ModuleData[]>({
+    cacheKey: `modules-${blocId}`,
+    fetchFn: async () => {
         // Liste des modules par bloc
         const moduleFiles: Record<string, string[]> = {
           bloc1: [
@@ -92,32 +93,32 @@ export default function FicheBloc() {
         const files = moduleFiles[blocId] || [];
         const loadedModules: ModuleData[] = [];
 
-        for (const file of files) {
-          try {
-            const response = await fetch(`/data/${file}.json`);
-            if (response.ok) {
-              const data = await response.json();
-              loadedModules.push(data);
-            }
-          } catch (err) {
-            console.error(`Erreur lors du chargement de ${file}:`, err);
+      for (const file of files) {
+        try {
+          const response = await fetch(`/data/${file}.json`);
+          if (response.ok) {
+            const data = await response.json();
+            loadedModules.push(data);
           }
+        } catch (err) {
+          console.error(`Erreur lors du chargement de ${file}:`, err);
         }
+      }
 
-        setModules(loadedModules);
-        if (loadedModules.length > 0) {
-          setActiveModule(loadedModules[0].id);
-        }
-      } catch (err) {
-        setError('Erreur lors du chargement des modules');
-        console.error(err);
-      } finally {
-        setLoading(false);
+      return loadedModules;
+    },
+  });
+
+  // Mettre à jour les modules quand le cache est chargé
+  useEffect(() => {
+    if (cachedModules) {
+      setModules(cachedModules);
+      if (cachedModules.length > 0 && !activeModule) {
+        setActiveModule(cachedModules[0].id);
       }
     }
-
-    loadModules();
-  }, [blocId]);
+    setLoading(cacheLoading);
+  }, [cachedModules, cacheLoading]);
 
   if (loading) {
     return (
