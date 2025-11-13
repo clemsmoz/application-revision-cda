@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
-import { Loader2, AlertCircle, BookOpen, Lightbulb, Code as CodeIcon } from 'lucide-react';
+import { Loader2, AlertCircle, BookOpen, Lightbulb, Code as CodeIcon, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface ModuleData {
   id: string;
@@ -34,6 +34,7 @@ export default function FicheBloc() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeModule, setActiveModule] = useState<string>('');
+  const [isMenuCollapsed, setIsMenuCollapsed] = useState(false);
 
   const blocInfo: Record<string, { title: string; color: string }> = {
     bloc1: { title: 'Bloc 1 : Développer une application sécurisée', color: 'blue' },
@@ -154,7 +155,27 @@ export default function FicheBloc() {
 
       {/* Tabs pour les modules */}
       <Tabs value={activeModule} onValueChange={setActiveModule} className="space-y-6">
-        <TabsList className="flex-wrap h-auto gap-2 bg-transparent">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-semibold text-gray-900">Modules</h2>
+          <button
+            onClick={() => setIsMenuCollapsed(!isMenuCollapsed)}
+            className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            {isMenuCollapsed ? (
+              <>
+                <ChevronDown className="w-4 h-4" />
+                Afficher les modules
+              </>
+            ) : (
+              <>
+                <ChevronUp className="w-4 h-4" />
+                Réduire les modules
+              </>
+            )}
+          </button>
+        </div>
+        {!isMenuCollapsed && (
+          <TabsList className="flex-wrap h-auto gap-2 bg-transparent">
           {modules.map((module) => (
             <TabsTrigger
               key={module.id}
@@ -166,6 +187,7 @@ export default function FicheBloc() {
             </TabsTrigger>
           ))}
         </TabsList>
+        )}
 
         {modules.map((module) => (
           <TabsContent key={module.id} value={module.id} className="space-y-6">
