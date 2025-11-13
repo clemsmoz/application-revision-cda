@@ -3,6 +3,7 @@ import { Link, useLocation } from 'wouter';
 import { Home, BookOpen, Brain, BookMarked, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
+import ScrollToTop from './ScrollToTop';
 
 interface LayoutProps {
   children: ReactNode;
@@ -104,6 +105,9 @@ export default function Layout({ children }: LayoutProps) {
       <main className="container mx-auto px-4 py-8">
         {children}
       </main>
+
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
 
       {/* Footer */}
       <footer className="bg-white border-t mt-auto">
