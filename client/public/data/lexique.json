@@ -254,6 +254,766 @@
       "term": "Portée",
       "definition": "Zone du code où une variable est accessible (scope)",
       "category": "Programmation"
+    },
+    {
+      "term": "Algorithme",
+      "definition": "Suite d'instructions logiques permettant de résoudre un problème de manière optimale",
+      "category": "Algorithmique"
+    },
+    {
+      "term": "Complexité temporelle",
+      "definition": "Mesure du temps d'exécution d'un algorithme en fonction de la taille des données",
+      "category": "Algorithmique"
+    },
+    {
+      "term": "Complexité spatiale",
+      "definition": "Mesure de la mémoire utilisée par un algorithme en fonction de la taille des données",
+      "category": "Algorithmique"
+    },
+    {
+      "term": "Big O",
+      "definition": "Notation mathématique décrivant la complexité d'un algorithme dans le pire cas",
+      "category": "Algorithmique"
+    },
+    {
+      "term": "Récursivité",
+      "definition": "Technique où une fonction s'appelle elle-même pour résoudre un problème",
+      "category": "Algorithmique"
+    },
+    {
+      "term": "Itération",
+      "definition": "Répétition d'un ensemble d'instructions un nombre déterminé ou indéterminé de fois",
+      "category": "Algorithmique"
+    },
+    {
+      "term": "Pile (Stack)",
+      "definition": "Structure de données LIFO (Last In First Out) où le dernier élément ajouté est le premier retiré",
+      "category": "Structures de données"
+    },
+    {
+      "term": "File (Queue)",
+      "definition": "Structure de données FIFO (First In First Out) où le premier élément ajouté est le premier retiré",
+      "category": "Structures de données"
+    },
+    {
+      "term": "Liste chaînée",
+      "definition": "Structure de données où chaque élément pointe vers le suivant",
+      "category": "Structures de données"
+    },
+    {
+      "term": "Arbre binaire",
+      "definition": "Structure hiérarchique où chaque nœud a au maximum deux enfants",
+      "category": "Structures de données"
+    },
+    {
+      "term": "Graphe",
+      "definition": "Structure composée de nœuds (sommets) reliés par des arêtes",
+      "category": "Structures de données"
+    },
+    {
+      "term": "Table de hachage",
+      "definition": "Structure de données permettant un accès rapide aux éléments via une fonction de hachage",
+      "category": "Structures de données"
+    },
+    {
+      "term": "Closure",
+      "definition": "Fonction qui a accès aux variables de sa portée parente même après que celle-ci ait terminé son exécution",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Callback",
+      "definition": "Fonction passée en argument à une autre fonction pour être exécutée plus tard",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Promise",
+      "definition": "Objet représentant la complétion ou l'échec éventuel d'une opération asynchrone",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Async/Await",
+      "definition": "Syntaxe permettant d'écrire du code asynchrone de manière synchrone",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Event Loop",
+      "definition": "Mécanisme permettant à JavaScript d'exécuter du code asynchrone de manière non-bloquante",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Hoisting",
+      "definition": "Comportement JavaScript où les déclarations sont déplacées en haut de leur portée",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Destructuring",
+      "definition": "Syntaxe permettant d'extraire des valeurs d'objets ou de tableaux",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Spread operator",
+      "definition": "Opérateur (...) permettant d'étendre un itérable en éléments individuels",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Arrow function",
+      "definition": "Syntaxe concise pour déclarer des fonctions avec un this lexical",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Virtual DOM",
+      "definition": "Représentation en mémoire du DOM réel utilisée par React pour optimiser les mises à jour",
+      "category": "React"
+    },
+    {
+      "term": "Hook",
+      "definition": "Fonction permettant d'utiliser l'état et d'autres fonctionnalités React dans des composants fonctionnels",
+      "category": "React"
+    },
+    {
+      "term": "Props",
+      "definition": "Propriétés passées d'un composant parent à un composant enfant en React",
+      "category": "React"
+    },
+    {
+      "term": "State",
+      "definition": "Données internes d'un composant React qui peuvent changer au fil du temps",
+      "category": "React"
+    },
+    {
+      "term": "Context",
+      "definition": "Mécanisme React pour partager des données entre composants sans passer par les props",
+      "category": "React"
+    },
+    {
+      "term": "Redux",
+      "definition": "Bibliothèque de gestion d'état prévisible pour applications JavaScript",
+      "category": "React"
+    },
+    {
+      "term": "JSX",
+      "definition": "Extension de syntaxe JavaScript permettant d'écrire du HTML dans du JavaScript",
+      "category": "React"
+    },
+    {
+      "term": "Composant",
+      "definition": "Bloc de code réutilisable qui retourne des éléments React",
+      "category": "React"
+    },
+    {
+      "term": "Flexbox",
+      "definition": "Modèle de mise en page CSS permettant de créer des layouts flexibles",
+      "category": "CSS"
+    },
+    {
+      "term": "Grid",
+      "definition": "Système de mise en page CSS bidimensionnel pour créer des grilles",
+      "category": "CSS"
+    },
+    {
+      "term": "Media Query",
+      "definition": "Technique CSS pour appliquer des styles selon les caractéristiques de l'appareil",
+      "category": "CSS"
+    },
+    {
+      "term": "Responsive Design",
+      "definition": "Approche de conception s'adaptant à différentes tailles d'écran",
+      "category": "Design"
+    },
+    {
+      "term": "Mobile First",
+      "definition": "Approche de conception commençant par la version mobile",
+      "category": "Design"
+    },
+    {
+      "term": "Wireframe",
+      "definition": "Maquette filaire représentant la structure d'une interface",
+      "category": "Design"
+    },
+    {
+      "term": "Mockup",
+      "definition": "Maquette visuelle détaillée d'une interface",
+      "category": "Design"
+    },
+    {
+      "term": "Prototype",
+      "definition": "Version interactive d'une interface pour tester l'expérience utilisateur",
+      "category": "Design"
+    },
+    {
+      "term": "UX",
+      "definition": "User Experience - Expérience globale de l'utilisateur avec un produit",
+      "category": "Design"
+    },
+    {
+      "term": "UI",
+      "definition": "User Interface - Interface visuelle avec laquelle l'utilisateur interagit",
+      "category": "Design"
+    },
+    {
+      "term": "Accessibilité",
+      "definition": "Conception permettant à tous les utilisateurs, y compris handicapés, d'utiliser une application",
+      "category": "Design"
+    },
+    {
+      "term": "WCAG",
+      "definition": "Web Content Accessibility Guidelines - Directives pour l'accessibilité web",
+      "category": "Design"
+    },
+    {
+      "term": "Middleware",
+      "definition": "Fonction intermédiaire traitant les requêtes avant qu'elles n'atteignent leur destination",
+      "category": "Backend"
+    },
+    {
+      "term": "Express",
+      "definition": "Framework web minimaliste pour Node.js",
+      "category": "Backend"
+    },
+    {
+      "term": "Route",
+      "definition": "Point d'entrée d'une API défini par une méthode HTTP et un chemin",
+      "category": "Backend"
+    },
+    {
+      "term": "Controller",
+      "definition": "Composant gérant la logique métier et les interactions avec les modèles",
+      "category": "Backend"
+    },
+    {
+      "term": "Model",
+      "definition": "Représentation des données et de la logique métier",
+      "category": "Backend"
+    },
+    {
+      "term": "View",
+      "definition": "Composant responsable de l'affichage des données",
+      "category": "Backend"
+    },
+    {
+      "term": "MVC",
+      "definition": "Model-View-Controller - Pattern architectural séparant données, logique et présentation",
+      "category": "Architecture"
+    },
+    {
+      "term": "JWT",
+      "definition": "JSON Web Token - Standard pour créer des tokens d'authentification",
+      "category": "Sécurité"
+    },
+    {
+      "term": "OAuth",
+      "definition": "Protocole d'autorisation permettant l'accès délégué à des ressources",
+      "category": "Sécurité"
+    },
+    {
+      "term": "CORS",
+      "definition": "Cross-Origin Resource Sharing - Mécanisme permettant les requêtes cross-domain",
+      "category": "Sécurité"
+    },
+    {
+      "term": "Session",
+      "definition": "Mécanisme de stockage côté serveur pour maintenir l'état utilisateur",
+      "category": "Backend"
+    },
+    {
+      "term": "Cookie",
+      "definition": "Petit fichier stocké côté client pour maintenir l'état entre requêtes",
+      "category": "Backend"
+    },
+    {
+      "term": "Clé primaire",
+      "definition": "Identifiant unique pour chaque enregistrement d'une table",
+      "category": "Base de données"
+    },
+    {
+      "term": "Clé étrangère",
+      "definition": "Champ référençant la clé primaire d'une autre table",
+      "category": "Base de données"
+    },
+    {
+      "term": "Index",
+      "definition": "Structure de données améliorant la vitesse des requêtes",
+      "category": "Base de données"
+    },
+    {
+      "term": "Transaction",
+      "definition": "Ensemble d'opérations exécutées comme une unité atomique",
+      "category": "Base de données"
+    },
+    {
+      "term": "ACID",
+      "definition": "Atomicité, Cohérence, Isolation, Durabilité - Propriétés des transactions",
+      "category": "Base de données"
+    },
+    {
+      "term": "Normalisation",
+      "definition": "Processus d'organisation des données pour réduire la redondance",
+      "category": "Base de données"
+    },
+    {
+      "term": "Dénormalisation",
+      "definition": "Ajout de redondance pour améliorer les performances de lecture",
+      "category": "Base de données"
+    },
+    {
+      "term": "JOIN",
+      "definition": "Opération combinant des lignes de plusieurs tables",
+      "category": "Base de données"
+    },
+    {
+      "term": "ORM",
+      "definition": "Object-Relational Mapping - Technique de conversion entre objets et tables",
+      "category": "Base de données"
+    },
+    {
+      "term": "Migration",
+      "definition": "Script modifiant la structure d'une base de données",
+      "category": "Base de données"
+    },
+    {
+      "term": "Seed",
+      "definition": "Données initiales insérées dans une base de données",
+      "category": "Base de données"
+    },
+    {
+      "term": "MongoDB",
+      "definition": "Base de données NoSQL orientée documents",
+      "category": "Base de données"
+    },
+    {
+      "term": "Redis",
+      "definition": "Base de données NoSQL en mémoire de type clé-valeur",
+      "category": "Base de données"
+    },
+    {
+      "term": "PostgreSQL",
+      "definition": "Système de gestion de base de données relationnelle open source",
+      "category": "Base de données"
+    },
+    {
+      "term": "MySQL",
+      "definition": "Système de gestion de base de données relationnelle populaire",
+      "category": "Base de données"
+    },
+    {
+      "term": "Test unitaire",
+      "definition": "Test vérifiant le bon fonctionnement d'une unité de code isolée",
+      "category": "Tests"
+    },
+    {
+      "term": "Test d'intégration",
+      "definition": "Test vérifiant l'interaction entre plusieurs composants",
+      "category": "Tests"
+    },
+    {
+      "term": "Test E2E",
+      "definition": "End-to-End - Test simulant le parcours utilisateur complet",
+      "category": "Tests"
+    },
+    {
+      "term": "TDD",
+      "definition": "Test-Driven Development - Développement guidé par les tests",
+      "category": "Tests"
+    },
+    {
+      "term": "BDD",
+      "definition": "Behavior-Driven Development - Développement guidé par le comportement",
+      "category": "Tests"
+    },
+    {
+      "term": "Mock",
+      "definition": "Objet simulant le comportement d'un objet réel pour les tests",
+      "category": "Tests"
+    },
+    {
+      "term": "Stub",
+      "definition": "Implémentation simplifiée d'un composant pour les tests",
+      "category": "Tests"
+    },
+    {
+      "term": "Coverage",
+      "definition": "Pourcentage de code couvert par les tests",
+      "category": "Tests"
+    },
+    {
+      "term": "Jest",
+      "definition": "Framework de test JavaScript développé par Facebook",
+      "category": "Tests"
+    },
+    {
+      "term": "Cypress",
+      "definition": "Framework de test E2E pour applications web",
+      "category": "Tests"
+    },
+    {
+      "term": "Commit",
+      "definition": "Enregistrement des modifications dans l'historique Git",
+      "category": "Git"
+    },
+    {
+      "term": "Branch",
+      "definition": "Branche parallèle de développement dans Git",
+      "category": "Git"
+    },
+    {
+      "term": "Merge",
+      "definition": "Fusion de deux branches Git",
+      "category": "Git"
+    },
+    {
+      "term": "Rebase",
+      "definition": "Réécriture de l'historique Git en appliquant des commits sur une nouvelle base",
+      "category": "Git"
+    },
+    {
+      "term": "Pull Request",
+      "definition": "Demande de fusion de code dans un dépôt Git",
+      "category": "Git"
+    },
+    {
+      "term": "CI/CD",
+      "definition": "Continuous Integration/Continuous Deployment - Automatisation du build et déploiement",
+      "category": "DevOps"
+    },
+    {
+      "term": "Pipeline",
+      "definition": "Séquence automatisée d'étapes pour build, test et déploiement",
+      "category": "DevOps"
+    },
+    {
+      "term": "Container",
+      "definition": "Environnement isolé contenant une application et ses dépendances",
+      "category": "DevOps"
+    },
+    {
+      "term": "Image Docker",
+      "definition": "Template en lecture seule pour créer des conteneurs",
+      "category": "DevOps"
+    },
+    {
+      "term": "Dockerfile",
+      "definition": "Fichier de configuration pour construire une image Docker",
+      "category": "DevOps"
+    },
+    {
+      "term": "Docker Compose",
+      "definition": "Outil pour définir et exécuter des applications multi-conteneurs",
+      "category": "DevOps"
+    },
+    {
+      "term": "Kubernetes",
+      "definition": "Plateforme d'orchestration de conteneurs",
+      "category": "DevOps"
+    },
+    {
+      "term": "Microservices",
+      "definition": "Architecture où l'application est divisée en services indépendants",
+      "category": "Architecture"
+    },
+    {
+      "term": "Monolithe",
+      "definition": "Architecture où toute l'application est un seul bloc",
+      "category": "Architecture"
+    },
+    {
+      "term": "XSS",
+      "definition": "Cross-Site Scripting - Injection de scripts malveillants dans des pages web",
+      "category": "Sécurité"
+    },
+    {
+      "term": "CSRF",
+      "definition": "Cross-Site Request Forgery - Attaque forçant un utilisateur à exécuter des actions non désirées",
+      "category": "Sécurité"
+    },
+    {
+      "term": "SQL Injection",
+      "definition": "Injection de code SQL malveillant dans une requête",
+      "category": "Sécurité"
+    },
+    {
+      "term": "Hashing",
+      "definition": "Transformation irréversible de données en une empreinte fixe",
+      "category": "Sécurité"
+    },
+    {
+      "term": "Salting",
+      "definition": "Ajout de données aléatoires avant le hashing pour renforcer la sécurité",
+      "category": "Sécurité"
+    },
+    {
+      "term": "Encryption",
+      "definition": "Chiffrement réversible de données pour protéger leur confidentialité",
+      "category": "Sécurité"
+    },
+    {
+      "term": "HTTPS",
+      "definition": "HTTP Secure - Protocole HTTP sécurisé par SSL/TLS",
+      "category": "Sécurité"
+    },
+    {
+      "term": "SSL/TLS",
+      "definition": "Protocoles de sécurisation des communications réseau",
+      "category": "Sécurité"
+    },
+    {
+      "term": "Authentification",
+      "definition": "Processus de vérification de l'identité d'un utilisateur",
+      "category": "Sécurité"
+    },
+    {
+      "term": "Autorisation",
+      "definition": "Processus de vérification des droits d'accès d'un utilisateur",
+      "category": "Sécurité"
+    },
+    {
+      "term": "OWASP",
+      "definition": "Open Web Application Security Project - Organisation pour la sécurité des applications",
+      "category": "Sécurité"
+    },
+    {
+      "term": "Scrum",
+      "definition": "Framework agile pour gérer des projets complexes",
+      "category": "Agile"
+    },
+    {
+      "term": "Sprint",
+      "definition": "Période de temps fixe (1-4 semaines) pour développer des fonctionnalités",
+      "category": "Agile"
+    },
+    {
+      "term": "Product Owner",
+      "definition": "Personne responsable de la vision produit et des priorités",
+      "category": "Agile"
+    },
+    {
+      "term": "Scrum Master",
+      "definition": "Facilitateur aidant l'équipe à appliquer Scrum",
+      "category": "Agile"
+    },
+    {
+      "term": "Daily Standup",
+      "definition": "Réunion quotidienne courte pour synchroniser l'équipe",
+      "category": "Agile"
+    },
+    {
+      "term": "Backlog",
+      "definition": "Liste priorisée des fonctionnalités à développer",
+      "category": "Agile"
+    },
+    {
+      "term": "User Story",
+      "definition": "Description courte d'une fonctionnalité du point de vue utilisateur",
+      "category": "Agile"
+    },
+    {
+      "term": "Epic",
+      "definition": "Grande user story décomposable en plusieurs stories plus petites",
+      "category": "Agile"
+    },
+    {
+      "term": "Kanban",
+      "definition": "Méthode agile visualisant le flux de travail",
+      "category": "Agile"
+    },
+    {
+      "term": "Retrospective",
+      "definition": "Réunion d'équipe pour améliorer les processus",
+      "category": "Agile"
+    },
+    {
+      "term": "Definition of Done",
+      "definition": "Critères définissant quand une tâche est complète",
+      "category": "Agile"
+    },
+    {
+      "term": "SOLID",
+      "definition": "Cinq principes de conception orientée objet",
+      "category": "Architecture"
+    },
+    {
+      "term": "DRY",
+      "definition": "Don't Repeat Yourself - Principe évitant la duplication de code",
+      "category": "Architecture"
+    },
+    {
+      "term": "KISS",
+      "definition": "Keep It Simple, Stupid - Principe de simplicité",
+      "category": "Architecture"
+    },
+    {
+      "term": "YAGNI",
+      "definition": "You Aren't Gonna Need It - Ne pas développer de fonctionnalités inutiles",
+      "category": "Architecture"
+    },
+    {
+      "term": "Singleton",
+      "definition": "Pattern garantissant qu'une classe n'a qu'une seule instance",
+      "category": "Design Patterns"
+    },
+    {
+      "term": "Factory",
+      "definition": "Pattern créant des objets sans spécifier leur classe exacte",
+      "category": "Design Patterns"
+    },
+    {
+      "term": "Observer",
+      "definition": "Pattern où des objets sont notifiés des changements d'état",
+      "category": "Design Patterns"
+    },
+    {
+      "term": "Decorator",
+      "definition": "Pattern ajoutant dynamiquement des fonctionnalités à un objet",
+      "category": "Design Patterns"
+    },
+    {
+      "term": "Strategy",
+      "definition": "Pattern définissant une famille d'algorithmes interchangeables",
+      "category": "Design Patterns"
+    },
+    {
+      "term": "Dependency Injection",
+      "definition": "Pattern fournissant les dépendances d'un objet de l'extérieur",
+      "category": "Architecture"
+    },
+    {
+      "term": "Lazy Loading",
+      "definition": "Chargement différé des ressources pour améliorer les performances",
+      "category": "Performance"
+    },
+    {
+      "term": "Code Splitting",
+      "definition": "Division du code en plusieurs bundles chargés à la demande",
+      "category": "Performance"
+    },
+    {
+      "term": "Caching",
+      "definition": "Stockage temporaire de données pour accélérer les accès futurs",
+      "category": "Performance"
+    },
+    {
+      "term": "CDN",
+      "definition": "Content Delivery Network - Réseau de serveurs distribuant du contenu",
+      "category": "Performance"
+    },
+    {
+      "term": "Minification",
+      "definition": "Réduction de la taille du code en supprimant les espaces et commentaires",
+      "category": "Performance"
+    },
+    {
+      "term": "Bundling",
+      "definition": "Regroupement de plusieurs fichiers en un seul",
+      "category": "Performance"
+    },
+    {
+      "term": "Tree Shaking",
+      "definition": "Élimination du code mort lors du bundling",
+      "category": "Performance"
+    },
+    {
+      "term": "Debouncing",
+      "definition": "Limitation de la fréquence d'exécution d'une fonction",
+      "category": "Performance"
+    },
+    {
+      "term": "Throttling",
+      "definition": "Limitation du nombre d'exécutions d'une fonction par période",
+      "category": "Performance"
+    },
+    {
+      "term": "Webpack",
+      "definition": "Bundler de modules JavaScript",
+      "category": "Outils"
+    },
+    {
+      "term": "Babel",
+      "definition": "Compilateur JavaScript transformant le code moderne en code compatible",
+      "category": "Outils"
+    },
+    {
+      "term": "npm",
+      "definition": "Node Package Manager - Gestionnaire de paquets JavaScript",
+      "category": "Outils"
+    },
+    {
+      "term": "yarn",
+      "definition": "Gestionnaire de paquets JavaScript alternatif à npm",
+      "category": "Outils"
+    },
+    {
+      "term": "ESLint",
+      "definition": "Outil d'analyse statique pour identifier les problèmes dans le code JavaScript",
+      "category": "Outils"
+    },
+    {
+      "term": "Prettier",
+      "definition": "Formateur de code automatique",
+      "category": "Outils"
+    },
+    {
+      "term": "TypeScript",
+      "definition": "Sur-ensemble typé de JavaScript",
+      "category": "JavaScript"
+    },
+    {
+      "term": "Interface",
+      "definition": "Contrat définissant la structure d'un objet en TypeScript",
+      "category": "TypeScript"
+    },
+    {
+      "term": "Type",
+      "definition": "Définition de la nature des données en TypeScript",
+      "category": "TypeScript"
+    },
+    {
+      "term": "Generic",
+      "definition": "Type paramétrable permettant la réutilisation de code",
+      "category": "TypeScript"
+    },
+    {
+      "term": "Enum",
+      "definition": "Ensemble de constantes nommées",
+      "category": "TypeScript"
+    },
+    {
+      "term": "GraphQL",
+      "definition": "Langage de requête pour API permettant de demander exactement les données nécessaires",
+      "category": "API"
+    },
+    {
+      "term": "WebSocket",
+      "definition": "Protocole de communication bidirectionnelle en temps réel",
+      "category": "API"
+    },
+    {
+      "term": "SSR",
+      "definition": "Server-Side Rendering - Rendu côté serveur",
+      "category": "Architecture"
+    },
+    {
+      "term": "SPA",
+      "definition": "Single Page Application - Application web monopage",
+      "category": "Architecture"
+    },
+    {
+      "term": "PWA",
+      "definition": "Progressive Web App - Application web progressive fonctionnant offline",
+      "category": "Architecture"
+    },
+    {
+      "term": "SEO",
+      "definition": "Search Engine Optimization - Optimisation pour les moteurs de recherche",
+      "category": "Web"
+    },
+    {
+      "term": "Responsive",
+      "definition": "Design s'adaptant aux différentes tailles d'écran",
+      "category": "Design"
+    },
+    {
+      "term": "Atomic Design",
+      "definition": "Méthodologie de conception par composants atomiques",
+      "category": "Design"
     }
   ]
 }
